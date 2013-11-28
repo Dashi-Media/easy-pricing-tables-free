@@ -1,0 +1,2 @@
+easy-pricing-tables-free
+========================
