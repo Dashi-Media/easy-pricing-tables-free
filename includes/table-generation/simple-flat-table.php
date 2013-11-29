@@ -232,7 +232,7 @@ function dh_ptp_generate_simple_flat_pricing_table_html ($id) {
      */
 
     $loop_index = 0;
-    $pricing_table_html = '<div class="ptp-pricing-table" >';
+    $pricing_table_html = '<div id="ptp-'. $id .'" class="ptp-pricing-table">';
     foreach ($meta['column'] as $column)
     {
         // Note: beneath ifs are to prevent 'undefined variable notice'. It wasn't possible to put this code into a function since the passing argument might be undefined.
@@ -291,7 +291,7 @@ function dh_ptp_generate_simple_flat_pricing_table_html ($id) {
 
         // create the html code
         $pricing_table_html .= '
-		<div id="ptp-'. $id .'" class="ptp-col ' . dh_ptp_get_number_of_columns() . ' '. $feature . ' ptp-col-id-' . $loop_index . '">'
+		<div class="ptp-col ' . dh_ptp_get_number_of_columns() . ' '. $feature . ' ptp-col-id-' . $loop_index . '">'
             . $feature_label .
             '<ul class="ptp-item-container">
 				<li class="ptp-plan">' . $planname . '</li>
