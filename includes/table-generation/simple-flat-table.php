@@ -7,208 +7,113 @@
  */
 
 
-
-add_action( 'wp_head', 'dh_ptp_get_custom_styling' );
-
-/**
- * Read all custom styling from our database
- */
-function dh_ptp_get_custom_styling($id)
+function dh_ptp_simple_flat_css($id, $meta)
 {
-    global $features_metabox;
-    $meta = get_post_meta($id, $features_metabox->get_the_id(), TRUE);
-
-    /* get all variables from custom settings */
     /**
      * Overall Styles *
      */
-    //<editor-fold desc="Get Overall Styles">
+    
     // get rounded corner width
-    if(isset($meta['rounded-corners']))
-        $rounded_corner_width = $meta['rounded-corners'];
-    else
-        $rounded_corner_width = '0px';
-    //</editor-fold>
-
+    $rounded_corner_width = (isset($meta['rounded-corners']))?$meta['rounded-corners']:'0px';
+    
     /**
      * Font Styles
      */
-    //<editor-fold desc="Get Font Styles">
+    
     // most popular
-    if(isset($meta['most-popular-font-size']))
-        $most_popular_font_size = $meta['most-popular-font-size'];
-    else
-        $most_popular_font_size = 0.9;
-    if(isset($meta['most-popular-font-size-type']))
-        $most_popular_font_size_type = $meta['most-popular-font-size-type'];
-    else
-        $most_popular_font_size_type = "em";
-
+    $most_popular_font_size = (isset($meta['most-popular-font-size']))?$meta['most-popular-font-size']:0.9;
+    $most_popular_font_size_type = (isset($meta['most-popular-font-size-type']))?$meta['most-popular-font-size-type']:"em";
+    
     // plan name
-    if(isset($meta['plan-name-font-size']))
-        $plan_name_font_size = $meta['plan-name-font-size'];
-    else
-        $plan_name_font_size = 1;
-    if(isset($meta['plan-name-font-size-type']))
-        $plan_name_font_size_type = $meta['plan-name-font-size-type'];
-    else
-        $plan_name_font_size_type = "em";
-
+    $plan_name_font_size = (isset($meta['plan-name-font-size']))?$meta['plan-name-font-size']:1;
+    $plan_name_font_size_type = (isset($meta['plan-name-font-size-type']))?$meta['plan-name-font-size-type']:"em";
+    
     // price
-    if(isset($meta['price-font-size']))
-        $price_font_size = $meta['price-font-size'];
-    else
-        $price_font_size = 1.25;
-    if(isset($meta['price-font-size-type']))
-        $price_font_size_type = $meta['price-font-size-type'];
-    else
-        $price_font_size_type = "em";
-
+    $price_font_size = (isset($meta['price-font-size']))?$meta['price-font-size']:1.25;
+    $price_font_size_type = (isset($meta['price-font-size-type']))?$meta['price-font-size-type']:"em";
+    
     // bullet item
-    if(isset($meta['bullet-item-font-size']))
-        $bullet_item_font_size = $meta['bullet-item-font-size'];
-    else
-        $bullet_item_font_size = 0.875;
-    if(isset($meta['bullet-item-font-size-type']))
-        $bullet_item_font_size_type = $meta['bullet-item-font-size-type'];
-    else
-        $bullet_item_font_size_type = "em";
-
+    $bullet_item_font_size = (isset($meta['bullet-item-font-size']))?$meta['bullet-item-font-size']:0.875;
+    $bullet_item_font_size_type = (isset($meta['bullet-item-font-size-type']))?$meta['bullet-item-font-size-type']:"em";
+    
     // button
-    if(isset($meta['button-font-size']))
-        $button_font_size = $meta['button-font-size'];
-    else
-        $button_font_size = 1;
-    if(isset($meta['button-font-size-type']))
-        $button_font_size_type = $meta['button-font-size-type'];
-    else
-        $button_font_size_type = "em";
-    //</editor-fold>
-
+    $button_font_size = (isset($meta['button-font-size']))?$meta['button-font-size']:1;
+    $button_font_size_type = (isset($meta['button-font-size-type']))?$meta['button-font-size-type']:"em";
+    
     /**
      * Button Colors
      */
-    //<editor-fold desc="Get Button Colors">
+    
     // get featured button font color
-    if(isset($meta['featured-button-font-color']))
-        $featured_button_font_color = $meta['featured-button-font-color'];
-    else
-        $featured_button_font_color = '#ffffff';
-
+    $featured_button_font_color = (isset($meta['featured-button-font-color']))?$meta['featured-button-font-color']:'#ffffff';
+    
     // get featured button color
-    if(isset($meta['featured-button-color']))
-        $featured_button_color = $meta['featured-button-color'];
-    else
-        $featured_button_color = '#3498db';
-
+    $featured_button_color = (isset($meta['featured-button-color']))?$meta['featured-button-color']:'#3498db';
+    
     // get featured button  border color
-    if(isset($meta['featured-button-border-color']))
-        $featured_button_border_color = $meta['featured-button-border-color'];
-    else
-        $featured_button_border_color = '#2980b9';
-
+    $featured_button_border_color = (isset($meta['featured-button-border-color']))?$meta['featured-button-border-color']:'#2980b9';
+    
     // get featured button hover color
-    if(isset($meta['featured-button-hover-color']))
-        $featured_button_hover_color = $meta['featured-button-hover-color'];
-    else
-        $featured_button_hover_color = '#2980b9';
-
+    $featured_button_hover_color = (isset($meta['featured-button-hover-color']))?$meta['featured-button-hover-color']:'#2980b9';
+    
     // non-featured buttons
     // get  button font color
-    if(!empty($meta['button-font-color']))
-        $button_font_color = $meta['button-font-color'];
-    else
-        $button_font_color = '#ffffff';
-
+    $button_font_color = (!empty($meta['button-font-color']))?$meta['button-font-color']:'#ffffff';
+    
     // get button color
-    if(!empty($meta['button-color']))
-        $button_color = $meta['button-color'];
-    else
-        $button_color = '#e74c3c';
-
+    $button_color = (!empty($meta['button-color']))?$meta['button-color']:'#e74c3c';
+    
     // get button border color
-    if(isset($meta['button-border-color']))
-        $button_border_color = $meta['button-border-color'];
-    else
-        $button_border_color = '#c0392b';
-
+    $button_border_color = (isset($meta['button-border-color']))?$meta['button-border-color']:'#c0392b';
+    
     // get button hover color
-    if(isset($meta['button-hover-color']))
-        $button_hover_color = $meta['button-hover-color'];
-    else
-        $button_hover_color = '#c0392b';
-    //</editor-fold>
-
-    return dh_ptp_print_inline_css($id, $rounded_corner_width, $most_popular_font_size, $most_popular_font_size_type, $plan_name_font_size,
-        $plan_name_font_size_type, $price_font_size, $price_font_size_type, $button_font_size, $button_font_size_type,
-        $bullet_item_font_size, $bullet_item_font_size_type,
-        $featured_button_font_color, $featured_button_color, $featured_button_border_color, $featured_button_hover_color,
-        $button_font_color, $button_color, $button_border_color, $button_hover_color);
-}
-
-/**
- * Big ugly function to generate our custom CSS
- */
-function dh_ptp_print_inline_css($id, $rounded_corner_width, $most_popular_font_size, $most_popular_font_size_type, $plan_name_font_size,
-                                 $plan_name_font_size_type, $price_font_size, $price_font_size_type, $button_font_size, $button_font_size_type,
-                                 $bullet_item_font_size, $bullet_item_font_size_type,
-                                 $featured_button_font_color, $featured_button_color, $featured_button_border_color, $featured_button_hover_color,
-                                 $button_font_color, $button_color, $button_border_color, $button_hover_color)
-
-{
-    $id = "#ptp-".$id;
+    $button_hover_color = (isset($meta['button-hover-color']))?$meta['button-hover-color']:'#c0392b';
     ?>
-    <!-- Dynamic CSS from Easy Pricing Tables -->
-    <style type="text/css">
-        <?php echo $id ?> ul.ptp-item-container{
-            border-radius: <?php echo $rounded_corner_width; ?>;"
-        }
-        <?php echo $id ?> li.ptp-plan{
-            border-top-right-radius: <?php echo $rounded_corner_width; ?>;
-            border-top-left-radius: <?php echo $rounded_corner_width; ?>;
-            font-size: <?php echo $plan_name_font_size . $plan_name_font_size_type; ?>;
-        }
-        <?php echo $id ?> li.ptp-price{
-            font-size: <?php echo $price_font_size . $price_font_size_type; ?>;
-        }
-        <?php echo $id ?> li.ptp-cta{
-            border-bottom-right-radius: <?php echo $rounded_corner_width; ?>;
-            border-top-left-radius: <?php echo $rounded_corner_width; ?>;
-        }
-        <?php echo $id ?> a.ptp-button{
-            border-radius: <?php echo $rounded_corner_width; ?>;
-            font-size: <?php echo $button_font_size.$button_font_size_type; ?>;
-            color: <?php echo $button_font_color; ?>;
-            background-color: <?php echo $button_color; ?>;
-            border-bottom: <?php echo $button_border_color;?> 4px solid;
-        }
-        <?php echo $id ?> a.ptp-button:hover{
-            background-color: <?php echo $button_hover_color; ?>
-        }
+    
+    #ptp-<?php echo $id ?> ul.ptp-item-container{
+        border-radius: <?php echo $rounded_corner_width; ?>;"
+    }
+    #ptp-<?php echo $id ?> li.ptp-plan{
+        border-top-right-radius: <?php echo $rounded_corner_width; ?>;
+        border-top-left-radius: <?php echo $rounded_corner_width; ?>;
+        font-size: <?php echo $plan_name_font_size . $plan_name_font_size_type; ?>;
+    }
+    #ptp-<?php echo $id ?> li.ptp-price{
+        font-size: <?php echo $price_font_size . $price_font_size_type; ?>;
+    }
+    #ptp-<?php echo $id ?> li.ptp-cta{
+        border-bottom-right-radius: <?php echo $rounded_corner_width; ?>;
+        border-top-left-radius: <?php echo $rounded_corner_width; ?>;
+    }
+    #ptp-<?php echo $id ?> a.ptp-button{
+        border-radius: <?php echo $rounded_corner_width; ?>;
+        font-size: <?php echo $button_font_size.$button_font_size_type; ?>;
+        color: <?php echo $button_font_color; ?>;
+        background-color: <?php echo $button_color; ?>;
+        border-bottom: <?php echo $button_border_color;?> 4px solid;
+    }
+    #ptp-<?php echo $id ?> a.ptp-button:hover{
+        background-color: <?php echo $button_hover_color; ?>
+    }
 
-        div<?php echo $id ?>.ptp-highlight a.ptp-button{
-            color: <?php echo $featured_button_font_color; ?>;
-            background-color: <?php echo $featured_button_color; ?>;
-            border-bottom: <?php echo $featured_button_border_color;?> 4px solid;
-        }
-        div<?php echo $id ?>.ptp-highlight a.ptp-button:hover{
-            background-color: <?php echo $featured_button_hover_color; ?>;
-        }
-        <?php echo $id ?> li.ptp-bullet-item{
-            font-size: <?php echo $bullet_item_font_size.$bullet_item_font_size_type; ?>;
-        }
-        <?php echo $id ?> div.ptp-most-popular{
-            border-radius: <?php echo $rounded_corner_width; ?>;"
-        font-size: <?php echo $most_popular_font_size.$most_popular_font_size_type; ?>;
-        }
-    </style>
-    <!-- / End Easy Pricing Tables Dynamic CSS -->
-<?php
+    div#ptp-<?php echo $id ?>.ptp-highlight a.ptp-button{
+        color: <?php echo $featured_button_font_color; ?>;
+        background-color: <?php echo $featured_button_color; ?>;
+        border-bottom: <?php echo $featured_button_border_color;?> 4px solid;
+    }
+    div#ptp-<?php echo $id ?>.ptp-highlight a.ptp-button:hover{
+        background-color: <?php echo $featured_button_hover_color; ?>;
+    }
+    #ptp-<?php echo $id ?> li.ptp-bullet-item{
+        font-size: <?php echo $bullet_item_font_size.$bullet_item_font_size_type; ?>;
+    }
+    #ptp-<?php echo $id ?> div.ptp-most-popular{
+        border-radius: <?php echo $rounded_corner_width; ?>;"
+    font-size: <?php echo $most_popular_font_size.$most_popular_font_size_type; ?>;
+    }
+    
+    <?php
 }
-
-
-
-
 
 
 /**
@@ -220,11 +125,6 @@ function dh_ptp_generate_simple_flat_pricing_table_html ($id) {
     global $meta;
 
     $meta = get_post_meta($id, $features_metabox->get_the_id(), TRUE);
-
-    do_action( 'wp_head', $id );
-    add_action( 'wp_head', 'dh_ptp_get_custom_styling');
-
-
 
     /**
      * the string to be returned that includes the pricing table html
