@@ -26,7 +26,10 @@ include ( PTP_PLUGIN_PATH . 'includes/shortcodes.php');
 include ( PTP_PLUGIN_PATH . 'includes/analytics.php');
 
 //include WPAlchemy
-include_once ( PTP_PLUGIN_PATH . 'includes/libraries/wpalchemy/MetaBox.php');
+if(!class_exists('WPAlchemy_MetaBox')) {
+  include_once ( PTP_PLUGIN_PATH . 'includes/libraries/wpalchemy/MetaBox.php');
+}
+
 include_once ( PTP_PLUGIN_PATH . 'includes/metaboxes/spec.php');
 
 if(is_admin())
