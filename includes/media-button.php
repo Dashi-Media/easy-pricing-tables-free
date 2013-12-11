@@ -1,0 +1,80 @@
+<?php
+
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) exit;
+
+function dh_ptp_media_button()
+{
+    global $pagenow, $typenow, $wp_version;
+    
+    $button_title = 'Insert pricing table';
+    $output = '';
+    
+    // Show button only in post and page edit screens
+    if ( in_array( $pagenow, array( 'post.php', 'page.php', 'post-new.php', 'post-edit.php' ) ) && $typenow != 'download' ) {
+        /* check current WP version */
+        if ( version_compare( $wp_version, '3.5', '<' ) ) {
+                $output = '<a href="#TB_inline?width=640&inlineId=dh-ptp-pricing-table-thickbox" class="thickbox" title="' . $button_title . '">' . $button_title . '</a>';
+        } else {
+                $img = '<span class="wp-media-buttons-icon" id="dh-ptp-media-button"></span>';
+                $output = '<a href="#TB_inline?width=640&inlineId=dh-ptp-pricing-table-thickbox" class="thickbox button" title="' . $button_title . '" style="padding-left: .4em;">' . $button_title . '</a>';
+        }
+    }
+    
+    echo $output;
+}
+add_action( 'media_buttons', 'dh_ptp_media_button', 11);
+
+function dh_ptp_media_button_thickbox()
+{
+    global $pagenow, $typenow;
+
+    // Only run in post/page creation and edit screens
+    if ( in_array( $pagenow, array( 'post.php', 'page.php', 'post-new.php', 'post-edit.php' ) ) && $typenow != 'download' ) { ?>
+    
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+                $('#dh-ptp-pricing-table-insert').on('click', function () {
+                    var id = $('#dh-ptp-pricing-table').val();
+                    
+                    // Return early if no download is selected
+                    if ('' === id) {
+                        alert('You must choose a download');
+                        return;
+                    }
+                    window.send_to_editor('[easy-pricing-table id="' + id + '"]');
+                });
+            });
+        </script>
+
+        <div id="dh-ptp-pricing-table-thickbox" style="display: none;">
+            <div class="wrap" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                <p>Use the form below to insert the shortcode for a pricing table.</p>
+                <div>
+                    <select id="dh-ptp-pricing-table">
+                        <option value="">Please select...</option>
+                        <?php
+                            // Fetch all pricing tables
+                            $query = new WP_Query(array('post_type'=>'easy-pricing-table', 'post_status'=>array('publish', 'draft'), 'posts_per_page'=>-1));
+                            if ( $query->have_posts() ) : 
+                                while ( $query->have_posts() ) : $query->the_post();
+                                    echo '<option value="' . get_the_ID() . '">' . (get_the_title()?get_the_title():'(no title)') . '</option>';
+                                endwhile;
+                            endif;
+                            
+                            // Restore original Post Data
+                            wp_reset_postdata();
+                        ?>
+                    </select>
+                </div>
+                <p class="submit">
+                    <input type="button" id="dh-ptp-pricing-table-insert" class="button-primary" value="Insert"/>
+                    <a id="dh-ptp-pricing-table-cancel" class="button-secondary" onclick="tb_remove();" title="Cancel">Cancel</a>
+                </p>
+            </div>
+        </div>
+    <?php
+    }
+}
+add_action( 'admin_footer', 'dh_ptp_media_button_thickbox' );
+?>

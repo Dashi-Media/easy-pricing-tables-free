@@ -16,6 +16,9 @@ define('PTP_PLUGIN_PATH_FOR_SUBDIRS', plugins_url(str_replace(dirname(dirname(__
 // include post types
 include ( PTP_PLUGIN_PATH . 'includes/post-types.php');
 
+// include media button
+include ( PTP_PLUGIN_PATH . 'includes/media-button.php');
+
 //include shortcodes
 include ( PTP_PLUGIN_PATH . 'includes/shortcodes.php');
 
