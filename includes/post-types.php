@@ -82,7 +82,7 @@ function dh_ptp_custom_rewrites($translation, $text, $domain) {
         if ( ! isset( $post->post_type ) ) {
             return $translation;
         }
-	$translations = &get_translations_for_domain($domain);
+	$translations = get_translations_for_domain($domain);
 	$translation_array = array();
  
 	switch ($post->post_type) {
