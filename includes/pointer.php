@@ -21,6 +21,22 @@ function dh_ptp_pointer_load($hook_suffix)
         // Add action hook
         add_action('admin_print_footer_scripts', 'dh_ptp_usage_tracking_pointer');
     }
+    
+    // Load mailing list pointer popup
+    global $current_screen;
+    global $pagenow;
+    
+    // Show mailing list pointer popup once
+    $mailing_list = get_option('dh_ptp_mailing_list');
+    if ( 'easy-pricing-table' == $current_screen->post_type &&
+           (( isset($_REQUEST['action']) && 'edit' == $_REQUEST['action']) || 'post-new.php' == $pagenow) && 
+           in_array($usage_tracking, array('yes', 'no')) &&
+           !in_array($mailing_list, array('yes', 'no'))) {
+        
+        wp_enqueue_style('wp-pointer');
+        wp_enqueue_script('wp-pointer');
+        add_action('admin_print_footer_scripts', 'dh_ptp_mailing_list_pointer');        
+    }
 }
 add_action('admin_enqueue_scripts', 'dh_ptp_pointer_load');
 
@@ -70,6 +86,89 @@ function dh_ptp_usage_tracking_pointer_ajax()
     exit();
 }
 add_action( 'wp_ajax_dh_ptp_usage_tracking', 'dh_ptp_usage_tracking_pointer_ajax');
+
+// Add mailing list subscription
+function dh_ptp_mailing_list_pointer() 
+{
+    // Ajax request template    
+    $ajax = '
+        jQuery.ajax({
+            type: "POST",
+            url:  "'.admin_url('admin-ajax.php').'",
+            data: {action: "dh_ptp_mailing_list", nonce: "'.wp_create_nonce('dh_ptp_mailing_list').'", subscribe: "%s" }
+        });
+    ';
+    
+    // Target
+    $id = '#wpadminbar';
+    
+    // Buttons
+    $button_1_title = 'No, thanks';
+    $button_1_fn    = sprintf($ajax, 'no');
+    $button_2_title = "Let&#39;s do it!";
+    $button_2_fn    = sprintf($ajax, 'yes');
+    
+    // Content
+    $content  = '<h3>'.'Pricing Table Crash Course'.'</h3>';
+    $content .= '<p>'."Instead of watching 99% of your visitors bounce, imagine you could increase your pricing table&#39;s conversion rate and make more money. Find out how in this ridiculously actionable (and totally free) 5-part email course.".'</p>';
+    
+    // Options
+    $options = array(
+        'content' => $content,
+        'position' => array('edge' => 'top', 'align' => 'center')
+    );
+    
+    dh_ptp_print_script($id, $options, $button_1_title, $button_2_title, $button_1_fn, $button_2_fn);
+}
+
+function dh_ptp_mailing_list_pointer_ajax()
+{
+    global $current_user;
+    
+    // Config
+    $api_key  = '35730c4540f59d2db0ec715ef1cb3f90';
+    $api_list = '34598307ceb27689b52a4da12f5a0ee6';
+    
+    // Verify nonce
+    if(!wp_verify_nonce($_POST['nonce'], 'dh_ptp_mailing_list')) {
+        die ('No tricky business!');
+    }
+    
+    // Check status
+    $result = ($_POST['subscribe'] == 'yes')?'yes':'no';
+    if ($result == 'no') {
+        update_option('dh_ptp_mailing_list', 'no');
+        exit();
+    }
+    
+    // Get current user info
+    get_currentuserinfo();
+    
+    // Subscribe
+    require_once PTP_PLUGIN_PATH.'includes/libraries/campaignmonitor/csrest_subscribers.php';
+    
+    $auth = array('api_key' => $api_key);
+    $wrap = new CS_REST_Subscribers($api_list, $auth);
+    $result = $wrap->add(array(
+        'EmailAddress' => $current_user->user_email,
+        'Name' => $current_user->display_name,
+        'CustomFields' => array(
+            array(
+                'Key' => 'URL',
+                'Value' => get_bloginfo('url'),
+            )
+        ),
+    ));
+    
+    if($result->was_successful()) {
+        update_option('dh_ptp_mailing_list', 'yes');
+    } else {
+        update_option('dh_ptp_mailing_list', 'no');
+    }
+    
+    exit();
+}
+add_action( 'wp_ajax_dh_ptp_mailing_list', 'dh_ptp_mailing_list_pointer_ajax');
 
 // Print JS Content
 function dh_ptp_print_script($selector, $options, $button1, $button2 = false, $button1_fn = '', $button2_fn = '')
