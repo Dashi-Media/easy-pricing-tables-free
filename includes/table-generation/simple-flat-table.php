@@ -96,12 +96,12 @@ function dh_ptp_simple_flat_css($id, $meta)
         background-color: <?php echo $button_hover_color; ?>
     }
 
-    div#ptp-<?php echo $id ?>.ptp-highlight a.ptp-button{
+    div#ptp-<?php echo $id ?> .ptp-highlight a.ptp-button{
         color: <?php echo $featured_button_font_color; ?>;
         background-color: <?php echo $featured_button_color; ?>;
         border-bottom: <?php echo $featured_button_border_color;?> 4px solid;
     }
-    div#ptp-<?php echo $id ?>.ptp-highlight a.ptp-button:hover{
+    div#ptp-<?php echo $id ?> .ptp-highlight a.ptp-button:hover{
         background-color: <?php echo $featured_button_hover_color; ?>;
     }
     #ptp-<?php echo $id ?> li.ptp-bullet-item{

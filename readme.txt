@@ -6,7 +6,7 @@ Author URI: http://davidhehenberger.com/
 Plugin URI: http://wordpress.org/plugins/easy-pricing-tables/
 Requires at least: 3.6
 Tested up to: 3.8
-Stable tag: 1.4
+Stable tag: 1.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,6 +58,9 @@ david[at]davidhehenberger[dot]com
 4. Design options
 
 == Changelog ==
+
+= 1.4.1 =
+* Fixed button-color bug introduced with version 1.4
 
 = 1.4 =
 * Bufix: Fixed CSS generation algorithm
