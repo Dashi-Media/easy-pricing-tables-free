@@ -5,8 +5,8 @@ Tags: pricing table, responsive pricing table, comparison, comparison table, css
 Author URI: http://davidhehenberger.com/
 Plugin URI: http://wordpress.org/plugins/easy-pricing-tables/
 Requires at least: 3.6
-Tested up to: 3.7.1
-Stable tag: 1.3.2
+Tested up to: 3.8
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,7 +27,7 @@ This plugin works with any WordPress theme you have installed. After installing 
 *   Responsive Pricing Tables
 *   Intuitive User Interface
 *   Built-in Conversion Rate Optimization Best Practices
-*   Create Unlimited Rows and Columns
+*   Create Unlimited Rows and up to 10 Columns
 *	Customize your design: font-size, color pickers and rounded borders.
 *   Use drag & drop to reorder columns
 *   Featured Your Most Popular Column
@@ -42,6 +42,11 @@ If you have suggestions for new features, feel free to email me at hi@shoppingca
 
 == Frequently Asked Questions ==
 
+= My tables aren't aligned properly =
+If within the same row, you use a lot more text in some features than in others, your feature height alignment might be weird.
+This problem is due to tables being responsive instead of fixed width. You can fix it by adding manual linebreaks for your features.
+<br/><br/> results in one linebreak.
+
 = Contact me if you have any questions: =
 
 david[at]davidhehenberger[dot]com
@@ -53,6 +58,15 @@ david[at]davidhehenberger[dot]com
 4. Design options
 
 == Changelog ==
+
+= 1.4 =
+* Bufix: Fixed CSS generation algorithm
+* Fixed PHP 5.4 strict notices
+* Improved compatibility with other plugins using the WPAlchemy framework
+* UI improvements: Shortcodes can now be directly added via the editor
+* After install, ask users if they want to allow usage tracking
+* After install, ask users if they want to get a pricing-table mini-course
+* Users can now change the text in the "most popular" label
 
 = 1.3.2 =
 * Improved CSS to cause less theme conflicts

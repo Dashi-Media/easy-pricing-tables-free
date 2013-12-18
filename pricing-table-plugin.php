@@ -4,7 +4,7 @@
 	Plugin URI: http://wordpress.org/plugins/easy-pricing-tables/
 	Description: Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 5 Minutes with Easy Pricing Tables for WordPress. No Coding Required.
 	Author: David Hehenberger
-	Version: 1.3.2
+	Version: 1.4
 	Author URI: http://shoppingcartlabs.com/
 */
 
