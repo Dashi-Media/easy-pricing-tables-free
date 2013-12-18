@@ -139,51 +139,32 @@ function dh_ptp_generate_simple_flat_pricing_table_html ($id) {
 
         //<editor-fold desc="get settings relevant to current column">
         // get plan name
-        if(isset($column['planname']))
-            $planname = $column['planname'];
-        else
-            $planname = '';
+        $planname = isset($column['planname'])?$column['planname']:'';
 
         // get plan price
-        if(isset($column['planprice']))
-            $planprice = $column['planprice'];
-        else
-            $planprice = '';
+        $planprice = isset($column['planprice'])?$column['planprice']:'';
 
-        if(isset($column['planfeatures']))
-        {
-            $planfeatures = $column['planfeatures'];
-        }
-        else
-            $planfeatures = '';
+        $planfeatures = isset($column['planfeatures'])?$column['planfeatures']:'';
 
         // get plan price
-        if(isset($column['buttonurl']))
-            $buttonurl = $column['buttonurl'];
-        else
-            $buttonurl = '';
+        $buttonurl = isset($column['buttonurl'])?$column['buttonurl']:'';
 
         // get plan price
-        if(isset($column['buttontext']))
-            $buttontext = $column['buttontext'];
-        else
-            $buttontext = '';
+        $buttontext = isset($column['buttontext'])?$column['buttontext']:'';
         //</editor-fold>
 
         //<editor-fold desc="set html based on if our current column is featured">
-        if(isset($column['feature']))
-            if ($column['feature'] == "featured")
-            {
+        if(isset($column['feature'])) {
+            if ($column['feature'] == "featured") {
+                $most_popular_text = isset($meta['most-popular-label-text'])?$meta['most-popular-label-text']:'Most Popular';
+                
                 $feature = "ptp-highlight";
-                $feature_label = '<div class="ptp-most-popular">Most Popular</div>';
-            }
-            else
-            {
+                $feature_label = '<div class="ptp-most-popular">'.$most_popular_text.'</div>';
+            } else {
                 $feature = '';
                 $feature_label = '<div class="ptp-not-most-popular">&nbsp;</div>';
             }
-        else
-        {
+        } else {
             $feature = '';
             $feature_label = '<div class="ptp-not-most-popular">&nbsp;</div>';
         }

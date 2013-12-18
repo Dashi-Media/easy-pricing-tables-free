@@ -1,74 +1,44 @@
 <div id="simple-flat-advanced-design-settings">
 <table>
-<! -- Rounded Corners
-<tr class="table-headline"><td><br/>Rounded Corners</td></tr>
-<tr>
-    <td>Border Radius</td>
-    <?php $mb->the_field('rounded-corners'); ?>
-    <td><select class="form-control" name="<?php $metabox->the_name(); ?>">
-            <option value="0px" <?php
-            if(!is_null($mb->get_the_value()))
-            {
-                if($mb->get_the_value() == '0px')
+    <tr class="table-headline"><td><br/>Design Settings</td></tr>
+    <tr>
+        <td>Border Radius</td>
+        <?php $mb->the_field('rounded-corners'); ?>
+        <td><select class="form-control" name="<?php $metabox->the_name(); ?>">
+                <option value="0px" <?php
+                if(!is_null($mb->get_the_value()))
                 {
+                    if($mb->get_the_value() == '0px')
+                    {
+                        echo 'selected';
+                    }
+                }
+                else {
                     echo 'selected';
                 }
-            }
-            else {
-                echo 'selected';
-            }
-            ?> >No Rounded Corners</option>
-            <?php
-            for($i=1;$i<=20;++$i){
-
-                if($mb->get_the_value() == $i . 'px')
-                {
-                    echo '<option value="' . $i . 'px" selected>' . $i . 'px</option>';
+                ?> >No Rounded Corners</option>
+                <?php
+                for($i=1;$i<=20;++$i){
+    
+                    if($mb->get_the_value() == $i . 'px')
+                    {
+                        echo '<option value="' . $i . 'px" selected>' . $i . 'px</option>';
+                    }
+                    else
+                        echo '<option value="' . $i . 'px" >' . $i . 'px</option>';
+    
                 }
-                else
-                    echo '<option value="' . $i . 'px" >' . $i . 'px</option>';
-
-            }
-            ?>
-        </select></td>
-</tr>
-<!-- commented out for now
-                            <tr class="table-headline"><td><br/>"Most Popular Area" Colors</td></tr>
-                            <tr>
-                                <td>Most Popular - Area Background Color</td>
-                                <?php $mb->the_field('most-popular-background-color'); ?>
-                                <td><input type="text" name="<?php $mb->the_name(); ?>" class="colorpicker-no-palettes" value="<?php
-                                            if(!is_null($mb->get_the_value()))
-                                                echo $mb->the_value();
-                                            else
-                                                echo "#7f8c8d";
-                                            ?>
-                                    " class="my-color-field" data-default-color="#7f8c8d" /></td>
-                            </tr>
-                            <tr>
-                                <td>Most Popular - Font Color</td>
-                                <?php $mb->the_field('most-popular-font-color'); ?>
-                                <td><input type="text" name="<?php $mb->the_name(); ?>" class="colorpicker-no-palettes" value="<?php
-                                            if(!is_null($mb->get_the_value()))
-                                                echo $mb->the_value();
-                                            else
-                                                echo "#ffffff";
-                                            ?>
-                                    " class="my-color-field" data-default-color="#ffffff" /></td>
-                            </tr>
-                            <tr class="table-headline"><td><br/>Table Colors</td></tr>
-                            <tr>
-                                <td>Most Popular - Area Background Color</td>
-                                <?php $mb->the_field('most-popular-background-color'); ?>
-                                <td><input type="text" name="<?php $mb->the_name(); ?>" class="colorpicker-no-palettes" value="<?php
-                                            if(!is_null($mb->get_the_value()))
-                                                echo $mb->the_value();
-                                            else
-                                                echo "#7f8c8d";
-                                            ?>
-                                    " class="my-color-field" data-default-color="#7f8c8d" /></td>
-                            </tr>
-                           -->
+                ?>
+            </select></td>
+    </tr>
+    <tr>
+        <td>Most Popular Label Text</td>
+        <?php $mb->the_field('most-popular-label-text'); ?>
+        <td>
+            <?php $value = (!is_null($mb->get_the_value()))?$metabox->get_the_value():'Most Popular'; ?>
+            <input type="text" name="<?php $metabox->the_name(); ?>" id="<?php $metabox->the_name(); ?>" value="<?php echo $value;?>" />
+        </td>
+    </tr>
 
 <tr class="table-headline"><td><br/>Font Sizes</td></tr>
 <tr>
