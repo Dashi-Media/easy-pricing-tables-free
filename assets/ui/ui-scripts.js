@@ -1,9 +1,12 @@
 jQuery(document).ready(function($) {
-    //nested tabs (design)
-    //$("#dh_ptp_design_tabs_container").tabs();
-    //activate jquery ui tabs
-    $("#dh_ptp_tabs_container").tabs();
 
+	// Activate jquery ui tabs
+    $("#dh_ptp_tabs_container").tabs();
+	
+	// Save tab state to dh_ptp_tab
+	$("a[href=#dh_ptp_tabs_1], a[href=#dh_ptp_tabs_2]").on('click', function(){
+		$('#dh_ptp_tab').val($(this).attr('href'));
+	});
 
     //drag and drop for columns
     $("#wpa_loop-column").sortable({ axis: "x" });

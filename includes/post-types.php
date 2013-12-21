@@ -161,5 +161,21 @@ function dh_ptp_remove_publish_metabox()
 }
 add_action( 'admin_menu', 'dh_ptp_remove_publish_metabox' );
 
+/* Save tab state */
+function dh_ptp_save_tab_state( $post_id ) {
 
+	// If this is just a revision, don't send the email.
+	if ( wp_is_post_revision( $post_id ) )
+		return;
+	
+	// Check if post type matches the pricing tables
+	if ( 'easy-pricing-table' != $_POST['post_type'] ) {
+        return;
+    }
 
+	// Set cookie with tab data
+	if (!isset($_COOKIE['dh_ptp_current_tab'])) {
+        setcookie('dh_ptp_current_tab', $_REQUEST['dh_ptp_tab'], time()+3, COOKIEPATH, COOKIE_DOMAIN, false);
+    }
+}
+add_action( 'save_post', 'dh_ptp_save_tab_state' );
