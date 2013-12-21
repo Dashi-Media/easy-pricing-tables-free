@@ -169,7 +169,7 @@ function dh_ptp_save_tab_state( $post_id ) {
 		return;
 	
 	// Check if post type matches the pricing tables
-	if ( 'easy-pricing-table' != $_POST['post_type'] ) {
+	if ( isset($_POST['post_type']) && 'easy-pricing-table' != $_POST['post_type'] ) {
         return;
     }
 
