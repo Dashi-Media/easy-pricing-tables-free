@@ -174,7 +174,7 @@ function dh_ptp_save_tab_state( $post_id ) {
     }
 
 	// Set cookie with tab data
-	if (!isset($_COOKIE['dh_ptp_current_tab'])) {
+	if (!isset($_COOKIE['dh_ptp_current_tab']) && isset($_REQUEST['dh_ptp_tab'])) {
         setcookie('dh_ptp_current_tab', $_REQUEST['dh_ptp_tab'], time()+3, COOKIEPATH, COOKIE_DOMAIN, false);
     }
 }
