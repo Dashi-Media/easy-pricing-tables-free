@@ -72,12 +72,14 @@ list-style: none;
 }
 
 ul.ptp-item-container{
+  
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 0px;
   margin-bottom: 1.25em;
 
   padding-left: 0px;
+  padding-bottom: 0px;
   font-size: 1em;
   line-height: 1.6;
   font-family: inherit;
@@ -91,7 +93,7 @@ ul.ptp-item-container{
 
 
 li.ptp-plan{
-  padding: 0.9375em 1.25em;
+  padding: 0.9375em 1.25em !important;
   text-align: center;
   font-weight: bold;
   font-size: 1em;
@@ -116,7 +118,6 @@ div.ptp-most-popular{
 /* light gray */
 div.ptp-most-popular{
     background-color: #7f8c8d;;
-    border: solid 1px #7f8c8d;
     color: white;
 }
 
@@ -129,13 +130,12 @@ div.ptp-not-most-popular{
   font-size: 0.9em;
   font-weight: bold;
   line-height: 1.4em;
-  border: solid 1px none;
   margin-bottom: 2px;
 }
 
 
 li.ptp-price{
-  padding: 0.9375em 1.25em;
+  padding: 0.9375em 1.25em !important;
   text-align: center;
   font-weight: normal;
   font-size: 1.25em;
@@ -149,10 +149,10 @@ li.ptp-price{
 
 li.ptp-bullet-item{
   background-color: white;
-  padding-top: 0.9375em;
-  padding-bottom: 0.9375em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  padding-top: 0.9375em !important;
+  padding-bottom: 0.9375em !important;
+  padding-left: 0.5em !important;
+  padding-right: 0.5em !important;
   text-align: center;
   font-size: 0.875em;
   font-weight: normal;
@@ -167,7 +167,7 @@ li.ptp-bullet-item{
 
 li.ptp-cta{
   text-align: center;
-  padding-top: 1.25em;
+  padding-top: 1.25em !important;
 }
 
 /* light gray */
