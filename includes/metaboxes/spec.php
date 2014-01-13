@@ -15,6 +15,17 @@ $features_metabox = new WPAlchemy_MetaBox(array
     'context' => 'normal'
 ));
 
+$banner_metabox = new WPAlchemy_MetaBox(array
+(
+    'id' => 'dh_ptp_banner',
+    'title' => 'Pro Version',
+    'template' => PTP_PLUGIN_PATH . 'includes/metaboxes/banner-metabox.php',
+    'types' => array('easy-pricing-table'),
+    'context' => 'side',
+    'priority' => 'high',
+    'skip_admin_head' => true
+));
+
 /**
  * Add the preview meta box. Deactivated since it's not working properly.
  * @var [type]

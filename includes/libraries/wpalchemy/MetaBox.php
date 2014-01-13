@@ -446,7 +446,9 @@ class WPAlchemy_MetaBox
 	
 	function WPAlchemy_MetaBox($arr)
 	{
-        add_action('admin_head', array($this, '_global_head'));
+        if (!isset($arr['skip_admin_head']) || $arr['skip_admin_head'] == false) {
+            add_action('admin_head', array($this, '_global_head'));
+        }
         add_action('admin_footer', array($this, '_global_foot'));
         
 		$this->_loop_data = new stdClass;

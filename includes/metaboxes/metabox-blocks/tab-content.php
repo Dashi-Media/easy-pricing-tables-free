@@ -95,6 +95,6 @@
             </div>
             <?php $mb->the_group_close(); ?>
         <?php endwhile; ?>
-
+		<div style="clear:both;"></div>
     </div>
 </div>
