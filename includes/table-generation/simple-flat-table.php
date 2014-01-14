@@ -40,10 +40,6 @@ function dh_ptp_simple_flat_css($id, $meta)
     $button_font_size = (isset($meta['button-font-size']))?$meta['button-font-size']:1;
     $button_font_size_type = (isset($meta['button-font-size-type']))?$meta['button-font-size-type']:"em";
     
-    /**
-     * Button Colors
-     */
-    
     // get featured button font color
     $featured_button_font_color = (isset($meta['featured-button-font-color']))?$meta['featured-button-font-color']:'#ffffff';
     
@@ -70,8 +66,13 @@ function dh_ptp_simple_flat_css($id, $meta)
     $button_hover_color = (isset($meta['button-hover-color']))?$meta['button-hover-color']:'#c0392b';
     ?>
     
-    #ptp-<?php echo $id ?> ul.ptp-item-container{
-        border-radius: <?php echo $rounded_corner_width; ?>;"
+    #ptp-<?php echo $id ?> ul.ptp-item-container {
+        border-radius: <?php echo $rounded_corner_width; ?>;";
+        padding: 0px;
+    }
+    #ptp-<?php echo $id ?> ul.ptp-item-container li{
+        list-style-type: none;
+        margin: 0px; 
     }
     #ptp-<?php echo $id ?> li.ptp-plan{
         border-top-right-radius: <?php echo $rounded_corner_width; ?>;
@@ -111,7 +112,6 @@ function dh_ptp_simple_flat_css($id, $meta)
         border-radius: <?php echo $rounded_corner_width; ?>;"
     font-size: <?php echo $most_popular_font_size.$most_popular_font_size_type; ?>;
     }
-    
     <?php
 }
 
