@@ -69,6 +69,7 @@ david[at]davidhehenberger[dot]com
 = 1.4.2 =
 * Updated readme.txt
 * Added sidebar link to Easy Pricing Tables Premium
+* Fixed CSS conflict with Dynamik Genesis Child Theme
 
 = 1.4.1 =
 * Fixed button-color bug introduced with version 1.4
