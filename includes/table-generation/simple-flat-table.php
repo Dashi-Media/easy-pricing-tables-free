@@ -66,9 +66,12 @@ function dh_ptp_simple_flat_css($id, $meta)
     $button_hover_color = (isset($meta['button-hover-color']))?$meta['button-hover-color']:'#c0392b';
     ?>
     
+    #ptp-<?php echo $id ?> ul li {list-style-type: none;}
     #ptp-<?php echo $id ?> ul.ptp-item-container {
         border-radius: <?php echo $rounded_corner_width; ?>;";
         padding: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
     #ptp-<?php echo $id ?> ul.ptp-item-container li{
         list-style-type: none;
