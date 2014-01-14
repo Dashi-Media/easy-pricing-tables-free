@@ -1,12 +1,12 @@
 === Easy Pricing Tables ===
 Contributors: davidhme
-Donate link: http://davidhehenberger.com/
+Donate link: http://easypricingtables.com/
 Tags: pricing table, responsive pricing table, comparison, comparison table, css table, price, price gird, pricing, pricing box, pricing grid, table
 Author URI: http://davidhehenberger.com/
-Plugin URI: http://wordpress.org/plugins/easy-pricing-tables/
+Plugin URI: http://easypricingtables.com/
 Requires at least: 3.6
 Tested up to: 3.8
-Stable tag: 1.4.1
+Stable tag: 1.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,7 +19,7 @@ Easy Pricing Tables implements conversion rate optimization (CRO) best practices
 
 This plugin works with any WordPress theme you have installed. After installing the plugin and creating your first pricing table, you can publish your table anywhere on your site using a shortcode.
 
-*   [View A Pricing Table Live Demo &raquo;](http://shoppingcartlabs.com/easy-pricing-tables-demo/)
+*   [View A Pricing Table Live Demo &raquo;](http://easypricingtables.com/easy-pricing-tables-live-demo/?utm_source=wp-plugin-directory&utm_medium=free-plugin-readme.txt&utm_campaign=link-to-pricing-table-demo)
 
 **Features**
 
@@ -32,7 +32,14 @@ This plugin works with any WordPress theme you have installed. After installing 
 *   Use drag & drop to reorder columns
 *   Featured Your Most Popular Column
 
-If you have suggestions for new features, feel free to email me at hi@shoppingcartlabs.com.
+If you have suggestions for new features, feel free to email me at david@easypricingtables.com
+
+**Premium Version Features**
+*	3 additional gorgeous designs
+*	Tons of customization options
+*	Priority support
+
+*	[Learn more about Easy Pricing Tables Premium](http://easypricingtables.com/?utm_source=wp-plugin-directory&utm_medium=free-plugin-readme.txt&utm_campaign=link-to-premium-marketing-page)
 
 == Installation ==
 
@@ -58,6 +65,10 @@ david[at]davidhehenberger[dot]com
 4. Design options
 
 == Changelog ==
+
+= 1.4.2 =
+* Updated readme.txt
+* Added sidebar link to Easy Pricing Tables Premium
 
 = 1.4.1 =
 * Fixed button-color bug introduced with version 1.4

@@ -1,11 +1,11 @@
 <?php
 /*
 	Plugin Name: Easy Pricing Tables
-	Plugin URI: http://wordpress.org/plugins/easy-pricing-tables/
+	Plugin URI: http://easypricingtables.com/
 	Description: Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 5 Minutes with Easy Pricing Tables for WordPress. No Coding Required.
 	Author: David Hehenberger
-	Version: 1.4.1
-	Author URI: http://shoppingcartlabs.com/
+	Version: 1.4.2
+	Author URI: http://davidhehenberger.com
 */
 
 // Define a constant to always include the absolute path
