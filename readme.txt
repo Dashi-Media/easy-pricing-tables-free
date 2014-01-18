@@ -70,6 +70,7 @@ david[at]davidhehenberger[dot]com
 * Updated readme.txt
 * Added sidebar link to Easy Pricing Tables Premium
 * Fixed CSS conflict with Dynamik Genesis Child Theme
+* Added ability to rename "Most Popular" Featured Label
 
 = 1.4.1 =
 * Fixed button-color bug introduced with version 1.4
