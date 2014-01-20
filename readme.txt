@@ -6,7 +6,7 @@ Author URI: http://davidhehenberger.com/
 Plugin URI: http://easypricingtables.com/
 Requires at least: 3.6
 Tested up to: 3.8
-Stable tag: 1.4.2
+Stable tag: 1.4.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,14 +32,13 @@ This plugin works with any WordPress theme you have installed. After installing 
 *   Use drag & drop to reorder columns
 *   Featured Your Most Popular Column
 
-If you have suggestions for new features, feel free to email me at david@easypricingtables.com
-
 **Premium Version Features**
+
 *	3 additional gorgeous designs
 *	Tons of customization options
-*	Priority support
+*	Priority email support
 
-*	[Learn more about Easy Pricing Tables Premium](http://easypricingtables.com/?utm_source=wp-plugin-directory&utm_medium=free-plugin-readme.txt&utm_campaign=link-to-premium-marketing-page)
+*	[Learn more about Easy Pricing Tables Premium >>](http://easypricingtables.com/?utm_source=wp-plugin-directory&utm_medium=free-plugin-readme.txt&utm_campaign=link-to-premium-marketing-page)
 
 == Installation ==
 
@@ -49,10 +48,36 @@ If you have suggestions for new features, feel free to email me at david@easypri
 
 == Frequently Asked Questions ==
 
-= My tables aren't aligned properly =
+= My table rows aren't aligned properly =
 If within the same row, you use a lot more text in some features than in others, your feature height alignment might be weird.
 This problem is due to tables being responsive instead of fixed width. You can fix it by adding manual linebreaks for your features.
 <br/><br/> results in one linebreak.
+
+= I want to change my colors for each individual column =
+This currently isn't supported in the user interface. However, each column has its own unique HTML class that can be modified using a css class selector.
+
+*	Class of the first column: ptp-col-id-0
+*	Class of the second column: ptp-col-id-1
+*	Class of the third column: ptp-col-id-2
+*	etc...
+
+= I want to adjust my column width =
+This currently isn't supported in the user interface. This plugin uses a fixed percentage column width based on how many columns your pricing table has.
+For example, if your pricing table has 3 columns, each column has the following HTML class: ``ptp-three-col``.
+
+The default CSS in this case looks like this:
+``
+.ptp-three-col {
+	width: 31%;
+}
+``
+
+Example code for changing your column width you can add to your theme:
+``
+.ptp-three-col {
+width: 25%!important;
+}
+``
 
 = Contact me if you have any questions: =
 
@@ -62,9 +87,16 @@ david[at]davidhehenberger[dot]com
 1. Example of a pricing table with 3 columns
 2. Example of a pricing table with 2 columns
 3. Creating a new table
-4. Design options
+4. Design options of free plugin
+5. Additional table designs of [Easy Pricing Tables Premium](http://easypricingtables.com/?utm_source=wp-plugin-directory&utm_medium=free-plugin-readme.txt&utm_campaign=link-to-premium-marketing-page-from-screenshots)
+6. Additional settings of [Easy Pricing Tables Premium](http://easypricingtables.com/?utm_source=wp-plugin-directory&utm_medium=free-plugin-readme.txt&utm_campaign=link-to-premium-marketing-page-from-screenshots)
+7. One of the designs from [Easy Pricing Tables Premium](http://easypricingtables.com/?utm_source=wp-plugin-directory&utm_medium=free-plugin-readme.txt&utm_campaign=link-to-premium-marketing-page-from-screenshots)
+8. Another design from [Easy Pricing Tables Premium](http://easypricingtables.com/?utm_source=wp-plugin-directory&utm_medium=free-plugin-readme.txt&utm_campaign=link-to-premium-marketing-page-from-screenshots)
 
 == Changelog ==
+
+= 1.4.2.1 =
+* Updated readme.txt (FAQ, screenshots, markdown formatting issues)
 
 = 1.4.2 =
 * Updated readme.txt
