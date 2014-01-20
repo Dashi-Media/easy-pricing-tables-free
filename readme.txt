@@ -66,18 +66,18 @@ This currently isn't supported in the user interface. This plugin uses a fixed p
 For example, if your pricing table has 3 columns, each column has the following HTML class: ``ptp-three-col``.
 
 The default CSS in this case looks like this:
-``
+`
 .ptp-three-col {
 	width: 31%;
 }
-``
+`
 
 Example code for changing your column width you can add to your theme:
-``
+`
 .ptp-three-col {
 width: 25%!important;
 }
-``
+`
 
 = Contact me if you have any questions: =
 
