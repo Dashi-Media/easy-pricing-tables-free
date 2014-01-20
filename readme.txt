@@ -6,7 +6,7 @@ Author URI: http://davidhehenberger.com/
 Plugin URI: http://easypricingtables.com/
 Requires at least: 3.6
 Tested up to: 3.8
-Stable tag: 1.4.2.1
+Stable tag: 1.4.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -94,6 +94,9 @@ david[at]davidhehenberger[dot]com
 8. Another design from [Easy Pricing Tables Premium](http://easypricingtables.com/?utm_source=wp-plugin-directory&utm_medium=free-plugin-readme.txt&utm_campaign=link-to-premium-marketing-page-from-screenshots)
 
 == Changelog ==
+
+= 1.4.2.2 =
+* Fixed versioning issue
 
 = 1.4.2.1 =
 * Updated readme.txt (FAQ, screenshots, markdown formatting issues)
