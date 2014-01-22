@@ -291,13 +291,13 @@ function dh_ptp_features_to_html_simple_flat ($dh_ptp_plan_features, $dh_ptp_max
         if ($iterator < $this_columns_number_of_features)
         {
             if ($dh_ptp_features[$iterator] == "") {
-                $dh_ptp_feature_html .= '<li class="ptp-bullet-item ">&nbsp;</li>';
+                $dh_ptp_feature_html .= '<li class="ptp-bullet-item ptp-row-id-'.$iterator.'">&nbsp;</li>';
             }
             else
-                $dh_ptp_feature_html .= '<li class="ptp-bullet-item">' . $dh_ptp_features[$iterator] . '</li>';
+                $dh_ptp_feature_html .= '<li class="ptp-bullet-item ptp-row-id-'.$iterator.'">' . $dh_ptp_features[$iterator] . '</li>';
+        } else {
+            $dh_ptp_feature_html .= '<li class="ptp-bullet-item ptp-row-id-'.$iterator.'">&nbsp;</li>';
         }
-        else
-            $dh_ptp_feature_html .= '<li class="ptp-bullet-item ">&nbsp;</li>';
     }
 
     // return the features html
