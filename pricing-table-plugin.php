@@ -63,4 +63,19 @@ function dh_ptp_plugin_settings_link($links)
 $plugin = plugin_basename(__FILE__); 
 add_filter("plugin_action_links_$plugin", 'dh_ptp_plugin_settings_link' );
 
+// Footer text
+function dh_ptp_plugin_footer ($text) {
+  echo $text . ' Thank you for using <a href="http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=thank-you-for-using-easy-pricing-tables" target="_blank">Easy Pricing Tables</a>. Please <a href="http://wordpress.org/support/view/plugin-reviews/easy-pricing-tables?filter=5#postform" taget="_blank">rate us</a> on <a href="http://wordpress.org/" taget="_blank">WordPress.org</a>.';
+}
+
+function dh_ptp_plugin_footer_enqueu($hook_suffix)
+{
+  global $post;
+  
+  if ($post && $post->post_type == 'easy-pricing-table') {
+	add_filter('admin_footer_text', 'dh_ptp_plugin_footer');
+  }
+}
+add_action('admin_enqueue_scripts', 'dh_ptp_plugin_footer_enqueu');
+
 ?>
