@@ -11,6 +11,7 @@
 
     <div id="ptp-save-buttons">
         <div style="margin-left:10px;margin-right:10px;">
+            <input type="hidden" name="publish" id="publish" value="1"/>
             <input type="hidden" name="dh_ptp_tab" id="dh_ptp_tab" value="#dh_ptp_tabs_1"/>
             <input style="float:left; " name="save" type="submit" class="button button-large " id="publish" accesskey="p" value="Save Settings">
             <a  style="float:left; margin-left:10px;" class="button button-large " href="<?php echo esc_url( get_permalink($post->ID) ); ?>" target="_blank" >Preview</a>
@@ -23,7 +24,7 @@
     <div style='display:none'>
         <div id='deploy' style='padding:10px; background:#fff;'>
             <p>Copy the shortcode below and paste it wherever you want your pricing table to appear.</p>
-            <input type="text" readonly="readonly" onclick="this.select()" value="[easy-pricing-table id=&quot;<?php the_ID(); ?>&quot;]"/><br/>
+            <input type="text" style="width: 300px;" readonly="readonly" onclick="this.select()" value="[easy-pricing-table id=&quot;<?php the_ID(); ?>&quot;]"/><br/>
         </div>
     </div>
 

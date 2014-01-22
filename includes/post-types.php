@@ -121,7 +121,7 @@ function dh_ptp_manage_pricing_table_columns($column_name, $id) {
 
     switch ($column_name) {
 	    case 'shortcode':
-	        echo '<input type="text" readonly="readonly" onclick="this.select()" value="[easy-pricing-table id=&quot;'. $id . '&quot;]"/>';
+	        echo '<input type="text" style="width: 300px;" readonly="readonly" onclick="this.select()" value="[easy-pricing-table id=&quot;'. $id . '&quot;]"/>';
 	            break;
 	 
 	    default:
