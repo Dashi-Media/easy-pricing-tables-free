@@ -46,8 +46,12 @@ function dh_ptp_custom_bulk_action()
     global $typenow;
     
     if($typenow == 'easy-pricing-table') {
-        // Initial values
+        
         $action = isset($_REQUEST['action'])?$_REQUEST['action']:'post';
+        if ($action != 'eptclone' && isset($_REQUEST['action2']) && $_REQUEST['action2'] == 'eptclone') {
+            $action = 'eptclone';
+        }
+        
         $post_ids = isset($_REQUEST['post'])?array_map('intval', $_REQUEST['post']):array();
         $page_num = isset($_REQUEST['paged'])?$_REQUEST['paged']:1;
         

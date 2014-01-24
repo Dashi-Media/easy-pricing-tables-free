@@ -68,7 +68,7 @@ add_filter("plugin_action_links_$plugin", 'dh_ptp_plugin_settings_link' );
 
 // Footer text
 function dh_ptp_plugin_footer ($text) {
-  echo $text . ' Thank you for using <a href="http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=thank-you-for-using-easy-pricing-tables" target="_blank">Easy Pricing Tables</a>. Please <a href="http://wordpress.org/support/view/plugin-reviews/easy-pricing-tables?filter=5#postform" taget="_blank">rate us</a> on <a href="http://wordpress.org/" taget="_blank">WordPress.org</a>.';
+  echo $text . ' Thank you for using <a href="http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=thank-you-for-using-easy-pricing-tables" target="_blank">Easy Pricing Tables</a>. Please <a href="http://wordpress.org/support/view/plugin-reviews/easy-pricing-tables?filter=5#postform">rate us on Wordpress.org</a>.';
 }
 
 function dh_ptp_plugin_footer_enqueu($hook_suffix)
