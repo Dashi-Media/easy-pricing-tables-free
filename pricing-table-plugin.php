@@ -18,6 +18,9 @@ include ( PTP_PLUGIN_PATH . 'includes/post-types.php');
 // Include media button
 include ( PTP_PLUGIN_PATH . 'includes/media-button.php');
 
+// Include clone table
+include ( PTP_PLUGIN_PATH . 'includes/clone-table.php');
+
 // Include shortcodes
 include ( PTP_PLUGIN_PATH . 'includes/shortcodes.php');
 
