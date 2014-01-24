@@ -95,6 +95,7 @@ function dh_ptp_simple_flat_css($id, $meta)
         color: <?php echo $button_font_color; ?>;
         background-color: <?php echo $button_color; ?>;
         border-bottom: <?php echo $button_border_color;?> 4px solid;
+        margin: 0 0 1.25em;
     }
     #ptp-<?php echo $id ?> a.ptp-button:hover{
         background-color: <?php echo $button_hover_color; ?>
