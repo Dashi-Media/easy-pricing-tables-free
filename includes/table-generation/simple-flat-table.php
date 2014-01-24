@@ -68,7 +68,7 @@ function dh_ptp_simple_flat_css($id, $meta)
     
     #ptp-<?php echo $id ?> ul li {list-style-type: none;}
     #ptp-<?php echo $id ?> ul.ptp-item-container {
-        border-radius: <?php echo $rounded_corner_width; ?>;";
+        border-radius: <?php echo $rounded_corner_width; ?>;
         padding: 0px;
         margin-left: 0px;
         margin-right: 0px;
@@ -112,8 +112,8 @@ function dh_ptp_simple_flat_css($id, $meta)
         font-size: <?php echo $bullet_item_font_size.$bullet_item_font_size_type; ?>;
     }
     #ptp-<?php echo $id ?> div.ptp-most-popular{
-        border-radius: <?php echo $rounded_corner_width; ?>;"
-    font-size: <?php echo $most_popular_font_size.$most_popular_font_size_type; ?>;
+        border-radius: <?php echo $rounded_corner_width; ?>;
+        font-size: <?php echo $most_popular_font_size.$most_popular_font_size_type; ?>;
     }
     <?php
 }
