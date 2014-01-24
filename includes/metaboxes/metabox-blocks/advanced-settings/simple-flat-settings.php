@@ -32,7 +32,7 @@
             </select></td>
     </tr>
     <tr>
-        <td>Most Popular Label Text</td>
+        <td>Featured Label Text</td>
         <?php $mb->the_field('most-popular-label-text'); ?>
         <td>
             <?php $value = (!is_null($mb->get_the_value()))?$metabox->get_the_value():'Most Popular'; ?>
@@ -42,7 +42,7 @@
 
 <tr class="table-headline"><td><br/>Font Sizes</td></tr>
 <tr>
-    <td>"Most Popular" Font Size</td>
+    <td>Featured Label Font Size</td>
     <td>
         <?php $mb->the_field('most-popular-font-size'); ?>
         <input class="form-control float-input" type="text" name="<?php $metabox->the_name(); ?>" value="<?php if(!is_null($mb->get_the_value())) echo $metabox->the_value(); else echo "0.9"; ?>"/>
@@ -75,7 +75,7 @@
     </td>
 </tr>
 <tr>
-    <td>"Plan Name" Font Size</td>
+    <td>Plan Name Font Size</td>
     <td>
         <?php $mb->the_field('plan-name-font-size'); ?>
         <input class="form-control float-input" type="text" name="<?php $metabox->the_name(); ?>" value="<?php if(!is_null($mb->get_the_value())) echo $metabox->the_value(); else echo "1"; ?>"/>
@@ -108,7 +108,7 @@
     </td>
 </tr>
 <tr>
-    <td>"Price" Font Size</td>
+    <td>Price Font Size</td>
     <td>
         <?php $mb->the_field('price-font-size'); ?>
         <input class="form-control float-input" type="text" name="<?php $metabox->the_name(); ?>" value="<?php if(!is_null($mb->get_the_value())) echo $metabox->the_value(); else echo "1.25"; ?>"/>
@@ -141,7 +141,7 @@
     </td>
 </tr>
 <tr>
-    <td>"Bullet Item (Feature)" Font Size</td>
+    <td>Bullet Item Font Size</td>
     <td>
         <?php $mb->the_field('bullet-item-font-size'); ?>
         <input class="form-control float-input" type="text" name="<?php $metabox->the_name(); ?>" value="<?php if(!is_null($mb->get_the_value())) echo $metabox->the_value(); else echo "0.875"; ?>"/>
@@ -174,7 +174,7 @@
     </td>
 </tr>
 <tr>
-    <td>"Button" Font Size</td>
+    <td>Button Font Size</td>
     <td>
         <?php $mb->the_field('button-font-size'); ?>
         <input class="form-control float-input" type="text" name="<?php $metabox->the_name(); ?>" value="<?php if(!is_null($mb->get_the_value())) echo $metabox->the_value(); else echo "1"; ?>"/>
