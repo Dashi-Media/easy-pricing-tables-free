@@ -95,7 +95,7 @@ function dh_ptp_simple_flat_css($id, $meta)
         color: <?php echo $button_font_color; ?>;
         background-color: <?php echo $button_color; ?>;
         border-bottom: <?php echo $button_border_color;?> 4px solid;
-        margin: 0 0 1.25em;
+        margin: 0px;
     }
     #ptp-<?php echo $id ?> a.ptp-button:hover{
         background-color: <?php echo $button_hover_color; ?>
@@ -150,8 +150,13 @@ function dh_ptp_generate_simple_flat_pricing_table_html ($id) {
 
         $planfeatures = isset($column['planfeatures'])?$column['planfeatures']:'';
 
-        // get plan price
+        // Get button url / custom shortcode button
+        $custom_button = false;
         $buttonurl = isset($column['buttonurl'])?$column['buttonurl']:'';
+        preg_match("/\[shortcode\](.*?)\[\/shortcode\]/sim", $buttonurl, $m);
+        if (count($m) > 0 && isset($m[1])) {
+            $custom_button = $m[1]; 
+        }
 
         // get plan price
         $buttontext = isset($column['buttontext'])?$column['buttontext']:'';
@@ -180,11 +185,11 @@ function dh_ptp_generate_simple_flat_pricing_table_html ($id) {
             . $feature_label .
             '<ul class="ptp-item-container">
 				<li class="ptp-plan">' . $planname . '</li>
-		  		<li class="ptp-price">' . $planprice . '</li>'
-            . dh_ptp_features_to_html_simple_flat($planfeatures,dh_ptp_get_max_number_of_features()) . '
-	  			<li class="ptp-cta">
-	  				<a class="ptp-button" href="' . $buttonurl . '">' . $buttontext . '</a>
-	  			</li>
+		  		<li class="ptp-price">' . $planprice . '</li>' .
+                    dh_ptp_features_to_html_simple_flat($planfeatures,dh_ptp_get_max_number_of_features()) .
+	  			'<li class="ptp-cta">'.
+                    (($custom_button)?$custom_button:'<a class="ptp-button" href="' . $buttonurl . '">' . $buttontext . '</a>') .
+	  			'</li>
 			</ul>
 		</div>
 		';
