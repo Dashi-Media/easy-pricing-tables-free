@@ -179,3 +179,21 @@ function dh_ptp_save_tab_state( $post_id ) {
     }
 }
 add_action( 'save_post', 'dh_ptp_save_tab_state' );
+
+/* Redirect when Save & Preview button is clicked */
+add_filter('redirect_post_location', 'dh_ptp_save_preview_redirect');
+function dh_ptp_save_preview_redirect ($location)
+{
+    global $post;
+ 
+    if (
+        (isset($_POST['publish']) || isset($_POST['save'])) && preg_match("/post=([0-9]*)/", $location, $match) && $post &&
+		$post->ID == $match[1] && (isset($_POST['publish']) || $post->post_status == 'publish') && $pl = get_permalink($post->ID)
+		&& isset($_POST['dh_ptp_preview_url'])
+    ) {
+        // Always redirect to the post
+        $location = $_POST['dh_ptp_preview_url'];
+    }
+ 
+    return $location;
+}

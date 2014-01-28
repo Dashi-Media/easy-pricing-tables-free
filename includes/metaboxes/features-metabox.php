@@ -13,9 +13,9 @@
         <div style="margin-left:10px;margin-right:10px;">
             <input type="hidden" name="publish" id="publish" value="1"/>
             <input type="hidden" name="dh_ptp_tab" id="dh_ptp_tab" value="#dh_ptp_tabs_1"/>
-            <input style="float:left; " name="save" type="submit" class="button button-large " id="publish" accesskey="p" value="Save Settings">
-            <a  style="float:left; margin-left:10px;" class="button button-large " href="<?php echo esc_url( get_permalink($post->ID) ); ?>" target="_blank" >Preview</a>
-            <a  style="float:left; margin-left:10px;" class="button button-large inline-lightbox" href="#deploy" >Deploy</a>
+            <a style="float:left;" class="button button-large" id="save_preview" data-url="<?php echo esc_url( get_permalink($post->ID) ); ?>">Save & Preview</a>
+            <input style="float:left; margin-left:10px;" name="save" type="submit" class="button button-large" id="publish" accesskey="p" value="Save" />
+            <a  style="float:left; margin-left:10px;" class="button button-large inline-lightbox" href="#deploy">Deploy (Get Shortcode)</a>
             <div class="clear"></div>
        </div>
     </div>

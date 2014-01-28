@@ -31,6 +31,25 @@ jQuery(document).ready(function($) {
 
     //enable lightbox
     $(".inline-lightbox").colorbox({inline:true, width:"50%", speed: 0, fadeOut: 0});
+	
+	// Save & Preview button
+	$('#save_preview').on('click', function(event) {
+        event.preventDefault();
+		
+		// Add target
+		var form = $(this).closest('form');
+		form.prop('target', '_blank');
+		
+		// Add preview_url parameter
+		var url = $(this).attr('data-url');
+		var preview_url_input = '<input type="hidden" name="dh_ptp_preview_url" id="dh_ptp_preview_url" value="' + url + '"/>';
+		$(this).after(preview_url_input);
+		
+		// Submit form
+		form.submit();
+		  
+        return false;
+	});
 
 });
 
