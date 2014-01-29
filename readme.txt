@@ -5,8 +5,8 @@ Tags: pricing table, responsive pricing table, comparison, comparison table, css
 Author URI: http://davidhehenberger.com/
 Plugin URI: http://easypricingtables.com/
 Requires at least: 3.6
-Tested up to: 3.8
-Stable tag: 1.4.2.2
+Tested up to: 3.8.1
+Stable tag: 1.4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -94,6 +94,14 @@ david[at]davidhehenberger[dot]com
 8. Another design from [Easy Pricing Tables Premium](http://easypricingtables.com/?utm_source=wp-plugin-directory&utm_medium=free-plugin-readme.txt&utm_campaign=link-to-premium-marketing-page-from-screenshots)
 
 == Changelog ==
+
+= 1.4.3 =
+* Added the ability to clone existing tables
+* Added row IDs to pricing table HTML (now you can change alternate row colors using CSS)
+* Bugfixes
+* Fixed CSS conflicts with some themes
+* Minor UX improvements
+
 
 = 1.4.2.2 =
 * Fixed versioning issue
