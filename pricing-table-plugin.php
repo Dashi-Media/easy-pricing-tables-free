@@ -4,7 +4,7 @@
 	Plugin URI: http://easypricingtables.com/
 	Description: Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 5 Minutes with Easy Pricing Tables for WordPress. No Coding Required.
 	Author: David Hehenberger
-	Version: 1.4.2.2
+	Version: 1.4.3
 	Author URI: http://davidhehenberger.com
 */
 
@@ -68,7 +68,7 @@ add_filter("plugin_action_links_$plugin", 'dh_ptp_plugin_settings_link' );
 
 // Footer text
 function dh_ptp_plugin_footer ($text) {
-  echo $text . ' Thank you for using <a href="http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=thank-you-for-using-easy-pricing-tables" target="_blank">Easy Pricing Tables</a>. Please <a href="http://wordpress.org/support/view/plugin-reviews/easy-pricing-tables?filter=5#postform">rate us on Wordpress.org</a>.';
+  echo $text . ' Thank you for using <a href="http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=thank-you-for-using-easy-pricing-tables" target="_blank">Easy Pricing Tables</a>. Please <a href="http://wordpress.org/support/view/plugin-reviews/easy-pricing-tables?filter=5#postform">rate us on WordPress.org</a>.';
 }
 
 function dh_ptp_plugin_footer_enqueu($hook_suffix)
