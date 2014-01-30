@@ -153,9 +153,12 @@ function dh_ptp_generate_simple_flat_pricing_table_html ($id) {
         // Get button url / custom shortcode button
         $custom_button = false;
         $buttonurl = isset($column['buttonurl'])?$column['buttonurl']:'';
-        preg_match("/\[shortcode\](.*?)\[\/shortcode\]/sim", $buttonurl, $m);
-        if (count($m) > 0 && isset($m[1])) {
-            $custom_button = $m[1]; 
+        $btn_url_trim = trim($buttonurl);
+        if (substr($btn_url_trim, 0, 11) == '[shortcode]') {
+            // Extract shortcode
+            $shortcode = substr($btn_url_trim, 11);
+            $shortcode = substr($shortcode, 0, -12);
+            $custom_button = $shortcode; 
         }
 
         // get plan price
