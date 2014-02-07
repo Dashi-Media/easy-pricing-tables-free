@@ -27,7 +27,7 @@ add_action( 'media_buttons', 'dh_ptp_media_button', 11);
 
 function dh_ptp_media_button_thickbox()
 {
-    global $pagenow, $typenow;
+    global $pagenow, $typenow, $post;
 
     // Only run in post/page creation and edit screens
     if ( in_array( $pagenow, array( 'post.php', 'page.php', 'post-new.php', 'post-edit.php' ) ) && $typenow != 'download' ) { ?>
@@ -55,6 +55,7 @@ function dh_ptp_media_button_thickbox()
                         <option value="">Please select...</option>
                         <?php
                             // Fetch all pricing tables
+                            $post_clone = $post;
                             $query = new WP_Query(array('post_type'=>'easy-pricing-table', 'post_status'=>array('publish', 'draft'), 'posts_per_page'=>-1));
                             if ( $query->have_posts() ) : 
                                 while ( $query->have_posts() ) : $query->the_post();
@@ -63,7 +64,8 @@ function dh_ptp_media_button_thickbox()
                             endif;
                             
                             // Restore original Post Data
-                            wp_reset_postdata();
+                            // wp_reset_postdata();
+                            $post = $post_clone;
                         ?>
                     </select>
                 </div>
