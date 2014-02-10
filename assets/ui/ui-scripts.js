@@ -70,7 +70,6 @@ jQuery(document).ready(function($) {
 		  
         return false;
 	});
-
 });
 
 //activate twitter bootstrap popover

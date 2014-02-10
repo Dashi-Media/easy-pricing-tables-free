@@ -27,6 +27,9 @@ include ( PTP_PLUGIN_PATH . 'includes/shortcodes.php');
 // Include pointer popups
 include ( PTP_PLUGIN_PATH . 'includes/pointer.php');
 
+// Upgrade to Premium
+include ( PTP_PLUGIN_PATH . 'includes/upgrade.php');
+
 // Include presstrends analytics if user agreed upon usage tracking
 $dh_ptp_usage_tracking = get_option('dh_ptp_allow_tracking');
 if ($dh_ptp_usage_tracking == 'yes') {
@@ -81,21 +84,4 @@ function dh_ptp_plugin_footer_enqueu($hook_suffix)
 }
 add_action('admin_enqueue_scripts', 'dh_ptp_plugin_footer_enqueu');
 
-/* Upgrade to Premium */
-function dh_ptp_upgrade_to_premium_menu()
-{
-  $page_hook = add_submenu_page('edit.php?post_type=easy-pricing-table', 'Upgrade to Premium', 'Upgrade to Premium', 'manage_options', 'easy-pricing-tables-upgrade', 'dh_ptp_upgrade_to_premium');
-  add_action('load-' . $page_hook , 'dh_ptp_upgrade_ob_start');
-}
-add_action('admin_menu', 'dh_ptp_upgrade_to_premium_menu');
-
-function dh_ptp_upgrade_ob_start() {
-    ob_start();
-}
-
-function dh_ptp_upgrade_to_premium()
-{
-  wp_redirect('http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=link-in-left-menu', 301);
-  exit();
-}
 ?>
