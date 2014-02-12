@@ -1,6 +1,7 @@
 .ptp-pricing-table{
   white-space: nowrap;
   width: 100%;
+  text-align: center;
 }
 
 /* fix woothemes incompatibility

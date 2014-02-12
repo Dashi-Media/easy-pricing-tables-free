@@ -55,7 +55,7 @@
         /**
          * the loop used to display our tables
          */
-        while($mb->have_fields_and_multi('column',array('length' => 1))):
+        while($mb->have_fields_and_multi('column',array('length' => 2))):
             ?>
             <?php $mb->the_group_open(); ?>
             <div class="column">
