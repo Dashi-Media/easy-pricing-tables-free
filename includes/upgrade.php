@@ -53,7 +53,8 @@ function dh_ptp_all_admin_notices()
 	echo
 		'<div class="dh-ptp-upgrade-nag">'.
 			'<p>Thanks for using Easy Pricing Tables. If you like this plugin, please consider supporting continued development by <a href="http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=upgrade-notice">purchasing the premium version</a>.</p>' .
-			'<p>Easy Pricing Tables Premium comes with 4 additional table designs, 369 icons and tons of customization options. <a href="http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=upgrade-notice">Click here to learn more...</a></p>'.
+			'<p>Easy Pricing Tables Premium comes with 4 additional table designs, 369 icons and tons of customization options. </p>'.
+			'<p><a href="http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=upgrade-notice">Click here to learn more...</a></p>'.
 		'</div>';
 }
 
@@ -61,7 +62,9 @@ function dh_ptp_all_admin_notices_css()
 {
 	echo
 		'<style type="text/css">' .
-			'.dh-ptp-upgrade-nag {background: #f9f9f9; padding:10px 40px 10px 40px; margin-top: 40px; margin-right: 20px; text-align: center;}' . 
+			'.dh-ptp-upgrade-nag {background: #282929; color: #fff; padding:10px 40px 10px 40px; margin-top: 40px; margin-right: 20px; text-align: center;} ' .
+			'.dh-ptp-upgrade-nag {color: #6bbc5b;} ' .
+			'.dh_ptp-upgrade-nag a:hover {color: #549448;}' .
 		'</style>';
 }
 ?>
