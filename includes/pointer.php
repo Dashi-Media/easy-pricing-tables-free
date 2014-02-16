@@ -56,14 +56,14 @@ function dh_ptp_usage_tracking_pointer()
     $id = '#wpadminbar';
     
     // Buttons
-    $button_1_title = 'Do not allow tracking';
+    $button_1_title = __('Do not allow tracking', PTP_LOC);
     $button_1_fn    = sprintf($ajax, 'no');
-    $button_2_title = 'Allow tracking';
+    $button_2_title = __('Allow tracking', PTP_LOC);
     $button_2_fn    = sprintf($ajax, 'yes');
     
     // Content
-    $content  = '<h3>'.'Help Improve Easy Pricing Tables'.'</h3>';
-    $content .= '<p>'.'Thanks for installing Easy Pricing Tables. Please help us improve this plugin by gathering usage stats so we know which features to improve and which plugins and themes to test with.'.'</p>';
+    $content  = '<h3>' . __('Help Improve Easy Pricing Tables', PTP_LOC) . '</h3>';
+    $content .= '<p>' . __('Thanks for installing Easy Pricing Tables. Please help us improve this plugin by gathering usage stats so we know which features to improve and which plugins and themes to test with.', PTP_LOC) . '</p>';
     
     // Options
     $options = array(
@@ -103,14 +103,14 @@ function dh_ptp_mailing_list_pointer()
     $id = '#wpadminbar';
     
     // Buttons
-    $button_1_title = 'No, thanks';
+    $button_1_title = __('No, thanks', PTP_LOC);
     $button_1_fn    = sprintf($ajax, 'no');
-    $button_2_title = "Let&#39;s do it!";
+    $button_2_title = __("Let&#39;s do it!", PTP_LOC);
     $button_2_fn    = sprintf($ajax, 'yes');
     
     // Content
-    $content  = '<h3>'.'Pricing Table Crash Course'.'</h3>';
-    $content .= '<p>'."Instead of watching 99% of your visitors bounce, imagine you could increase your pricing table&#39;s conversion rate and make more money. Find out how in this ridiculously actionable (and totally free) 5-part email course.".'</p>';
+    $content  = '<h3>' . __('Pricing Table Crash Course', PTL_LOC) . '</h3>';
+    $content .= '<p>' . __("Instead of watching 99% of your visitors bounce, imagine you could increase your pricing table&#39;s conversion rate and make more money. Find out how in this ridiculously actionable (and totally free) 5-part email course.", PTP_LOC) . '</p>';
     
     // Options
     $options = array(

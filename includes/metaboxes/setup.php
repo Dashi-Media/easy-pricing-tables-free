@@ -7,10 +7,11 @@ if (is_admin()){
 	add_action('admin_print_scripts-post.php', 'dh_ptp_metabox_styles_and_scripts');
 }
 
-function dh_ptp_metabox_styles_and_scripts() {
+function dh_ptp_metabox_styles_and_scripts()
+{
 	global $post_type;
-    if( 'easy-pricing-table' == $post_type )
-    {
+
+    if( 'easy-pricing-table' == $post_type ) {
 		//UI styles - includes all styles necessary for the UI
 		wp_enqueue_style('wpalchemy-metabox', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-styles.css' );
 
@@ -38,4 +39,4 @@ function dh_ptp_metabox_styles_and_scripts() {
 
 }
 
-/* eof */
+?>

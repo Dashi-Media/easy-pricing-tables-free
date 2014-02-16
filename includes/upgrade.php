@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 function dh_ptp_upgrade_to_premium_menu()
 {
-    $page_hook = add_submenu_page('edit.php?post_type=easy-pricing-table', 'Upgrade to Premium', 'Upgrade to Premium', 'manage_options', 'easy-pricing-tables-upgrade', 'dh_ptp_upgrade_to_premium');
+    $page_hook = add_submenu_page('edit.php?post_type=easy-pricing-table', __('Upgrade to Premium', PTP_LOC), __('Upgrade to Premium', PTP_LOC), 'manage_options', 'easy-pricing-tables-upgrade', 'dh_ptp_upgrade_to_premium');
     add_action('load-' . $page_hook , 'dh_ptp_upgrade_ob_start');
 }
 add_action('admin_menu', 'dh_ptp_upgrade_to_premium_menu');
@@ -52,9 +52,9 @@ function dh_ptp_all_admin_notices()
 {
 	echo
 		'<div class="dh-ptp-upgrade-nag">'.
-			'<p>Thanks for using Easy Pricing Tables. If you like this plugin, please consider supporting continued development by <a href="http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=upgrade-notice">purchasing the premium version</a>.</p>' .
-			'<p>Easy Pricing Tables Premium comes with 4 additional table designs, 369 icons and tons of customization options. </p>'.
-			'<p><a href="http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=upgrade-notice">Click here to learn more...</a></p>'.
+			'<p>' . sprintf( __('Thanks for using Easy Pricing Tables. If you like this plugin, please consider supporting continued development by <a href="%s">purchasing the premium version</a>.', PTP_LOC), 'http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=upgrade-notice') . '</p>' .
+			'<p>' . __('Easy Pricing Tables Premium comes with 4 additional table designs, 369 icons and tons of customization options.', PTP_LOC) . '</p>'.
+			'<p>' . sprintf( __('<a href="%s">Click here to learn more...</a>', PTP_LOC), 'http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=upgrade-notice') . '</p>'.
 		'</div>';
 }
 

@@ -12,6 +12,7 @@
 define('PTP_PLUGIN_VERSION', '1.4.3');
 define('PTP_PLUGIN_PATH', plugin_dir_path( __FILE__ ));
 define('PTP_PLUGIN_PATH_FOR_SUBDIRS', plugins_url(str_replace(dirname(dirname(__FILE__)), '', dirname(__FILE__))));
+define('PTP_LOC', 'easy-pricing-tables');
 
 // Include post types
 include ( PTP_PLUGIN_PATH . 'includes/post-types.php');
@@ -56,9 +57,9 @@ function dh_ptp_plugin_settings_link($links)
   unset($links['edit']);
   
   // Add Easy Pricing Tables links
-  $add_new_link = '<a href="post-new.php?post_type=easy-pricing-table">Add New</a>'; 
-  $forum_link   = '<a href="http://wordpress.org/support/plugin/easy-pricing-tables">Forum</a>';
-  $premium_link = '<a href="http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=link-in-installed-plugins">Purchase Premium</a>';
+  $add_new_link = '<a href="post-new.php?post_type=easy-pricing-table">' . __('Add New', PTP_LOC) . '</a>'; 
+  $forum_link   = '<a href="http://wordpress.org/support/plugin/easy-pricing-tables">' . __('Forum', PTP_LOC) . '</a>';
+  $premium_link = '<a href="http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=link-in-installed-plugins">' . __('Purchase Premium', PTP_LOC) . '</a>';
   
   array_push($links, $add_new_link);
   array_push($links, $forum_link);
@@ -72,7 +73,10 @@ add_filter("plugin_action_links_$plugin", 'dh_ptp_plugin_settings_link' );
 
 // Footer text
 function dh_ptp_plugin_footer ($text) {
-  echo $text . ' Thank you for using <a href="http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=thank-you-for-using-easy-pricing-tables" target="_blank">Easy Pricing Tables</a>. Please <a href="http://wordpress.org/support/view/plugin-reviews/easy-pricing-tables?filter=5#postform">rate us on WordPress.org</a>.';
+  echo
+	$text . ' '.
+	sprintf( __('Thank you for using <a href="%s" target="_blank">Easy Pricing Tables</a>.', PTP_LOC), 'http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=thank-you-for-using-easy-pricing-tables' ) . ' ' .
+	sprintf( __('Please <a href="%s">rate us on WordPress.org</a>.', PTP_LOC), 'http://wordpress.org/support/view/plugin-reviews/easy-pricing-tables?filter=5#postform');
 }
 
 function dh_ptp_plugin_footer_enqueu($hook_suffix)
@@ -85,4 +89,13 @@ function dh_ptp_plugin_footer_enqueu($hook_suffix)
 }
 add_action('admin_enqueue_scripts', 'dh_ptp_plugin_footer_enqueu');
 
+/* Localization */
+function dh_ptp_localization()
+{
+  $locale = apply_filters( 'plugin_locale', get_locale(), PTP_LOC );
+  
+  load_textdomain( PTP_LOC, trailingslashit( WP_LANG_DIR ) . PTP_LOC . '/' . PTP_LOC . '-' . $locale . '.mo' );
+  load_plugin_textdomain( PTP_LOC, FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
+}
+add_action('init', 'dh_ptp_localization');
 ?>

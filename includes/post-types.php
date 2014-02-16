@@ -7,19 +7,19 @@
 function dh_ptp_register_pricing_table_post_type() {
 
 	$labels = array(
-	    'name' => 'Pricing Tables',
-	    'singular_name' => 'Pricing Table',
-	    'add_new' => 'Add New',
-	    'add_new_item' => 'Add New Pricing Table',
-	    'edit_item' => 'Edit Pricing Table',
-	    'new_item' => 'New Pricing Table',
-	    'all_items' => 'All Pricing Tables',
-	    'view_item' => 'View Pricing Table',
-	    'search_items' => 'Search Pricing Tables',
-	    'not_found' =>  'No Pricing Tables found',
-	    'not_found_in_trash' => 'No Pricing Tables found in Trash', 
+	    'name' => __('Pricing Tables', PTP_LOC),
+	    'singular_name' => __('Pricing Table', PTP_LOC),
+	    'add_new' => __('Add New', PTP_LOC),
+	    'add_new_item' => __('Add New Pricing Table', PTP_LOC),
+	    'edit_item' => __('Edit Pricing Table', PTP_LOC),
+	    'new_item' => __('New Pricing Table', PTP_LOC),
+	    'all_items' => __('All Pricing Tables', PTP_LOC),
+	    'view_item' => __('View Pricing Table', PTP_LOC),
+	    'search_items' => __('Search Pricing Tables', PTP_LOC),
+	    'not_found' =>  __('No Pricing Tables found', PTP_LOC),
+	    'not_found_in_trash' => __('No Pricing Tables found in Trash', PTP_LOC),
 	    'parent_item_colon' => '',
-	    'menu_name' => 'Pricing Tables'
+	    'menu_name' => __('Pricing Tables', PTP_LOC)
 	  );
 
   	$args = array(
@@ -57,17 +57,17 @@ function dh_ptp_updated_interaction_messages( $messages ) {
 	global $post, $post_ID;
 	$messages['easy-pricing-table'] = array(
 		0 => '', 
-		1 => sprintf( __('Pricing table saved. <a href="%s">View pricing table</a>.'), esc_url( get_permalink($post_ID) ) ),
-		2 => __('Custom field updated.'),
-		3 => __('Custom field deleted.'),
-		4 => __('Pricing table saved.'),
-		5 => isset($_GET['revision']) ? sprintf( __('Pricing table restored to revision from %s'), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-		6 => sprintf( __('Pricing table saved. <a href="%s">View pricing table</a>'), esc_url( get_permalink($post_ID) ) ),
-		7 => __('Pricing table saved.'),
+		1 => sprintf( __('Pricing table saved. <a href="%s">View pricing table</a>.', PTP_LOC), esc_url( get_permalink($post_ID) ) ),
+		2 => __('Custom field updated.', PTP_LOC),
+		3 => __('Custom field deleted.', PTP_LOC),
+		4 => __('Pricing table saved.', PTP_LOC),
+		5 => isset($_GET['revision']) ? sprintf( __('Pricing table restored to revision from %s', PTP_LOC), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+		6 => sprintf( __('Pricing table saved. <a href="%s">View pricing table</a>', PTP_LOC), esc_url( get_permalink($post_ID) ) ),
+		7 => __('Pricing table saved.', PTP_LOC),
 		//8 => sprintf( __('Pricing table submitted. <a target="_blank" href="%s">Preview pricing table</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
-		8 => sprintf( __('Pricing table submitted.') ),
-		9 => sprintf( __('Pricing table scheduled for: <strong>%1$s</strong>.'), date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ), esc_url( get_permalink($post_ID) ) ),
-		10 => sprintf( __('Pricing table saved.' ) ),
+		8 => __('Pricing table submitted.', PTP_LOC),
+		9 => sprintf( __('Pricing table scheduled for: <strong>%1$s</strong>.', PTP_LOC), date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ), esc_url( get_permalink($post_ID) ) ),
+		10 => __('Pricing table saved.', PTP_LOC),
 	);
 	return $messages;
 }
@@ -77,11 +77,14 @@ add_filter( 'post_updated_messages', 'dh_ptp_updated_interaction_messages' );
  * changes the "Enter title here" to "Enter pricing table name here'" for pricing-table post type
  */
 add_filter('gettext', 'dh_ptp_custom_rewrites', 10, 4);
-function dh_ptp_custom_rewrites($translation, $text, $domain) {
+function dh_ptp_custom_rewrites($translation, $text, $domain)
+{
 	global $post;
-        if ( ! isset( $post->post_type ) ) {
-            return $translation;
-        }
+	
+	if ( ! isset( $post->post_type ) ) {
+		return $translation;
+	}
+	
 	$translations = get_translations_for_domain($domain);
 	$translation_array = array();
  
@@ -108,14 +111,15 @@ function dh_ptp_custom_rewrites($translation, $text, $domain) {
  */
 function dh_ptp_add_new_pricing_table_columns($gallery_columns) {
     $new_columns['cb'] = '<input type="checkbox" />';
-    $new_columns['title'] = _x('Pricing Table Name', 'column name');    
-    $new_columns['shortcode'] = __('Shortcode');
-    $new_columns['date'] = _x('Date', 'column name');
+    $new_columns['title'] = _x('Pricing Table Name', 'column name', PTP_LOC);    
+    $new_columns['shortcode'] = __('Shortcode', PTP_LOC);
+    $new_columns['date'] = _x('Date', 'column name', PTP_LOC);
  
     return $new_columns;
 }
 // Add to admin_init function
 add_filter('manage_edit-easy-pricing-table_columns', 'dh_ptp_add_new_pricing_table_columns');
+
 function dh_ptp_manage_pricing_table_columns($column_name, $id) {
     global $wpdb;
 
@@ -138,14 +142,12 @@ add_action('manage_easy-pricing-table_posts_custom_column', 'dh_ptp_manage_prici
  * @param  [type] $content [description]
  * @return [type]          [description]
  */
-function dh_ptp_live_preview($content){
+function dh_ptp_live_preview($content)
+{
     global $post;
-    if(get_post_type()=='easy-pricing-table' && is_main_query()) 
-	{
+    if(get_post_type() == 'easy-pricing-table' && is_main_query()) {
 		return $content . do_shortcode("[easy-pricing-table id={$post->ID}]");
-	}
-	else
-	{
+	} else {
 		return $content;
     }
 }
@@ -165,8 +167,9 @@ add_action( 'admin_menu', 'dh_ptp_remove_publish_metabox' );
 function dh_ptp_save_tab_state( $post_id ) {
 
 	// If this is just a revision, don't send the email.
-	if ( wp_is_post_revision( $post_id ) )
+	if ( wp_is_post_revision( $post_id ) ) {
 		return;
+	}
 	
 	// Check if post type matches the pricing tables
 	if ( isset($_POST['post_type']) && 'easy-pricing-table' != $_POST['post_type'] ) {

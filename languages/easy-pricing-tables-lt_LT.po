@@ -1,0 +1,581 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Easy Pricing Tables\n"
+"POT-Creation-Date: 2014-02-17 02:11+0400\n"
+"PO-Revision-Date: 2014-02-17 02:13+0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: Lithuanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n;_x\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: /Users/mindo/Documents/git/wordpress/wp-content/"
+"plugins/easy-pricing-tables-free\n"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/pricing-table-plugin.php:60
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:12
+msgid "Add New"
+msgstr "Pridėti Naują"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/pricing-table-plugin.php:61
+msgid "Forum"
+msgstr "Diskusijos"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/pricing-table-plugin.php:62
+msgid "Purchase Premium"
+msgstr "Mokama versija"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/pricing-table-plugin.php:78
+#, php-format
+msgid ""
+"Thank you for using <a href=\"%s\" target=\"_blank\">Easy Pricing Tables</a>."
+msgstr ""
+"Ačiū, kad naudojatės <a href=\"%s\" target=\"_blank\">Easy Pricing Tables</"
+"a>."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/pricing-table-plugin.php:79
+#, php-format
+msgid "Please <a href=\"%s\">rate us on WordPress.org</a>."
+msgstr ""
+"Prašome <a href=\"%s\">įvertinkite įskiepį puslapyje WordPress.org</a>."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/clone-table.php:21
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/clone-table.php:22
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/clone-table.php:25
+msgid "Make a Copy"
+msgstr "Sukurti kopiją"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/clone-table.php:99
+msgid "No naughty business please"
+msgstr "Prašom jokių gudrybių!"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/clone-table.php:121
+#, php-format
+msgid "Copy of %s"
+msgstr "%s kopija"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/clone-table.php:136
+msgid "Pricing table was copied successfully."
+msgstr "Kainų lentelė buvo nukopijuota sėkmingai."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:10
+msgid "Insert pricing table"
+msgstr "Įterpti kainų lentelę"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:52
+msgid "Use the form below to insert the shortcode for a pricing table."
+msgstr ""
+"Pasinaudok forma žemiau norėdamas įterpti trumpajį kodą su kainų lentele."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:55
+msgid "Please select..."
+msgstr "Prašome pasirinkti..."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:73
+msgid "Insert"
+msgstr "Įterpti"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:74
+msgid "Cancel"
+msgstr "Atšaukti"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:59
+msgid "Do not allow tracking"
+msgstr "Neleisti rinkti statistikos"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:61
+msgid "Allow tracking"
+msgstr "Leisti rinkti statistiką"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:65
+msgid "Help Improve Easy Pricing Tables"
+msgstr "Padėkite tobulinti Easy Pricing Tables"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:66
+msgid ""
+"Thanks for installing Easy Pricing Tables. Please help us improve this "
+"plugin by gathering usage stats so we know which features to improve and "
+"which plugins and themes to test with."
+msgstr ""
+"Ačiū, kad įdiegėte Easy Pricing Tables. Prašome jūsų padėti tobulinant šį "
+"įskiepį suteikdami galimybę mums rinkti statistinius duomenis, kurie leis "
+"mums nuspresti kurios įskiepio funkcijos turėtų būti tobulinamos ir su "
+"kokiomis temomis mes turėtumėme testuoti šį įskiepį."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:106
+msgid "No, thanks"
+msgstr "Ne, ačiū"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:108
+msgid "Let&#39;s do it!"
+msgstr "Sutinku!"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:112
+msgid "Pricing Table Crash Course"
+msgstr "Kainų lentelių pradžiamokslis"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:113
+#, php-format
+msgid ""
+"Instead of watching 99% of your visitors bounce, imagine you could increase "
+"your pricing table&#39;s conversion rate and make more money. Find out how "
+"in this ridiculously actionable (and totally free) 5-part email course."
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:10
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:22
+msgid "Pricing Tables"
+msgstr "Kainų Lentelės"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:11
+msgid "Pricing Table"
+msgstr "Kainų Lentelė"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:13
+msgid "Add New Pricing Table"
+msgstr "Nauja Kainų Lentelė"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:14
+msgid "Edit Pricing Table"
+msgstr "Redaguoti Kainų Lentelę"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:15
+msgid "New Pricing Table"
+msgstr "Nauja Kainų Lentelė"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:16
+msgid "All Pricing Tables"
+msgstr "Visos Kainų Lentelės"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:17
+msgid "View Pricing Table"
+msgstr "Žiūrėti Kainų Lentelę"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:18
+msgid "Search Pricing Tables"
+msgstr "Ieškoti Kainų Lentelių"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:19
+msgid "No Pricing Tables found"
+msgstr "Nepavyko rasti jokių kainų lentelių"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:20
+msgid "No Pricing Tables found in Trash"
+msgstr "Nepavyko rasti jokių kainų lentelių Šiukšlinėje"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:60
+#, php-format
+msgid "Pricing table saved. <a href=\"%s\">View pricing table</a>."
+msgstr "Kainų lentelė išsaugota. <a href=\"%s\">Peržiūrėti lentelę</a>."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:61
+msgid "Custom field updated."
+msgstr "Papildomas laukelis atnaujintas."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:62
+msgid "Custom field deleted."
+msgstr "Papildomas laukeris ištrintas."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:63
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:66
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:70
+msgid "Pricing table saved."
+msgstr "Kainų lentelė išsaugota."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:64
+#, php-format
+msgid "Pricing table restored to revision from %s"
+msgstr "Kainų lentelė buvo atsatyta iš %s kopijos."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:65
+#, php-format
+msgid "Pricing table saved. <a href=\"%s\">View pricing table</a>"
+msgstr "Kainų lentelė išsaugota. <a href=\"%s\">Peržiūrėti lentelę</a>"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:68
+msgid "Pricing table submitted."
+msgstr "Kainų lentelė išsaugota."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:69
+#, php-format
+msgid "Pricing table scheduled for: <strong>%1$s</strong>."
+msgstr "Kainų lentelė planuojama: <strong>%1$s</strong>."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:69
+msgid "M j, Y @ G:i"
+msgstr "Y-m-d, H:i"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:114
+msgid "Pricing Table Name"
+msgstr "Kainų lentelės pavadinimas"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:115
+msgid "Shortcode"
+msgstr "Trumpasis kodas"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:116
+msgid "Date"
+msgstr "Data"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/shortcodes.php:29
+msgid "Pricing table does not exist. Please check your shortcode."
+msgstr "Kainų lentelė neegzistuoja. Patikrinkite trumpąjį kodą."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/upgrade.php:7
+msgid "Upgrade to Premium"
+msgstr "Atnaujinkite į mokamą versiją"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/upgrade.php:55
+#, php-format
+msgid ""
+"Thanks for using Easy Pricing Tables. If you like this plugin, please "
+"consider supporting continued development by <a href=\"%s\">purchasing the "
+"premium version</a>."
+msgstr ""
+"Ačiū kad naudojatės Easy Pricing Tables. Jei jums patinka šis įskiepis, "
+"prašome, pamąstykite apie parama plėtojant šį projektą <a href=\"%s"
+"\">užsisakydami mokamą versiją</a>."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/upgrade.php:56
+msgid ""
+"Easy Pricing Tables Premium comes with 4 additional table designs, 369 icons "
+"and tons of customization options."
+msgstr ""
+"Easy Pricing Tables Premium įskiepyje taip pat rasite 4 papildmus kainų "
+"lentelių dizainus, 369 iliustracijas ir galybę pasirinkimų ir nustatymų."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/upgrade.php:57
+#, php-format
+msgid "<a href=\"%s\">Click here to learn more...</a>"
+msgstr "<a href=\"%s\">Spauskite norėdami sužinoti daugiau...</a>"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/banner-metabox.php:2
+msgid "Do you like this plugin?"
+msgstr "Ar jums patinka šis įskiepis?"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/banner-metabox.php:2
+msgid "Check out the premium version."
+msgstr "Išbandykite įskiepio mokamą versiją."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/banner-metabox.php:3
+msgid ""
+"It comes with 4 beautiful table designs and tons of customization options. "
+"And because of our 60-day money back guarantee you have nothing to lose."
+msgstr ""
+"Įskiepyje rasite 4 papildomus nuostabius kainų lentelių dizainus ir galybę "
+"pasirinkimų ir nustatymų. Ir kadangi mes sutinkame gražinti pinigus per "
+"bandomasias 60 dienų jūs neturite ko prarasti!"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/banner-metabox.php:5
+msgid "Learn More"
+msgstr "Sužinokite Daugiau"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/features-metabox.php:3
+msgid "Content"
+msgstr "Turinys"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/features-metabox.php:4
+msgid "Design"
+msgstr "Išvaizda"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/features-metabox.php:16
+msgid "Save & Preview"
+msgstr "Išsaugoti ir Peržiūrėti"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/features-metabox.php:17
+msgid "Save"
+msgstr "Išsaugoti"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/features-metabox.php:18
+msgid "Deploy (Get Shortcode)"
+msgstr "Trumpasis Kodas"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/features-metabox.php:26
+msgid ""
+"Copy the shortcode below and paste it wherever you want your pricing table "
+"to appear."
+msgstr ""
+"Nusikopijuokite žemiau esantį trumpąjį kodą ir įdėkite jį ten kur norėtumėte "
+"matyti kainų lentelę."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/spec.php:10
+msgid "Pricing Table Settings"
+msgstr "Pricing Table Nustatymai"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/spec.php:21
+msgid "Premium Version"
+msgstr "Mokama Versija"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:2
+msgid "Pricing Table Columns"
+msgstr "Kainų Lentelės Stulpeliai"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:3
+msgid "New Column"
+msgstr "Naujas Stulpelis"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:9
+msgid "Plan Name"
+msgstr "Plano Pavadinimas"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:10
+msgid "Enter your pricing plan - names here."
+msgstr "Jūsų planų pavadinimams skirtas įvedimo laukelis."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:12
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:29
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:38
+msgid "Best practice:"
+msgstr "Patarimai:"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:14
+msgid ""
+"Avoid generic names such as <em>Bronze</em>, <em>Silver</em> and <em>Gold</"
+"em>.<br/>"
+msgstr ""
+"Stenkitės išvengti neapibrėžiančių pavadinimų tokių kaip <em>Bronzinis</em>, "
+"<em>Sidabrinis</em> ir <em>Auksinis</em>.<br/>"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:15
+msgid ""
+"Instead, choose aspirational names like <em>Personal</em>, <em>Small "
+"Business</em> and <em>Enterprise</em>.<br/><br/>"
+msgstr ""
+"Vietoje to, pasirinkite pavadinimus tokius kaip <em>Asmeninis</em>, "
+"<em>Mažajam Versliui</em> ir <em>Verslui</em>.<br/><br/>"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:16
+msgid ""
+"Many people choose plans based on names, not features: A corporate buyer "
+"might choose <em>Enterprise</em> even though <em>Personal</em> might be "
+"sufficient for his use-case."
+msgstr ""
+"Daug žmonių renkasi planus atsižvelgdami į pavadinimus, o ne į suteikiamas "
+"funkcijas: Įmonė paprastai rinksis planą <em>Verslui</em> nors jiems pilnai "
+"pakaktų <em>Asmeninio</em> plano."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:21
+msgid "Pricing"
+msgstr "Kainodara"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:22
+msgid "Enter your pricing options here."
+msgstr "Įveskite savo kanodaros pasirinkimus."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:26
+msgid "Plan Features"
+msgstr "Plano funkcijos"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:26
+msgid "Features"
+msgstr "Funkcijos"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:27
+msgid "Enter your features here (one per line)."
+msgstr "Įveskite sutekiamas fukcijas (po vieną kiekvienoje eilutėje)."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:31
+msgid ""
+"Don't overwhelm users with too much content. Long pricing tables are "
+"confusing and difficult to read."
+msgstr ""
+"Nesistenkite išvartinti visų suteikiamų funkcijų. Ilgos kainų lentelės yra "
+"pernelyg komplikuotos ir sunkiai skaitomos."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:35
+msgid "Button Text"
+msgstr "Mygtuko tekstas"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:35
+msgid "Call To Action Text"
+msgstr "Mygtuko tekstas"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:36
+msgid "Enter your call to action text here."
+msgstr "Įveskite mygtuko tekstą."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:40
+msgid "Here are some of the highest converting variations:"
+msgstr "Štai keletas naudingiausių pasirinkimų:"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:41
+msgid "Add To Cart"
+msgstr "Įdėti į krepšelį"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:42
+msgid "Sign Up"
+msgstr "Užsiregistruoti"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:43
+msgid "Sign Up Free"
+msgstr "Užsiregistruok Nemokamai"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:44
+msgid "Start Free Trial"
+msgstr "Bandomasis laikotarpis nemokamai"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:47
+msgid "Button URL"
+msgstr "Mygtuko URL"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:47
+msgid "Call To Action URL"
+msgstr "Mygtuko URL"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:48
+msgid ""
+"Enter your call to action URL here. This is usually either a payment link (e."
+"g. PayPal) or a page where users can create an account."
+msgstr ""
+"Įvesite jūsų mygtuko URL. Tai paprastai būna URL su nuoroda į mokėjimų "
+"sistemą (pvz PayPal) arba į puslapį kur vartotojas gali susikurti paskyrą."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:68
+msgid "Feature This Column"
+msgstr "Paryškinti Sulpelį"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:68
+msgid ""
+"Click this button to feature this column. A featured column appears bigger "
+"and includes the wording 'Most Popular'. You can only feature one column per "
+"table."
+msgstr ""
+"Paspauskite norėdami paryškinkite šį sutlpelį. Paryškintas stulpelis yra "
+"padidinamas, taip pat rodomas tekstas 'Populiarausias'. Jūs galite "
+"paryškinti tik vieną stulpelį lentelėje."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:68
+msgid "Feature"
+msgstr "Paryškinti"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:69
+msgid "Delete This Column"
+msgstr "Ištrinti šį stulpelį"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:69
+msgid "Click this button to delete this column."
+msgstr "Paspauskite norėdami ištrinti šį stulpelį."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:69
+msgid "Delete"
+msgstr "Ištrinti"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:72
+msgid "e.g. Small Business"
+msgstr "pvz: Mažam Verslui"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:78
+msgid "e.g. $49/mo"
+msgstr "pvz: 49LT"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:84
+msgid "e.g. 1 Website"
+msgstr "pvz: 1 Puslapis"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:85
+msgid "30,000 Monthly Visits"
+msgstr "30,000 Apsilankymų"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:86
+msgid "Unlimited Data Transfer"
+msgstr "Neribotas Duomenų Kiekis"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:87
+msgid "5GB Storage"
+msgstr "5GB Disko Vietos"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:95
+msgid "e.g. Start A Free Trial"
+msgstr "pvz: Pradėkite Bandomąjį Laikotarpį"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:100
+msgid "e.g. http://example.com/buy"
+msgstr "pvz: http://example.com/buy"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:3
+msgid "Design Settings"
+msgstr "Išvaizdos Nustatymai"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:5
+msgid "Border Radius"
+msgstr "Kraštinės Spindulys"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:16
+msgid "No Rounded Corners"
+msgstr "Neapvalinti Kampų"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:29
+msgid "Featured Label Text"
+msgstr "Paryškinto Stulpelio Tekstas"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:32
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/table-generation/design1.php:123
+msgid "Most Popular"
+msgstr "Populiariausias"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:37
+msgid "Font Sizes"
+msgstr "Šrifto Dydžiai"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:39
+msgid "Featured Label Font Size"
+msgstr "Paryštinto Stulpelio Teksto Dydis"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:67
+msgid "Plan Name Font Size"
+msgstr "Plano Pavadinimo Teksto Dydis"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:95
+msgid "Price Font Size"
+msgstr "Kainos Teksto Dydis"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:123
+msgid "Bullet Item Font Size"
+msgstr "Funkcijos Teksto Dydis"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:151
+msgid "Button Font Size"
+msgstr "Mygktuko Teksto Dydis"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:180
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:182
+msgid "Button Color"
+msgstr "Mygtuko Spalva"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:189
+msgid "Button Border Color"
+msgstr "Mygtuko Kraštinių Spalva"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:196
+msgid "Button Hover Color"
+msgstr "Aktyvaus Mygtuko Spalva"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:203
+msgid "Button Font Color"
+msgstr "Mygtuko Teksto Spalva"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:210
+msgid "Button Color (Featured Column)"
+msgstr "Mygtuko (Paryškinto stulpelio) Spalva"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:212
+msgid "Featured-Button Color"
+msgstr "Paryškinto Stulpelio Mygtuko Spalva"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:219
+msgid "Featured-Button Border Color"
+msgstr "Paryškinto Stulpelio Kraštinių Spalva"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:226
+msgid "Featured-Button Hover Color"
+msgstr "Paryškinto Stulpelio Aktyvaus Mygtuko Spalva"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:233
+msgid "Featured-Button Font Color"
+msgstr "Paryškinto Stulpelio Teksto Spalva"
+
+#~ msgid "Enter pricing table name here"
+#~ msgstr "Įveskite kainų lentelės pavadinimą"
