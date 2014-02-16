@@ -6,7 +6,7 @@ Author URI: http://davidhehenberger.com/
 Plugin URI: http://easypricingtables.com/
 Requires at least: 3.6
 Tested up to: 3.8.1
-Stable tag: 1.4.3
+Stable tag: 1.4.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,9 +34,10 @@ This plugin works with any WordPress theme you have installed. After installing 
 
 **Premium Version Features**
 
-*	3 additional gorgeous designs
+*	4 additional gorgeous designs
 *	Tons of customization options
-*	Priority email support
+*   369 icons
+*	Priority support
 
 *	[Learn more about Easy Pricing Tables Premium >>](http://easypricingtables.com/?utm_source=wp-plugin-directory&utm_medium=free-plugin-readme.txt&utm_campaign=link-to-premium-marketing-page)
 
@@ -47,6 +48,10 @@ This plugin works with any WordPress theme you have installed. After installing 
 3. In your sidebar, select 'Pricing Tables -> Add New' to create a new table
 
 == Frequently Asked Questions ==
+
+= I'm using S2 member / WooCommerce / etc and would like to replace your built-in button with a button generated from a shortcode =
+Do disable the pricing table button and replace it with a shortcode, simply enter the following in the 'Button Text' row:
+`[shortcode][my-example-shortcode/][/shortcode]`
 
 = My table rows aren't aligned properly =
 If within the same row, you use a lot more text in some features than in others, your feature height alignment might be weird.
@@ -94,6 +99,14 @@ david[at]davidhehenberger[dot]com
 8. Another design from [Easy Pricing Tables Premium](http://easypricingtables.com/?utm_source=wp-plugin-directory&utm_medium=free-plugin-readme.txt&utm_campaign=link-to-premium-marketing-page-from-screenshots)
 
 == Changelog ==
+
+= 1.4.4 =
+* UI improvements
+* Added support for shortcode buttons like S2 member
+* Fixed incompatibility with the Theme Foundry Basis theme
+* Decreased file size of plugin
+* Fixed CSS incompatibility with some themes
+* Added an update notice
 
 = 1.4.3 =
 * Added the ability to clone existing tables
