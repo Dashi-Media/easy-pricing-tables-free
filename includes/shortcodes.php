@@ -22,7 +22,7 @@ function dh_ptp_message_shortcode( $atts) {
         // check if our pricing table contains any content
 		if ($meta != "") {
             // if the table contains content, call the function that generates the table
-			return dh_ptp_generate_pricing_table($id);
+			return do_shortcode(dh_ptp_generate_pricing_table($id));
 		}
 	}
 	
