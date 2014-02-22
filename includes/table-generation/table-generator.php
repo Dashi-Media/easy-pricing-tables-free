@@ -35,6 +35,11 @@ function dh_ptp_generate_pricing_table($id)
     global $features_metabox;
     $meta = get_post_meta($id, $features_metabox->get_the_id(), TRUE);
 
+    // Enqueue IE Hacks
+    wp_enqueue_style('ept-ie-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-ie.css');
+    global $wp_styles;
+    $wp_styles->add_data('ept-ie-style', 'conditional', 'lt IE 9');
+    
     //include css
     wp_enqueue_style( 'dh-ptp-design1', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/design1/pricingtable.css' );
 
