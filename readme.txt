@@ -50,7 +50,7 @@ This plugin works with any WordPress theme you have installed. After installing 
 == Frequently Asked Questions ==
 
 = I'm using S2 member / WooCommerce / etc and would like to replace your built-in button with a button generated from a shortcode =
-Do disable the pricing table button and replace it with a shortcode, simply enter the following in the 'Button Text' row:
+To disable the pricing table button and replace it with a shortcode, simply enter the following in the 'Button Text' row:
 `[shortcode][my-example-shortcode/][/shortcode]`
 
 = My table rows aren't aligned properly =
@@ -58,12 +58,20 @@ If within the same row, you use a lot more text in some features than in others,
 This problem is due to tables being responsive instead of fixed width. You can fix it by adding manual linebreaks for your features.
 <br/><br/> results in one linebreak.
 
-= I want to change my colors for each individual column =
+= I want to change the design for each individual column =
 This currently isn't supported in the user interface. However, each column has its own unique HTML class that can be modified using a css class selector.
 
 *	Class of the first column: ptp-col-id-0
 *	Class of the second column: ptp-col-id-1
 *	Class of the third column: ptp-col-id-2
+*	etc...
+
+= How do I change the design of individual feature rows? =
+This currently isn't supported in the user interface. However, each feature row has its own unique HTML class that can be modified using a css class selector.
+
+*	Class of the first feature row: ptp-row-id-0
+*	Class of the second feature row: ptp-row-id-1
+*	Class of the third feature row: ptp-row-id-2
 *	etc...
 
 = I want to adjust my column width =
