@@ -63,8 +63,9 @@ function dh_ptp_all_admin_notices_css()
 	echo
 		'<style type="text/css">' .
 			'.dh-ptp-upgrade-nag {background: #282929; color: #fff; padding:10px 40px 10px 40px; margin-top: 40px; margin-right: 20px; text-align: center;} ' .
-			'.dh-ptp-upgrade-nag {color: #6bbc5b;} ' .
-			'.dh_ptp-upgrade-nag a:hover {color: #549448;}' .
+			'.dh-ptp-upgrade-nag {color: #fff;} ' .
+			'.dh-ptp-upgrade-nag a {color: #6bbc5b;} '.
+			'.dh-ptp-upgrade-nag a:hover {color: #7ad368;}' .
 		'</style>';
 }
 ?>
