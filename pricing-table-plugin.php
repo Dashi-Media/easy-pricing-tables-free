@@ -34,12 +34,6 @@ include ( PTP_PLUGIN_PATH . 'includes/pointer.php');
 // Upgrade to Premium
 include ( PTP_PLUGIN_PATH . 'includes/upgrade.php');
 
-// Include presstrends analytics if user agreed upon usage tracking
-$dh_ptp_usage_tracking = get_option('dh_ptp_allow_tracking');
-if ($dh_ptp_usage_tracking == 'yes') {
-  include ( PTP_PLUGIN_PATH . 'includes/analytics.php');
-}
-
 // Include WPAlchemy
 if(!class_exists('WPAlchemy_MetaBox')) {
   include_once ( PTP_PLUGIN_PATH . 'includes/libraries/wpalchemy/MetaBox.php');
@@ -60,7 +54,7 @@ function dh_ptp_plugin_settings_link($links)
   
   // Add Easy Pricing Tables links
   $add_new_link = '<a href="post-new.php?post_type=easy-pricing-table">' . __('Add New', PTP_LOC) . '</a>'; 
-  $forum_link   = '<a href="http://wordpress.org/support/plugin/easy-pricing-tables">' . __('Forum', PTP_LOC) . '</a>';
+  $forum_link   = '<a href="http://wordpress.org/support/plugin/easy-pricing-tables">' . __('Support', PTP_LOC) . '</a>';
   $premium_link = '<a href="http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=link-in-installed-plugins">' . __('Purchase Premium', PTP_LOC) . '</a>';
   
   array_push($links, $add_new_link);

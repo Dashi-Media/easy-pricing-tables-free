@@ -1,54 +1,35 @@
 <?php
 
-function dh_ptp_presstrends_plugin() {
-    // PressTrends Account API Key
-    $api_key = 'o1pt4mcck7wd2gz1y6dencn5c25zrgz0fon6';
-    $auth    = '0l1jj7krb11dfrtagkcocl2up2jl50aha';
-    // Start of Metrics
-    global $wpdb;
-    $data = get_transient( 'presstrends_cache_data' );
-    if ( !$data || $data == '' ) {
-        $api_base = 'http://api.presstrends.io/index.php/api/pluginsites/update?auth=';
-        $url      = $api_base . $auth . '&api=' . $api_key . '';
-        $count_posts    = wp_count_posts();
-        $count_pages    = wp_count_posts( 'page' );
-        $comments_count = wp_count_comments();
-        if ( function_exists( 'wp_get_theme' ) ) {
-            $theme_data = wp_get_theme();
-            $theme_name = urlencode( $theme_data->Name );
-        } else {
-            $theme_data = get_theme_data( get_stylesheet_directory() . '/style.css' );
-            $theme_name = $theme_data['Name'];
-        }
-        $plugin_name = '&';
-        foreach ( get_plugins() as $plugin_info ) {
-            $plugin_name .= $plugin_info['Name'] . '&';
-        }
-        // CHANGE __FILE__ PATH IF LOCATED OUTSIDE MAIN PLUGIN FILE
-        $plugin_data         = get_plugin_data( __FILE__ );
-        $posts_with_comments = $wpdb->get_var( "SELECT COUNT(*) FROM $wpdb->posts WHERE post_type='post' AND comment_count > 0" );
-        $data                = array(
-            'url'             => base64_encode(site_url()),
-            'posts'           => $count_posts->publish,
-            'pages'           => $count_pages->publish,
-            'comments'        => $comments_count->total_comments,
-            'approved'        => $comments_count->approved,
-            'spam'            => $comments_count->spam,
-            'pingbacks'       => $wpdb->get_var( "SELECT COUNT(comment_ID) FROM $wpdb->comments WHERE comment_type = 'pingback'" ),
-            'post_conversion' => ( $count_posts->publish > 0 && $posts_with_comments > 0 ) ? number_format( ( $posts_with_comments / $count_posts->publish ) * 100, 0, '.', '' ) : 0,
-            'theme_version'   => $plugin_data['Version'],
-            'theme_name'      => $theme_name,
-            'site_name'       => str_replace( ' ', '', get_bloginfo( 'name' ) ),
-            'plugins'         => count( get_option( 'active_plugins' ) ),
-            'plugin'          => urlencode( $plugin_name ),
-            'wpversion'       => get_bloginfo( 'version' ),
-        );
-        foreach ( $data as $k => $v ) {
-            $url .= '&' . $k . '=' . $v . '';
-        }
-        wp_remote_get( $url );
-        set_transient( 'presstrends_cache_data', $data, 60 * 60 * 24 );
-        }
+// import Mixpanel
+require ( PTP_PLUGIN_PATH . '/includes/libraries/mixpanel/Mixpanel.php');
+
+/**
+ * Tracks an event using the Mixpanel API if the user opted into tracking.
+ * Example: dh_ptp_track_event("add to cart clicked", array("label" => "sign-up"));
+ * 
+ * @param  string $dh_ptp_event      [The name of the event that is being fired.]
+ * @param  array $dh_ptp_properties  [Additional properties to track. (optional)]
+ */
+function dh_ptp_track_event($dh_ptp_event, $dh_ptp_properties = null)
+{
+    // only track events if the user agreed
+    $dh_ptp_usage_tracking = get_option('dh_ptp_allow_tracking');
+    if ($dh_ptp_usage_tracking == 'yes') 
+    {
+        // get the Mixpanel class instance
+        $mp = Mixpanel::getInstance("bd63eb026af34be9749fa037e9d87ec4");
+        
+        // Set user id: site url =  (url + site name) encoded
+        $user_id = base64_encode(site_url()+str_replace( ' ', '', get_bloginfo( 'name' ) ));    
+        
+        // associate user to all subsequent track calls
+        $mp->identify($user_id);
+        
+        // track the event
+        $mp->track($dh_ptp_event, $dh_ptp_properties);
     }
-// PressTrends WordPress Action
-add_action('admin_init', 'dh_ptp_presstrends_plugin');
+}
+
+
+
+?>
