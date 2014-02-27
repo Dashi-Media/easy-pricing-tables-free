@@ -34,7 +34,7 @@ function dh_ptp_register_pricing_table_post_type() {
 	    'capability_type' => 'post',
 	    'has_archive' => false, 
 	    'hierarchical' => false,
-	    'menu_position' => 21,
+	    'menu_position' => 81,
 	    'supports' => array( 'title', 'revisions')
   	); 
 
