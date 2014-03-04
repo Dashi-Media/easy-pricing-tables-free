@@ -6,7 +6,7 @@ Author URI: http://davidhehenberger.com/
 Plugin URI: http://easypricingtables.com/
 Requires at least: 3.6
 Tested up to: 3.8.1
-Stable tag: 1.4.5.1
+Stable tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -108,7 +108,7 @@ david[at]davidhehenberger[dot]com
 
 == Changelog ==
 
-= 1.4.5 =
+= 1.5 =
 * Easy Pricing Tables now supports translations (contact me if you'd like to submit a translation).
 * Added Lithuanian language support. 
 * Improved compatibility with legacy browsers (in particular old Internet Exploreer versions).
