@@ -1,12 +1,12 @@
 === Easy Pricing Tables ===
 Contributors: davidhme
 Donate link: http://easypricingtables.com/
-Tags: pricing table, responsive pricing table, comparison, comparison table, css table, price, price gird, pricing, pricing box, pricing grid, table
+Tags: pricing table, responsive pricing table, comparison, comparison table, css table, price, price gird, pricing, pricing box, pricing grid, table, pricing page
 Author URI: http://davidhehenberger.com/
 Plugin URI: http://easypricingtables.com/
 Requires at least: 3.6
 Tested up to: 3.8.1
-Stable tag: 1.4.4
+Stable tag: 1.5.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -107,6 +107,13 @@ david[at]davidhehenberger[dot]com
 8. Another design from [Easy Pricing Tables Premium](http://easypricingtables.com/?utm_source=wp-plugin-directory&utm_medium=free-plugin-readme.txt&utm_campaign=link-to-premium-marketing-page-from-screenshots)
 
 == Changelog ==
+
+= 1.5 =
+* Easy Pricing Tables now supports translations (contact me if you'd like to submit a translation).
+* Added Lithuanian language support. 
+* Improved compatibility with legacy browsers (in particular old Internet Exploreer versions).
+* Easy Pricing Tables is now compatible with http://wordpress.org/plugins/responsive-mobile-friendly-tooltip/.
+* Small UI improvement: moved the "Pricing Tables" setting link in the left-hand navigation further down.
 
 = 1.4.4 =
 * UI improvements
