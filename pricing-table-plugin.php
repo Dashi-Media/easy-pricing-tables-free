@@ -34,6 +34,9 @@ include ( PTP_PLUGIN_PATH . 'includes/pointer.php');
 // Upgrade to Premium
 include ( PTP_PLUGIN_PATH . 'includes/upgrade.php');
 
+// Analytics
+include_once PTP_PLUGIN_PATH . 'includes/analytics.php';
+
 // Include WPAlchemy
 if(!class_exists('WPAlchemy_MetaBox')) {
   include_once ( PTP_PLUGIN_PATH . 'includes/libraries/wpalchemy/MetaBox.php');
@@ -94,4 +97,13 @@ function dh_ptp_localization()
   load_plugin_textdomain( PTP_LOC, FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
 }
 add_action('init', 'dh_ptp_localization');
+
+// Track plugin activation
+function dh_ptp_plugin_activation()
+{
+  if (function_exists('dh_ptp_track_event') && get_option('dh_ptp_allow_tracking') == 'yes') {
+	dh_ptp_track_event('Plugin activated');
+  }
+}
+register_activation_hook('easy-pricing-tables-free/pricing-table-plugin.php', 'dh_ptp_plugin_activation');
 ?>

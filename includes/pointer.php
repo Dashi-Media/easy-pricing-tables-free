@@ -82,6 +82,12 @@ function dh_ptp_usage_tracking_pointer_ajax()
     
     $result = ($_POST['allow_tracking'] == 'yes')?'yes':'no';
     
+	if ($result == 'yes') {
+		if (function_exists('dh_ptp_track_event')) {
+			dh_ptp_track_event('Plugin activated');
+		}
+	}
+	
     update_option('dh_ptp_allow_tracking', $result);
     exit();
 }

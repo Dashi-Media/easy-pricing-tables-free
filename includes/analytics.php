@@ -10,14 +10,15 @@ require ( PTP_PLUGIN_PATH . '/includes/libraries/mixpanel/Mixpanel.php');
  * @param  string $dh_ptp_event      [The name of the event that is being fired.]
  * @param  array $dh_ptp_properties  [Additional properties to track. (optional)]
  */
-function dh_ptp_track_event($dh_ptp_event, $dh_ptp_properties = null)
+function dh_ptp_track_event($dh_ptp_event, $dh_ptp_properties = array())
 {
     // only track events if the user agreed
     $dh_ptp_usage_tracking = get_option('dh_ptp_allow_tracking');
     if ($dh_ptp_usage_tracking == 'yes') 
     {
         // get the Mixpanel class instance
-        $mp = Mixpanel::getInstance("bd63eb026af34be9749fa037e9d87ec4");
+                                     
+        $mp = Mixpanel::getInstance("1064083f4aaf3eed31d0fdf1c308365c");
         
         // Set user id: site url =  (url + site name) encoded
         $user_id = base64_encode(site_url()+str_replace( ' ', '', get_bloginfo( 'name' ) ));    
