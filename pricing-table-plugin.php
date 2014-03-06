@@ -16,6 +16,10 @@ define('PTP_PLUGIN_PATH', plugin_dir_path( __FILE__ ));
 define('PTP_PLUGIN_PATH_FOR_SUBDIRS', plugins_url(str_replace(dirname(dirname(__FILE__)), '', dirname(__FILE__))));
 define('PTP_LOC', 'easy-pricing-tables');
 
+// Analytics
+include_once PTP_PLUGIN_PATH . 'includes/analytics.php';
+include_once PTP_PLUGIN_PATH . 'includes/tracking.php';
+
 // Include post types
 include ( PTP_PLUGIN_PATH . 'includes/post-types.php');
 
@@ -33,9 +37,6 @@ include ( PTP_PLUGIN_PATH . 'includes/pointer.php');
 
 // Upgrade to Premium
 include ( PTP_PLUGIN_PATH . 'includes/upgrade.php');
-
-// Analytics
-include_once PTP_PLUGIN_PATH . 'includes/analytics.php';
 
 // Include WPAlchemy
 if(!class_exists('WPAlchemy_MetaBox')) {
@@ -98,12 +99,4 @@ function dh_ptp_localization()
 }
 add_action('init', 'dh_ptp_localization');
 
-// Track plugin activation
-function dh_ptp_plugin_activation()
-{
-  if (function_exists('dh_ptp_track_event') && get_option('dh_ptp_allow_tracking') == 'yes') {
-	dh_ptp_track_event('Plugin activated');
-  }
-}
-register_activation_hook('easy-pricing-tables-free/pricing-table-plugin.php', 'dh_ptp_plugin_activation');
 ?>

@@ -21,7 +21,7 @@ function dh_ptp_track_event($dh_ptp_event, $dh_ptp_properties = array())
         $mp = Mixpanel::getInstance("1064083f4aaf3eed31d0fdf1c308365c");
         
         // Set user id: site url =  (url + site name) encoded
-        $user_id = base64_encode(site_url()+str_replace( ' ', '', get_bloginfo( 'name' ) ));    
+        $user_id = base64_encode(site_url().' '.get_bloginfo('name'));    
         
         // associate user to all subsequent track calls
         $mp->identify($user_id);

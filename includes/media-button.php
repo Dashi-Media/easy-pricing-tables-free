@@ -43,6 +43,16 @@ function dh_ptp_media_button_thickbox()
                         return;
                     }
                     window.send_to_editor('[easy-pricing-table id="' + id + '"]');
+                    
+                    // Tracking
+                    jQuery.ajax({
+                        type: "POST",
+                        url: "<?php echo admin_url('admin-ajax.php'); ?>",
+                        data: {
+                            action: "dh_ptp_tracking_deploy",
+                            id: id
+                        }
+                    });
                 });
             });
         </script>
@@ -64,7 +74,6 @@ function dh_ptp_media_button_thickbox()
                             endif;
                             
                             // Restore original Post Data
-                            // wp_reset_postdata();
                             $post = $post_clone;
                         ?>
                     </select>

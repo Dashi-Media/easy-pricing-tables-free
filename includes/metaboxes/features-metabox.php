@@ -15,7 +15,7 @@
             <input type="hidden" name="dh_ptp_tab" id="dh_ptp_tab" value="#dh_ptp_tabs_1"/>
             <a style="float:left;" class="button button-large" id="save_preview" data-url="<?php echo esc_url( get_permalink($post->ID) ); ?>"><?php _e('Save & Preview', PTP_LOC); ?></a>
             <input style="float:left; margin-left:10px;" name="save" id="save" type="submit" class="button button-large" accesskey="p" value="<?php _e('Save', PTP_LOC); ?>" />
-            <a  style="float:left; margin-left:10px;" class="button button-large inline-lightbox" href="#deploy"><?php _e('Deploy (Get Shortcode)', PTP_LOC); ?></a>
+            <a style="float:left; margin-left:10px;" class="button button-large inline-lightbox button-deploy" href="#deploy" data-id="<?php the_ID(); ?>"><?php _e('Deploy (Get Shortcode)', PTP_LOC); ?></a>
             <div class="clear"></div>
        </div>
     </div>
@@ -35,4 +35,19 @@
             });
         </script>
     <?php endif; ?>
+    
+    <script type="text/javascript">
+        jQuery(document).ready(function(){
+            jQuery('.button-deploy').click(function() {
+                jQuery.ajax({
+                    type: "POST",
+                    url: "<?php echo admin_url('admin-ajax.php'); ?>",
+                    data: {
+                        action: "dh_ptp_tracking_deploy",
+                        id: jQuery(this).attr('data-id')
+                    }
+                });
+            }); 
+        });
+    </script>
 </div>

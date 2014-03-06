@@ -143,9 +143,12 @@ function dh_ptp_mailing_list_pointer_ajax()
     // Check status
     $result = ($_POST['subscribe'] == 'yes')?'yes':'no';
     if ($result == 'no') {
+		dh_ptp_crash_course('No, thanks');
         update_option('dh_ptp_mailing_list', 'no');
         exit();
-    }
+    } else {
+		dh_ptp_crash_course('Lets do it!');
+	}
     
     // Get current user info
     get_currentuserinfo();
