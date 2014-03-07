@@ -6,7 +6,7 @@ Author URI: http://davidhehenberger.com/
 Plugin URI: http://easypricingtables.com/
 Requires at least: 3.6
 Tested up to: 3.8.1
-Stable tag: 1.5.0.1
+Stable tag: 1.5.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,7 +15,9 @@ Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 
 == Description ==
 **Easy Pricing Tables for Wordpress** makes it easy to create and publish beautiful pricing tables on your WordPress site. You will be able to set up and publish your pricing table in no time.
 
-Easy Pricing Tables implements conversion rate optimization (CRO) best practices and guides you through the process of creating a pricing table that converts. 
+[youtube http://www.youtube.com/watch?v=657Qs5Yng5Q]
+
+Easy Pricing Tables implements conversion rate optimization (CRO) best practices and guides you through the process of creating a pricing table that converts 
 
 This plugin works with any WordPress theme you have installed. After installing the plugin and creating your first pricing table, you can publish your table anywhere on your site using a shortcode.
 
@@ -107,6 +109,10 @@ david[at]davidhehenberger[dot]com
 8. Another design from [Easy Pricing Tables Premium](http://easypricingtables.com/?utm_source=wp-plugin-directory&utm_medium=free-plugin-readme.txt&utm_campaign=link-to-premium-marketing-page-from-screenshots)
 
 == Changelog ==
+
+= 1.5.0.2 =
+* Fixed incompatibility with netstudio-wp theme
+* Added YouTube video link to readme.txt
 
 = 1.5 =
 * Easy Pricing Tables now supports translations (contact me if you'd like to submit a translation).
