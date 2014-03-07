@@ -96,12 +96,17 @@ add_action( 'wp_ajax_dh_ptp_usage_tracking', 'dh_ptp_usage_tracking_pointer_ajax
 // Add mailing list subscription
 function dh_ptp_mailing_list_pointer() 
 {
+	global $current_user;
+	
+	// Get current user info
+    get_currentuserinfo();
+	
     // Ajax request template    
     $ajax = '
         jQuery.ajax({
             type: "POST",
             url:  "'.admin_url('admin-ajax.php').'",
-            data: {action: "dh_ptp_mailing_list", nonce: "'.wp_create_nonce('dh_ptp_mailing_list').'", subscribe: "%s" }
+            data: {action: "dh_ptp_mailing_list", email: jQuery("#ept_email").val(), nonce: "'.wp_create_nonce('dh_ptp_mailing_list').'", subscribe: "%s" }
         });
     ';
     
@@ -115,9 +120,10 @@ function dh_ptp_mailing_list_pointer()
     $button_2_fn    = sprintf($ajax, 'yes');
     
     // Content
-    $content  = '<h3>' . __('Pricing Table Crash Course', PTL_LOC) . '</h3>';
+    $content  = '<h3>' . __('Pricing Table Crash Course', PTP_LOC) . '</h3>';
     $content .= '<p>' . __("Instead of watching 99% of your visitors bounce, imagine you could increase your pricing table&#39;s conversion rate and make more money. Find out how in this ridiculously actionable (and totally free) 5-part email course.", PTP_LOC) . '</p>';
-    
+    $content .= '<p>' . '<input type="text" name="ept_email" id="ept_email" value="' . $current_user->user_email . '" style="width: 100%"/>' . '</p>';
+	
     // Options
     $options = array(
         'content' => $content,
@@ -132,7 +138,7 @@ function dh_ptp_mailing_list_pointer_ajax()
     global $current_user;
     
     // Verify nonce
-    if(!wp_verify_nonce($_POST['nonce'], 'dh_ptp_mailing_list')) {
+    if(!wp_verify_nonce($_POST['nonce'], 'dh_ptp_mailing_list') && !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         die ('No tricky business!');
     }
     
@@ -154,7 +160,7 @@ function dh_ptp_mailing_list_pointer_ajax()
 	
 	$drip_api = new DripApi();
 	$drip_api->add_subscriber(
-		$current_user->user_email,
+		$_POST['email'], //$current_user->user_email,
 		array(
 			'name' => $current_user->display_name,
 			'url'  => get_bloginfo('url')
