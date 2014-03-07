@@ -131,10 +131,6 @@ function dh_ptp_mailing_list_pointer_ajax()
 {
     global $current_user;
     
-    // Config
-    $api_key  = '35730c4540f59d2db0ec715ef1cb3f90';
-    $api_list = '34598307ceb27689b52a4da12f5a0ee6';
-    
     // Verify nonce
     if(!wp_verify_nonce($_POST['nonce'], 'dh_ptp_mailing_list')) {
         die ('No tricky business!');
@@ -154,26 +150,18 @@ function dh_ptp_mailing_list_pointer_ajax()
     get_currentuserinfo();
     
     // Subscribe
-    require_once PTP_PLUGIN_PATH.'includes/libraries/campaignmonitor/csrest_subscribers.php';
-    
-    $auth = array('api_key' => $api_key);
-    $wrap = new CS_REST_Subscribers($api_list, $auth);
-    $result = $wrap->add(array(
-        'EmailAddress' => $current_user->user_email,
-        'Name' => $current_user->display_name,
-        'CustomFields' => array(
-            array(
-                'Key' => 'URL',
-                'Value' => get_bloginfo('url'),
-            )
-        ),
-    ));
-    
-    if($result->was_successful()) {
-        update_option('dh_ptp_mailing_list', 'yes');
-    } else {
-        update_option('dh_ptp_mailing_list', 'no');
-    }
+    include_once PTP_PLUGIN_PATH.'includes/libraries/drip/drip.php';
+	
+	$drip_api = new DripApi();
+	$drip_api->add_subscriber(
+		$current_user->user_email,
+		array(
+			'name' => $current_user->display_name,
+			'url'  => get_bloginfo('url')
+		)
+	);
+	
+	update_option('dh_ptp_mailing_list', 'yes');
     
     exit();
 }
