@@ -15,13 +15,13 @@ Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 
 == Description ==
 **Easy Pricing Tables for Wordpress** makes it easy to create and publish beautiful pricing tables on your WordPress site. You will be able to set up and publish your pricing table in no time.
 
+*   [View A Pricing Table Live Demo &raquo;](http://easypricingtables.com/easy-pricing-tables-live-demo/?utm_source=wp-plugin-directory&utm_medium=free-plugin-readme.txt&utm_campaign=link-to-pricing-table-demo)
+
 [youtube http://www.youtube.com/watch?v=657Qs5Yng5Q]
 
 Easy Pricing Tables implements conversion rate optimization (CRO) best practices and guides you through the process of creating a pricing table that converts 
 
 This plugin works with any WordPress theme you have installed. After installing the plugin and creating your first pricing table, you can publish your table anywhere on your site using a shortcode.
-
-*   [View A Pricing Table Live Demo &raquo;](http://easypricingtables.com/easy-pricing-tables-live-demo/?utm_source=wp-plugin-directory&utm_medium=free-plugin-readme.txt&utm_campaign=link-to-pricing-table-demo)
 
 **Features**
 
