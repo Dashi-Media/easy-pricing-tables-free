@@ -194,6 +194,10 @@ function dh_ptp_save_preview_redirect ($location)
 		$post->ID == $match[1] && (isset($_POST['publish']) || $post->post_status == 'publish') && $pl = get_permalink($post->ID)
 		&& isset($_POST['dh_ptp_preview_url'])
     ) {
+		// Flush rewrite rules
+		global $wp_rewrite;
+		$wp_rewrite->flush_rules(true);
+		
         // Always redirect to the post
         $location = $_POST['dh_ptp_preview_url'];
     }
