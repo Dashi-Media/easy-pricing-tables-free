@@ -72,7 +72,7 @@ function dh_ptp_simple_flat_css($id, $meta)
     div#ptp-<?php echo $id ?> .ptp-highlight a.ptp-button:hover{
         background-color: <?php echo $design1_featured_button_hover_color; ?>;
     }
-    #ptp-<?php echo $id ?> li.ptp-bullet-item{
+    #ptp-<?php echo $id ?> .ptp-bullet-item{
         font-size: <?php echo $design1_bullet_item_font_size . $design1_bullet_item_font_size_type; ?>;
     }
     #ptp-<?php echo $id ?> div.ptp-most-popular{
