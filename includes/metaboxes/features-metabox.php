@@ -11,7 +11,11 @@
 
     <div id="ptp-save-buttons">
         <div style="margin-left:10px;margin-right:10px;">
-            <input type="hidden" name="publish" id="publish" value="1"/>
+            <input type="hidden" id="save" class="button" value="Save">
+            <input type="hidden" name="hidden_post_status" id="hidden_post_status" value="publish" />
+            <input type="hidden" name="post_status" id="post_status" value="publish" /> 
+            <input type="hidden" name="original_publish" id="original_publish" value="Update" />
+            <input type="hidden" name="publish" id="publish" value="Save"/>
             <input type="hidden" name="dh_ptp_tab" id="dh_ptp_tab" value="#dh_ptp_tabs_1"/>
             <a style="float:left;" class="button button-large" id="save_preview" data-url="<?php echo esc_url( get_permalink($post->ID) ); ?>"><?php _e('Save & Preview', PTP_LOC); ?></a>
             <input style="float:left; margin-left:10px;" name="save" id="save" type="submit" class="button button-large" accesskey="p" value="<?php _e('Save', PTP_LOC); ?>" />
