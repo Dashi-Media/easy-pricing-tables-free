@@ -509,3 +509,6 @@ color:#333;
 .cboxIE #cboxMiddleRight {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
 }
+
+.settings-title {padding-right: 30px; vertical-align: top; padding-top:3px;}
+.ept-demo label {color: #888; font-weight: normal; cursor: default; margin: 0;}

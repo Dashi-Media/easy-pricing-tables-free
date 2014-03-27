@@ -204,3 +204,32 @@ function dh_ptp_save_preview_redirect ($location)
  
     return $location;
 }
+
+/**
+ * Enqueue jquery-ui-accordion in wp-admin
+ */
+function dh_ptp_jquery_ui_accordion()
+{
+	if (is_admin()) {
+		wp_enqueue_script('jquery-ui-accordion');
+		wp_enqueue_style('dh-ptp-jquery-ui', plugins_url('assets/ui/ui-accordion.css', dirname(__FILE__)));
+	}
+}
+add_action('admin_enqueue_scripts', 'dh_ptp_jquery_ui_accordion' );
+
+/**
+ * Print accordion related JS
+ */
+function dh_ptp_print_jquery_ui_accordion_js()
+{
+	?>
+	<script type="text/javascript">
+		//<![CDATA[
+			jQuery(document).ready(function(){
+				jQuery( ".dh_ptp_accordion" ).accordion({heightStyle: 'content'});
+			});
+		//]]>
+	</script>
+	<?php
+}
+add_action('admin_print_footer_scripts', 'dh_ptp_print_jquery_ui_accordion_js' );
