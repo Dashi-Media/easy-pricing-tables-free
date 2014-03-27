@@ -14,12 +14,12 @@
 .ptp-more-col  { width: auto; }
 
 div.ptp-item-container { margin: 0 0 1.25em 0; padding-left: 0px; padding-bottom: 0px; font-size: 1em; line-height: 1.6; font-family: inherit; border: #dddddd solid 1px;}
-div.ptp-plan{ padding: 0.9375em 1.25em !important; text-align: center; font-weight: bold; font-size: 1em; background-color: #dddddd; color: #333333;}
+div.ptp-plan{ text-align: center; font-weight: bold; font-size: 1em; background-color: #dddddd; color: #333333;}
 div.ptp-most-popular{padding: 0.3em; text-align: center; font-size: 0.9em; font-weight: bold; line-height: 1.4em; margin-bottom: 2px; background-color: #7f8c8d; color: #fff;}
 div.ptp-not-most-popular{ background: none; padding: 0.3em; text-align: center; color: #fff; font-size: 0.9em; font-weight: bold; line-height: 1.4em; margin-bottom: 2px; }
-div.ptp-price{ padding: 0.9375em 1.25em !important; text-align: center; font-weight: normal; font-size: 1.25em; background-color: #eeeeee; color: #333333;}
-div.ptp-bullet-item{background-color: #fff; padding: 0.9375em 0.5em 0.9375em 0.5em!important; text-align: center; font-size: 0.875em; font-weight: normal; color: #333333; border-bottom: dotted 1px #dddddd; }
-div.ptp-cta{ text-align: center; padding-top: 1.25em !important; padding-bottom: 1.25em !important; background-color: #F5F5F5; }
+div.ptp-price{text-align: center; font-weight: normal; font-size: 1.25em; background-color: #eeeeee; color: #333333;}
+div.ptp-bullet-item{background-color: #fff; text-align: center; font-size: 0.875em; font-weight: normal; color: #333333; border-bottom: dotted 1px #dddddd; }
+div.ptp-cta{ text-align: center; background-color: #F5F5F5; }
 
 a.ptp-button{
   border-style: solid;
