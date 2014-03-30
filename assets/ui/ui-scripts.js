@@ -33,7 +33,7 @@ jQuery(document).ready(function($) {
     $(".inline-lightbox").colorbox({inline:true, width:"50%", speed: 0, fadeOut: 0});
 	
 	// Save & Preview button
-	$('#save_preview').on('click', function(event) {
+	$('#dh_ptp_save_preview').on('click', function(event) {
         event.preventDefault();
 		
 		// Add target
@@ -54,10 +54,9 @@ jQuery(document).ready(function($) {
         return false;
 	});
 	
-	$('#save').on('click', function(event) {
+	$('#dh_ptp_save').on('click', function(event) {
         event.preventDefault();
 		
-		console.log('test');
 		// Add target
 		var form = $(this).closest('form');
 		form.removeAttr('target');
