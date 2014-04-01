@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Easy Pricing Tables\n"
-"POT-Creation-Date: 2014-02-17 02:11+0400\n"
-"PO-Revision-Date: 2014-02-17 02:13+0400\n"
+"POT-Creation-Date: 2014-04-01 22:59+0200\n"
+"PO-Revision-Date: 2014-04-01 23:05+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Lithuanian\n"
@@ -21,8 +21,8 @@ msgid "Add New"
 msgstr "Pridėti Naują"
 
 #: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/pricing-table-plugin.php:61
-msgid "Forum"
-msgstr "Diskusijos"
+msgid "Support"
+msgstr "Pagalba"
 
 #: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/pricing-table-plugin.php:62
 msgid "Purchase Premium"
@@ -65,20 +65,20 @@ msgstr "Kainų lentelė buvo nukopijuota sėkmingai."
 msgid "Insert pricing table"
 msgstr "Įterpti kainų lentelę"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:52
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:62
 msgid "Use the form below to insert the shortcode for a pricing table."
 msgstr ""
 "Pasinaudok forma žemiau norėdamas įterpti trumpajį kodą su kainų lentele."
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:55
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:65
 msgid "Please select..."
 msgstr "Prašome pasirinkti..."
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:73
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:82
 msgid "Insert"
 msgstr "Įterpti"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:74
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:83
 msgid "Cancel"
 msgstr "Atšaukti"
 
@@ -105,19 +105,19 @@ msgstr ""
 "mums nuspresti kurios įskiepio funkcijos turėtų būti tobulinamos ir su "
 "kokiomis temomis mes turėtumėme testuoti šį įskiepį."
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:106
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:117
 msgid "No, thanks"
 msgstr "Ne, ačiū"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:108
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:119
 msgid "Let&#39;s do it!"
 msgstr "Sutinku!"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:112
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:123
 msgid "Pricing Table Crash Course"
 msgstr "Kainų lentelių pradžiamokslis"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:113
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:124
 #, php-format
 msgid ""
 "Instead of watching 99% of your visitors bounce, imagine you could increase "
@@ -496,86 +496,193 @@ msgid "e.g. http://example.com/buy"
 msgstr "pvz: http://example.com/buy"
 
 #: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:3
-msgid "Design Settings"
-msgstr "Išvaizdos Nustatymai"
+msgid "General Settings"
+msgstr "Pagrindiniai Nustatymai"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:5
-msgid "Border Radius"
-msgstr "Kraštinės Spindulys"
-
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:16
-msgid "No Rounded Corners"
-msgstr "Neapvalinti Kampų"
-
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:29
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:7
 msgid "Featured Label Text"
 msgstr "Paryškinto Stulpelio Tekstas"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:32
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/table-generation/design1.php:123
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:10
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/table-generation/design1.php:128
 msgid "Most Popular"
 msgstr "Populiariausias"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:37
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:15
+msgid "Border Radius"
+msgstr "Kraštinės Spindulys"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:26
+msgid "No Rounded Corners"
+msgstr "Neapvalinti Kampų"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:40
+msgid "Enlarge Column on Hover"
+msgstr "Padidinti Stulpelius Užvedus Kursorių"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:44
+msgid "Shake Button on Hover"
+msgstr "Judantys Mygtukai Užvedus Kursorių"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:49
 msgid "Font Sizes"
 msgstr "Šrifto Dydžiai"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:39
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:53
 msgid "Featured Label Font Size"
 msgstr "Paryštinto Stulpelio Teksto Dydis"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:67
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:81
 msgid "Plan Name Font Size"
 msgstr "Plano Pavadinimo Teksto Dydis"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:95
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:109
 msgid "Price Font Size"
 msgstr "Kainos Teksto Dydis"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:123
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:137
 msgid "Bullet Item Font Size"
 msgstr "Funkcijos Teksto Dydis"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:151
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:165
 msgid "Button Font Size"
 msgstr "Mygktuko Teksto Dydis"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:180
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:182
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:194
+msgid "Unfeatured Columns Colors"
+msgstr "Standartinių Stulpelių Spalvos"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:198
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:271
+msgid "Background Colors"
+msgstr "Fono Spalvos"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:201
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:274
+msgid "Border Color"
+msgstr "Kraštinių Spalvos"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:205
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:278
+msgid "Title Background Color"
+msgstr "Pavadinimo Fono Spalva"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:209
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:282
+msgid "Pricing Background Color"
+msgstr "Kainos Fono Spalva"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:213
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:286
+msgid "Button Area Background Color"
+msgstr "Mygtuko Konteinerio Fono Spalva"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:217
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:290
+msgid "Bullet Item Background Color"
+msgstr "Teksto Eilutės Fono Spalva"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:223
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:304
+msgid "Font Colors"
+msgstr "Teksto Spalvos"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:226
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:307
+msgid "Title Font Color"
+msgstr "Pavadinimo Teksto Spalva"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:230
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:311
+msgid "Pricing Font Color"
+msgstr "Kainos Teksto Spalva"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:234
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:315
+msgid "Feature Color"
+msgstr "Įrašo Spalva"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:239
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:241
 msgid "Button Color"
 msgstr "Mygtuko Spalva"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:189
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:247
 msgid "Button Border Color"
 msgstr "Mygtuko Kraštinių Spalva"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:196
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:253
 msgid "Button Hover Color"
 msgstr "Aktyvaus Mygtuko Spalva"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:203
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:259
 msgid "Button Font Color"
 msgstr "Mygtuko Teksto Spalva"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:210
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:266
+msgid "Featured Columns Colors"
+msgstr "Paryškinto Stulpelio Spalvos"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:294
+msgid "Featured Label Border Color"
+msgstr "Paryškinto Stulpelio Rėmelio Spalva"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:298
+msgid "Featured Label Background Color"
+msgstr "Paryštinto Stulpelio Etiketės Fono Spalva"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:319
+msgid "Feature Label Font Color"
+msgstr "Paryštinto Stulpelio Etiketės Teksto Spalva"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:324
 msgid "Button Color (Featured Column)"
 msgstr "Mygtuko (Paryškinto stulpelio) Spalva"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:212
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:326
 msgid "Featured-Button Color"
 msgstr "Paryškinto Stulpelio Mygtuko Spalva"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:219
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:332
 msgid "Featured-Button Border Color"
 msgstr "Paryškinto Stulpelio Kraštinių Spalva"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:226
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:338
 msgid "Featured-Button Hover Color"
 msgstr "Paryškinto Stulpelio Aktyvaus Mygtuko Spalva"
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:233
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:344
 msgid "Featured-Button Font Color"
 msgstr "Paryškinto Stulpelio Teksto Spalva"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:351
+msgid "Advanced Settings"
+msgstr "Papildomi Nustatymai"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:355
+msgid "Hide Empty Rows"
+msgstr "Paslėpti Tuščias Eilutes"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:359
+msgid "Hide Call To Action Buttons"
+msgstr "Paslėpti Mygtukus"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:363
+msgid "Open Link in New Tab"
+msgstr "Atidaryti Nuorodas Naujame Lange"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:367
+msgid "No Spacing Between Columns"
+msgstr "Pašalinti Tarpelius Tarp Stulpelių"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:377
+msgid "Please upgrade to Easy Pricing Tables Premium to use this setting."
+msgstr ""
+"Norėdami keisti šį nustatyma privalote atnaujinti Easy Pricing Tables į "
+"Premium versiją."
+
+#~ msgid "Forum"
+#~ msgstr "Diskusijos"
 
 #~ msgid "Enter pricing table name here"
 #~ msgstr "Įveskite kainų lentelės pavadinimą"

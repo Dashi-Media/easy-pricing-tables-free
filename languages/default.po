@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Easy Pricing Tables\n"
-"POT-Creation-Date: 2014-02-17 01:05+0400\n"
-"PO-Revision-Date: 2014-02-17 01:06+0400\n"
+"POT-Creation-Date: 2014-04-01 22:59+0200\n"
+"PO-Revision-Date: 2014-04-01 22:59+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgid "Add New"
 msgstr ""
 
 #: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/pricing-table-plugin.php:61
-msgid "Forum"
+msgid "Support"
 msgstr ""
 
 #: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/pricing-table-plugin.php:62
@@ -61,19 +61,19 @@ msgstr ""
 msgid "Insert pricing table"
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:52
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:62
 msgid "Use the form below to insert the shortcode for a pricing table."
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:55
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:65
 msgid "Please select..."
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:73
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:82
 msgid "Insert"
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:74
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:83
 msgid "Cancel"
 msgstr ""
 
@@ -96,19 +96,19 @@ msgid ""
 "which plugins and themes to test with."
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:106
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:117
 msgid "No, thanks"
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:108
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:119
 msgid "Let&#39;s do it!"
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:112
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:123
 msgid "Pricing Table Crash Course"
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:113
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:124
 #, php-format
 msgid ""
 "Instead of watching 99% of your visitors bounce, imagine you could increase "
@@ -197,10 +197,6 @@ msgstr ""
 
 #: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:69
 msgid "M j, Y @ G:i"
-msgstr ""
-
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:94
-msgid "Enter pricing table name here"
 msgstr ""
 
 #: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:114
@@ -467,83 +463,185 @@ msgid "e.g. http://example.com/buy"
 msgstr ""
 
 #: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:3
-msgid "Design Settings"
+msgid "General Settings"
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:5
-msgid "Border Radius"
-msgstr ""
-
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:16
-msgid "No Rounded Corners"
-msgstr ""
-
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:29
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:7
 msgid "Featured Label Text"
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:32
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/table-generation/design1.php:123
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:10
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/table-generation/design1.php:128
 msgid "Most Popular"
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:37
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:15
+msgid "Border Radius"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:26
+msgid "No Rounded Corners"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:40
+msgid "Enlarge Column on Hover"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:44
+msgid "Shake Button on Hover"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:49
 msgid "Font Sizes"
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:39
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:53
 msgid "Featured Label Font Size"
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:67
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:81
 msgid "Plan Name Font Size"
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:95
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:109
 msgid "Price Font Size"
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:123
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:137
 msgid "Bullet Item Font Size"
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:151
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:165
 msgid "Button Font Size"
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:180
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:182
-msgid "Button Color"
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:194
+msgid "Unfeatured Columns Colors"
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:189
-msgid "Button Border Color"
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:198
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:271
+msgid "Background Colors"
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:196
-msgid "Button Hover Color"
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:201
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:274
+msgid "Border Color"
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:203
-msgid "Button Font Color"
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:205
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:278
+msgid "Title Background Color"
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:210
-msgid "Button Color (Featured Column)"
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:209
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:282
+msgid "Pricing Background Color"
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:212
-msgid "Featured-Button Color"
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:213
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:286
+msgid "Button Area Background Color"
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:219
-msgid "Featured-Button Border Color"
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:217
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:290
+msgid "Bullet Item Background Color"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:223
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:304
+msgid "Font Colors"
 msgstr ""
 
 #: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:226
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:307
+msgid "Title Font Color"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:230
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:311
+msgid "Pricing Font Color"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:234
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:315
+msgid "Feature Color"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:239
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:241
+msgid "Button Color"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:247
+msgid "Button Border Color"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:253
+msgid "Button Hover Color"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:259
+msgid "Button Font Color"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:266
+msgid "Featured Columns Colors"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:294
+msgid "Featured Label Border Color"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:298
+msgid "Featured Label Background Color"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:319
+msgid "Feature Label Font Color"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:324
+msgid "Button Color (Featured Column)"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:326
+msgid "Featured-Button Color"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:332
+msgid "Featured-Button Border Color"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:338
 msgid "Featured-Button Hover Color"
 msgstr ""
 
-#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:233
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:344
 msgid "Featured-Button Font Color"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:351
+msgid "Advanced Settings"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:355
+msgid "Hide Empty Rows"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:359
+msgid "Hide Call To Action Buttons"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:363
+msgid "Open Link in New Tab"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:367
+msgid "No Spacing Between Columns"
+msgstr ""
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:377
+msgid "Please upgrade to Easy Pricing Tables Premium to use this setting."
 msgstr ""
