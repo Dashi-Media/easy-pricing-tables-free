@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Easy Pricing Tables\n"
-"POT-Creation-Date: 2014-04-01 22:59+0200\n"
-"PO-Revision-Date: 2014-04-01 23:05+0200\n"
+"POT-Creation-Date: 2014-04-02 21:54+0200\n"
+"PO-Revision-Date: 2014-04-02 21:57+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Lithuanian\n"
@@ -257,16 +257,16 @@ msgid "Do you like this plugin?"
 msgstr "Ar jums patinka šis įskiepis?"
 
 #: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/banner-metabox.php:2
-msgid "Check out the premium version."
-msgstr "Išbandykite įskiepio mokamą versiją."
+msgid "You will love Easy Pricing Tables Premium."
+msgstr "Jūs įsimylėsite Easy Pricing Tables Premium."
 
 #: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/banner-metabox.php:3
 msgid ""
-"It comes with 4 beautiful table designs and tons of customization options. "
-"And because of our 60-day money back guarantee you have nothing to lose."
+"It comes with 4 additional table designs, tooltips, icons, tons of "
+"customization options and much more. 60-day money back guarantee."
 msgstr ""
-"Įskiepyje rasite 4 papildomus nuostabius kainų lentelių dizainus ir galybę "
-"pasirinkimų ir nustatymų. Ir kadangi mes sutinkame gražinti pinigus per "
+"Įskiepyje rasite 4 naujus kainų lentelių šablonus, galybę pasirinkimų, "
+"piktogramų bei nustatymų. Ir kadangi mes sutinkame gražinti pinigus per "
 "bandomasias 60 dienų jūs neturite ko prarasti!"
 
 #: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/banner-metabox.php:5
@@ -306,8 +306,8 @@ msgid "Pricing Table Settings"
 msgstr "Pricing Table Nustatymai"
 
 #: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/spec.php:21
-msgid "Premium Version"
-msgstr "Mokama Versija"
+msgid "Want More Design Options?"
+msgstr "Norėtum pasirinkti kitą dizainą?"
 
 #: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:2
 msgid "Pricing Table Columns"
@@ -680,6 +680,12 @@ msgid "Please upgrade to Easy Pricing Tables Premium to use this setting."
 msgstr ""
 "Norėdami keisti šį nustatyma privalote atnaujinti Easy Pricing Tables į "
 "Premium versiją."
+
+#~ msgid "Check out the premium version."
+#~ msgstr "Išbandykite įskiepio mokamą versiją."
+
+#~ msgid "Premium Version"
+#~ msgstr "Mokama Versija"
 
 #~ msgid "Forum"
 #~ msgstr "Diskusijos"

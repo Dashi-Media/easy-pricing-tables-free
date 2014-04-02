@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Easy Pricing Tables\n"
-"POT-Creation-Date: 2014-04-01 22:59+0200\n"
-"PO-Revision-Date: 2014-04-01 22:59+0200\n"
+"POT-Creation-Date: 2014-04-02 21:54+0200\n"
+"PO-Revision-Date: 2014-04-02 21:54+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -243,13 +243,13 @@ msgid "Do you like this plugin?"
 msgstr ""
 
 #: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/banner-metabox.php:2
-msgid "Check out the premium version."
+msgid "You will love Easy Pricing Tables Premium."
 msgstr ""
 
 #: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/banner-metabox.php:3
 msgid ""
-"It comes with 4 beautiful table designs and tons of customization options. "
-"And because of our 60-day money back guarantee you have nothing to lose."
+"It comes with 4 additional table designs, tooltips, icons, tons of "
+"customization options and much more. 60-day money back guarantee."
 msgstr ""
 
 #: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/banner-metabox.php:5
@@ -287,7 +287,7 @@ msgid "Pricing Table Settings"
 msgstr ""
 
 #: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/spec.php:21
-msgid "Premium Version"
+msgid "Want More Design Options?"
 msgstr ""
 
 #: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:2
