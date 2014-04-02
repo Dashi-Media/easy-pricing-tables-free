@@ -18,7 +18,7 @@ $features_metabox = new WPAlchemy_MetaBox(array
 $banner_metabox = new WPAlchemy_MetaBox(array
 (
     'id' => 'dh_ptp_banner',
-    'title' => __('Premium Version', PTP_LOC),
+    'title' => __('Want More Design Options?', PTP_LOC),
     'template' => PTP_PLUGIN_PATH . 'includes/metaboxes/banner-metabox.php',
     'types' => array('easy-pricing-table'),
     'context' => 'side',
