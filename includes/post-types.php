@@ -35,6 +35,7 @@ function dh_ptp_register_pricing_table_post_type() {
 	    'has_archive' => false, 
 	    'hierarchical' => false,
 	    'menu_position' => 104,
+		'menu_icon' => PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ept-icon-16x16.png',
 	    'supports' => array( 'title', 'revisions')
   	); 
 
