@@ -249,3 +249,16 @@ function dh_ptp_print_jquery_ui_accordion_js()
 	<?php
 }
 add_action('admin_print_footer_scripts', 'dh_ptp_print_jquery_ui_accordion_js' );
+
+/* Deal with parasite Post Type Switcher plugin */
+add_filter('pts_post_type_filter', 'ptp_dh_pts_disable');
+function ptp_dh_pts_disable( $args )
+{
+    $postType  = get_post_type();
+    if( 'easy-pricing-table' === $postType){
+        $args = array(
+          'name' => 'easy-pricing-table'
+        );
+    }
+    return $args;
+}
