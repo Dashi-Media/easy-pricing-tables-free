@@ -15,7 +15,7 @@ function dh_ptp_upgrade_ob_start() {
 
 function dh_ptp_upgrade_to_premium()
 {
-    wp_redirect('http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=link-in-left-menu', 301);
+    wp_redirect('http://fatcatapps.com/easypricingtables/?utm_campaign=ept-left-menu&utm_source=free-plugin&utm_medium=link&utm_content=v1', 301);
     exit();
 }
 
@@ -54,7 +54,7 @@ function dh_ptp_all_admin_notices()
 		'<div class="dh-ptp-upgrade-nag">'.
 			'<p>' . sprintf( __('Thanks for using Easy Pricing Tables. If you like this plugin, please consider supporting continued development by <a href="%s">purchasing the premium version</a>.', PTP_LOC), 'http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=upgrade-notice') . '</p>' .
 			'<p>' . __('Easy Pricing Tables Premium comes with 4 additional table designs, 369 icons and tons of customization options.', PTP_LOC) . '</p>'.
-			'<p>' . sprintf( __('<a href="%s">Click here to learn more...</a>', PTP_LOC), 'http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=upgrade-notice') . '</p>'.
+			'<p>' . sprintf( __('<a href="%s">Click here to learn more...</a>', PTP_LOC), 'http://fatcatapps.com/easypricingtables/?utm_campaign=ept-upgrade-nag&utm_source=free-plugin&utm_medium=link&utm_content=v1') . '</p>'.
 		'</div>';
 }
 

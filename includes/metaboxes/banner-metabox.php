@@ -2,7 +2,7 @@
     <p><?php _e('Do you like this plugin?', PTP_LOC); ?> <a href="http://easypricingtables.com/?utm_source=free-plugin&utm_medium=banner&utm_campaign=banner-in-plugin-sidebar" target="_blank"><?php _e('You will love Easy Pricing Tables Premium.', PTP_LOC); ?></a></p>
     <p><?php _e('It comes with 4 additional table designs, tooltips, icons, tons of customization options and much more. 60-day money back guarantee.', PTP_LOC); ?></p>
     <p style="text-align: center;">
-        <a href="http://easypricingtables.com/?utm_source=free-plugin&utm_medium=banner&utm_campaign=banner-in-plugin-sidebar" target="_blank" class="button button-primary button-large"><?php _e('Learn More', PTP_LOC); ?></a>
+        <a href="http://fatcatapps.com/easypricingtables/?utm_campaign=ept-ui-sidebar&utm_source=free-plugin&utm_medium=link&utm_content=v2" target="_blank" class="button button-primary button-large"><?php _e('Learn More', PTP_LOC); ?></a>
     </p>
     
     <script type="text/javascript">
