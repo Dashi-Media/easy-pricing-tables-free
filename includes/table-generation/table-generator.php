@@ -4,26 +4,43 @@
 include ( PTP_PLUGIN_PATH . '/includes/table-generation/design1.php');
 
 /* CSS Styling */
-function dh_ptp_easy_pricing_table_dynamic_css()
+function dh_ptp_easy_pricing_table_dynamic_css( $id )
 {
     global $features_metabox;
     
-    echo '<style type="text/css">';
+    $css = '';
 
-        // Retrieve all meta data for easy pricing tables
-        $query = new WP_Query(array('post_type' => 'easy-pricing-table', 'posts_per_page' => -1, 'post_status' => 'any'));
-        if ($query->have_posts()) :
-            while ($query->have_posts()) : $query->the_post();
-                // Print CSS styles per table
-                $meta = get_post_meta(get_the_ID(), $features_metabox->get_the_id(), true);
-                dh_ptp_simple_flat_css(get_the_ID(), $meta);
-            endwhile;
-        endif;
-        wp_reset_postdata();
+    // Retrieve all meta data for easy pricing tables
+    $query = new WP_Query( array(
+            'post_type' => 'easy-pricing-table',
+            'p' => $id,
+            'post_status' => 'any',
+    ) );
+    ob_start();
+    if ($query->have_posts()) :
+        while ($query->have_posts()) : $query->the_post();
+            // Print CSS styles per table
+            $meta = get_post_meta(get_the_ID(), $features_metabox->get_the_id(), true);
+            dh_ptp_simple_flat_css(get_the_ID(), $meta);
+        endwhile;
+    endif;
+    wp_reset_postdata();
+    $css = ob_get_clean();
     
-    echo "</style>" . "\n";
+    // Minify
+    $css = preg_replace( '/\s+/', ' ', $css );
+    $css = preg_replace( '/;(?=\s*})/', '', $css );
+    $css = preg_replace( '/(,|:|;|\{|}|\*\/|>) /', '$1', $css );
+    $css = preg_replace( '/ (,|;|\{|}|\(|\)|>)/', '$1', $css );
+    $css = preg_replace( '/(:| )0\.([0-9]+)(%|em|ex|px|in|cm|mm|pt|pc)/i', '${1}.${2}${3}', $css );
+    $css = preg_replace( '/(:| )(\.?)0(%|em|ex|px|in|cm|mm|pt|pc)/i', '${1}0', $css );
+    $css = preg_replace( '/0 0 0 0/', '0', $css );
+    $css = preg_replace( '/#([a-f0-9])\\1([a-f0-9])\\2([a-f0-9])\\3/i', '#\1\2\3', $css );
+
+    $css = '<style type="text/css">' . $css . '</style>' . "\n";
+
+    return $css;
 }
-add_action( 'wp_head', 'dh_ptp_easy_pricing_table_dynamic_css');
 
 /**
  * This function decides which table style we should create. It enqueue the appropriate CSS file and calls the appropriate function.
