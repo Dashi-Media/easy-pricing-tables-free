@@ -5,8 +5,8 @@ Tags: pricing table, responsive pricing table, comparison, comparison table, css
 Author URI: http://fatcatapps.com/?utm_campaign=ept-author-uri&utm_source=wordpress.org-plugins&utm_medium=link
 Plugin URI: http://fatcatapps.com/easypricingtables/?utm_campaign=ept-plugin-uri&utm_source=wordpress.org-plugins&utm_medium=link
 Requires at least: 3.6
-Tested up to: 3.9
-Stable tag: 1.5.2.1
+Tested up to: 3.9.1
+Stable tag: 1.5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -109,6 +109,10 @@ david[at]davidhehenberger[dot]com
 8. Another design from [Easy Pricing Tables Premium](http://fatcatapps.com/easypricingtables/?utm_campaign=ept-sceenshots-cta&utm_source=wordpress.org-plugins&utm_medium=link)
 
 == Changelog ==
+
+= 1.5.3 =
+* Fixed a bug that added unnecessary CSS to some pages
+* Confirmed compatibility with WordPress 3.9.1
 
 = 1.5.2.1 =
 * Updated links from http://easypricingtables.com to http://fatcatapps.com/
