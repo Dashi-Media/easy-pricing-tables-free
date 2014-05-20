@@ -224,14 +224,15 @@ function dh_ptp_save_preview_redirect ($location)
 /**
  * Enqueue jquery-ui-accordion in wp-admin
  */
-function dh_ptp_jquery_ui_accordion()
-{
-	if (is_admin()) {
-		wp_enqueue_script('jquery-ui-accordion');
-		wp_enqueue_style('dh-ptp-jquery-ui', plugins_url('assets/ui/ui-accordion.css', dirname(__FILE__)));
+add_action('admin_enqueue_scripts', 'dh_ptp_jquery_ui_accordion_enqueue' );
+function dh_ptp_jquery_ui_accordion_enqueue(){
+	$screen = get_current_screen();
+	if ( 'easy-pricing-table' != $screen->id ) {
+		return;
 	}
+	wp_enqueue_script('jquery-ui-accordion');
+	wp_enqueue_style('dh-ptp-jquery-ui', plugins_url('assets/ui/ui-accordion.css', dirname(__FILE__)));
 }
-add_action('admin_enqueue_scripts', 'dh_ptp_jquery_ui_accordion' );
 
 /**
  * Print accordion related JS
