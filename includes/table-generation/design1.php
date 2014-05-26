@@ -115,9 +115,12 @@ function dh_ptp_generate_simple_flat_pricing_table_html ($id)
         
         // Get custom shortcode if any
         $custom_button = false;
-        if ( preg_match( '|^\[shortcode\](?P<custom_button>.*)\[/shortcode\]$|', $button_text, $matches) ) {
-            $custom_button = $matches[ 'custom_button' ];        
-        } else if ( empty($button_text) && preg_match( '|^\[shortcode\](?P<custom_button>.*)\[/shortcode\]$|', $button_url, $matches) ) {
+        $shortcode_pattern = '|^\[shortcode\](?P<custom_button>.*)\[/shortcode\]$|';
+        if ( 
+            preg_match( $shortcode_pattern, $button_text, $matches) 
+            ||
+            preg_match( $shortcode_pattern, $button_url, $matches) 
+        ) {
             $custom_button = $matches[ 'custom_button' ];
         }
 
