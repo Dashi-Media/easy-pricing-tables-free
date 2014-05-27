@@ -28,7 +28,8 @@ function dh_ptp_simple_flat_css($id, $meta)
     $design1_featured_button_border_color = isset($meta['featured-button-border-color'])?$meta['featured-button-border-color']:'#2980b9';
     $design1_featured_button_hover_color = isset($meta['featured-button-hover-color'])?$meta['featured-button-hover-color']:'#2980b9';
     $design1_featured_button_font_color = isset($meta['featured-button-font-color'])?$meta['featured-button-font-color']:'#ffffff';
-        
+    
+    $importantAttr = " !important;";
     ?>
 
     #ptp-<?php echo $id ?> div.ptp-item-container {
@@ -59,7 +60,7 @@ function dh_ptp_simple_flat_css($id, $meta)
     #ptp-<?php echo $id ?> a.ptp-button{
         border-radius: <?php echo $design1_rounded_corner_width; ?>;
         font-size: <?php echo $design1_button_font_size . $design1_button_font_size_type; ?>;
-        color: <?php echo $design1_button_font_color; ?>;
+        color: <?php echo $design1_button_font_color.$importantAttr; ?>;
         background-color: <?php echo $design1_button_color; ?>;
         border-bottom: <?php echo $design1_button_border_color;?> 4px solid;
         margin: 0px;
@@ -69,7 +70,7 @@ function dh_ptp_simple_flat_css($id, $meta)
     }
 
     div#ptp-<?php echo $id ?> .ptp-highlight a.ptp-button{
-        color: <?php echo $design1_featured_button_font_color; ?>;
+        color: <?php echo $design1_featured_button_font_color.$importantAttr;; ?>;
         background-color: <?php echo $design1_featured_button_color; ?>;
         border-bottom: <?php echo $design1_featured_button_border_color;?> 4px solid;
     }
