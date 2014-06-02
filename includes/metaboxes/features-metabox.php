@@ -2,12 +2,14 @@
     <ul id="dh_ptp_metabox_tabs">
         <li class="dh_ptp_tab_header"><a href="#dh_ptp_tabs_1"><?php _e('Content', PTP_LOC); ?></a></li>
         <li class="dh_ptp_tab_header"><a href="#dh_ptp_tabs_2"><?php _e('Design', PTP_LOC); ?></a></li>
+        <li class="dh_ptp_tab_header"><a href="#dh_ptp_tabs_3"><?php _e('Template', PTP_LOC); ?></a></li>
     </ul>
     <!-- clear our floats -->
     <div class="clear"></div>
 
     <?php include ( PTP_PLUGIN_PATH . '/includes/metaboxes/metabox-blocks/tab-content.php');?>
     <?php include ( PTP_PLUGIN_PATH . '/includes/metaboxes/metabox-blocks/tab-advanced-settings.php');?>
+    <?php include ( PTP_PLUGIN_PATH . '/includes/metaboxes/metabox-blocks/tab-template.php'); ?>
 
     <div id="ptp-save-buttons">
         <div style="margin-left:10px;margin-right:10px;">
