@@ -52,6 +52,17 @@
         </div>
 
         <?php
+          /*
+        * check if this pricing table is already exist will return number of column as user did setting
+        * otherwise if not exist yet, will initialize 2 columns  
+        */
+        $checkIsExistMeta = get_post_meta(get_the_ID(), $id, TRUE);
+        if ($checkIsExistMeta) {
+                         $options = array();
+               
+        } else {
+            $options = array('length' => 2);
+        }
         /**
          * the loop used to display our tables
          */
