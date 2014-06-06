@@ -17,7 +17,7 @@
     </div>
 
 <?php $mb->the_field('dh-ptp-fancy-flat-template'); ?>
-    <div id="fancy-flat-selector" class="template-selector ">
+    <div id="fancy-flat-selector" class="template-selector " onClick="templateSelectorRequireUpgradeClickedHandler(this)" >
         <input type="hidden" name="<?php $mb->the_name(); ?>" value="<?php if (!is_null($metabox->get_the_value())) {
     $mb->the_value();
 } elseif (!$mb->is_last()) {
@@ -29,11 +29,11 @@
             <li><?php _e('Ideal For Responsive Sites', PTP_LOC); ?></li>
             <li><?php _e('Supports Up To 8 Columns', PTP_LOC); ?></li>
         </ul>
-        <a onClick="templateSelectorRequireUpgradeClickedHandler(this)" class="button template-button"><?php _e('Use This Template', PTP_LOC); ?></a>
+        <a onClick="" class="button template-button"><?php _e('Use This Template', PTP_LOC); ?></a>
     </div>
 
 <?php $mb->the_field('dh-ptp-stylish-flat-template'); ?>
-    <div id="stylish-flat-selector" class="template-selector ">
+    <div id="stylish-flat-selector" class="template-selector " onClick="templateSelectorRequireUpgradeClickedHandler(this)" >
         <input type="hidden" name="<?php $mb->the_name(); ?>" value="<?php if (!is_null($metabox->get_the_value())) {
     $mb->the_value();
 } elseif (!$mb->is_last()) {
@@ -45,12 +45,12 @@
             <li><?php _e('Ideal For Responsive Sites', PTP_LOC); ?></li>
             <li><?php _e('Supports Up To 5 Columns', PTP_LOC); ?></li>
         </ul>
-        <a onClick="templateSelectorRequireUpgradeClickedHandler(this)" class="button template-button"><?php _e('Use This Template', PTP_LOC); ?></a>
+        <a  class="button template-button"><?php _e('Use This Template', PTP_LOC); ?></a>
     </div>
 
     <!-- Design 4 -->
     <?php $mb->the_field('dh-ptp-design4-template'); ?>
-    <div id="design4-selector" class="template-selector ">
+    <div id="design4-selector" class="template-selector " onClick="templateSelectorRequireUpgradeClickedHandler(this)" >
         <input type="hidden" name="<?php $mb->the_name(); ?>" value="<?php if (!is_null($metabox->get_the_value())) {
         $mb->the_value();
     } elseif (!$mb->is_last()) {
@@ -63,11 +63,11 @@
             <li><?php _e('Supports Unlimited Columns', PTP_LOC); ?></li>
             <li><?php _e('Hover Effects (ideal for non-touch devices)', PTP_LOC); ?></li>
         </ul>
-        <a onClick="templateSelectorRequireUpgradeClickedHandler(this)" class="button template-button"><?php _e('Use This Template', PTP_LOC); ?></a>
+        <a  class="button template-button"><?php _e('Use This Template', PTP_LOC); ?></a>
     </div>
 
 <?php $mb->the_field('dh-ptp-design5-template'); ?>
-    <div id="design5-selector" class="template-selector ">
+    <div id="design5-selector" class="template-selector " onClick="templateSelectorRequireUpgradeClickedHandler(this)" >
         <input type="hidden" name="<?php $mb->the_name(); ?>" value="<?php if (!is_null($metabox->get_the_value())) {
     $mb->the_value();
 } elseif (!$mb->is_last()) {
@@ -79,7 +79,7 @@
             <li><?php _e('Ideal For Unresponsive Sites', PTP_LOC); ?></li>
             <li><?php _e('Supports Up To 10 Columns', PTP_LOC); ?></li>
         </ul>
-        <a onClick="templateSelectorRequireUpgradeClickedHandler(this)" class="button template-button"><?php _e('Use This Template', PTP_LOC); ?></a>
+        <a  class="button template-button"><?php _e('Use This Template', PTP_LOC); ?></a>
     </div>
 
     <!-- clear our floats -->
@@ -93,7 +93,7 @@
     function templateSelectorRequireUpgradeClickedHandler(el)
     {
 	
-        var alert_text = "<?php _e("Please upgrade to Easy Pricing Tables Premium to use this setting.", PTP_LOC); ?>";
+        var alert_text = "<?php _e("Please upgrade to Easy Pricing Tables Premium to use this design.", PTP_LOC); ?>";
         alert(alert_text);
 
         return false;
