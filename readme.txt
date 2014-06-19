@@ -6,7 +6,7 @@ Author URI: http://fatcatapps.com/?utm_campaign=ept-author-uri&utm_source=wordpr
 Plugin URI: http://fatcatapps.com/easypricingtables/?utm_campaign=ept-plugin-uri&utm_source=wordpress.org-plugins&utm_medium=link
 Requires at least: 3.6
 Tested up to: 4.0
-Stable tag: 1.5.4
+Stable tag: 1.5.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
