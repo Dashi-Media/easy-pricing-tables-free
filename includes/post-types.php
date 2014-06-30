@@ -169,7 +169,7 @@ function dh_ptp_admin_footer_js()
 {
 	global $post;
 	
-	if ($post->post_type == 'easy-pricing-table') :
+	if (isset($post) && $post->post_type == 'easy-pricing-table') :
 		?>
 			<script type="text/javascript">
 				jQuery('#submitdiv').hide();
