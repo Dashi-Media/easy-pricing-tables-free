@@ -1,11 +1,11 @@
 <?php
 /*
-	Plugin Name: Easy Pricing Tables
-	Plugin URI: http://fatcatapps.com/easypricingtables
-	Description: Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 5 Minutes with Easy Pricing Tables for WordPress. No Coding Required.
-	Author: David Hehenberger
-	Version: 1.5.4.1
-	Author URI: http://fatcatapps.com
+  Plugin Name: Easy Pricing Tables by fatcat apps
+  Plugin URI: http://fatcatapps.com/easypricingtables
+  Description: Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 5 Minutes with Easy Pricing Tables for WordPress. No Coding Required.
+  Author: David Hehenberger @ fatcat apps
+  Version: 1.5.4.1
+  Author URI: http://fatcatapps.com
 */
 
 // define plugin version for update nag
