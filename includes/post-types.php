@@ -235,10 +235,14 @@ function dh_ptp_jquery_ui_accordion_enqueue(){
 }
 
 /**
- * Print accordion related JS
+ * Print accordion related JS in Pricing Tables create/edit pages
  */
-function dh_ptp_print_jquery_ui_accordion_js()
-{
+add_action('admin_print_footer_scripts', 'dh_ptp_print_jquery_ui_accordion_js' );
+function dh_ptp_print_jquery_ui_accordion_js() {
+	$screen = get_current_screen();
+	if ( 'easy-pricing-table' != $screen->id ) {
+		return;
+	}
 	?>
 	<script type="text/javascript">
 		//<![CDATA[
@@ -249,7 +253,6 @@ function dh_ptp_print_jquery_ui_accordion_js()
 	</script>
 	<?php
 }
-add_action('admin_print_footer_scripts', 'dh_ptp_print_jquery_ui_accordion_js' );
 
 /* Deal with parasite Post Type Switcher plugin */
 add_filter('pts_post_type_filter', 'ptp_dh_pts_disable');
