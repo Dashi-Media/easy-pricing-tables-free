@@ -114,7 +114,6 @@ david[at]davidhehenberger[dot]com
 * JS bug (jquery-ui loaded in non easy-pricing-tables post-type)
 
 
-
 = 1.5.4 =
 * Improved the plugins' compatibility with shortcode-button generators
 * Fixed a JS error in the Easy Pricing Tables editor
