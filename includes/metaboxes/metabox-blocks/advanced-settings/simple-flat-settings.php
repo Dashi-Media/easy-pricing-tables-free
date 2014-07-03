@@ -44,6 +44,18 @@
                     <td class="settings-title"><label for="design1-shake-buttons-on-hover-demo"><?php _e('Shake Button on Hover', PTP_LOC); ?></label></td>
                     <td><input type="checkbox" name="design1-shake-buttons-on-hover-demo" id="design1-shake-buttons-on-hover-demo" value="1"/></td>
                 </tr>
+                
+                   <!--  Automatically match Column Height  -->
+                  <tr>
+                     <?php $mb->the_field('match-column-height-dg1'); ?>
+                    <td class="settings-title">
+                        <label for="match-column-height-dg1" style="margin: 0; font-weight: normal;"><?php _e('Automatically match Column Height', PTP_LOC); ?></label>
+                    </td>
+                    <td>
+                        <?php $mb->the_field('match-column-height-dg1'); ?>
+                        <input type="checkbox" onchange="return consistent_match_column_height(this) " class="tt-match-column-height-checkbox" name="<?php $metabox->the_name(); ?>" id="match-column-height-dg1" value="1" <?php      if (!$meta) { echo 'checked="checked"'; } else  if ($metabox->get_the_value()) echo 'checked="checked"'; ?>/>
+                    </td>
+                </tr>
             </table>
         </div>
         <h3><?php _e('Font Sizes', PTP_LOC); ?></h3>
@@ -369,6 +381,25 @@
                 </tr>
             </table>
         </div>
+               <!-- ept-custom-css-setting -->
+        <h3><?php _e('Custom Css', PTP_LOC); ?></h3>
+        <div >
+ 
+            <table>
+                <tr>
+                   
+                    <td class="settings-title">
+                        <label for="custom-css-setting" style="margin: 0; font-weight: bold;"><?php _e('Custom Pricing Table Css', PTP_LOC); ?></label>
+                    </td>
+                    <td class="custom-css-setting-td">
+                        
+                        <textarea class="custom-css-setting-textbox"  disabled="true"  rows="10" cols="60"  placeholder="Type your custom css here" ></textarea>
+                        </td>
+                </tr>
+           
+            </table>
+        
+           </div>
     </div>
 
     <script type="text/javascript">
