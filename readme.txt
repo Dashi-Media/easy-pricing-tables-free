@@ -97,6 +97,9 @@ width: 25%!important;
 }
 `
 
+= Does this plugin use JavaScript? =
+We're using a small jQuery library called (jquery.matchHeight.js)[https://github.com/liabru/jquery-match-height] for the "Automatically match Row Height" feature. This small library won't significantly impact load time, but please be aware that we are loading a JavaScript file if you enable "Automatically match Row Height".
+
 == Screenshots ==
 1. Example of a pricing table with 3 columns
 2. Example of a pricing table with 2 columns
