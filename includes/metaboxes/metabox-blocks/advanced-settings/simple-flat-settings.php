@@ -45,11 +45,11 @@
                     <td><input type="checkbox" name="design1-shake-buttons-on-hover-demo" id="design1-shake-buttons-on-hover-demo" value="1"/></td>
                 </tr>
                 
-                   <!--  Automatically match Column Height  -->
+                   <!--  Automatically match Row Height  -->
                   <tr>
                      <?php $mb->the_field('match-column-height-dg1'); ?>
                     <td class="settings-title">
-                        <label for="match-column-height-dg1" style="margin: 0; font-weight: normal;"><?php _e('Automatically match Column Height', PTP_LOC); ?></label>
+                        <label for="match-column-height-dg1" style="margin: 0; font-weight: normal;"><?php _e('Automatically match Row Height', PTP_LOC); ?></label>
                     </td>
                     <td>
                         <?php $mb->the_field('match-column-height-dg1'); ?>
@@ -389,7 +389,7 @@
                 <tr>
                    
                     <td class="settings-title">
-                        <label for="custom-css-setting" style="margin: 0; font-weight: bold;"><?php _e('Custom Pricing Table Css', PTP_LOC); ?></label>
+                        <label class="custom-css-setting-textbox"  for="custom-css-setting" style="margin: 0; font-weight: bold;"><?php _e('Custom Pricing Table Css', PTP_LOC); ?></label>
                     </td>
                     <td class="custom-css-setting-td">
                         
@@ -411,6 +411,15 @@
                 return false;
             });
             $('.ept-demo .wp-picker-container a').click(function(event){
+                alert(alert_text);
+                return false;
+            });
+            
+             $('.custom-css-setting-textbox').on('click', function(){
+                alert(alert_text);
+                return false;
+            });
+             $('.custom-css-setting-td').on('click', function(){
                 alert(alert_text);
                 return false;
             });
