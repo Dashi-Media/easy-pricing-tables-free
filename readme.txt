@@ -4,9 +4,9 @@ Donate link: http://fatcatapps.com/easypricingtables/?utm_campaign=ept-donate-li
 Tags: pricing table, responsive pricing table, comparison, comparison table, css table, price, price gird, pricing, pricing box, pricing grid, table, pricing page, landing page, woocommerce
 Author URI: http://fatcatapps.com/?utm_campaign=ept-author-uri&utm_source=wordpress.org-plugins&utm_medium=link
 Plugin URI: http://fatcatapps.com/easypricingtables/?utm_campaign=ept-plugin-uri&utm_source=wordpress.org-plugins&utm_medium=link
-Requires at least: 3.6
+Requires at least: 3.6.0.1
 Tested up to: 3.9.1
-Stable tag: 1.6
+Stable tag: 1.6.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -112,8 +112,13 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 
 == Changelog ==
 
+= 1.6.0.1 =
+* Fixed a minor issue that occured while deploying v1.6 that caused 'Automatically match Row Height' to not work.
+
+
 = 1.6 =
 * Automatically match Row Height - feature. For all newly created tables, all rows will now be forced to be of the same height using JS (you can activate/deactivate this in Design -> General Settings -> Automatically match Row Height)
+
 
 = 1.5.5 =
 * Fixed a JS bug (jquery-ui loaded in non easy-pricing-tables post-types)
