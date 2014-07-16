@@ -159,15 +159,17 @@ function dh_ptp_mailing_list_pointer_ajax()
     include_once PTP_PLUGIN_PATH.'includes/libraries/drip/drip.php';
 	
 	$drip_api = new DripApi();
-	$drip_api->add_subscriber(
+        $drip_api->add_subscriber(
 		$_POST['email'], //$current_user->user_email,
 		array(
 			'name' => $current_user->display_name,
 			'url'  => get_bloginfo('url')
 		)
 	);
+                
+        update_option('dh_ptp_mailing_list', $result);
+       	
 	
-	update_option('dh_ptp_mailing_list', 'yes');
     
     exit();
 }

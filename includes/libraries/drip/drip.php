@@ -1,7 +1,7 @@
 <?php
 class DripApi
 {
-	var $api_url 		= 'https://api.getdrip.com/v1';
+	var $api_url 		= 'https://api.getdrip.com/v2';
 	var $api_key 		= 'zp7isdxrswdabrpts1vedh1z11ejkr2t';
 	var $api_account_id = '6214945';
 	var $api_campaign   = '2910687';
@@ -24,6 +24,7 @@ class DripApi
 		);
 		
 		$this->execute_query($url, $payload);
+               
 	}
 	
 	private function execute_query($url_path, $payload = array())
@@ -39,7 +40,7 @@ class DripApi
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 		if (count($payload) > 0) {
-			curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+			curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/vnd.api+json'));
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 		} else {
 			curl_setopt($ch, CURLOPT_POSTFIELDS, array('status' => 'active'));
@@ -47,7 +48,6 @@ class DripApi
 		curl_setopt($ch, CURLOPT_URL, $url);
 		$result = curl_exec($ch);
 		curl_close($ch);
-		
 		return $result;
 	}
 }
