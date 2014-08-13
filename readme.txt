@@ -5,8 +5,8 @@ Tags: pricing table, responsive pricing table, comparison, comparison table, css
 Author URI: http://fatcatapps.com/?utm_campaign=ept-author-uri&utm_source=wordpress.org-plugins&utm_medium=link
 Plugin URI: http://fatcatapps.com/easypricingtables/?utm_campaign=ept-plugin-uri&utm_source=wordpress.org-plugins&utm_medium=link
 Requires at least: 3.6.0.1
-Tested up to: 3.9.1
-Stable tag: 1.6.0.1
+Tested up to: 3.9.2
+Stable tag: 1.6.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,6 +111,11 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 8. Another design from [Easy Pricing Tables Premium](http://fatcatapps.com/easypricingtables/?utm_campaign=ept-sceenshots-cta&utm_source=wordpress.org-plugins&utm_medium=link)
 
 == Changelog ==
+
+= 1.6.0.2 =
+* Confirmed compatibility with WordPress 3.9.2
+* Updated to Drip API v2.0
+
 
 = 1.6.0.1 =
 * Fixed a minor issue that occured while deploying v1.6 that caused 'Automatically match Row Height' to not work.
