@@ -1,4 +1,4 @@
-=== Easy Pricing Tables by fatcat apps ===
+=== Easy Pricing Tables by Fatcat Apps ===
 Contributors: davidhme
 Donate link: http://fatcatapps.com/easypricingtables/?utm_campaign=ept-donate-link&utm_source=wordpress.org-plugins&utm_medium=link
 Tags: pricing table, responsive pricing table, comparison, comparison table, css table, price, price gird, pricing, pricing box, pricing grid, table, pricing page, landing page, woocommerce
@@ -13,7 +13,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 5 Minutes with Easy Pricing Tables for WordPress. No Coding Required.
 
 == Description ==
-*   **Easy Pricing Tables for Wordpress** makes it easy to create and publish beautiful pricing tables on your WordPress site. You will be able to set up and publish your pricing table in no time.
+*   **Easy Pricing Tables for Wordpress** makes it easy to create and publish beautiful pricing tables and comparison tables on your WordPress site. You will be able to set up and publish your pricing table in no time.
 
 *   [View A Pricing Table Live Demo &raquo;](http://fatcatapps.com/easypricingtables/free-demo/?utm_campaign=ept-description-demo&utm_source=wordpress.org-plugins&utm_medium=link)
 
