@@ -258,11 +258,11 @@
         </div>
         
         
-        <h3><?php _e("Unfeatured Columns Colors", PTP_LOC); ?></h3>
+        <h3><?php _e("Font & Background Colors (Premium Only)", PTP_LOC); ?></h3>
         <div>
             <table>
                 <tr class="table-headline">
-                    <td><?php _e('Background Colors', PTP_LOC); ?></td>
+                    <td><?php _e('Background Colors (Unfeatured Columns)', PTP_LOC); ?></td>
                 </tr>
                 <tr class="ept-demo">
                     <td class="settings-title"><label for="unfeatured-border-color-demo"><?php _e('Border Color', PTP_LOC); ?></label></td>
@@ -287,7 +287,7 @@
                 
                 <!-- Headline -->
                 <tr class="table-headline">
-                    <td><br/><?php _e('Font Colors', PTP_LOC); ?></td>
+                    <td><br/><?php _e('Font Colors (Unfeatured Columns)', PTP_LOC); ?></td>
                 </tr>
                 <tr class="ept-demo">
                     <td class="settings-title"><label for="title-area-font-color-demo"><?php _e('Title Font Color', PTP_LOC); ?></label></td>
@@ -302,15 +302,9 @@
                     <td><div class="wp-picker-container"><a tabindex="0" class="wp-color-result" title="Select Color" data-current="Current Color" style="background-color: #333333;"></a></div></td>
                 </tr>
                 
-                
-            </table>
-        </div>
-        <h3><?php _e("Featured Columns Colors", PTP_LOC); ?></h3>
-        <div>
-            <table>
-                <!-- Headline -->
+                 <!-- Headline -->
                 <tr class="table-headline">
-                    <td><?php _e('Background Colors', PTP_LOC); ?></td>
+                    <td><?php _e('Background Colors (Featured Columns)', PTP_LOC); ?></td>
                 </tr>
                 <tr class="ept-demo">
                     <td class="settings-title"><label for="featured-border-color-demo"><?php _e('Border Color', PTP_LOC); ?></label></td>
@@ -343,7 +337,7 @@
                 
                 <!-- Headline -->
                 <tr class="table-headline">
-                    <td><br/><?php _e('Font Colors', PTP_LOC); ?></td>
+                    <td><br/><?php _e('Font Colors (Featured Columns)', PTP_LOC); ?></td>
                 </tr>
                 <tr class="ept-demo">
                     <td class="settings-title"><label for="featured-title-area-font-color-demo"><?php _e('Title Font Color', PTP_LOC); ?></label></td>
@@ -362,10 +356,10 @@
                     <td><div class="wp-picker-container"><a tabindex="0" class="wp-color-result" title="Select Color" data-current="Current Color" style="background-color: #ffffff;"></a></div></td>
                 </tr>
                 
-                
             </table>
         </div>
-        <h3><?php _e("Advanced Settings", PTP_LOC); ?></h3>
+
+        <h3><?php _e("Advanced Settings (Premium Only)", PTP_LOC); ?></h3>
         <div>
             <table>
                 <tr class="ept-demo">
@@ -395,7 +389,7 @@
             </table>
         </div>
                <!-- ept-custom-css-setting -->
-        <h3><?php _e('Custom Css', PTP_LOC); ?></h3>
+        <h3><?php _e('Custom CSS (Premium Only)', PTP_LOC); ?></h3>
         <div >
  
             <table>
