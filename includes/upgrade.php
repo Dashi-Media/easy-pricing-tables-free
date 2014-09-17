@@ -29,6 +29,14 @@ function dh_ptp_upgrade_to_premium_menu_js()
             });
         });
     </script>
+    <style>
+        a[href="edit.php?post_type=easy-pricing-table&page=easy-pricing-tables-upgrade"] {
+            color: #6bbc5b !important;
+        }
+        a[href="edit.php?post_type=easy-pricing-table&page=easy-pricing-tables-upgrade"]:hover {
+            color: #7ad368 !important;
+        }
+    </style>
     <?php 
 }
 add_action( 'admin_footer', 'dh_ptp_upgrade_to_premium_menu_js');
