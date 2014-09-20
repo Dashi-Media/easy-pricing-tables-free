@@ -569,7 +569,8 @@ color:#333;
 .tt-centered{
     text-align: center;
 }
-#dh_ptp_banner_metabox h3 {
+#dh_ptp_banner_metabox h3 , #dh_ptp_banner_quick_link_metabox h3 {
     color: #fff;
     background-color: #333;
 }
+

@@ -26,4 +26,15 @@ $banner_metabox = new WPAlchemy_MetaBox(array
     'skip_admin_head' => true
 ));
 
+$quick_links_metabox = new WPAlchemy_MetaBox(array
+(
+    'id' => 'dh_ptp_banner_quick_link',
+    'title' => __('Quick Links', PTP_LOC),
+    'template' => PTP_PLUGIN_PATH . 'includes/metaboxes/quick-links-metabox.php',
+    'types' => array('easy-pricing-table'),
+    'context' => 'side',
+    'priority' => 'high',
+    'skip_admin_head' => true
+));
+
 ?>
