@@ -569,8 +569,13 @@ color:#333;
 .tt-centered{
     text-align: center;
 }
-#dh_ptp_banner_metabox h3 , #dh_ptp_banner_quick_link_metabox h3 {
+#dh_ptp_banner_review_box_metabox h3, #dh_ptp_banner_metabox h3 , #dh_ptp_banner_quick_link_metabox h3 {
     color: #fff;
     background-color: #333;
 }
 
+#dh_ptp_banner_review_box_metabox .button-large, #dh_ptp_banner_metabox .button-large , #dh_ptp_banner_quick_link_metabox .button-large {
+    font-size: 17px;
+    line-height: 30px;
+    height: 32px;
+}
