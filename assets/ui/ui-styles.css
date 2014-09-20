@@ -562,3 +562,14 @@ color:#333;
 .custom-css-setting-textbox {
     opacity: 0.7;
 }
+
+.tt-banner-headline {
+    font-size: 17px;
+}
+.tt-centered{
+    text-align: center;
+}
+#dh_ptp_banner_metabox h3 {
+    color: #fff;
+    background-color: #333;
+}

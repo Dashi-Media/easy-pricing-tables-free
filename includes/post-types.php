@@ -25,7 +25,7 @@ function dh_ptp_register_pricing_table_post_type() {
   	$args = array(
 	    'labels' => $labels,
 	    'public' => false,
-	   	'exclude_from_search' => true,
+	    'exclude_from_search' => true,
 	    'publicly_queryable' => true,
 	    'show_ui' => true, 
 	    'show_in_menu' => true, 
@@ -35,7 +35,7 @@ function dh_ptp_register_pricing_table_post_type() {
 	    'has_archive' => false, 
 	    'hierarchical' => false,
 	    'menu_position' => 104,
-		'menu_icon' => PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ept-icon-16x16.png',
+	    'menu_icon' => PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ept-icon-16x16.png',
 	    'supports' => array( 'title', 'revisions')
   	); 
 
@@ -265,4 +265,26 @@ function ptp_dh_pts_disable( $args )
         );
     }
     return $args;
+}
+
+/**
+ *  set screen layout to 2 colums
+ */
+add_filter('screen_layout_columns', 'tt_ptp_set_custom_branding_screen_layout', 10, 2);
+function tt_ptp_set_custom_branding_screen_layout($columns, $screen) {
+	
+       if ($screen === 'easy-pricing-table'){
+		$columns[$screen] = 2;
+	}
+	return $columns;
+}
+
+add_filter( 'get_user_option_screen_layout_easy-pricing-table', 'tt_ptp_user_option_screen_layout_easy_pricing_table' );
+function tt_ptp_user_option_screen_layout_easy_pricing_table() {
+    
+    $screen = get_current_screen();
+	if ( 'easy-pricing-table' == $screen->id ) {
+		 return 2;
+	}
+   
 }
