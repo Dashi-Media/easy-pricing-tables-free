@@ -10,9 +10,9 @@ $features_metabox = new WPAlchemy_MetaBox(array
 	'title' => __('Pricing Table Settings', PTP_LOC),
 	'template' => PTP_PLUGIN_PATH . 'includes/metaboxes/features-metabox.php',
 	'types' => array('easy-pricing-table'),
-    'autosave' => TRUE,
-    'priority' => 'high',
-    'context' => 'normal'
+        'autosave' => TRUE,
+        'priority' => 'high',
+        'context' => 'normal'
 ));
 
 $banner_metabox = new WPAlchemy_MetaBox(array
