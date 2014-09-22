@@ -1,5 +1,5 @@
 === Easy Pricing Tables by Fatcat Apps ===
-Contributors: davidhme
+Contributors: davidhme, fatcatapps
 Donate link: http://fatcatapps.com/easypricingtables/?utm_campaign=ept-donate-link&utm_source=wordpress.org-plugins&utm_medium=link
 Tags: pricing table, responsive pricing table, comparison, comparison table, css table, price, price gird, pricing, pricing box, pricing grid, table, pricing page, landing page, woocommerce
 Author URI: http://fatcatapps.com/?utm_campaign=ept-author-uri&utm_source=wordpress.org-plugins&utm_medium=link
@@ -13,17 +13,20 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 5 Minutes with Easy Pricing Tables for WordPress. No Coding Required.
 
 == Description ==
-*   **Easy Pricing Tables for Wordpress** makes it easy to create and publish beautiful pricing tables and comparison tables on your WordPress site. You will be able to set up and publish your pricing table in no time.
+*   The **Easy Pricing Tables** WordPress Plugin makes it easy to create and publish beautiful pricing tables and comparison tables on your WordPress site. You will be able to set up and publish your pricing table in no time.
+
+[youtube http://www.youtube.com/watch?v=657Qs5Yng5Q]
 
 *   [View A Pricing Table Live Demo &raquo;](http://fatcatapps.com/easypricingtables/free-demo/?utm_campaign=ept-description-demo&utm_source=wordpress.org-plugins&utm_medium=link)
+
+= Overview =
 
 *   Easy Pricing Tables implements conversion rate optimization (CRO) best practices and guides you through the process of creating a pricing table that converts 
 
 *   This plugin works with any WordPress theme you have installed. After installing the plugin and creating your first pricing table, you can publish your table anywhere on your site using a shortcode.
 
-[youtube http://www.youtube.com/watch?v=657Qs5Yng5Q]
 
-**Features**
+= Easy Pricing Tables Features=
 
 *   Works with any WordPress Theme
 *   Responsive Pricing Tables
@@ -34,17 +37,25 @@ Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 
 *   Use drag & drop to reorder columns
 *   Featured Your Most Popular Column
 
-**Premium Version Features**
+> #### Easy Pricing Tables Premium
+> Easy Pricing Tables Premium comes with the following features.<br />
+>
+> 4 additional gorgeous designs.<br />
+> More customization options.<br />
+> Tooltips.<br />
+> Google Analytics Integration.<br />
+> 300+ Icons.<br />
+> Pricing Toggles<br />
+> Priority support<br />
+>
+> [Learn more about Easy Pricing Tables Premium >>](http://fatcatapps.com/easypricingtables/?utm_campaign=ept-description-cta&utm_source=wordpress.org-plugins&utm_medium=link)
 
-*	4 additional gorgeous designs
-*	More customization options
-*	Tooltips
-*	Google Analytics Integration
-*   Icons
-*	Pricing Toggles
-*	Priority support
+= Relevant Links =
 
-*	[Learn more about Easy Pricing Tables Premium >>](http://fatcatapps.com/easypricingtables/?utm_campaign=ept-description-cta&utm_source=wordpress.org-plugins&utm_medium=link)
+*   [Easy Pricing Tables Premium live demo](http://demo.fatcatapps.com/easypricingtables/)
+*   [FatcatApps.com](http://fatcatapps.com/)
+*	[Other plugins by FatcatApps](https://profiles.wordpress.org/fatcatapps/#content-plugins)
+*	[FatcatApps founder, David Hehenberger, on Twitter](https://twitter.com/davidhme)
 
 == Installation ==
 
