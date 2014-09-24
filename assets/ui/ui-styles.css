@@ -358,6 +358,7 @@ Popover help text tooltip styling
 #dh_ptp_metabox_tabs a{
   text-decoration: none;
   outline:0;
+  color:#333;
 }
 
 #dh_ptp_design_tabs .ui-tabs-active a,
