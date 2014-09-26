@@ -359,6 +359,8 @@ Popover help text tooltip styling
   text-decoration: none;
   outline:0;
   color:#333;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 #dh_ptp_design_tabs .ui-tabs-active a,
