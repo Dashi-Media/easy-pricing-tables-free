@@ -604,3 +604,16 @@ color:#333;
     background: #f1f1f1;
     color: #000;
 }
+
+.settings-title {padding-right: 30px; vertical-align: top; padding-top:3px;}
+#dh_ptp_design_tabs_container input[type="text"] {margin-left: 0px;}
+
+.custom-css-setting-td {
+    max-width: 40em;
+    width: 40em;
+}
+
+.CodeMirror { border: 1px solid #ddd;height: 300px;background: #f8f8f8;}
+.CodeMirror pre span {
+     display: inline;
+}

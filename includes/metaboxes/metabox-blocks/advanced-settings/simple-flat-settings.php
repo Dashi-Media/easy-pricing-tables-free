@@ -257,7 +257,11 @@
             </table>
         </div>
         
-        
+        <?php 
+        /*   
+         * 
+         *    Hide the greyed out for not against WP.org term
+         * 
         <h3><?php _e("Font & Background Colors (Premium Only)", PTP_LOC); ?></h3>
         <div>
             <table>
@@ -388,19 +392,23 @@
                 </tr>
             </table>
         </div>
-               <!-- ept-custom-css-setting -->
-        <h3><?php _e('Custom CSS (Premium Only)', PTP_LOC); ?></h3>
+         */ ?> 
+         
+     <!-- ept-custom-css-setting -->
+        <h3><?php _e('Custom Css', PTP_LOC); ?></h3>
         <div >
  
             <table>
                 <tr>
-                   
+                    <?php $mb->the_field('ept-custom-css-setting-dg1'); ?>
                     <td class="settings-title">
-                        <label class="custom-css-setting-textbox"  for="custom-css-setting" style="margin: 0; font-weight: bold;"><?php _e('Custom Pricing Table Css', PTP_LOC); ?></label>
+                        <label for="custom-css-setting" style="margin: 0; font-weight: bold;"><?php _e('Custom Pricing Table Css', PTP_LOC); ?></label>
                     </td>
                     <td class="custom-css-setting-td">
                         
-                        <textarea class="custom-css-setting-textbox"  disabled="true"  rows="10" cols="60"  placeholder="Type your custom css here" ></textarea>
+                        <textarea  class="custom-css-setting-textbox" name="<?php $metabox->the_name(); ?>"  rows="10" cols="60" <?php if (!$metabox->get_the_value()) echo  'placeholder=" Type your custom css here"' ?> ><?php if ($metabox->get_the_value()) echo " ".$metabox->get_the_value();else {
+                         echo " ";
+                     } ?></textarea>
                         </td>
                 </tr>
            
@@ -410,9 +418,9 @@
     </div>
 
     <script type="text/javascript">
-        jQuery(document).ready(function($){            
+       /* jQuery(document).ready(function($){            
             // Alert
-            var alert_text = "<?php _e("Please upgrade to Easy Pricing Tables Premium to use this setting.", PTP_LOC); ?>";
+            var alert_text = "<?php //_e("Please upgrade to Easy Pricing Tables Premium to use this setting.", PTP_LOC); ?>";
             $('.ept-demo').on('click', function(){
                 alert(alert_text);
                 return false;
@@ -430,6 +438,6 @@
                 alert(alert_text);
                 return false;
             });
-        });
+        }); */
     </script>
 </div>

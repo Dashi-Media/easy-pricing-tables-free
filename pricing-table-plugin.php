@@ -84,7 +84,10 @@ function dh_ptp_plugin_footer_enqueu($hook_suffix)
   global $post;
   
   if ($post && $post->post_type == 'easy-pricing-table') {
-	add_filter('admin_footer_text', 'dh_ptp_plugin_footer');
+      wp_enqueue_script( 'codemirror', PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ui/ui-components/codemirror/codemirror.js' );
+      wp_enqueue_script( 'css', PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ui/ui-components/codemirror/addon-codemirror/css.js' );
+      wp_enqueue_style( 'codemirror-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-components/codemirror/codemirror.css' );
+      add_filter('admin_footer_text', 'dh_ptp_plugin_footer');
   }
 }
 add_action('admin_enqueue_scripts', 'dh_ptp_plugin_footer_enqueu');
