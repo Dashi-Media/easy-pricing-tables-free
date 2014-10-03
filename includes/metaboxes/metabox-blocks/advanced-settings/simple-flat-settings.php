@@ -260,7 +260,7 @@
         <?php 
         /*   
          * 
-         *    Hide the greyed out for not against WP.org term
+         *    Hide the greyed out area
          * 
         <h3><?php _e("Font & Background Colors (Premium Only)", PTP_LOC); ?></h3>
         <div>

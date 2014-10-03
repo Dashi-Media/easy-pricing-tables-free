@@ -6,7 +6,7 @@ Author URI: http://fatcatapps.com/?utm_campaign=ept-author-uri&utm_source=wordpr
 Plugin URI: http://fatcatapps.com/easypricingtables/?utm_campaign=ept-plugin-uri&utm_source=wordpress.org-plugins&utm_medium=link
 Requires at least: 3.6
 Tested up to: 4.0
-Stable tag: 1.6.1.1
+Stable tag: 1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,6 +18,8 @@ Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 
 [youtube http://www.youtube.com/watch?v=657Qs5Yng5Q]
 
 *   [View A Pricing Table Live Demo &raquo;](http://fatcatapps.com/easypricingtables/free-demo/?utm_campaign=ept-description-demo&utm_source=wordpress.org-plugins&utm_medium=link)
+
+*   [Check out Easy Pricing Tables Premium](http://fatcatapps.com/easypricingtables/?utm_campaign=ept-description-cta&utm_source=wordpress.org-plugins&utm_medium=link)
 
 = Overview =
 
@@ -36,6 +38,7 @@ Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 
 *	Customize your design: font-size, color pickers and rounded borders.
 *   Use drag & drop to reorder columns
 *   Featured Your Most Popular Column
+*   Custom CSS - Add Custom CSS to your pricing table
 
 > #### Easy Pricing Tables Premium
 > Easy Pricing Tables Premium comes with the following features.<br />
@@ -122,6 +125,9 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 8. Another design from [Easy Pricing Tables Premium](http://fatcatapps.com/easypricingtables/?utm_campaign=ept-sceenshots-cta&utm_source=wordpress.org-plugins&utm_medium=link)
 
 == Changelog ==
+
+= 1.7 =
+* Add Custom CSS Feature
 
 = 1.6.1.1 =
 * Tiny CSS fix (user interface)
