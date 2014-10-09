@@ -57,7 +57,7 @@ function dh_ptp_simple_flat_css($id, $meta)
     }
     #ptp-<?php echo $id ?> div.ptp-cta{
         border-bottom-right-radius: <?php echo $design1_rounded_corner_width; ?>;
-        border-top-left-radius: <?php echo $design1_rounded_corner_width; ?>;
+        border-bottom-left-radius: <?php echo $design1_rounded_corner_width; ?>;
         padding-top: 1.25em;
         padding-bottom: 1.25em;
     }
