@@ -62,7 +62,7 @@ function dh_ptp_generate_pricing_table($id)
     
     // Print stylish enable match-column-height
        if(isset($meta['match-column-height-dg1'])) {   
-             wp_enqueue_script( 'matchHeight', PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ui/jquery.matchHeight-min.js');
+             wp_enqueue_script( 'matchHeight', PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ui/jquery.matchHeight-min.js', array('jquery'));
          
              tt_ptp_enable_column_match_height_script_dg1();
         }
