@@ -136,7 +136,7 @@ function dh_ptp_mailing_list_pointer()
 function dh_ptp_mailing_list_pointer_ajax()
 {
     global $current_user;
-    
+
     // Verify nonce
     if(!wp_verify_nonce($_POST['nonce'], 'dh_ptp_mailing_list') && !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         die ('No tricky business!');
@@ -160,14 +160,14 @@ function dh_ptp_mailing_list_pointer_ajax()
 	
 	$drip_api = new DripApi();
         $drip_api->add_subscriber(
-		$_POST['email'], //$current_user->user_email,
-		array(
-			'name' => $current_user->display_name,
-			'url'  => get_bloginfo('url')
-		)
+                'forms/7564307/submissions',
+		
+		array(  'fields[name]'  => $current_user->display_name,
+			'fields[email]' => $_POST['email'], //$current_user->user_email,,
+					)
 	);
                 
-        update_option('dh_ptp_mailing_list', $result);
+       update_option('dh_ptp_mailing_list', $result);
        	
 	
     
