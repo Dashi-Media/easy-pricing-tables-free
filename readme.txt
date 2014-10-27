@@ -17,7 +17,7 @@ Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 
 
 [youtube http://www.youtube.com/watch?v=657Qs5Yng5Q]
 
-*   [View A Pricing Table Live Demo &raquo;](http://fatcatapps.com/easypricingtables/free-demo/?utm_campaign=ept-description-demo&utm_source=wordpress.org-plugins&utm_medium=link)
+*   [View Easy Pricing Tables Premium Live Demo &raquo;](http://demo.fatcatapps.com/easypricingtables/?utm_campaign=ept-description-demo&utm_source=wordpress.org-plugins&utm_medium=link)
 
 *   [Check out Easy Pricing Tables Premium](http://fatcatapps.com/easypricingtables/?utm_campaign=ept-description-cta&utm_source=wordpress.org-plugins&utm_medium=link)
 
@@ -28,7 +28,7 @@ Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 
 *   This plugin works with any WordPress theme you have installed. After installing the plugin and creating your first pricing table, you can publish your table anywhere on your site using a shortcode.
 
 
-= Easy Pricing Tables Features=
+= Easy Pricing Tables Feature s=
 
 *   Works with any WordPress Theme
 *   Responsive Pricing Tables
