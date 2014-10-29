@@ -147,7 +147,7 @@ function dh_ptp_generate_simple_flat_pricing_table_html ($id)
 		  		'<div class="ptp-price">' . $plan_price . '</div>' .
                     dh_ptp_features_to_html_simple_flat($plan_features, dh_ptp_get_max_number_of_features()) .
 	  			'<div class="ptp-cta">'.
-                    (($custom_button)?$custom_button:'<a class="ptp-button" href="' . $button_url . '">' . $button_text . '</a>') .
+                    (($custom_button)?$custom_button:'<a class="ptp-button" id="ptp-'.$id.'-cta-'.$loop_index.'" href="' . $button_url . '">' . $button_text . '</a>') .
 	  			'</div>' .
 			'</div>' .
 		'</div>';
