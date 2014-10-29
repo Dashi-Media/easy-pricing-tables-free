@@ -6,7 +6,7 @@ Author URI: http://fatcatapps.com/?utm_campaign=ept-author-uri&utm_source=wordpr
 Plugin URI: http://fatcatapps.com/easypricingtables/?utm_campaign=ept-plugin-uri&utm_source=wordpress.org-plugins&utm_medium=link
 Requires at least: 3.6
 Tested up to: 4.0
-Stable tag: 1.7
+Stable tag: 1.7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -125,6 +125,12 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 8. Another design from [Easy Pricing Tables Premium](http://fatcatapps.com/easypricingtables/?utm_campaign=ept-sceenshots-cta&utm_source=wordpress.org-plugins&utm_medium=link)
 
 == Changelog ==
+
+= 1.7.1 =
+* Fixed CSS bug related to the "rounded corners" - feature
+* Fixed a rare bug by adding jquey lib dependency after matchHeight lib
+* Minor CSS change in the UI
+* Add unique ID element to every call to action button
 
 = 1.7 =
 * Add Custom CSS Feature
