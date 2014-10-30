@@ -107,7 +107,9 @@ function dh_ptp_mailing_list_pointer()
             type: "POST",
             url:  "'.admin_url('admin-ajax.php').'",
             data: {action: "dh_ptp_mailing_list", email: jQuery("#ept_email").val(), nonce: "'.wp_create_nonce('dh_ptp_mailing_list').'", subscribe: "%s" }
-        });
+        }).done(function( html ) {
+                      eval( html  );
+         });
     ';
     
     // Target
@@ -145,43 +147,95 @@ function dh_ptp_mailing_list_pointer_ajax()
     // Check status
     $result = ($_POST['subscribe'] == 'yes')?'yes':'no';
     if ($result == 'no') {
-		dh_ptp_crash_course('No, thanks');
+	dh_ptp_crash_course('No, thanks');
         update_option('dh_ptp_mailing_list', 'no');
         exit();
     } else {
-		dh_ptp_crash_course('Lets do it!');
-	}
+	dh_ptp_crash_course('Lets do it!');
+    }
     
     // Get current user info
     get_currentuserinfo();
     
-    // Subscribe
-    include_once PTP_PLUGIN_PATH.'includes/libraries/drip/drip.php';
-	
-	$drip_api = new DripApi();
-        $drip_api->add_subscriber(
-                'forms/7564307/submissions',
+    
+   dh_ptp_add_subscriber(
+                'https://www.getdrip.com/forms/7564307/submissions',
 		
 		array(  'fields[name]'  => $current_user->display_name,
 			'fields[email]' => $_POST['email'], //$current_user->user_email,,
 					)
 	);
                 
-       update_option('dh_ptp_mailing_list', $result);
-       	
-	
+    update_option('dh_ptp_mailing_list', $result);
+    
+    // After custommers "sign up", display another pointer to ask them check the confirm email  
+    $kind_of_email = '';
+    if ( strpos( $_POST['email'] , '@yahoo' ) !== false ) {
+        $kind_of_email = '<a href="https://mail.yahoo.com/" target="_blank" >Go to Yahoo! Mail</a>';
+    } elseif ( strpos( $_POST['email'] , '@hotmail' ) !== false )
+    {
+        $kind_of_email = '<a href="https://www.hotmail.com/" target="_blank" >Go to Hotmail</a>';
+    } elseif ( strpos( $_POST['email'] , '@gmail' ) !== false )
+    {
+        $kind_of_email = '<a href="https://mail.google.com/" target="_blank" >Go to Gmail</a>';
+    }
+
+    // Target
+    $id = '#wpadminbar';
+    
+    // Buttons
+    $button_1_title = __('Close', PTP_LOC);
+    
+    // Content
+    $content  = '<h3>' . __('Please confirm your email', PTP_LOC) . '</h3>';
+    $content .= '<p>' . __("Thanks! For security reasons you'll have to confirm your email. Please check your email inbox.", PTP_LOC) . '</p>';
+    if( $kind_of_email !=='' ) {
+        $content .= '<p>'.$kind_of_email.'</p>';
+    }
+    
+    // Options
+    $options = array(
+        'content' => $content,
+        'position' => array('edge' => 'top', 'align' => 'center')
+    );
+    
+    dh_ptp_print_script($id, $options, $button_1_title, false , '' , '' , true);    
     
     exit();
 }
 add_action( 'wp_ajax_dh_ptp_mailing_list', 'dh_ptp_mailing_list_pointer_ajax');
 
-// Print JS Content
-function dh_ptp_print_script($selector, $options, $button1, $button2 = false, $button1_fn = '', $button2_fn = '')
+function dh_ptp_add_subscriber($url, $payload = array())
 {
+                $data = http_build_query($payload);
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC) ; 
+		curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)"); 
+		curl_setopt($ch, CURLOPT_HEADER, false);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+                curl_setopt($ch, CURLOPT_POST, true);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+		curl_setopt($ch, CURLOPT_URL, $url);
+		$result = curl_exec($ch);
+		curl_close($ch);
+		return $result;
+}
+
+
+// Print JS Content
+function dh_ptp_print_script($selector, $options, $button1, $button2 = false, $button1_fn = '', $button2_fn = '', $isCallBackFunc = false)
+{ 
+    if( !$isCallBackFunc ) {
     ?>
     <script type="text/javascript">
 		//<![CDATA[
             (function ($) {
+                <?php 
+          }
+                ?>
                 var dh_ptp_pointer_options = <?php echo json_encode( $options ); ?>, setup;
      
                 dh_ptp_pointer_options = $.extend(dh_ptp_pointer_options, {
@@ -204,6 +258,15 @@ function dh_ptp_print_script($selector, $options, $button1, $button2 = false, $b
                             <?php echo $button2_fn; ?>
                             $('<?php echo $selector; ?>').pointer('close');
                         });
+                        
+                        jQuery('#ept_email').keypress(function ( event ) {
+                             if ( event.which == 13 ) {
+                                <?php echo $button2_fn; ?>
+                                $('<?php echo $selector; ?>').pointer('close');
+                             }
+                            
+                        });
+                        
                         jQuery('#pointer-close').click(function () {
                             <?php echo $button1_fn; ?>
                             $('<?php echo $selector; ?>').pointer('close');
@@ -212,9 +275,11 @@ function dh_ptp_print_script($selector, $options, $button1, $button2 = false, $b
                 };
  
                 $(document).ready(setup);
-            })(jQuery);
+          <?php if( !$isCallBackFunc ) { ?>
+          })(jQuery);
         //]]>
 	</script>
     <?php
+          }
 }
 ?>
