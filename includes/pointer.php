@@ -169,17 +169,27 @@ function dh_ptp_mailing_list_pointer_ajax()
     update_option('dh_ptp_mailing_list', $result);
     
     // After custommers "sign up", display another pointer to ask them check the confirm email  
-    $kind_of_email = '';
+    $button_2_title = false;
+    $kind_of_email_link = '';
     if ( strpos( $_POST['email'] , '@yahoo' ) !== false ) {
-        $kind_of_email = '<a href="https://mail.yahoo.com/" target="_blank" >Go to Yahoo! Mail</a>';
+        $button_2_title = 'Go to Yahoo! Mail';
+        $kind_of_email_link = 'https://mail.yahoo.com/';
     } elseif ( strpos( $_POST['email'] , '@hotmail' ) !== false )
     {
-        $kind_of_email = '<a href="https://www.hotmail.com/" target="_blank" >Go to Hotmail</a>';
+        $button_2_title = 'Go to Hotmail';
+        $kind_of_email_link = 'https://www.hotmail.com/';
     } elseif ( strpos( $_POST['email'] , '@gmail' ) !== false )
     {
-        $kind_of_email = '<a href="https://mail.google.com/" target="_blank" >Go to Gmail</a>';
+        $button_2_title = 'Go to Gmail';
+        $kind_of_email_link = 'https://mail.google.com/';
+    } elseif ( strpos( $_POST['email'] , '@aol' ) !== false ) 
+    {
+        $button_2_title = 'Go to AOL Mail';
+        $kind_of_email_link = 'https://mail.aol.com/';
     }
-
+    
+    $button_2_func = "window.open('$kind_of_email_link', '_blank');";
+    
     // Target
     $id = '#wpadminbar';
     
@@ -188,10 +198,7 @@ function dh_ptp_mailing_list_pointer_ajax()
     
     // Content
     $content  = '<h3>' . __('Please confirm your email', PTP_LOC) . '</h3>';
-    $content .= '<p>' . __("Thanks! For security reasons you'll have to confirm your email. Please check your email inbox.", PTP_LOC) . '</p>';
-    if( $kind_of_email !=='' ) {
-        $content .= '<p>'.$kind_of_email.'</p>';
-    }
+    $content .= '<p>' . __("Thanks! For privacy reasons you'll have to confirm your email. Please check your email inbox.", PTP_LOC) . '</p>';
     
     // Options
     $options = array(
@@ -199,7 +206,7 @@ function dh_ptp_mailing_list_pointer_ajax()
         'position' => array('edge' => 'top', 'align' => 'center')
     );
     
-    dh_ptp_print_script($id, $options, $button_1_title, false , '' , '' , true);    
+    dh_ptp_print_script($id, $options, $button_1_title, $button_2_title , '' , $button_2_func , true);    
     
     exit();
 }
