@@ -17,7 +17,7 @@ function dh_ptp_media_button()
                 $output = '<a href="#TB_inline?width=640&inlineId=dh-ptp-pricing-table-thickbox" class="thickbox" title="' . $button_title . '">' . $button_title . '</a>';
         } else {
                 $img = '<span class="wp-media-buttons-icon" id="dh-ptp-media-button"></span>';
-                $output = '<a href="#TB_inline?width=640&inlineId=dh-ptp-pricing-table-thickbox" class="thickbox button" title="' . $button_title . '" style="padding-left: .4em;">' . $button_title . '</a>';
+                $output = '<a href="#TB_inline?width=640&inlineId=dh-ptp-pricing-table-thickbox" class="thickbox button" title="' . $button_title . '" style="padding-left: .4em;">' . $img . $button_title . '</a>';
         }
     }
     
@@ -56,7 +56,13 @@ function dh_ptp_media_button_thickbox()
                 });
             });
         </script>
-
+        <style>
+            
+            #dh-ptp-media-button {
+			background: url(<?php echo PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ept-icon-16x16.png'; ?>) 0 -3px no-repeat;
+			background-size: 12px 30px;
+		}
+        </style>
         <div id="dh-ptp-pricing-table-thickbox" style="display: none;">
             <div class="wrap" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
                 <p><?php _e('Use the form below to insert the shortcode for a pricing table.', PTP_LOC); ?></p>
