@@ -22,7 +22,7 @@
 }
 
 .plan-title button{
-  width: 48%;
+  width: 32%;
 }
 
 .plan-title #delete-button {
@@ -135,7 +135,7 @@
 
 /** float column layout **/
 .column {
-  width: 180px;
+  width: 250px;
   float: left;
   margin-right: 10px;
   cursor: move;
