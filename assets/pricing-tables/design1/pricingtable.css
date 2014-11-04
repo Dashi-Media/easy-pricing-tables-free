@@ -52,4 +52,5 @@ a.ptp-button{
 @media only screen and (max-width: 765px) {
   .ptp-col { width: 100%; }
   .ptp-pricing-table{ white-space: normal; }
+  .tt-ptp-empty-row { display: none  }
 }

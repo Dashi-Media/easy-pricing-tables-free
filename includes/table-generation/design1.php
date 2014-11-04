@@ -222,10 +222,10 @@ function dh_ptp_features_to_html_simple_flat ($plan_features, $max_number_of_fea
     $this_columns_number_of_features = count($features);
 
     for ($i=0; $i<$max_number_of_features; $i++) {
-        if ($i < $this_columns_number_of_features && $features[$i] != '') {
+        if ($i < $this_columns_number_of_features && trim($features[$i]) != '') {
             $html .= '<div class="ptp-bullet-item ptp-row-id-'.$i.'">' . str_replace(array("\n", "\r"), '', $features[$i]) . '</div>';
         } else {
-            $html .= '<div class="ptp-bullet-item ptp-row-id-'.$i.'">&nbsp;</div>';
+            $html .= '<div class="ptp-bullet-item ptp-row-id-'.$i.' tt-ptp-empty-row">&nbsp;</div>';
         }
     }
 
