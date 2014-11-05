@@ -59,8 +59,8 @@ function dh_ptp_media_button_thickbox()
         <style>
             
             #dh-ptp-media-button {
-			background: url(<?php echo PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ept-icon-16x16.png'; ?>) 0 -3px no-repeat;
-			background-size: 12px 30px;
+			background: url(<?php echo PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ept-icon-16x16.png'; ?>) 0 -1px no-repeat;
+			background-size: 16px 25px;
 		}
         </style>
         <div id="dh-ptp-pricing-table-thickbox" style="display: none;">
