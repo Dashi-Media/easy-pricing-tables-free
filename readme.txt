@@ -1,12 +1,12 @@
 === Easy Pricing Tables by Fatcat Apps ===
 Contributors: davidhme, fatcatapps
 Donate link: http://fatcatapps.com/easypricingtables/?utm_campaign=ept-donate-link&utm_source=wordpress.org-plugins&utm_medium=link
-Tags: pricing table, responsive pricing table, comparison, comparison table, css table, price, price gird, pricing, pricing box, pricing grid, table, pricing page, landing page, woocommerce
+Tags: pricing table, responsive pricing table, comparison table, css table, price, price gird, pricing, pricing box, pricing grid, table, pricing page, woocommerce
 Author URI: http://fatcatapps.com/?utm_campaign=ept-author-uri&utm_source=wordpress.org-plugins&utm_medium=link
 Plugin URI: http://fatcatapps.com/easypricingtables/?utm_campaign=ept-plugin-uri&utm_source=wordpress.org-plugins&utm_medium=link
 Requires at least: 3.6
 Tested up to: 4.0
-Stable tag: 1.7.1
+Stable tag: 1.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,31 +25,31 @@ Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 
 
 *   Easy Pricing Tables implements conversion rate optimization (CRO) best practices and guides you through the process of creating a pricing table that converts 
 
-*   This plugin works with any WordPress theme you have installed. After installing the plugin and creating your first pricing table, you can publish your table anywhere on your site using a shortcode.
+*   Easy Pricing Tables works with any WordPress theme you have installed. After installing the plugin and creating your first pricing table, you can publish your table anywhere on your site using a shortcode.
 
 
-= Easy Pricing Tables Feature s=
+= Easy Pricing Tables Features =
 
 *   Works with any WordPress Theme
 *   Responsive Pricing Tables
 *   Intuitive User Interface
 *   Built-in Conversion Rate Optimization Best Practices
-*   Create Unlimited Rows and up to 10 Columns
-*	Customize your design: font-size, color pickers and rounded borders.
-*   Use drag & drop to reorder columns
-*   Featured Your Most Popular Column
+*   Create Unlimited Pricing Rows
+*	Customize Your Design: Font-size, Color Pickers and Rounded Borders.
+*   Use Drag & Drop To Reorder Columns
+*   Featured Your Most Popular Pricing Column
 *   Custom CSS - Add Custom CSS to your pricing table
 
 > #### Easy Pricing Tables Premium
 > Easy Pricing Tables Premium comes with the following features.<br />
 >
-> 4 additional gorgeous designs.<br />
-> More customization options.<br />
+> 4 Additional Gorgeous Designs.<br />
+> Full Customization Options.<br />
 > Tooltips.<br />
 > Google Analytics Integration.<br />
 > 300+ Icons.<br />
-> Pricing Toggles<br />
-> Priority support<br />
+> Pricing Toggles.<br />
+> Priority Support.<br />
 >
 > [Learn more about Easy Pricing Tables Premium >>](http://fatcatapps.com/easypricingtables/?utm_campaign=ept-description-cta&utm_source=wordpress.org-plugins&utm_medium=link)
 
@@ -127,7 +127,7 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 == Changelog ==
 
 = 1.7.1 =
-* Fixed CSS bug related to the "rounded corners" - feature
+* Fixed CSS bug related to the "rounded pricing table corners" - feature
 * Fixed a rare bug by adding jquey lib dependency after matchHeight lib
 * Minor CSS change in the UI
 * Add unique ID element to every call to action button
