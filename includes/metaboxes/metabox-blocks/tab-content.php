@@ -92,10 +92,10 @@
                         <?php $mb->the_field('planfeatures'); ?>
 						<?php
 							$placeholder = array(
-								str_pad(__('e.g. 1 Website', PTP_LOC), 50),
-								str_pad(__('30,000 Monthly Visits', PTP_LOC), 50),
-								str_pad(__('Unlimited Data Transfer', PTP_LOC), 50),
-								str_pad(__('5GB Storage', PTP_LOC), 50),
+								str_pad(__('e.g. 1 Website', PTP_LOC), 40),
+								str_pad(__('30,000 Monthly Visits', PTP_LOC), 40),
+								str_pad(__('Unlimited Data Transfer', PTP_LOC), 40),
+								str_pad(__('5GB Storage', PTP_LOC), 40),
 							);
 						?>
                         <textarea name="<?php $mb->the_name(); ?>" class="form-control" rows="7" placeholder="<?php echo implode('', $placeholder); ?>"><?php echo $mb->the_value(); ?></textarea>
