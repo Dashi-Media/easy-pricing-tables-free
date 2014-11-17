@@ -22,7 +22,14 @@
 }
 
 .plan-title button{
-  width: 32%;
+  width: 49%;
+  float: right;
+}
+
+.plan-title a{
+  width: 49%;
+  float: left;
+  text-align: center;
 }
 
 .plan-title #delete-button {
