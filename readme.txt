@@ -6,7 +6,7 @@ Author URI: http://fatcatapps.com/?utm_campaign=ept-author-uri&utm_source=wordpr
 Plugin URI: http://fatcatapps.com/easypricingtables/?utm_campaign=ept-plugin-uri&utm_source=wordpress.org-plugins&utm_medium=link
 Requires at least: 3.6
 Tested up to: 4.0
-Stable tag: 1.8
+Stable tag: 1.9.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -125,6 +125,13 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 8. Another design from [Easy Pricing Tables Premium](http://fatcatapps.com/easypricingtables/?utm_campaign=ept-sceenshots-cta&utm_source=wordpress.org-plugins&utm_medium=link)
 
 == Changelog ==
+
+= 1.9.5 =
+* Changed version number of Easy Pricing Tables to correspond to Easy Pricing Tables Premium
+* Improvement: Empty rows will now automatically be hidden on smartphones
+* Improvement: Changed mouse cursor from arrow to hand on button hover
+* Improvement: Changed aesthetics (CSS) of the tabs in the Easy Pricing Tables editor
+* Added Easy Pricing Tables - icon to media button
 
 = 1.7.1 =
 * Fixed CSS bug related to the "rounded pricing table corners" - feature
