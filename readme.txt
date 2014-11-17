@@ -127,10 +127,11 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 == Changelog ==
 
 = 1.9.5 =
-* Changed version number of Easy Pricing Tables to correspond to Easy Pricing Tables Premium
 * Improvement: Empty rows will now automatically be hidden on smartphones
 * Improvement: Changed mouse cursor from arrow to hand on button hover
 * Improvement: Changed aesthetics (CSS) of the tabs in the Easy Pricing Tables editor
+* Improvement: Made the pricing table columns in the Easy Pricing Tables editor wider
+* Changed version number of Easy Pricing Tables to correspond to Easy Pricing Tables Premium
 * Added Easy Pricing Tables - icon to media button
 
 = 1.7.1 =
