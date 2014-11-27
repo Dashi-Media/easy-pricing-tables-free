@@ -4,12 +4,12 @@
 	Plugin URI: http://fatcatapps.com/easypricingtables
 	Description: Create a Beautiful, Responsive and Highly Converting Pricing or Comparison Table in Less Than 5 Minutes with Easy Pricing Tables for WordPress. No Coding Required.
 	Author: David Hehenberger
-	Version: 1.9.5
+	Version: 1.9.5.1
 	Author URI: http://fatcatapps.com
 */
 
 // define plugin version for update nag
-define('PTP_PLUGIN_VERSION', '1.9.5');
+define('PTP_PLUGIN_VERSION', '1.9.5.1');
 
 // Define a constant to always include the absolute path
 define('PTP_PLUGIN_PATH', plugin_dir_path( __FILE__ ));

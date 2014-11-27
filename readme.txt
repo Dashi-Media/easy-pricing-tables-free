@@ -5,8 +5,8 @@ Tags: pricing table, responsive pricing table, comparison table, css table, pric
 Author URI: http://fatcatapps.com/?utm_campaign=ept-author-uri&utm_source=wordpress.org-plugins&utm_medium=link
 Plugin URI: http://fatcatapps.com/easypricingtables/?utm_campaign=ept-plugin-uri&utm_source=wordpress.org-plugins&utm_medium=link
 Requires at least: 3.6
-Tested up to: 4.0
-Stable tag: 1.9.5
+Tested up to: 4.0.1
+Stable tag: 1.9.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -125,6 +125,10 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 8. Another design from [Easy Pricing Tables Premium](http://fatcatapps.com/easypricingtables/?utm_campaign=ept-sceenshots-cta&utm_source=wordpress.org-plugins&utm_medium=link)
 
 == Changelog ==
+
+= 1.9.5.1 =
+* Confirmed compatibility with WordPress 4.0.1
+* Black Friday Promo
 
 = 1.9.5 =
 * Improvement: Empty rows will now automatically be hidden on smartphones
