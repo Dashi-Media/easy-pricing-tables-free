@@ -595,6 +595,13 @@ color:#333;
 .tt-centered{
     text-align: center;
 }
+
+.tt-discount-text {
+    margin: 0;
+    font-weight: bold;
+    font-size: 13.4px;
+}
+
 [id='1_dh_ptp_settings_metabox'] > h3, #dh_ptp_banner_review_box_metabox h3, #dh_ptp_banner_metabox h3 , #dh_ptp_banner_quick_link_metabox h3 {
     color: #fff;
     background-color: #333;

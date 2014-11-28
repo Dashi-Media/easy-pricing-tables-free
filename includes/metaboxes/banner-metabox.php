@@ -14,6 +14,9 @@
     
    <p style="text-align: center;">
         <a href="http://fatcatapps.com/easypricingtables/?utm_campaign=ept-ui-sidebar&utm_source=free-plugin&utm_medium=link&utm_content=v3" target="_blank" class="button button-primary button-large"><?php _e('Upgrade Now', PTP_LOC); ?></a>
+    </p>    
+    <p style="text-align: center;" class="tt-discount-text">
+       Use the Black Friday discount code <span style="color: red">30PERCENT</span> to get 30% off any license. Expires Monday, Dec. 2.
     </p>
     
     <script type="text/javascript">

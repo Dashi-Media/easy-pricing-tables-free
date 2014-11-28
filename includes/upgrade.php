@@ -43,6 +43,9 @@ add_action( 'admin_footer', 'dh_ptp_upgrade_to_premium_menu_js');
 
 /* Upgrade to premium notice when plugin is upgraded */
 
+/*
+ * // Remove upgrade nag is due WP.org policy
+ * 
 function dh_ptp_upgrade_check()
 {
 	$installed_version = get_option('dh_ptp_ept_free_version');
@@ -75,5 +78,5 @@ function dh_ptp_all_admin_notices_css()
 			'.dh-ptp-upgrade-nag a {color: #6bbc5b;} '.
 			'.dh-ptp-upgrade-nag a:hover {color: #7ad368;}' .
 		'</style>';
-}
+}*/
 ?>
