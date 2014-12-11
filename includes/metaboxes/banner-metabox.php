@@ -1,19 +1,20 @@
 <div id="dh_ptp_banner_container">
     <p class="tt-banner-headline tt-centered">
-	<?php _e( 'Upgrade to Easy Pricing Tables Premium and get the following:', PTP_LOC ); ?>
+	<?php _e( "Upgrade To Premium And Build Better Pricing Tables. You'll Get:", PTP_LOC ); ?>
     </p>
     
     <ul>
-					<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Four additional table designs', PTP_LOC ); ?></li>
-					<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Pricing toggles', PTP_LOC ); ?></li>
+					<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Four Additional Designs', PTP_LOC ); ?></li>
 					<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Tooltips', PTP_LOC ); ?></li>
 					<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Icons', PTP_LOC ); ?></li>
-					<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Full customization options', PTP_LOC ); ?></li>
-                                        <li><div class="dashicons dashicons-yes"></div> <?php _e( 'Priority support', PTP_LOC ); ?></li>
+					<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Full Customization Options', PTP_LOC ); ?></li>
+                    <li><div class="dashicons dashicons-yes"></div> <?php _e( 'Google Analytics Integration', PTP_LOC ); ?></li>
+                    <li><div class="dashicons dashicons-yes"></div> <?php _e( 'Pricing Toggles', PTP_LOC ); ?></li>
+                    <li><div class="dashicons dashicons-yes"></div> <?php _e( 'Priority Support', PTP_LOC ); ?></li>
     </ul>
     
    <p style="text-align: center;">
-        <a href="http://fatcatapps.com/easypricingtables/?utm_campaign=ept-ui-sidebar&utm_source=free-plugin&utm_medium=link&utm_content=v3" target="_blank" class="button button-primary button-large"><?php _e('Upgrade Now', PTP_LOC); ?></a>
+        <a href="https://fatcatapps.com/easypricingtables/?utm_campaign=ept-ui-sidebar&utm_source=free-plugin&utm_medium=referral&utm_content=v4" target="_blank" class="button button-primary button-large"><?php _e('Upgrade Now', PTP_LOC); ?></a>
     </p>    
     
     <script type="text/javascript">

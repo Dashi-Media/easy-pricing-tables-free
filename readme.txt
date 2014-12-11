@@ -1,12 +1,12 @@
 === Easy Pricing Tables by Fatcat Apps ===
 Contributors: davidhme, fatcatapps
-Donate link: http://fatcatapps.com/easypricingtables/?utm_campaign=ept-donate-link&utm_source=wordpress.org-plugins&utm_medium=link
-Tags: pricing table, responsive pricing table, comparison table, css table, price, price gird, pricing, pricing box, pricing grid, table, pricing page, woocommerce
-Author URI: http://fatcatapps.com/?utm_campaign=ept-author-uri&utm_source=wordpress.org-plugins&utm_medium=link
-Plugin URI: http://fatcatapps.com/easypricingtables/?utm_campaign=ept-plugin-uri&utm_source=wordpress.org-plugins&utm_medium=link
+Donate link: https://fatcatapps.com/easypricingtables/?utm_campaign=ept-donate-link&utm_source=wordpress.org%2Fplugins&utm_medium=referral
+Tags: pricing table, price table, comparison table, table, pricing grid, responsive pricing table, sales page, pricing page, woocommerce
+Author URI: https://fatcatapps.com/easypricingtables/?utm_campaign=ept-donate-link&utm_source=wordpress.org%2Fplugins&utm_medium=referral
+Plugin URI: https://fatcatapps.com/easypricingtables/?utm_campaign=ept-donate-link&utm_source=wordpress.org%2Fplugins&utm_medium=referral
 Requires at least: 3.6
 Tested up to: 4.0.1
-Stable tag: 1.9.5.3
+Stable tag: 1.9.5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,9 +17,9 @@ Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 
 
 [youtube http://www.youtube.com/watch?v=657Qs5Yng5Q]
 
-*   [View Easy Pricing Tables Premium Live Demo &raquo;](http://demo.fatcatapps.com/easypricingtables/?utm_campaign=ept-description-demo&utm_source=wordpress.org-plugins&utm_medium=link)
+*   [View Easy Pricing Tables Premium Live Demo &raquo;](http://ept-demo.fatcatapps.com/?utm_campaign=ept-description-demo&utm_source=wordpress.org%2Fplugins&utm_medium=referral)
 
-*   [Check out Easy Pricing Tables Premium](http://fatcatapps.com/easypricingtables/?utm_campaign=ept-description-cta&utm_source=wordpress.org-plugins&utm_medium=link)
+*   [Check out Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=ept-description-cta&utm_source=wordpress.org%2Fplugins&utm_medium=referral)
 
 = Overview =
 
@@ -55,7 +55,7 @@ Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 
 
 = Relevant Links =
 
-*   [Easy Pricing Tables Premium live demo](http://demo.fatcatapps.com/easypricingtables/)
+*   [Easy Pricing Tables Premium live demo](http://ept-demo.fatcatapps.com/?utm_campaign=ept-description-demo&utm_source=wordpress.org%2Fplugins&utm_medium=referral)
 *   [FatcatApps.com](http://fatcatapps.com/)
 *	[Other plugins by FatcatApps](https://profiles.wordpress.org/fatcatapps/#content-plugins)
 *	[FatcatApps founder, David Hehenberger, on Twitter](https://twitter.com/davidhme)
@@ -119,12 +119,15 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 2. Example of a pricing table with 2 columns
 3. Creating a new table
 4. Design options of free plugin
-5. Additional table designs of [Easy Pricing Tables Premium](http://fatcatapps.com/easypricingtables/?utm_campaign=ept-sceenshots-cta&utm_source=wordpress.org-plugins&utm_medium=link)
+5. Additional table designs of [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=ept-sceenshots-cta&utm_source=wordpress.org%2Fplugins&utm_medium=referral)
 6. Additional settings of [Easy Pricing Tables Premium](http://fatcatapps.com/easypricingtables/?utm_campaign=ept-sceenshots-cta&utm_source=wordpress.org-plugins&utm_medium=link)
 7. One of the designs from [Easy Pricing Tables Premium](http://fatcatapps.com/easypricingtables/?utm_campaign=ept-sceenshots-cta&utm_source=wordpress.org-plugins&utm_medium=link)
 8. Another design from [Easy Pricing Tables Premium](http://fatcatapps.com/easypricingtables/?utm_campaign=ept-sceenshots-cta&utm_source=wordpress.org-plugins&utm_medium=link)
 
 == Changelog ==
+
+= 1.9.5.4 =
+* Updated readme.txt
 
 = 1.9.5.3 =
 * Confirmed compatibility with WordPress 4.0.1
