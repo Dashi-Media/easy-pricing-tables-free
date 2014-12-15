@@ -395,14 +395,14 @@
          */ ?> 
          
      <!-- ept-custom-css-setting -->
-        <h3><?php _e('Custom Css', PTP_LOC); ?></h3>
+        <h3><?php _e('Custom CSS', PTP_LOC); ?></h3>
         <div >
  
             <table>
                 <tr>
                     <?php $mb->the_field('ept-custom-css-setting-dg1'); ?>
                     <td class="settings-title">
-                        <label for="custom-css-setting" style="margin: 0; font-weight: bold;"><?php _e('Custom Pricing Table Css', PTP_LOC); ?></label>
+                        <label for="custom-css-setting" style="margin: 0; font-weight: bold;"><?php _e('Custom Pricing Table CSS', PTP_LOC); ?></label>
                     </td>
                     <td class="custom-css-setting-td">
                         
