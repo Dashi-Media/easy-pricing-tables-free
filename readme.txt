@@ -1,12 +1,12 @@
-=== Easy Pricing Tables by Fatcat Apps ===
+=== Easy Pricing Tables Lite by Fatcat Apps ===
 Contributors: davidhme, fatcatapps
 Donate link: https://fatcatapps.com/easypricingtables/?utm_campaign=ept-donate-link&utm_source=wordpress.org%2Fplugins&utm_medium=referral
 Tags: pricing table, price table, comparison table, table, pricing grid, responsive pricing table, sales page, pricing page, woocommerce
 Author URI: https://fatcatapps.com/easypricingtables/?utm_campaign=ept-donate-link&utm_source=wordpress.org%2Fplugins&utm_medium=referral
 Plugin URI: https://fatcatapps.com/easypricingtables/?utm_campaign=ept-donate-link&utm_source=wordpress.org%2Fplugins&utm_medium=referral
 Requires at least: 3.6
-Tested up to: 4.0.1
-Stable tag: 1.9.5.4
+Tested up to: 4.1
+Stable tag: 1.9.5.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
