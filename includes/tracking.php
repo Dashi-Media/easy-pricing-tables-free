@@ -13,7 +13,7 @@ function dh_ptp_tracking_deploy()
         $columns = count($meta['column']);
         
         if (function_exists('dh_ptp_track_event')) {
-            dh_ptp_track_event('Deploy clicked', array('Number of columns' => $columns));
+            dh_ptp_track_event('Deploy clicked', array('Number of columns' => $columns , 'type' => 'table'));
         }
     }
     
