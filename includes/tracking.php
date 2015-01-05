@@ -28,7 +28,7 @@ function dh_ptp_plugin_activated()
         dh_ptp_track_event('Plugin activated');
     }
 }
-register_activation_hook('easy-pricing-tables-free/pricing-table-plugin.php', 'dh_ptp_plugin_activated');
+register_activation_hook(PTP_PLUGIN_PATH.'/pricing-table-plugin.php', 'dh_ptp_plugin_activated');
 
 // Plugin deactivated
 function dh_ptp_plugin_deactivated()
@@ -37,7 +37,7 @@ function dh_ptp_plugin_deactivated()
         dh_ptp_track_event('Plugin deactivated');
     }
 }
-register_deactivation_hook('easy-pricing-tables-free/pricing-table-plugin.php', 'dh_ptp_plugin_deactivated');
+register_deactivation_hook(PTP_PLUGIN_PATH.'/pricing-table-plugin.php', 'dh_ptp_plugin_deactivated');
 
 // Pricing Table Crash Course
 function dh_ptp_crash_course($var)
