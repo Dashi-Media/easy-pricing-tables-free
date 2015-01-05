@@ -21,17 +21,6 @@ function dh_ptp_tracking_deploy()
 }
 add_action('wp_ajax_dh_ptp_tracking_deploy', 'dh_ptp_tracking_deploy');
 
-// Banner
-function dh_ptp_tracking_banner()
-{
-    if (function_exists('dh_ptp_track_event') && get_option('dh_ptp_allow_tracking') == 'yes') {
-        dh_ptp_track_event("Sidebar ad button clicked", array("Ad version" =>"1"));
-    }
-    
-    exit();    
-}
-add_action('wp_ajax_dh_ptp_tracking_banner', 'dh_ptp_tracking_banner');
-
 // Plugin activated
 function dh_ptp_plugin_activated()
 {
