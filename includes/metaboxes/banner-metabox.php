@@ -14,7 +14,7 @@
     </ul>
     
    <p style="text-align: center;">
-        <a href="https://fatcatapps.com/easypricingtables/?utm_campaign=ept-ui-sidebar&utm_source=free-plugin&utm_medium=referral&utm_content=v4" target="_blank" class="button button-primary button-large"><?php _e('Upgrade Now', PTP_LOC); ?></a>
+        <a href="https://fatcatapps.com/easypricingtables/?utm_campaign=big%2Bsidebar%2Bad&utm_source=Easy%2BPricing%2BTables%2BFree&utm_medium=plugin&utm_content=v4" target="_blank" class="button button-primary button-large"><?php _e('Upgrade Now', PTP_LOC); ?></a>
     </p>    
     
 </div>

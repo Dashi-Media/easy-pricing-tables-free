@@ -61,7 +61,7 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
     // Add Easy Pricing Tables links
     $add_new_link = '<a href="post-new.php?post_type=easy-pricing-table">' . __('Add New', PTP_LOC) . '</a>'; 
     $forum_link   = '<a href="http://wordpress.org/support/plugin/easy-pricing-tables">' . __('Support', PTP_LOC) . '</a>';
-    $premium_link = '<a href="https://fatcatapps.com/easypricingtables/?utm_campaign=ept-plugins.php&utm_source=free-plugin&utm_medium=referral&utm_content=v1">' . __('Purchase Premium', PTP_LOC) . '</a>';
+    $premium_link = '<a href="https://fatcatapps.com/easypricingtables/?utm_campaign=Purchase%2BPremium%2Bin%2Bplugins.php&utm_source=Easy%2BPricing%2BTables%2BFree&utm_medium=plugin&utm_content=v1">' . __('Purchase Premium', PTP_LOC) . '</a>';
     
     array_push($links, $add_new_link);
     array_push($links, $forum_link);
