@@ -6,7 +6,7 @@ Author URI: https://fatcatapps.com/?utm_campaign=author%2Buri&utm_source=https%3
 Plugin URI: https://fatcatapps.com/easypricingtables/?utm_campaign=plugin%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Requires at least: 3.6
 Tested up to: 4.1
-Stable tag: 1.9.5.5
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -125,6 +125,12 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 8. Another design from [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
 
 == Changelog ==
+
+= 2.0 =
+* Updated version to 2.0 to correspond with Easy Pricing Tables Premium
+* Updated copy of Easy Pricing Tables Premium banner
+* Updated anonymous tracking script
+* Fixed error that occured when activating Easy Pricing Tables Premium when Easy Pricing Tables Lite was installed.
 
 = 1.9.5.4 =
 * Updated readme.txt
