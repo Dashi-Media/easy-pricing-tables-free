@@ -15,11 +15,22 @@ Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 
 == Description ==
 *   The **Easy Pricing Tables** WordPress Plugin makes it easy to create and publish beautiful pricing tables and comparison tables on your WordPress site. You will be able to set up and publish your pricing table in no time.
 
-[youtube http://www.youtube.com/watch?v=657Qs5Yng5Q]
+*   [View screenshots of pricing tables built with this plugin](https://wordpress.org/plugins/easy-pricing-tables/screenshots/).
 
 *   [View Easy Pricing Tables Premium Live Demo &raquo;](http://ept-demo.fatcatapps.com/?utm_campaign=description%2Bdemo%2Blink&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
 
-*   [Check out Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=ept-description-cta&utm_source=wordpress.org%2Fplugins&utm_medium=referral)
+> #### Easy Pricing Tables Premium
+> Easy Pricing Tables Premium comes with the following features.<br />
+>
+> Ten Gorgeous Designs.<br />
+> Fully Customizable (Colors, etc...).<br />
+> Priority Email Support.<br />
+> Tooltips.<br />
+> Google Analytics Integration.<br />
+> Pricing Toggles (switch between currencies or monthly/yearly pricing.<br />
+> And much more....<br />
+>
+> [Learn more about Easy Pricing Tables Premium >>](https://fatcatapps.com/easypricingtables/?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
 
 = Overview =
 
@@ -40,18 +51,9 @@ Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 
 *   Featured Your Most Popular Pricing Column
 *   Custom CSS - Add Custom CSS to your pricing table
 
-> #### Easy Pricing Tables Premium
-> Easy Pricing Tables Premium comes with the following features.<br />
->
-> 4 Additional Gorgeous Designs.<br />
-> Full Customization Options.<br />
-> Tooltips.<br />
-> Google Analytics Integration.<br />
-> 300+ Icons.<br />
-> Pricing Toggles.<br />
-> Priority Support.<br />
->
-> [Learn more about Easy Pricing Tables Premium >>](https://fatcatapps.com/easypricingtables/?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
+
+*   [Check out Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=ept-description-cta&utm_source=wordpress.org%2Fplugins&utm_medium=referral)
+
 
 = Relevant Links =
 
@@ -119,10 +121,14 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 2. Example of a pricing table with 2 columns
 3. Creating a new table
 4. Design options of free plugin
-5. Additional table designs of [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
 6. Additional settings of [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
 7. One of the designs from [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
 8. Another design from [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
+9. Another design from [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
+10. Another design from [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
+11. Another design from [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
+12. Another design from [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
+13. Another design from [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
 
 == Changelog ==
 
