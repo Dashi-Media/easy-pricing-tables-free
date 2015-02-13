@@ -54,13 +54,16 @@ Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 
 
 *   [Check out Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=ept-description-cta&utm_source=wordpress.org%2Fplugins&utm_medium=referral)
 
+= WordPress.org Support =
+
+> As this is the lite version of [Easy Pricing Tables](https://fatcatapps.com/easypricingtables/?utm_campaign=donate%2Blink&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral), the only support we offer through these forums is for bugs. Support for questions regarding modifying your pricing tables, writing custom CSS, etc is available for customers of [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=donate%2Blink&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral).
+
 
 = Relevant Links =
 
 *   [Easy Pricing Tables Premium live demo](http://ept-demo.fatcatapps.com/?utm_campaign=ept-description-demo&utm_source=wordpress.org%2Fplugins&utm_medium=referral)
 *   [FatcatApps.com](http://fatcatapps.com/)
 *	[Other plugins by FatcatApps](https://profiles.wordpress.org/fatcatapps/#content-plugins)
-*	[FatcatApps founder, David Hehenberger, on Twitter](https://twitter.com/davidhme)
 
 == Installation ==
 
