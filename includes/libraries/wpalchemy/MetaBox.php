@@ -1365,7 +1365,14 @@ class WPAlchemy_MetaBox
 		jQuery(function($)
 		{
 			$(document).click(function(e)
-			{		
+			{	
+                                // Prevent if user press the "Enter" key
+                                $(window).keydown(function(event){
+                                    if(event.keyCode == 13) {
+                                    event.preventDefault();
+                                    return false;
+                                }
+                                });
 				var elem = $(e.target);
 
 				if (elem.attr('class') && elem.filter('[class*=dodelete]').length)
