@@ -1,11 +1,11 @@
 === Easy Pricing Tables Lite by Fatcat Apps ===
 Contributors: davidhme, fatcatapps
 Donate link: https://fatcatapps.com/easypricingtables/?utm_campaign=donate%2Blink&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
-Tags: pricing table, price table, comparison table, table, pricing grid, responsive pricing table, sales page, pricing page, woocommerce
+Tags: pricing table, pricing tables, comparison table, pricing grid, responsive pricing table, price comparison, price comparison table
 Author URI: https://fatcatapps.com/?utm_campaign=author%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Plugin URI: https://fatcatapps.com/easypricingtables/?utm_campaign=plugin%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Requires at least: 3.6
-Tested up to: 4.1
+Tested up to: 4.1.1
 Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -17,39 +17,39 @@ Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 
 
 *   [View screenshots of pricing tables built with this plugin](https://wordpress.org/plugins/easy-pricing-tables/screenshots/).
 
-*   [View Easy Pricing Tables Premium Live Demo &raquo;](http://ept-demo.fatcatapps.com/?utm_campaign=description%2Bdemo%2Blink&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
+*   [View Easy Pricing Tables Premium Live Demo &raquo;](https://fatcatapps.com/easypricingtables/demo?utm_campaign=description%2Bdemo%2Blink&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
 
 > #### Easy Pricing Tables Premium
 > Easy Pricing Tables Premium comes with the following features.<br />
 >
-> Ten Gorgeous Designs.<br />
-> Fully Customizable (Colors, etc...).<br />
+> Ten Gorgeous Pricing Table Designs.<br />
+> Fully Customize your Pricing Table (Colors, etc...).<br />
 > Priority Email Support.<br />
 > Tooltips.<br />
-> Google Analytics Integration.<br />
-> Pricing Toggles (switch between currencies or monthly/yearly pricing.<br />
+> Google Analytics Integration (track pricing table button clicks).<br />
+> Pricing Toggles (switch between multiple pricing tables - eg. currencies or monthly/yearly pricing.<br />
 > And much more....<br />
 >
 > [Learn more about Easy Pricing Tables Premium >>](https://fatcatapps.com/easypricingtables/?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
 
 = Overview =
 
-*   Easy Pricing Tables implements conversion rate optimization (CRO) best practices and guides you through the process of creating a pricing table that converts 
+*   Easy Pricing Tables implements conversion rate optimization (CRO) best practices and guides you through the process of creating a pricing table that converts.
 
-*   Easy Pricing Tables works with any WordPress theme you have installed. After installing the plugin and creating your first pricing table, you can publish your table anywhere on your site using a shortcode.
+*   Easy Pricing Tables works with any WordPress theme you have installed. After creating your first pricing table using Easy Pricing Tables, you can publish your pricing tables anywhere on your site using a shortcode.
 
 
 = Easy Pricing Tables Features =
 
 *   Works with any WordPress Theme
 *   Responsive Pricing Tables
-*   Intuitive User Interface
+*   Intuitive User Interface - building pricing tables has never been easier
 *   Built-in Conversion Rate Optimization Best Practices
-*   Create Unlimited Pricing Rows
-*	Customize Your Design: Font-size, Color Pickers and Rounded Borders.
-*   Use Drag & Drop To Reorder Columns
-*   Featured Your Most Popular Pricing Column
-*   Custom CSS - Add Custom CSS to your pricing table
+*   Create Unlimited Pricing Table Rows
+*	Customize Your Pricing Table Design: Font-size, Color Pickers and Rounded Borders.
+*   Use Drag & Drop To Reorder Easy Pricing Tables Columns
+*   Featured Your Most Popular Easy Pricing Tables Column
+*   Custom CSS - Add Custom CSS to your Pricing Table
 
 
 *   [Check out Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=ept-description-cta&utm_source=wordpress.org%2Fplugins&utm_medium=referral)
@@ -58,26 +58,19 @@ Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 
 
 > As this is the lite version of [Easy Pricing Tables](https://fatcatapps.com/easypricingtables/?utm_campaign=donate%2Blink&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral), the only support we offer through these forums is for bugs. Support for questions regarding modifying your pricing tables, writing custom CSS, etc is available for customers of [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=donate%2Blink&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral).
 
-
-= Relevant Links =
-
-*   [Easy Pricing Tables Premium live demo](http://ept-demo.fatcatapps.com/?utm_campaign=ept-description-demo&utm_source=wordpress.org%2Fplugins&utm_medium=referral)
-*   [FatcatApps.com](http://fatcatapps.com/)
-*	[Other plugins by FatcatApps](https://profiles.wordpress.org/fatcatapps/#content-plugins)
-
 == Installation ==
 
-1. Upload `easy-pricing-tables.zip` to the `/wp-content/plugins/` directory
+1. Upload the Easy Pricing Tables plugin file (`easy-pricing-tables.zip`) to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. In your sidebar, select 'Pricing Tables -> Add New' to create a new table
 
 == Frequently Asked Questions ==
 
-= I'm using S2 member / WooCommerce / etc and would like to replace your built-in button with a button generated from a shortcode =
+= I'm using S2 member / WooCommerce / etc and would like to replace your built-in Easy Pricing Tables button with a button generated from a shortcode =
 To disable the pricing table button and replace it with a shortcode, simply enter the following in the 'Button Text' row:
 `[shortcode][my-example-shortcode/][/shortcode]`
 
-= My table rows aren't aligned properly =
+= My pricing table rows aren't aligned properly =
 If within the same row, you use a lot more text in some features than in others, your feature height alignment might be weird.
 This problem is due to tables being responsive instead of fixed width. You can fix it by adding manual linebreaks for your features.
 <br/><br/> results in one linebreak.
@@ -90,7 +83,7 @@ This currently isn't supported in the user interface. However, each column has i
 *	Class of the third column: ptp-col-id-2
 *	etc...
 
-= How do I change the design of individual feature rows? =
+= How do I change the design of individual pricing table feature rows? =
 This currently isn't supported in the user interface. However, each feature row has its own unique HTML class that can be modified using a css class selector.
 
 *	Class of the first feature row: ptp-row-id-0
@@ -98,7 +91,7 @@ This currently isn't supported in the user interface. However, each feature row 
 *	Class of the third feature row: ptp-row-id-2
 *	etc...
 
-= I want to adjust my column width =
+= I want to adjust my pricing table column width =
 This currently isn't supported in the user interface. This plugin uses a fixed percentage column width based on how many columns your pricing table has.
 For example, if your pricing table has 3 columns, each column has the following HTML class: ``ptp-three-col``.
 
@@ -117,13 +110,13 @@ width: 25%!important;
 `
 
 = Does this plugin use JavaScript? =
-We're using a small jQuery library called (jquery.matchHeight.js)[https://github.com/liabru/jquery-match-height] for the "Automatically match Row Height" feature. This small library won't significantly impact load time, but please be aware that we are loading a JavaScript file if you enable "Automatically match Row Height".
+We're using a small jQuery library called (jquery.matchHeight.js)[https://github.com/liabru/jquery-match-height] for the "Automatically match Row Height" feature. This small library won't significantly impact load time.
 
 == Screenshots ==
 1. Example of a pricing table with 3 columns
 2. Example of a pricing table with 2 columns
-3. Creating a new table
-4. Design options of free plugin
+3. Creating a new pricing table
+4. Design options of Easy Pricing Tables Lite
 6. Additional settings of [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
 7. One of the designs from [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
 8. Another design from [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
@@ -162,34 +155,33 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 * Add unique ID element to every call to action button
 
 = 1.7 =
-* Add Custom CSS Feature
+* Add Custom Pricing Table CSS Feature
 
 = 1.6.1.1 =
-* Tiny CSS fix (user interface)
+* Tiny CSS fix (Easy Pricing Tables user interface)
 
 = 1.6.1 =
 * Small user interface improvements
 
 
 = 1.6.0.3 =
-* Confirmed compatibility with WordPress 4.0
+* Confirmed Easy Pricing Tables compatibility with WordPress 4.0
 
 
 = 1.6.0.2 =
-* Confirmed compatibility with WordPress 3.9.2
-* Updated to Drip API v2.0
+* Confirmed Easy Pricing Tables compatibility with WordPress 3.9.2
 
 
 = 1.6.0.1 =
-* Fixed a minor issue that occured while deploying v1.6 that caused 'Automatically match Row Height' to not work.
+* Fixed a minor issue that occured while deploying Easy Pricing Tables v1.6 that caused 'Automatically match Row Height' to not work.
 
 
 = 1.6 =
-* Automatically match Row Height - feature. For all newly created tables, all rows will now be forced to be of the same height using JS (you can activate/deactivate this in Design -> General Settings -> Automatically match Row Height)
+* Automatically match Pricing Table Row Height - feature. For all newly created tables, all rows will now be forced to be of the same height using JS (you can activate/deactivate this in Design -> General Settings -> Automatically match Row Height)
 
 
 = 1.5.5 =
-* Fixed a JS bug (jquery-ui loaded in non easy-pricing-tables post-types)
+* Fixed a JS bug in the Easy Pricing Tables backend (jquery-ui loaded in non easy-pricing-tables post-types)
 
 
 = 1.5.4 =
@@ -200,14 +192,14 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 
 
 = 1.5.3 =
-* Fixed a bug that added unnecessary CSS to some pages
+* Fixed a bug that added unnecessary pricing table CSS to some pages
 * Confirmed compatibility with WordPress 3.9.1
 
 = 1.5.2.1 =
-* Updated links from http://easypricingtables.com to http://fatcatapps.com/
+* Updated links to new Easy Pricing Tables landing page - https://fatcatapps.com/easypricingtables
 
 = 1.5.2 =
-* Confirmed compatibility with WordPress 3.9
+* Confirmed compatibility of Easy Pricing Tables with WordPress 3.9
 * Changed Easy Pricing Tables icon
 
 = 1.5.1 =
@@ -230,15 +222,15 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 * Small UI improvement: moved the "Pricing Tables" setting link in the left-hand navigation further down.
 
 = 1.4.4 =
-* UI improvements
+* Pricing Table editor UI improvements
 * Added support for shortcode buttons like S2 member
 * Fixed incompatibility with the Theme Foundry Basis theme
-* Decreased file size of plugin
+* Decreased file size of Easy Pricing Tables plugin
 * Fixed CSS incompatibility with some themes
 * Added an update notice
 
 = 1.4.3 =
-* Added the ability to clone existing tables
+* Added the ability to clone existing pricing tables
 * Added row IDs to pricing table HTML (now you can change alternate row colors using CSS)
 * Bugfixes
 * Fixed CSS conflicts with some themes
@@ -249,7 +241,7 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 * Fixed versioning issue
 
 = 1.4.2.1 =
-* Updated readme.txt (FAQ, screenshots, markdown formatting issues)
+* Updated readme.txt (FAQ, pricing table screenshots, markdown formatting issues)
 
 = 1.4.2 =
 * Updated readme.txt
@@ -258,10 +250,10 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 * Added ability to rename "Most Popular" Featured Label
 
 = 1.4.1 =
-* Fixed button-color bug introduced with version 1.4
+* Fixed pricing tables button-color bug introduced with version 1.4
 
 = 1.4 =
-* Bufix: Fixed CSS generation algorithm
+* Bufix: Fixed Easy Pricing Tables CSS generation algorithm
 * Fixed PHP 5.4 strict notices
 * Improved compatibility with other plugins using the WPAlchemy framework
 * UI improvements: Shortcodes can now be directly added via the editor
@@ -270,9 +262,9 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 * Users can now change the text in the "most popular" label
 
 = 1.3.2 =
-* Improved CSS to cause less theme conflicts
+* Improved CSS to cause less Easy Pricing Tables / theme conflicts
 * Various bugfixes
-* Refactored table generation code
+* Refactored pricing table generation code
 * UI improvements
 
 = 1.3.1 =
@@ -281,7 +273,7 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 = 1.3 =
 * Fixed incompatibility with s2 Member plugin
 * Added font-size options
-* Changed post-type 'public' => false
+* Changed Easy Pricing Tables post-type 'public' => false
 * Minor bugfixes
 * Minor UI improvements
 
@@ -289,7 +281,7 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 * Bugfix
 
 = 1.2 =
-* Added column drag & drop
+* Added column drag & drop to pricing tables editor
 * UI improvements
 * Bugfixes
 * Fixed CSS issues on the "Add new pricing tables"-page caused by WooThemes
@@ -301,8 +293,8 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 * Fixed Woothems incompatibility
 
 = 1.1.0 =
-* Added new design options (colors & rounded corners)
-* Added tabs to backend UI
+* Added new pricing tables design options (colors & rounded corners)
+* Added tabs to backend Easy Pricing Tables UI
 * Replaced default-text with HTML5 placeholder
 * Various bugfixes
 * Added new screenshots
@@ -319,10 +311,10 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 * Bugfixes
 
 = 1.0.1 =
-* Improved readme.txt
+* Improved readme.txt of Easy Pricing Tables
 
 = 1.0.0 =
-* Initial release
+* Initial release of Easy Pricing Tables
 
 
 == Upgrade Notice ==
