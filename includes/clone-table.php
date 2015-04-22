@@ -53,7 +53,7 @@ function dh_ptp_custom_bulk_action()
         }
         
         $post_ids = isset($_REQUEST['post'])?array_map('intval', $_REQUEST['post']):array();
-        $page_num = isset($_REQUEST['paged'])?$_REQUEST['paged']:1;
+        $page_num = isset($_REQUEST['paged'])?intval($_REQUEST['paged']):1;
         
         // Return when invalid parameters are given
         if($action != 'eptclone' || empty($post_ids)) {
