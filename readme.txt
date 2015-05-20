@@ -6,7 +6,7 @@ Author URI: https://fatcatapps.com/?utm_campaign=author%2Buri&utm_source=https%3
 Plugin URI: https://fatcatapps.com/easypricingtables/?utm_campaign=plugin%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Requires at least: 3.6
 Tested up to: 4.1.1
-Stable tag: 2.0
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -127,6 +127,9 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 13. Another design from [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
 
 == Changelog ==
+
+= 2.0.1 =
+* Fixed Phantom "1" bug that showed up on some sites
 
 = 2.0 =
 * Updated version to 2.0 to correspond with Easy Pricing Tables Premium
