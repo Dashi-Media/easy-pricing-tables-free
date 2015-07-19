@@ -128,6 +128,9 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 
 == Changelog ==
 
+= 2.0.2 =
+* Confirmed WordPress 4.3 compatibility
+
 = 2.0.1 =
 * Fixed Phantom "1" bug that showed up on some sites
 
