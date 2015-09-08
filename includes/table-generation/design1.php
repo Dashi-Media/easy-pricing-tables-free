@@ -36,8 +36,6 @@ function dh_ptp_simple_flat_css($id, $meta)
     
     ?>
 
-    #ptp-<?php echo $id;?> p { display: none; }
-
     #ptp-<?php echo $id ?> div.ptp-item-container {
         border-radius: <?php echo $design1_rounded_corner_width; ?>;
         padding: 0px;
