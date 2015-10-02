@@ -3,15 +3,17 @@
 	Plugin Name: Easy Pricing Tables Lite by Fatcat Apps
 	Plugin URI: https://fatcatapps.com/easypricingtables
 	Description: Create a Beautiful, Responsive and Highly Converting Pricing or Comparison Table in Less Than 5 Minutes with Easy Pricing Tables for WordPress. No Coding Required.
+	Text Domain: easy-pricing-tables
+	Domain Path: /languages
 	Author: David Hehenberger
-	Version: 2.0.4
+	Version: 2.0.5
 	Author URI: https://fatcatapps.com
 */
 
 if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 
   // define plugin version for update nag
-  define('PTP_PLUGIN_VERSION', '2.0.3');
+  define('PTP_PLUGIN_VERSION', '2.0.5');
 
   // Define a constant to always include the absolute path
   define('PTP_PLUGIN_PATH', plugin_dir_path( __FILE__ ));
