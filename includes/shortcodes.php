@@ -26,7 +26,7 @@ function dh_ptp_message_shortcode( $atts) {
 		}
 	}
 	
-	return __('Pricing table does not exist. Please check your shortcode.', PTP_LOC);
+	return __('Pricing table does not exist. Please check your shortcode.', 'easy-pricing-tables');
 }
 // add the shortcode
 add_shortcode( 'easy-pricing-table', 'dh_ptp_message_shortcode' );

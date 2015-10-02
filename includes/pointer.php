@@ -56,14 +56,14 @@ function dh_ptp_usage_tracking_pointer()
     $id = '#wpadminbar';
     
     // Buttons
-    $button_1_title = __('Do not allow tracking', PTP_LOC);
+    $button_1_title = __('Do not allow tracking', 'easy-pricing-tables');
     $button_1_fn    = sprintf($ajax, 'no');
-    $button_2_title = __('Allow tracking', PTP_LOC);
+    $button_2_title = __('Allow tracking', 'easy-pricing-tables');
     $button_2_fn    = sprintf($ajax, 'yes');
     
     // Content
-    $content  = '<h3>' . __('Help Improve Easy Pricing Tables', PTP_LOC) . '</h3>';
-    $content .= '<p>' . __('Thanks for installing Easy Pricing Tables. Please help us improve this plugin by gathering usage stats so we know which features to improve and which plugins and themes to test with.', PTP_LOC) . '</p>';
+    $content  = '<h3>' . __('Help Improve Easy Pricing Tables', 'easy-pricing-tables') . '</h3>';
+    $content .= '<p>' . __('Thanks for installing Easy Pricing Tables. Please help us improve this plugin by gathering usage stats so we know which features to improve and which plugins and themes to test with.', 'easy-pricing-tables') . '</p>';
     
     // Options
     $options = array(
@@ -116,14 +116,14 @@ function dh_ptp_mailing_list_pointer()
     $id = '#wpadminbar';
     
     // Buttons
-    $button_1_title = __('No, thanks', PTP_LOC);
+    $button_1_title = __('No, thanks', 'easy-pricing-tables');
     $button_1_fn    = sprintf($ajax, 'no');
-    $button_2_title = __("Let&#39;s do it!", PTP_LOC);
+    $button_2_title = __("Let&#39;s do it!", 'easy-pricing-tables');
     $button_2_fn    = sprintf($ajax, 'yes');
     
     // Content
-    $content  = '<h3>' . __('Pricing Table Crash Course', PTP_LOC) . '</h3>';
-    $content .= '<p>' . __("Instead of watching 99% of your visitors bounce, imagine you could increase your pricing table&#39;s conversion rate and make more money. Find out how in this ridiculously actionable (and totally free) 5-part email course.", PTP_LOC) . '</p>';
+    $content  = '<h3>' . __('Pricing Table Crash Course', 'easy-pricing-tables') . '</h3>';
+    $content .= '<p>' . __("Instead of watching 99% of your visitors bounce, imagine you could increase your pricing table&#39;s conversion rate and make more money. Find out how in this ridiculously actionable (and totally free) 5-part email course.", 'easy-pricing-tables') . '</p>';
     $content .= '<p>' . '<input type="text" name="ept_email" id="ept_email" value="' . $current_user->user_email . '" style="width: 100%"/>' . '</p>';
 	
     // Options
@@ -194,11 +194,11 @@ function dh_ptp_mailing_list_pointer_ajax()
     $id = '#wpadminbar';
     
     // Buttons
-    $button_1_title = __('Close', PTP_LOC);
+    $button_1_title = __('Close', 'easy-pricing-tables');
     
     // Content
-    $content  = '<h3>' . __('Please confirm your email', PTP_LOC) . '</h3>';
-    $content .= '<p>' . __("Thanks! For privacy reasons you'll have to confirm your email. Please check your email inbox.", PTP_LOC) . '</p>';
+    $content  = '<h3>' . __('Please confirm your email', 'easy-pricing-tables') . '</h3>';
+    $content .= '<p>' . __("Thanks! For privacy reasons you'll have to confirm your email. Please check your email inbox.", 'easy-pricing-tables') . '</p>';
     
     // Options
     $options = array(

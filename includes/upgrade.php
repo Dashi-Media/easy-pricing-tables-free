@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 function dh_ptp_upgrade_to_premium_menu()
 {
-    $page_hook = add_submenu_page('edit.php?post_type=easy-pricing-table', __('Upgrade to Premium', PTP_LOC), __('Upgrade to Premium', PTP_LOC), 'manage_options', 'easy-pricing-tables-upgrade', 'dh_ptp_upgrade_to_premium');
+    $page_hook = add_submenu_page('edit.php?post_type=easy-pricing-table', __('Upgrade to Premium', 'easy-pricing-tables'), __('Upgrade to Premium', 'easy-pricing-tables'), 'manage_options', 'easy-pricing-tables-upgrade', 'dh_ptp_upgrade_to_premium');
     add_action('load-' . $page_hook , 'dh_ptp_upgrade_ob_start');
 }
 add_action('admin_menu', 'dh_ptp_upgrade_to_premium_menu');
@@ -63,9 +63,9 @@ function dh_ptp_all_admin_notices()
 {
 	echo
 		'<div class="dh-ptp-upgrade-nag">'.
-			'<p>' . sprintf( __('Thanks for using Easy Pricing Tables. If you like this plugin, please consider supporting continued development by <a href="%s">purchasing the premium version</a>.', PTP_LOC), 'http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=upgrade-notice') . '</p>' .
-			'<p>' . __('Easy Pricing Tables Premium comes with 4 additional table designs, 369 icons and tons of customization options.', PTP_LOC) . '</p>'.
-			'<p>' . sprintf( __('<a href="%s">Click here to learn more...</a>', PTP_LOC), 'http://fatcatapps.com/easypricingtables/?utm_campaign=ept-upgrade-nag&utm_source=free-plugin&utm_medium=link&utm_content=v1') . '</p>'.
+			'<p>' . sprintf( __('Thanks for using Easy Pricing Tables. If you like this plugin, please consider supporting continued development by <a href="%s">purchasing the premium version</a>.', 'easy-pricing-tables'), 'http://easypricingtables.com/?utm_source=free-plugin&utm_medium=link&utm_campaign=upgrade-notice') . '</p>' .
+			'<p>' . __('Easy Pricing Tables Premium comes with 4 additional table designs, 369 icons and tons of customization options.', 'easy-pricing-tables') . '</p>'.
+			'<p>' . sprintf( __('<a href="%s">Click here to learn more...</a>', 'easy-pricing-tables'), 'http://fatcatapps.com/easypricingtables/?utm_campaign=ept-upgrade-nag&utm_source=free-plugin&utm_medium=link&utm_content=v1') . '</p>'.
 		'</div>';
 }
 

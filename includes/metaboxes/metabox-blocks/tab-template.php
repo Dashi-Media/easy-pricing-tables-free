@@ -8,12 +8,12 @@
         echo "selected";
     } ?>" class="form-control template-hidden-input" />
         <img src="<?php echo PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/img/simple-flat.png'; ?>" class="template-image"></img>
-        <p class="template-headline"><?php _e('Design 1', PTP_LOC); ?></p>
+        <p class="template-headline"><?php _e('Design 1', 'easy-pricing-tables'); ?></p>
         <ul class="template-feature">
-            <li><?php _e('Ideal For Responsive Sites', PTP_LOC); ?></li>
-            <li><?php _e('Supports Up To 10 Columns', PTP_LOC); ?></li>
+            <li><?php _e('Ideal For Responsive Sites', 'easy-pricing-tables'); ?></li>
+            <li><?php _e('Supports Up To 10 Columns', 'easy-pricing-tables'); ?></li>
         </ul>
-        <a onClick="" class="button template-button"><?php _e('Use This Template', PTP_LOC); ?></a>
+        <a onClick="" class="button template-button"><?php _e('Use This Template', 'easy-pricing-tables'); ?></a>
     </div>
 
 <?php $mb->the_field('dh-ptp-fancy-flat-template'); ?>
@@ -24,12 +24,12 @@
     echo "not-selected";
 } ?>" class="form-control template-hidden-input" />
         <img src="<?php echo PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/img/fancy-flat.png'; ?>" class="template-image"></img>
-        <p class="template-headline"><?php _e('Design 2', PTP_LOC); ?></p>
+        <p class="template-headline"><?php _e('Design 2', 'easy-pricing-tables'); ?></p>
         <ul class="template-feature">
-            <li><?php _e('Ideal For Responsive Sites', PTP_LOC); ?></li>
-            <li><?php _e('Supports Up To 8 Columns', PTP_LOC); ?></li>
+            <li><?php _e('Ideal For Responsive Sites', 'easy-pricing-tables'); ?></li>
+            <li><?php _e('Supports Up To 8 Columns', 'easy-pricing-tables'); ?></li>
         </ul>
-        <a onClick="" class="button template-button"><?php _e('Use This Template', PTP_LOC); ?></a>
+        <a onClick="" class="button template-button"><?php _e('Use This Template', 'easy-pricing-tables'); ?></a>
     </div>
 
 <?php $mb->the_field('dh-ptp-stylish-flat-template'); ?>
@@ -40,12 +40,12 @@
     echo "not-selected";
 } ?>" class="form-control template-hidden-input" />
         <img src="<?php echo PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/img/stylish-flat.png'; ?>" class="template-image"></img>
-        <p class="template-headline"><?php _e('Design 3', PTP_LOC); ?></p>
+        <p class="template-headline"><?php _e('Design 3', 'easy-pricing-tables'); ?></p>
         <ul class="template-feature">
-            <li><?php _e('Ideal For Responsive Sites', PTP_LOC); ?></li>
-            <li><?php _e('Supports Up To 5 Columns', PTP_LOC); ?></li>
+            <li><?php _e('Ideal For Responsive Sites', 'easy-pricing-tables'); ?></li>
+            <li><?php _e('Supports Up To 5 Columns', 'easy-pricing-tables'); ?></li>
         </ul>
-        <a  class="button template-button"><?php _e('Use This Template', PTP_LOC); ?></a>
+        <a  class="button template-button"><?php _e('Use This Template', 'easy-pricing-tables'); ?></a>
     </div>
 
     <!-- Design 4 -->
@@ -57,13 +57,13 @@
         echo "not-selected";
     } ?>" class="form-control template-hidden-input" />
         <img src="<?php echo PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/img/design4.png'; ?>" class="template-image"></img>
-        <p class="template-headline"><?php _e('Design 4', PTP_LOC); ?></p>
+        <p class="template-headline"><?php _e('Design 4', 'easy-pricing-tables'); ?></p>
         <ul class="template-feature">
-            <li><?php _e('Ideal For Responsive Sites', PTP_LOC); ?></li>
-            <li><?php _e('Supports Unlimited Columns', PTP_LOC); ?></li>
-            <li><?php _e('Hover Effects (ideal for non-touch devices)', PTP_LOC); ?></li>
+            <li><?php _e('Ideal For Responsive Sites', 'easy-pricing-tables'); ?></li>
+            <li><?php _e('Supports Unlimited Columns', 'easy-pricing-tables'); ?></li>
+            <li><?php _e('Hover Effects (ideal for non-touch devices)', 'easy-pricing-tables'); ?></li>
         </ul>
-        <a  class="button template-button"><?php _e('Use This Template', PTP_LOC); ?></a>
+        <a  class="button template-button"><?php _e('Use This Template', 'easy-pricing-tables'); ?></a>
     </div>
 
 <?php $mb->the_field('dh-ptp-design5-template'); ?>
@@ -74,12 +74,12 @@
     echo "not-selected";
 } ?>" class="form-control template-hidden-input" />
         <img src="<?php echo PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/img/design5.png'; ?>" class="template-image"></img>
-        <p class="template-headline"><?php _e('Design 5', PTP_LOC); ?></p>
+        <p class="template-headline"><?php _e('Design 5', 'easy-pricing-tables'); ?></p>
         <ul class="template-feature">
-            <li><?php _e('Ideal For Unresponsive Sites', PTP_LOC); ?></li>
-            <li><?php _e('Supports Up To 10 Columns', PTP_LOC); ?></li>
+            <li><?php _e('Ideal For Unresponsive Sites', 'easy-pricing-tables'); ?></li>
+            <li><?php _e('Supports Up To 10 Columns', 'easy-pricing-tables'); ?></li>
         </ul>
-        <a  class="button template-button"><?php _e('Use This Template', PTP_LOC); ?></a>
+        <a  class="button template-button"><?php _e('Use This Template', 'easy-pricing-tables'); ?></a>
     </div>
 
     <!-- clear our floats -->
@@ -93,7 +93,7 @@
     function templateSelectorRequireUpgradeClickedHandler(el)
     {
 	
-        var alert_text = "<?php _e("Please upgrade to Easy Pricing Tables Premium to use this design.", PTP_LOC); ?>";
+        var alert_text = "<?php _e("Please upgrade to Easy Pricing Tables Premium to use this design.", 'easy-pricing-tables'); ?>";
         alert(alert_text);
 
         return false;

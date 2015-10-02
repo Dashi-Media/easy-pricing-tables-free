@@ -134,7 +134,7 @@ function dh_ptp_generate_simple_flat_pricing_table_html ($id)
         $feature_label = '<div class="ptp-not-most-popular">&nbsp;</div>';
         if(isset($column['feature']) && $column['feature'] == "featured") {
             $feature = "ptp-highlight";
-            $most_popular_text = isset($meta['most-popular-label-text'])?$meta['most-popular-label-text']:__('Most Popular', PTP_LOC);
+            $most_popular_text = isset($meta['most-popular-label-text'])?$meta['most-popular-label-text']:__('Most Popular', 'easy-pricing-tables');
             $feature_label = '<div class="ptp-most-popular">'.$most_popular_text.'</div>';
         }
 

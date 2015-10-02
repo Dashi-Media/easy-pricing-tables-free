@@ -1,8 +1,8 @@
 <div id="dh_ptp_tabs_container" class="my_meta_control">
     <ul id="dh_ptp_metabox_tabs">
-        <li class="dh_ptp_tab_header"><a href="#dh_ptp_tabs_1"><?php _e('Content', PTP_LOC); ?></a></li>
-        <li class="dh_ptp_tab_header"><a href="#dh_ptp_tabs_2"><?php _e('Design', PTP_LOC); ?></a></li>
-       <!-- <li class="dh_ptp_tab_header"><a href="#dh_ptp_tabs_3"><?php // _e('Template', PTP_LOC); ?></a></li>  -->
+        <li class="dh_ptp_tab_header"><a href="#dh_ptp_tabs_1"><?php _e('Content', 'easy-pricing-tables'); ?></a></li>
+        <li class="dh_ptp_tab_header"><a href="#dh_ptp_tabs_2"><?php _e('Design', 'easy-pricing-tables'); ?></a></li>
+       <!-- <li class="dh_ptp_tab_header"><a href="#dh_ptp_tabs_3"><?php // _e('Template', 'easy-pricing-tables'); ?></a></li>  -->
     </ul>
     <!-- clear our floats -->
     <div class="clear"></div>
@@ -15,9 +15,9 @@
         <div style="margin-left:10px;margin-right:10px;">
             <input type="hidden" name="publish" id="publish" value="1"/>
             <input type="hidden" name="dh_ptp_tab" id="dh_ptp_tab" value="#dh_ptp_tabs_1"/>
-            <a style="float:left;" class="button button-large" id="dh_ptp_save_preview" data-url="<?php echo esc_url( get_permalink($post->ID) ); ?>"><?php _e('Save & Preview', PTP_LOC); ?></a>
-            <input style="float:left; margin-left:10px;" name="save" id="dh_ptp_save" type="submit" class="button button-large" accesskey="p" value="<?php _e('Save', PTP_LOC); ?>" />
-            <a style="float:left; margin-left:10px;" class="button button-large inline-lightbox button-deploy" href="#deploy" data-id="<?php the_ID(); ?>"><?php _e('Deploy (Get Shortcode)', PTP_LOC); ?></a>
+            <a style="float:left;" class="button button-large" id="dh_ptp_save_preview" data-url="<?php echo esc_url( get_permalink($post->ID) ); ?>"><?php _e('Save & Preview', 'easy-pricing-tables'); ?></a>
+            <input style="float:left; margin-left:10px;" name="save" id="dh_ptp_save" type="submit" class="button button-large" accesskey="p" value="<?php _e('Save', 'easy-pricing-tables'); ?>" />
+            <a style="float:left; margin-left:10px;" class="button button-large inline-lightbox button-deploy" href="#deploy" data-id="<?php the_ID(); ?>"><?php _e('Deploy (Get Shortcode)', 'easy-pricing-tables'); ?></a>
             <div class="clear"></div>
        </div>
     </div>

@@ -18,11 +18,11 @@ function dh_ptp_add_custom_bulk_action()
         ?>
             <script type="text/javascript">
                 jQuery(document).ready(function() {
-                    jQuery('<option>').val('eptclone').text('<?php _e('Make a Copy', PTP_LOC)?>').insertAfter("select[name='action'] option[value='edit']");
-                    jQuery('<option>').val('eptclone').text('<?php _e('Make a Copy', PTP_LOC)?>').insertAfter("select[name='action2'] option[value='edit']");
+                    jQuery('<option>').val('eptclone').text('<?php _e('Make a Copy', 'easy-pricing-tables')?>').insertAfter("select[name='action'] option[value='edit']");
+                    jQuery('<option>').val('eptclone').text('<?php _e('Make a Copy', 'easy-pricing-tables')?>').insertAfter("select[name='action2'] option[value='edit']");
                     jQuery('.row-actions').each(function() {
                         var post_edit_url = jQuery(this).find('.edit a').attr('href');
-                        var clone_html = '<span class="eptclone"><a href="#" data-ajax="<?php echo $link; ?>&raw='+encodeURIComponent(post_edit_url)+'"><?php _e('Make a Copy', PTP_LOC)?></a> | </span>';
+                        var clone_html = '<span class="eptclone"><a href="#" data-ajax="<?php echo $link; ?>&raw='+encodeURIComponent(post_edit_url)+'"><?php _e('Make a Copy', 'easy-pricing-tables')?></a> | </span>';
                         jQuery(this).find('.trash').before(clone_html);
                     });
                     
@@ -96,7 +96,7 @@ function dh_ptp_custom_bulk_action()
 function dh_ptp_clone_single_table_action()
 {
     if ( !wp_verify_nonce( $_REQUEST['nonce'], "dh_ptp_clone_table_nonce")) {
-        exit(__("No naughty business please", PTP_LOC));
+        exit(__("No naughty business please", 'easy-pricing-tables'));
     }
    
     preg_match('/post=(\d+)/', $_REQUEST['raw'], $m);
@@ -118,7 +118,7 @@ function dh_ptp_clone_table($post_id)
     unset($clone['ID']);
     unset($clone['post_name']);
     unset($clone['guid']);
-    $clone['post_title'] = sprintf( __('Copy of %s', PTP_LOC), $clone['post_title']);
+    $clone['post_title'] = sprintf( __('Copy of %s', 'easy-pricing-tables'), $clone['post_title']);
     
     // Insert clone
     $cloned_post_id = wp_insert_post($clone, $wp_error);
@@ -133,7 +133,7 @@ function dh_ptp_custom_bulk_admin_notices()
 			
     if($pagenow == 'edit.php' && $post_type == 'easy-pricing-table' && isset($_REQUEST['eptcloned']) && (int)$_REQUEST['eptcloned']) {
         $message = sprintf(
-            _n( 'Pricing table was copied successfully.', '%s pricing tables were copied successfully.', $_REQUEST['eptcloned'], PTP_LOC),
+            _n( 'Pricing table was copied successfully.', '%s pricing tables were copied successfully.', $_REQUEST['eptcloned'], 'easy-pricing-tables'),
             number_format_i18n($_REQUEST['eptcloned'])
         );
         echo '<div class="updated"><p>'.$message.'</p></div>';

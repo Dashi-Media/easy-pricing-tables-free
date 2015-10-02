@@ -7,7 +7,7 @@ function dh_ptp_media_button()
 {
     global $pagenow, $typenow, $wp_version;
     
-    $button_title = __('Insert pricing table', PTP_LOC);
+    $button_title = __('Insert pricing table', 'easy-pricing-tables');
     $output = '';
     
     // Show button only in post and page edit screens
@@ -39,7 +39,7 @@ function dh_ptp_media_button_thickbox()
                     
                     // Return early if no download is selected
                     if ('' === id) {
-                        alert(__('You must choose a download', PTP_LOC));
+                        alert(__('You must choose a download', 'easy-pricing-tables'));
                         return;
                     }
                     window.send_to_editor('[easy-pricing-table id="' + id + '"]');
@@ -65,10 +65,10 @@ function dh_ptp_media_button_thickbox()
         </style>
         <div id="dh-ptp-pricing-table-thickbox" style="display: none;">
             <div class="wrap" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
-                <p><?php _e('Use the form below to insert the shortcode for a pricing table.', PTP_LOC); ?></p>
+                <p><?php _e('Use the form below to insert the shortcode for a pricing table.', 'easy-pricing-tables'); ?></p>
                 <div>
                     <select id="dh-ptp-pricing-table">
-                        <option value=""><?php _e('Please select...', PTP_LOC); ?></option>
+                        <option value=""><?php _e('Please select...', 'easy-pricing-tables'); ?></option>
                         <?php
                             // Fetch all pricing tables
                             $post_clone = $post;
@@ -85,8 +85,8 @@ function dh_ptp_media_button_thickbox()
                     </select>
                 </div>
                 <p class="submit">
-                    <input type="button" id="dh-ptp-pricing-table-insert" class="button-primary" value="<?php _e('Insert', PTP_LOC); ?>"/>
-                    <a id="dh-ptp-pricing-table-cancel" class="button-secondary" onclick="tb_remove();" title="<?php _e('Cancel', PTP_LOC); ?>"><?php _e('Cancel', PTP_LOC); ?></a>
+                    <input type="button" id="dh-ptp-pricing-table-insert" class="button-primary" value="<?php _e('Insert', 'easy-pricing-tables'); ?>"/>
+                    <a id="dh-ptp-pricing-table-cancel" class="button-secondary" onclick="tb_remove();" title="<?php _e('Cancel', 'easy-pricing-tables'); ?>"><?php _e('Cancel', 'easy-pricing-tables'); ?></a>
                 </p>
             </div>
         </div>

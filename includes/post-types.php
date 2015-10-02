@@ -7,19 +7,19 @@
 function dh_ptp_register_pricing_table_post_type() {
 
 	$labels = array(
-	    'name' => __('Pricing Tables', PTP_LOC),
-	    'singular_name' => __('Pricing Table', PTP_LOC),
-	    'add_new' => __('Add New', PTP_LOC),
-	    'add_new_item' => __('Add New Pricing Table', PTP_LOC),
-	    'edit_item' => __('Edit Pricing Table', PTP_LOC),
-	    'new_item' => __('New Pricing Table', PTP_LOC),
-	    'all_items' => __('All Pricing Tables', PTP_LOC),
-	    'view_item' => __('View Pricing Table', PTP_LOC),
-	    'search_items' => __('Search Pricing Tables', PTP_LOC),
-	    'not_found' =>  __('No Pricing Tables found', PTP_LOC),
-	    'not_found_in_trash' => __('No Pricing Tables found in Trash', PTP_LOC),
+	    'name' => __('Pricing Tables', 'easy-pricing-tables'),
+	    'singular_name' => __('Pricing Table', 'easy-pricing-tables'),
+	    'add_new' => __('Add New', 'easy-pricing-tables'),
+	    'add_new_item' => __('Add New Pricing Table', 'easy-pricing-tables'),
+	    'edit_item' => __('Edit Pricing Table', 'easy-pricing-tables'),
+	    'new_item' => __('New Pricing Table', 'easy-pricing-tables'),
+	    'all_items' => __('All Pricing Tables', 'easy-pricing-tables'),
+	    'view_item' => __('View Pricing Table', 'easy-pricing-tables'),
+	    'search_items' => __('Search Pricing Tables', 'easy-pricing-tables'),
+	    'not_found' =>  __('No Pricing Tables found', 'easy-pricing-tables'),
+	    'not_found_in_trash' => __('No Pricing Tables found in Trash', 'easy-pricing-tables'),
 	    'parent_item_colon' => '',
-	    'menu_name' => __('Pricing Tables', PTP_LOC)
+	    'menu_name' => __('Pricing Tables', 'easy-pricing-tables')
 	  );
 
   	$args = array(
@@ -58,17 +58,17 @@ function dh_ptp_updated_interaction_messages( $messages ) {
 	global $post, $post_ID;
 	$messages['easy-pricing-table'] = array(
 		0 => '', 
-		1 => sprintf( __('Pricing table saved. <a href="%s">View pricing table</a>.', PTP_LOC), esc_url( get_permalink($post_ID) ) ),
-		2 => __('Custom field updated.', PTP_LOC),
-		3 => __('Custom field deleted.', PTP_LOC),
-		4 => __('Pricing table saved.', PTP_LOC),
-		5 => isset($_GET['revision']) ? sprintf( __('Pricing table restored to revision from %s', PTP_LOC), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-		6 => sprintf( __('Pricing table saved. <a href="%s">View pricing table</a>', PTP_LOC), esc_url( get_permalink($post_ID) ) ),
-		7 => __('Pricing table saved.', PTP_LOC),
+		1 => sprintf( __('Pricing table saved. <a href="%s">View pricing table</a>.', 'easy-pricing-tables'), esc_url( get_permalink($post_ID) ) ),
+		2 => __('Custom field updated.', 'easy-pricing-tables'),
+		3 => __('Custom field deleted.', 'easy-pricing-tables'),
+		4 => __('Pricing table saved.', 'easy-pricing-tables'),
+		5 => isset($_GET['revision']) ? sprintf( __('Pricing table restored to revision from %s', 'easy-pricing-tables'), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+		6 => sprintf( __('Pricing table saved. <a href="%s">View pricing table</a>', 'easy-pricing-tables'), esc_url( get_permalink($post_ID) ) ),
+		7 => __('Pricing table saved.', 'easy-pricing-tables'),
 		//8 => sprintf( __('Pricing table submitted. <a target="_blank" href="%s">Preview pricing table</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
-		8 => __('Pricing table submitted.', PTP_LOC),
-		9 => sprintf( __('Pricing table scheduled for: <strong>%1$s</strong>.', PTP_LOC), date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ), esc_url( get_permalink($post_ID) ) ),
-		10 => __('Pricing table saved.', PTP_LOC),
+		8 => __('Pricing table submitted.', 'easy-pricing-tables'),
+		9 => sprintf( __('Pricing table scheduled for: <strong>%1$s</strong>.', 'easy-pricing-tables'), date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ), esc_url( get_permalink($post_ID) ) ),
+		10 => __('Pricing table saved.', 'easy-pricing-tables'),
 	);
 	return $messages;
 }
@@ -112,9 +112,9 @@ function dh_ptp_custom_rewrites($translation, $text, $domain)
  */
 function dh_ptp_add_new_pricing_table_columns($gallery_columns) {
     $new_columns['cb'] = '<input type="checkbox" />';
-    $new_columns['title'] = _x('Pricing Table Name', 'column name', PTP_LOC);    
-    $new_columns['shortcode'] = __('Shortcode', PTP_LOC);
-    $new_columns['date'] = _x('Date', 'column name', PTP_LOC);
+    $new_columns['title'] = _x('Pricing Table Name', 'column name', 'easy-pricing-tables');    
+    $new_columns['shortcode'] = __('Shortcode', 'easy-pricing-tables');
+    $new_columns['date'] = _x('Date', 'column name', 'easy-pricing-tables');
  
     return $new_columns;
 }
