@@ -26,7 +26,7 @@ function dh_ptp_register_pricing_table_post_type() {
 	    'labels' => $labels,
 	    'public' => false,
 	    'exclude_from_search' => true,
-	    'publicly_queryable' => true,
+	    'publicly_queryable' => false,
 	    'show_ui' => true, 
 	    'show_in_menu' => true, 
 	    'query_var' => true,
