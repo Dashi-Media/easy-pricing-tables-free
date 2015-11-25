@@ -46,4 +46,12 @@ function dh_ptp_crash_course($var)
         dh_ptp_track_event('Email course button clicked', array('Button copy' => $var));
     }
 }
+
+// Plugin uninstall
+function dh_ptp_plugin_uninstall()
+{
+    delete_option( 'dh_ptp_allow_tracking' );
+    delete_option( 'dh_ptp_mailing_list' );
+}
+register_uninstall_hook( PTP_PLUGIN_PATH.'/easy-pricing-tables-premium.php', 'dh_ptp_plugin_uninstall' );
 ?>
