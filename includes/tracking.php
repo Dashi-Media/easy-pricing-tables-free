@@ -53,5 +53,5 @@ function dh_ptp_plugin_uninstall()
     delete_option( 'dh_ptp_allow_tracking' );
     delete_option( 'dh_ptp_mailing_list' );
 }
-register_uninstall_hook( PTP_PLUGIN_PATH.'/easy-pricing-tables-premium.php', 'dh_ptp_plugin_uninstall' );
+register_uninstall_hook( PTP_PLUGIN_PATH.'/pricing-table-plugin.php', 'dh_ptp_plugin_uninstall' );
 ?>
