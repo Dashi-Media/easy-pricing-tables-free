@@ -1,7 +1,7 @@
 <div id="simple-flat-advanced-design-settings">
-    <div class="dh_ptp_accordion">
-        <h3><?php _e('General Settings', 'easy-pricing-tables'); ?></h3>
-        <div>
+    <div class="dh_ptp_accordion widget-title ui-sortable-handle">
+        <h4><?php _e('General Settings', 'easy-pricing-tables'); ?></h4>
+        <div class="widget-inside widget">
             <table>
                 <tr>
                     <td class="settings-title"><?php _e('Featured Label Text', 'easy-pricing-tables'); ?></td>
@@ -51,7 +51,7 @@
                 </tr>
             </table>
         </div>
-        <h3><?php _e('Font Sizes', 'easy-pricing-tables'); ?></h3>
+        <h4><?php _e('Font Sizes', 'easy-pricing-tables'); ?></h4>
         <div>
             <table>
                 <tr>
@@ -197,7 +197,7 @@
             </table>
         </div>
         
-        <h3><?php _e("Button Colors", 'easy-pricing-tables'); ?></h3>
+        <h4><?php _e("Button Colors", 'easy-pricing-tables'); ?></h4>
         <div>
             <table>
                <!-- Headline -->
@@ -395,7 +395,7 @@
          */ ?> 
          
      <!-- ept-custom-css-setting -->
-        <h3><?php _e('Custom CSS', 'easy-pricing-tables'); ?></h3>
+        <h4><?php _e('Custom CSS', 'easy-pricing-tables'); ?></h4>
         <div >
  
             <table>

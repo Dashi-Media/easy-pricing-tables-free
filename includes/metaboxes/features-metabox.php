@@ -1,7 +1,7 @@
-<div id="dh_ptp_tabs_container" class="my_meta_control">
-    <ul id="dh_ptp_metabox_tabs">
-        <li class="dh_ptp_tab_header"><a href="#dh_ptp_tabs_1"><?php _e('Content', 'easy-pricing-tables'); ?></a></li>
-        <li class="dh_ptp_tab_header"><a href="#dh_ptp_tabs_2"><?php _e('Design', 'easy-pricing-tables'); ?></a></li>
+<div id="dh_ptp_tabs_container">
+    <ul id="dh_ptp_metabox_tabs" class="nav-tab-wrapper">
+        <li class="dh_ptp_tab_header nav-tab"><a href="#dh_ptp_tabs_1"><?php _e('Content', 'easy-pricing-tables'); ?></a></li>
+        <li class="dh_ptp_tab_header nav-tab"><a href="#dh_ptp_tabs_2"><?php _e('Design', 'easy-pricing-tables'); ?></a></li>
        <!-- <li class="dh_ptp_tab_header"><a href="#dh_ptp_tabs_3"><?php // _e('Template', 'easy-pricing-tables'); ?></a></li>  -->
     </ul>
     <!-- clear our floats -->

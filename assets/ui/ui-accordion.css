@@ -1,7 +1,7 @@
 .ui-accordion .ui-accordion-header {
   cursor: pointer;
   position: relative;
-  margin-bottom: 5px !important;
+  margin-bottom: 10px !important;
   zoom: 1;
   background: #fafafa;
   border: 1px solid #e5e5e5;
@@ -14,7 +14,7 @@
   display: inline;
 }
 .ui-accordion .ui-accordion-header-active {
-  border-color: #999 !important;
+  border-bottom: 0 !important;
 }
 .ui-accordion .ui-accordion-header a {
   display: block;
@@ -37,13 +37,13 @@
 .ui-accordion .ui-accordion-content {
   padding: 1em 2.2em;
   border-top: 0;
-  margin-top: -2px;
+  margin: -11px auto 10px;
   position: relative;
   top: 1px;
-  margin-bottom: 2px;
   overflow: auto;
   display: none;
   zoom: 1;
+  border: 1px solid #e5e5e5;
 }
 .ui-accordion .ui-accordion-content-active {
   display: block;

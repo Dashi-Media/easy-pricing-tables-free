@@ -347,7 +347,6 @@ Popover help text tooltip styling
 
 #dh_ptp_tabs_container #dh_ptp_metabox_tabs li {
     border: 1px solid #ddd;
-    border-bottom: 0;
     background: #e4e4e4;
     color: #555;
     font-size: 15px;
@@ -356,9 +355,8 @@ Popover help text tooltip styling
     display: inline-block;
     padding: 4px 14px 6px;
     text-decoration: none;
-    margin: -4px 4px 0px 0;
+    margin: 0 0 0px 10px;
     float: left;
-    padding: 5px;
 }
 
 #dh_ptp_design_tabs a,
@@ -383,6 +381,7 @@ color:#333;
   border-style: solid solid none;
   border-width: 1px 1px 0;
   margin-bottom: 0px;
+  border-bottom: 1px solid white !important;
 }
 
 .dh_ptp_tab
@@ -411,6 +410,7 @@ color:#333;
 }
 #dh_ptp_metabox_tabs{
   border: none;
+  margin-top: 20px;
 }
 .dh_ptp_tab.ui-widget-content{
   padding: 10px!important;
