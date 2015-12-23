@@ -6,15 +6,18 @@
   background: #fafafa;
   border: 1px solid #e5e5e5;
   outline: none;
+  border-radius: 0;
+  font-weight: bold;
+  font-size: 13px !important;
 }
 .ui-accordion .ui-accordion-header:hover {
-  border-color: #999;
+  
 }
 .ui-accordion .ui-accordion-li-fix {
   display: inline;
 }
 .ui-accordion .ui-accordion-header-active {
-  border-bottom: 0 !important;
+
 }
 .ui-accordion .ui-accordion-header a {
   display: block;

@@ -224,7 +224,7 @@ function dh_ptp_save_preview_redirect ($location)
 /**
  * Enqueue jquery-ui-accordion in wp-admin
  */
-add_action('admin_enqueue_scripts', 'dh_ptp_jquery_ui_accordion_enqueue' );
+add_action('admin_enqueue_scripts', 'dh_ptp_jquery_ui_accordion_enqueue',100 );
 function dh_ptp_jquery_ui_accordion_enqueue(){
 	$screen = get_current_screen();
 	if ( 'easy-pricing-table' != $screen->id ) {
