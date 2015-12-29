@@ -139,14 +139,16 @@ add_action('manage_easy-pricing-table_posts_custom_column', 'dh_ptp_manage_prici
 
 /**
  * Preview functionality.
-(Append the pricing table shortcode to the empty post.)
+ * (Append the pricing table shortcode to the empty post.)
  * @param  [type] $content [description]
  * @return [type]          [description]
  */
 function dh_ptp_live_preview($content)
 {
     global $post;
-    if(get_post_type() == 'easy-pricing-table' && is_main_query()) {
+    if( 'easy-pricing-table' == get_post_type() && 
+    	is_user_logged_in() && 
+    	is_main_query() ) {
 		return $content . do_shortcode("[easy-pricing-table id={$post->ID}]");
 	} else {
 		return $content;
