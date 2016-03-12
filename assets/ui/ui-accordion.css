@@ -4,10 +4,11 @@
   margin-bottom: 10px !important;
   zoom: 1;
   background: #fafafa;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #e5e5e5 !important;
   outline: none;
   border-radius: 0;
   font-weight: bold;
+  padding: 15px !important;
   font-size: 13px !important;
 }
 .ui-accordion .ui-accordion-header:hover {
@@ -39,7 +40,6 @@
 }
 .ui-accordion .ui-accordion-content {
   padding: 1em 2.2em;
-  border-top: 0;
   margin: -11px auto 10px;
   position: relative;
   top: 1px;
@@ -47,6 +47,7 @@
   display: none;
   zoom: 1;
   border: 1px solid #e5e5e5;
+  border-top: 0;
 }
 .ui-accordion .ui-accordion-content-active {
   display: block;
