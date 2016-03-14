@@ -90,6 +90,7 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
         wp_enqueue_script( 'codemirror', PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ui/ui-components/codemirror/codemirror.js' );
         wp_enqueue_script( 'css', PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ui/ui-components/codemirror/addon-codemirror/css.js' );
         wp_enqueue_style( 'codemirror-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-components/codemirror/codemirror.css' );
+        wp_enqueue_style( 'jquery-ui-fresh', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/jquery-ui-fresh.css' );
         add_filter('admin_footer_text', 'dh_ptp_plugin_footer');
     }
   }
