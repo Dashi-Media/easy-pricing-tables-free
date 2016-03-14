@@ -17,8 +17,24 @@
 .ui-accordion .ui-accordion-li-fix {
   display: inline;
 }
-.ui-accordion .ui-accordion-header-active {
+.ui-accordion-header {
+  position: relative;
+}
+.ui-accordion .ui-accordion-header:after {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  content: "\f140"; 
+  display: inline-block;
+  font: 400 20px/1 dashicons;
+  text-decoration: none !important;
+}
 
+.ui-accordion .ui-accordion-header-active:after {
+  content: "\f142";
+  display: inline-block;
+  font: 400 20px/1 dashicons;
+  text-decoration: none !important;
 }
 .ui-accordion .ui-accordion-header a {
   display: block;
