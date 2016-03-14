@@ -157,6 +157,29 @@ function dh_ptp_live_preview($content)
 add_filter( 'the_content', 'dh_ptp_live_preview');
 
 /**
+ * Redirect to 404 Page
+ * Current user is not an admin
+ * @param  [type] $content [description]
+ * @return [type]          [description]
+ */
+function dh_ptp_404()
+{
+    // check is admin
+    if( is_singular( 'easy-pricing-table' ) &&
+    	!current_user_can( 'manage_options' ) ) {
+    	
+		global $wp_query;
+	    $wp_query->set_404();
+	    status_header(404);
+	    nocache_headers();
+	    include( get_query_template( '404' ) );
+        die();
+    }
+}
+add_action( 'wp', 'dh_ptp_404');
+
+
+/**
  * Remove the publish metabox for pricing tables
  * @return [type] [description]
  */
