@@ -342,6 +342,7 @@ Popover help text tooltip styling
 #dh_ptp_metabox_tabs{
   list-style: none;
   background: none;
+  margin-left: 12px;
 }
 
 #dh_ptp_design_tabs li,
@@ -353,7 +354,6 @@ Popover help text tooltip styling
 
 #dh_ptp_tabs_container #dh_ptp_metabox_tabs li {
     border: 1px solid #ccc;
-    border-bottom: 0;
     background: #e4e4e4;
     color: #555;
     font-size: 15px;
@@ -361,7 +361,7 @@ Popover help text tooltip styling
     line-height: 24px;
     display: inline-block;
     text-decoration: none;
-    margin: -4px 6px 0px -2px;
+    margin: -4px 8px 0px 0px;
     float: left;
     padding: 5px
 }
@@ -420,7 +420,7 @@ color:#333;
   border-radius: initial;
 }
 .dh_ptp_tab.ui-widget-content{
-  border: 1px solid #e5e5e5;
+  border: 1px solid #ccc;
   padding: 10px!important;
   background: white;
 }
@@ -627,8 +627,8 @@ color:#333;
 }
 
 #dh_ptp_tabs_container #dh_ptp_metabox_tabs .ui-tabs-active, #dh_ptp_tabs_container #dh_ptp_metabox_tabs .dh_ptp_tab_header:hover {
-    border-bottom: 1px solid #f1f1f1;
-    background: #f1f1f1;
+    border-bottom: 1px solid #fff;
+    background: #fff;
     color: #000
 }
 
