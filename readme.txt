@@ -5,8 +5,8 @@ Tags: pricing table, pricing tables, comparison table, pricing grid, responsive 
 Author URI: https://fatcatapps.com/?utm_campaign=author%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Plugin URI: https://fatcatapps.com/easypricingtables/?utm_campaign=plugin%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Requires at least: 3.6
-Tested up to: 4.3.1
-Stable tag: 2.0.5
+Tested up to: 4.5
+Stable tag: 2.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -127,6 +127,12 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 13. Another design from [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
 
 == Changelog ==
+
+= Easy Pricing Tables 2.0.6 =
+* Small UI improvements: pricing table editor now looks a bit nicer.
+* Fix: Easy Pricing Tables now cleans up the database when the plugin is deleted. (It removes dh_ptp_allow_tracking and dh_ptp_mailing_list)
+* Fix: Easy Pricing Tables disabled the WordPress post auto save feature on some configurations.
+* Fix: pricing tables used to be listed as public posts.
 
 = Easy Pricing Tables 2.0.5 =
 * Added text domain for compatibility with translate.wordpress.org
