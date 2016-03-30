@@ -6,14 +6,14 @@
 	Text Domain: easy-pricing-tables
 	Domain Path: /languages
 	Author: David Hehenberger
-	Version: 2.0.6
+	Version: 2.1.0
 	Author URI: https://fatcatapps.com
 */
 
 if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 
   // define plugin version for update nag
-  define('PTP_PLUGIN_VERSION', '2.0.6');
+  define('PTP_PLUGIN_VERSION', '2.1.0');
 
   // Define a constant to always include the absolute path
   define('PTP_PLUGIN_PATH', plugin_dir_path( __FILE__ ));
