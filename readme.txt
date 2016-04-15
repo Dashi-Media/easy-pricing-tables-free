@@ -128,6 +128,10 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 
 == Changelog ==
 
+= Easy Pricing Tables 2.1.0 =
+* Fixed a plugin conflict with iThemes exchange.
+* Fixed a bug in the backend introduced by a new version of jQuery included in WP 4.5
+
 = Easy Pricing Tables 2.0.6 =
 * Small UI improvements: pricing table editor now looks a bit nicer.
 * Fix: Easy Pricing Tables now cleans up the database when the plugin is deleted. (It removes dh_ptp_allow_tracking and dh_ptp_mailing_list)
