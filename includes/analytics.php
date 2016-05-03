@@ -1,7 +1,10 @@
 <?php
 
 // import Mixpanel
-require ( PTP_PLUGIN_PATH . '/includes/libraries/mixpanel/Mixpanel.php');
+if ( !class_exists ( 'Mixpanel' ) ) {
+	require ( PTP_PLUGIN_PATH . '/includes/libraries/mixpanel/Mixpanel.php');
+}
+
 
 /**
  * Tracks an event using the Mixpanel API if the user opted into tracking.
