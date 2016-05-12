@@ -6,6 +6,11 @@ include ( PTP_PLUGIN_PATH . '/includes/table-generation/design1.php');
 /* CSS Styling */
 function dh_ptp_easy_pricing_table_dynamic_css( $id )
 {
+	//FIX YOAST MUCKING THINGS UP
+	if ( doing_action( 'wp_head' ) ) {
+		return false;
+	}
+	
     global $features_metabox;
     
     $css = '';
