@@ -256,7 +256,7 @@ function dh_ptp_jquery_ui_accordion_enqueue(){
 		return;
 	}
 	wp_enqueue_script('jquery-ui-accordion');
-	wp_enqueue_style('dh-ptp-jquery-ui', plugins_url('assets/ui/ui-accordion.css', dirname(__FILE__)));
+	wp_enqueue_style('dh-ptp-jquery-ui', plugins_url('assets/ui/ui-accordion.min.css', dirname(__FILE__)));
 }
 
 /**
