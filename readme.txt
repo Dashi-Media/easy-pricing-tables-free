@@ -128,10 +128,13 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 
 == Changelog ==
 
-+= Easy Pricing Tables 2.2.0 =
-* TODO: Update changelog
+= Easy Pricing Tables 2.2.0 =
+* Fix possible conflict with other plugins using Mixpanel library
+* Fix conflict with Yoast SEO plugin causing incorrect styles on some themes/configurations
+* Included French language translations
+* Minor UI Improvements
 
-+= Easy Pricing Tables 2.1.0 =
+= Easy Pricing Tables 2.1.0 =
 * Fixed a plugin conflict with iThemes exchange.
 * Fixed a bug in the backend introduced by a new version of jQuery included in WP 4.5
 
