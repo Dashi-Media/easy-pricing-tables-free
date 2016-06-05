@@ -1,4 +1,4 @@
-=== Easy Pricing Tables Lite by Fatcat Apps ===
+=== Pricing Table Builder - Easy Pricing Tables ===
 Contributors: davidhme, fatcatapps
 Donate link: https://fatcatapps.com/easypricingtables/?utm_campaign=donate%2Blink&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Tags: pricing table, pricing tables, comparison table, pricing grid, responsive pricing table, price comparison, price comparison table
