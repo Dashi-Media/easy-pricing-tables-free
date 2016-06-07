@@ -129,8 +129,8 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 == Changelog ==
 
 = Easy Pricing Tables 2.3.0 =
-TODO: update changelog
-
+* Added Dutch translations
+* Fix a warning that occured with PHP 7
 
 = Easy Pricing Tables 2.2.0 =
 * Fix possible conflict with other plugins using Mixpanel library
