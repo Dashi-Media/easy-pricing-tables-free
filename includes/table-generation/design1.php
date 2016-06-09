@@ -28,11 +28,6 @@ function dh_ptp_simple_flat_css($id, $meta)
     $design1_featured_button_border_color = isset($meta['featured-button-border-color'])?$meta['featured-button-border-color']:'#2980b9';
     $design1_featured_button_hover_color = isset($meta['featured-button-hover-color'])?$meta['featured-button-hover-color']:'#2980b9';
     $design1_featured_button_font_color = isset($meta['featured-button-font-color'])?$meta['featured-button-font-color']:'#ffffff';
-     
-    // Print stylish custom css setting
-      if(isset($meta['ept-custom-css-setting-dg1'])) {    
-              echo $meta['ept-custom-css-setting-dg1'];
-        }
     
     ?>
 
@@ -90,6 +85,15 @@ function dh_ptp_simple_flat_css($id, $meta)
         font-size: <?php echo $design1_most_popular_font_size . $design1_most_popular_font_size_type; ?>;
     }
     <?php
+		
+	// Print stylish custom css setting
+    if(isset($meta['ept-custom-css-setting-dg1'])) {
+		if (function_exists ('wp_add_inline_script') ) {
+			wp_add_inline_style ( 'dh-ptp-custom-css', $meta['ept-custom-css-setting-dg1'] );
+		} else {
+			echo $meta['ept-custom-css-setting-dg1'];
+		}
+    }		     
 }
 
 
