@@ -131,6 +131,7 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 = Easy Pricing Tables 2.3.0 =
 * Added Dutch translations
 * Fix a warning that occured with PHP 7
+* Changed CSS enqueue order to allow overwriting any rules with custom css
 
 = Easy Pricing Tables 2.2.0 =
 * Fix possible conflict with other plugins using Mixpanel library
