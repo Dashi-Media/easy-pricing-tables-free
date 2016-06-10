@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
     $("#dh_ptp_tabs_container").tabs();
 	
 	// Save tab state to dh_ptp_tab
-	$("a[href=#dh_ptp_tabs_1], a[href=#dh_ptp_tabs_2]").on('click', function(){
+	$("a[href='#dh_ptp_tabs_1'], a[href='#dh_ptp_tabs_2']").on('click', function(){
 		$('#dh_ptp_tab').val($(this).attr('href'));
 	});
 

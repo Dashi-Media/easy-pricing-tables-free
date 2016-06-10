@@ -33,7 +33,7 @@
     <?php if (isset($_COOKIE['dh_ptp_current_tab'])) : ?>
         <script type="text/javascript">
             jQuery(document).ready(function(){
-                jQuery('a[href=<?php echo $_COOKIE['dh_ptp_current_tab'];?>]').click();
+                jQuery('a[href="<?php echo $_COOKIE['dh_ptp_current_tab'];?>"]').click();
             });
         </script>
     <?php endif; ?>

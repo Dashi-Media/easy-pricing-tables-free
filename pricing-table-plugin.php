@@ -6,14 +6,11 @@
 	Text Domain: easy-pricing-tables
 	Domain Path: /languages
 	Author: David Hehenberger
-	Version: 2.0.5
+	Version: 2.2.0
 	Author URI: https://fatcatapps.com
 */
 
 if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
-
-  // define plugin version for update nag
-  define('PTP_PLUGIN_VERSION', '2.0.5');
 
   // Define a constant to always include the absolute path
   define('PTP_PLUGIN_PATH', plugin_dir_path( __FILE__ ));
@@ -87,9 +84,10 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
     global $post;
     
     if ($post && $post->post_type == 'easy-pricing-table') {
-        wp_enqueue_script( 'codemirror', PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ui/ui-components/codemirror/codemirror.js' );
-        wp_enqueue_script( 'css', PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ui/ui-components/codemirror/addon-codemirror/css.js' );
-        wp_enqueue_style( 'codemirror-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-components/codemirror/codemirror.css' );
+        wp_enqueue_script( 'codemirror', PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ui/ui-components/codemirror/codemirror.min.js' );
+        wp_enqueue_script( 'css', PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ui/ui-components/codemirror/addon-codemirror/css.min.js' );
+        wp_enqueue_style( 'codemirror-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-components/codemirror/codemirror.min.css' );
+        wp_enqueue_style( 'jquery-ui-fresh', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/jquery-ui-fresh.min.css' );
         add_filter('admin_footer_text', 'dh_ptp_plugin_footer');
     }
   }

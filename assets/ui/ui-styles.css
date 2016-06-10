@@ -1,19 +1,25 @@
-.my_meta_control .description
-{ display:none; }
- 
-.my_meta_control label
-{ display:block; font-weight:bold; margin:6px; margin-bottom:0; margin-top:12px; }
- 
-.my_meta_control label span
-{ display:inline; font-weight:normal; }
- 
-.my_meta_control span
-{ color:#999; display:block; }
- 
-.my_meta_control textarea, .my_meta_control input[type='text']
+.my_meta_control .description {
+    display: none
+}
+.my_meta_control label {
+    display: block;
+    font-weight: bold;
+    margin: 6px;
+    margin-bottom: 0;
+    margin-top: 12px
+}
+.my_meta_control label span {
+    display: inline;
+    font-weight: normal
+}
+.my_meta_control span {
+    color: #999;
+    display: block
+}
+.wpa_group textarea, .wpa_group input[type='text']
 { margin-bottom:3px; width:99%; }
  
-.my_meta_control h4
+.ui-widget-content > h4
 { color:#999; font-size:1em; margin:15px 6px; text-transform:uppercase; }
 
 /* style for plan title and delete button */
@@ -336,6 +342,7 @@ Popover help text tooltip styling
 #dh_ptp_metabox_tabs{
   list-style: none;
   background: none;
+  margin-left: 12px;
 }
 
 #dh_ptp_design_tabs li,
@@ -353,18 +360,17 @@ Popover help text tooltip styling
     font-weight: 700;
     line-height: 24px;
     display: inline-block;
-    padding: 0;
     text-decoration: none;
-    margin: 0 0 0px 10px;
+    margin: -4px 8px 0px 0px;
     float: left;
-    border-radius: 0;
+    padding: 5px
 }
 
 #dh_ptp_design_tabs a,
 #dh_ptp_metabox_tabs a{
   text-decoration: none;
   outline:0;
-  color:#333;
+  color: #333;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -382,23 +388,23 @@ color:#333;
   border-style: solid solid none;
   border-width: 1px 1px 0;
   margin-bottom: 0px;
-  border-bottom: 1px solid white !important;
 }
 
 .dh_ptp_tab
 {
-  border-top: 1px solid #ddd !important;
+  border: 1px solid #ddd;
   background-color: #fff;
   padding-left: 10px;
   padding-right: 10px;
 
-  border-radius: 0;
+    border-top-right-radius: 3px;
 
-  margin-top: -1px;
+    margin-top: 0
 }
 
 .dh_ptp_tab_header{
-
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 /** Fix woothemes incompatibilty caused by jqueryUI tabs */
@@ -406,13 +412,17 @@ color:#333;
   border: none;
   font-size: 1em;
   font-family: inherit;
+  background: inherit;
 }
 #dh_ptp_metabox_tabs{
-  border: none;
-  margin-top: 20px;
+  border: none; 
+  background: none;
+  border-radius: initial;
 }
 .dh_ptp_tab.ui-widget-content{
+  border: 1px solid #ccc;
   padding: 10px!important;
+  background: white;
 }
 
 /** Styles for save buttons **/
@@ -552,6 +562,7 @@ color:#333;
 
 .template-image{
   width: 300px;
+  height: 150px;
 }
 
 .template-selector{
@@ -560,6 +571,7 @@ color:#333;
   margin: 10px;
   border: 3px dashed transparent;
   opacity: 0.7;
+  cursor: pointer;
 }
 
 .template-button{
@@ -604,6 +616,10 @@ color:#333;
     background-color: #333;
 }
 
+[id='1_dh_ptp_settings_metabox'] {
+    background-color: inherit;
+}
+
 #dh_ptp_banner_review_box_metabox .button-large, #dh_ptp_banner_metabox .button-large , #dh_ptp_banner_quick_link_metabox .button-large {
     font-size: 17px;
     line-height: 30px;
@@ -611,8 +627,9 @@ color:#333;
 }
 
 #dh_ptp_tabs_container #dh_ptp_metabox_tabs .ui-tabs-active, #dh_ptp_tabs_container #dh_ptp_metabox_tabs .dh_ptp_tab_header:hover {
-    background: white;
-    color: #000;
+    border-bottom: 1px solid #fff;
+    background: #fff;
+    color: #000
 }
 
 .settings-title {padding-right: 30px; vertical-align: top; padding-top:3px;}

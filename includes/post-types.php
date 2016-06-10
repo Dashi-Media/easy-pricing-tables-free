@@ -82,9 +82,9 @@ function dh_ptp_custom_rewrites($translation, $text, $domain)
 {
 	global $post;
 	
-	if ( ! isset( $post->post_type ) ) {
-		return $translation;
-	}
+	if ( ! isset( $post->post_type ) || empty ( $text ) ) {
+    	return $translation;
+    }
 	
 	$translations = get_translations_for_domain($domain);
 	$translation_array = array();
@@ -155,6 +155,29 @@ function dh_ptp_live_preview($content)
     }
 }
 add_filter( 'the_content', 'dh_ptp_live_preview');
+
+/**
+ * Redirect to 404 Page
+ * Current user is not an admin
+ * @param  [type] $content [description]
+ * @return [type]          [description]
+ */
+function dh_ptp_404()
+{
+    // check is admin
+    if( is_singular( 'easy-pricing-table' ) &&
+    	!current_user_can( 'manage_options' ) ) {
+    	
+		global $wp_query;
+	    $wp_query->set_404();
+	    status_header(404);
+	    nocache_headers();
+	    include( get_query_template( '404' ) );
+        die();
+    }
+}
+add_action( 'wp', 'dh_ptp_404');
+
 
 /**
  * Remove the publish metabox for pricing tables
@@ -233,7 +256,7 @@ function dh_ptp_jquery_ui_accordion_enqueue(){
 		return;
 	}
 	wp_enqueue_script('jquery-ui-accordion');
-	wp_enqueue_style('dh-ptp-jquery-ui', plugins_url('assets/ui/ui-accordion.css', dirname(__FILE__)));
+	wp_enqueue_style('dh-ptp-jquery-ui', plugins_url('assets/ui/ui-accordion.min.css', dirname(__FILE__)));
 }
 
 /**
