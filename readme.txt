@@ -5,12 +5,12 @@ Tags: pricing table, pricing tables, comparison table, pricing grid, responsive 
 Author URI: https://fatcatapps.com/?utm_campaign=author%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Plugin URI: https://fatcatapps.com/easypricingtables/?utm_campaign=plugin%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Requires at least: 3.6
-Tested up to: 4.5.2
+Tested up to: 4.6.0
 Stable tag: 2.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 5 Minutes with Easy Pricing Tables for WordPress. No Coding Required.
+Pricing Table Builder - Easy Pricing Tables Lets You Create A Beautiful, Responsive Pricing Table In 2 Minutes. No Coding Required.
 
 == Description ==
 *   The **Easy Pricing Tables** WordPress Plugin makes it easy to create and publish beautiful pricing tables and comparison tables on your WordPress site. You will be able to set up and publish your pricing table in no time.
