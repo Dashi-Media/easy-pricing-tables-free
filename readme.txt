@@ -128,6 +128,15 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 
 == Changelog ==
 
+= Easy Pricing Tables 2.3.2 =
+* Changed default button text and place holder to 'Add to Cart'
+* Fixed conflict with 'All In One Schema.org Rich Snippets' plugin
+* Updated tooltip help texts for better clarity
+* Tested up to WP 4.6 Beta
+
+= Easy Pricing Tables 2.3.1 =
+* This release was only for Easy Pricing Tables premium
+
 = Easy Pricing Tables 2.3.0 =
 * Added Dutch translations
 * Fix a warning that occured with PHP 7
