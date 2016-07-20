@@ -272,7 +272,11 @@ function dh_ptp_print_jquery_ui_accordion_js() {
 	<script type="text/javascript">
 		//<![CDATA[
 			jQuery(document).ready(function(){
-				jQuery( ".dh_ptp_accordion" ).accordion({icons: false,heightStyle: 'content'});
+				jQuery( ".dh_ptp_accordion" ).accordion({
+                                    icons: false,
+                                    heightStyle: 'content',
+									collapsible: true
+                                });
 			});
 		//]]>
 	</script>
