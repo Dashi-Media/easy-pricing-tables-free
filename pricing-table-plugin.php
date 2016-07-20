@@ -121,7 +121,6 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 		wp_dequeue_style( 'star_style' );
 		wp_dequeue_script( 'bsf-scripts' );
 		wp_dequeue_script( 'bsf-scripts-media' );
-		wp_dequeue_script('jquery-ui-datepicker');
 		wp_dequeue_style('jquery-style');
 		wp_dequeue_style( 'meta_style');
 		wp_dequeue_style( 'bsf-styles');
