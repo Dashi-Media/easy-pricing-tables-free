@@ -6,7 +6,7 @@ Author URI: https://fatcatapps.com/?utm_campaign=author%2Buri&utm_source=https%3
 Plugin URI: https://fatcatapps.com/easypricingtables/?utm_campaign=plugin%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Requires at least: 3.6
 Tested up to: 4.6.0
-Stable tag: 2.3.0
+Stable tag: 2.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -131,7 +131,7 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 = Easy Pricing Tables 2.3.2 =
 * Changed default button text and place holder to 'Add to Cart'
 * Fixed conflict with 'All In One Schema.org Rich Snippets' plugin
-* Updated tooltip help texts for better clarity
+* Updated a few headings and tooltip texts for better clarity
 * Tested up to WP 4.6 Beta
 
 = Easy Pricing Tables 2.3.1 =
