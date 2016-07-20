@@ -103,7 +103,7 @@
 
                     <li>
                         <?php $mb->the_field('buttontext'); ?>
-                        <input type="text" pla name="<?php $mb->the_name(); ?>" placeholder="<?php _e('e.g. Start A Free Trial', 'easy-pricing-tables'); ?>" value="<?php  $mb->the_value(); ?>" class="form-control">
+                        <input type="text" pla name="<?php $mb->the_name(); ?>" placeholder="<?php _e('e.g. Add to Cart', 'easy-pricing-tables'); ?>" value="<?php  $mb->the_value(); ?>" class="form-control">
                     </li>
 
                     <li>
