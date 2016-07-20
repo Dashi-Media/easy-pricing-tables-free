@@ -6,8 +6,8 @@
     <div id="all-columns-wrap">
         <div class="column zero">
             <div class="ptp-title explaination-title">
-                <strong><?php _e('Plan Name', 'easy-pricing-tables'); ?></strong><i class="ptp-icon-help-circled" data-trigger="hover" data-html="true" data-placement="right" data-original-title="&lt;strong&gt;<?php _e('Plan Name', 'easy-pricing-tables');?>&lt;/strong&gt;" data-content="
-				            <?php _e('Enter your pricing plan - names here.', 'easy-pricing-tables'); ?>
+                <strong><?php _e('Name', 'easy-pricing-tables'); ?></strong><i class="ptp-icon-help-circled" data-trigger="hover" data-html="true" data-placement="right" data-original-title="&lt;strong&gt;<?php _e('Product or Plan Name', 'easy-pricing-tables');?>&lt;/strong&gt;" data-content="
+				            <?php _e('Enter your product name or plan name here.', 'easy-pricing-tables'); ?>
 				            &lt;br/&gt;&lt;br/&gt; 
 				            &lt;strong&gt;<?php _e('Best practice:', 'easy-pricing-tables'); ?>&lt;/strong&gt;
 				            &lt;br/&gt;
