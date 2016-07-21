@@ -6,7 +6,7 @@
 	Text Domain: easy-pricing-tables
 	Domain Path: /languages
 	Author: David Hehenberger
-	Version: 2.3.0
+	Version: 2.3.2
 	Author URI: https://fatcatapps.com
 */
 
@@ -51,8 +51,7 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
   }
 
   // Add settings link on plugin page
-  function dh_ptp_plugin_settings_link($links)
-  {
+  function dh_ptp_plugin_settings_link($links) {
     // Remove Edit link
     unset($links['edit']);
     
@@ -79,23 +78,21 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
   	sprintf( __('Please <a href="%s">rate us on WordPress.org</a>.',  'easy-pricing-tables' ), 'http://wordpress.org/support/view/plugin-reviews/easy-pricing-tables?filter=5#postform');
   }
 
-  function dh_ptp_plugin_footer_enqueu($hook_suffix)
-  {
+  function dh_ptp_plugin_footer_enqueu($hook_suffix) {
     global $post;
     
     if ($post && $post->post_type == 'easy-pricing-table') {
-        wp_enqueue_script( 'codemirror', PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ui/ui-components/codemirror/codemirror.min.js' );
-        wp_enqueue_script( 'css', PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ui/ui-components/codemirror/addon-codemirror/css.min.js' );
-        wp_enqueue_style( 'codemirror-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-components/codemirror/codemirror.min.css' );
-        wp_enqueue_style( 'jquery-ui-fresh', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/jquery-ui-fresh.min.css' );
+        wp_enqueue_script( 'codemirror-ept', PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ui/ui-components/codemirror/codemirror.min.js' );
+        wp_enqueue_script( 'codemirror-css-ept', PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ui/ui-components/codemirror/addon-codemirror/css.min.js' );
+        wp_enqueue_style( 'codemirror-style-ept', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-components/codemirror/codemirror.min.css' );
+        wp_enqueue_style( 'jquery-ui-fresh-ept', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/jquery-ui-fresh.min.css' );
         add_filter('admin_footer_text', 'dh_ptp_plugin_footer');
     }
   }
   add_action('admin_enqueue_scripts', 'dh_ptp_plugin_footer_enqueu');
 
   /* Localization */
-  function fca_eoi_load_localization_easy_pricing_tables()
-  {
+  function fca_eoi_load_localization_easy_pricing_tables() {
 	
     $locale = apply_filters( 'plugin_locale', get_locale(), 'easy-pricing-tables' );
     
@@ -104,5 +101,31 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 	load_plugin_textdomain( 'easy-pricing-tables', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
   }
   add_action( 'plugins_loaded', 'fca_eoi_load_localization_easy_pricing_tables' );
+  
+  /**
+  * Dequeue some scripts from naughty plugins from our post editor
+  */
+  
+  add_action( 'admin_enqueue_scripts', 'dh_ptp_admin_dequeue');
+  function dh_ptp_admin_dequeue() {
+    $screen = get_current_screen();
+    if ( 'easy-pricing-table' != $screen->id ) {
+      return;
+    }
+    remove_action( 'admin_enqueue_scripts', 'edd_load_admin_scripts', 100 );
+	
+	if ( class_exists ( "RichSnippets" ) ) {
+		
+		wp_dequeue_script( 'bsf_jquery_star' );
+		wp_dequeue_script( 'bsf_toggle' );
+		wp_dequeue_style( 'star_style' );
+		wp_dequeue_script( 'bsf-scripts' );
+		wp_dequeue_script( 'bsf-scripts-media' );
+		wp_dequeue_style('jquery-style');
+		wp_dequeue_style( 'meta_style');
+		wp_dequeue_style( 'bsf-styles');
+	}
+	
+  }
 
 }

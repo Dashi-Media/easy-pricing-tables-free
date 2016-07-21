@@ -7,26 +7,25 @@ if (is_admin()){
 	add_action('admin_print_scripts-post.php', 'dh_ptp_metabox_styles_and_scripts');
 }
 
-function dh_ptp_metabox_styles_and_scripts()
-{
+function dh_ptp_metabox_styles_and_scripts() {
 	global $post_type;
 
     if( 'easy-pricing-table' == $post_type ) {
-	       //UI styles - includes all styles necessary for the UI
-	       wp_enqueue_style('wpalchemy-metabox', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-styles.min.css' );
+	    //UI styles - includes all styles necessary for the UI
+	    wp_enqueue_style('wpalchemy-metabox', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-styles.min.css' );
 
-	       // Color Picker JS
-	       wp_enqueue_style( 'wp-color-picker' );
+	    // Color Picker JS
+	    wp_enqueue_style('wp-color-picker');
 		
-	       // Jquery UI Tabs
-	       wp_enqueue_script("jquery-ui-tabs");
+	    // Jquery UI Tabs
+	    wp_enqueue_script('jquery-ui-tabs');
 
-               // Jquery lighbox - colorbox
-               wp_enqueue_script( 'dh-ptp-colorbox', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-components/colorbox/jquery.colorbox-min.js', array('jquery') );
+        // Jquery lighbox - colorbox
+        wp_enqueue_script( 'dh-ptp-colorbox', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-components/colorbox/jquery.colorbox-min.js', array('jquery') );
 
 
-                //ui scripts - this file contains all Javascript necessary for the GUI
-	 	wp_enqueue_script( 'ui-script', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-scripts.min.js', array('jquery', 'jquery-ui-tabs', 'wp-color-picker', 'dh-ptp-colorbox') );
+        //ui scripts - this file contains all Javascript necessary for the GUI
+	 	wp_enqueue_script( 'ept-ui-script', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-scripts.min.js', array('jquery', 'jquery-ui-tabs', 'wp-color-picker', 'dh-ptp-colorbox') );
 
 		/** UI Components **/
 		//add bootstrap css for popover help boxes
