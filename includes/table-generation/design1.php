@@ -118,7 +118,7 @@ function dh_ptp_generate_simple_flat_pricing_table_html ($id)
         $plan_name = isset($column['planname'])?$column['planname']:'';
         $plan_price = isset($column['planprice'])?$column['planprice']:'';
         $plan_features = isset($column['planfeatures'])?$column['planfeatures']:'';
-        $button_text = isset($column['buttontext'])?$column['buttontext']:'';
+        $button_text = isset($column['buttontext'])?$column['buttontext']:__('Add to Cart', 'easy-pricing-tables');
         $button_url = isset($column['buttonurl'])?$column['buttonurl']:'';
         $button_url = trim($button_url);
         
