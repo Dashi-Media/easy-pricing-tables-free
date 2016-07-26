@@ -129,7 +129,8 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 == Changelog ==
 
 = Easy Pricing Tables 2.3.3 =
-TODO: update changelog
+* Improved performance up to 50%
+* Added WordPress filter for inline CSS ( 'fca_ept_css_filter' ) see https://github.com/davidhme/easy-pricing-tables-free/compare/release-2-3-3?expand=1#diff-6c2a3ec8c1f99e3832bfd514b00470b6R45
 
 = Easy Pricing Tables 2.3.2 =
 * Changed default button text and place holder to 'Add to Cart'
