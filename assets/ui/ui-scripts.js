@@ -1,43 +1,43 @@
 jQuery(document).ready(function($) {
 	
 	//FIX/HIDE RICH CONTENT SNIPPET PLUGIN CONFLICT  https://wordpress.org/support/topic/plugin-conflict-all-in-one-schemaorg-rich-snippets?replies=2#post-8641169
-	$('#review_metabox').hide()
+	$('#review_metabox').hide();
 
 	// Activate jquery ui tabs
-    $("#dh_ptp_tabs_container").tabs();
+	$("#dh_ptp_tabs_container").tabs();
 	
 	// Save tab state to dh_ptp_tab
 	$("a[href='#dh_ptp_tabs_1'], a[href='#dh_ptp_tabs_2']").on('click', function(){
 		$('#dh_ptp_tab').val($(this).attr('href'));
 	});
 
-    //drag and drop for columns
-    $("#wpa_loop-column").sortable({ axis: "x" });
+	//drag and drop for columns
+	$("#wpa_loop-column").sortable({ axis: "x" });
 
 	//activate color pickers
-    $('.button-color').wpColorPicker({
-	    palettes: ['#1abc9c', '#2ecc71','#3498db', '#9b59b6', '#34495e', '#f1c40f', '#e67e22', '#e74c3c', '95a5a6']
-    });
-    $('.button-border-color').wpColorPicker({
-    	    palettes: ['#16a085', '#27ae60','#2980b9', '#8e44ad', '#2c3e50', '#f39c12', '#d35400', '#c0392b', '7f8c8d']
-    });
-    $('.colorpicker-no-palettes').wpColorPicker();   
+	$('.button-color').wpColorPicker({
+		palettes: ['#1abc9c', '#2ecc71','#3498db', '#9b59b6', '#34495e', '#f1c40f', '#e67e22', '#e74c3c', '95a5a6']
+	});
+	$('.button-border-color').wpColorPicker({
+		palettes: ['#16a085', '#27ae60','#2980b9', '#8e44ad', '#2c3e50', '#f39c12', '#d35400', '#c0392b', '7f8c8d']
+	});
+	$('.colorpicker-no-palettes').wpColorPicker();   
 
 
-	 //make sure that only decimal numbers are allowed to input. 
-	 //source: http://jqueryexamples4u.blogspot.in/2013/09/validate-input-field-allows-only-float.html
-	 $('.float-input').keypress(function(event) {
-	      if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
-	        event.preventDefault();
-	      } 
+	//make sure that only decimal numbers are allowed to input. 
+	//source: http://jqueryexamples4u.blogspot.in/2013/09/validate-input-field-allows-only-float.html
+	$('.float-input').keypress(function(event) {
+		if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+			event.preventDefault();
+		} 
 	});
 
-    //enable lightbox
-    $(".inline-lightbox").colorbox({inline:true, width:"50%", speed: 0, fadeOut: 0});
+	//enable lightbox
+	$(".inline-lightbox").colorbox({inline:true, width:"50%", speed: 0, fadeOut: 0});
 	
 	// Save & Preview button
 	$('#dh_ptp_save_preview').on('click', function(event) {
-        event.preventDefault();
+		event.preventDefault();
 		
 		// Add target
 		var form = $(this).closest('form');
@@ -54,11 +54,11 @@ jQuery(document).ready(function($) {
 		// Submit form
 		form.submit();
 		  
-        return false;
+		return false;
 	});
 	
 	$('#dh_ptp_save').on('click', function(event) {
-        event.preventDefault();
+		event.preventDefault();
 		
 		// Add target
 		var form = $(this).closest('form');
@@ -70,44 +70,37 @@ jQuery(document).ready(function($) {
 		// Submit form
 		form.submit();
 		  
-        return false;
+		return false;
 	});
+	
+	//activate twitter bootstrap popover
+	$(".ptp-icon-help-circled").popover();  
+	$(".plan-title #delete-button").popover({placement:'top'});  
+	$(".plan-title .feature-button").popover({placement:'top'});  
 });
-
-//activate twitter bootstrap popover
-jQuery(function ($)
-  { 
-    $(".ptp-icon-help-circled").popover();  
-    $(".plan-title #delete-button").popover({placement:'top'});  
-    $(".plan-title .feature-button").popover({placement:'top'});  
-  });  
 
 
 // handle clicks on featured button
-function buttonHandler(el)
-{
-	// required for wordpress
+function buttonHandler(el) {
 	var $ = jQuery;
 
 	// toggle active button via css
-	function toggleButtonClasses(el)
-	{
+	function toggleButtonClasses(el) {
 		$(el).toggleClass('ptp-icon-star-empty');
 		$(el).toggleClass('ptp-icon-star');
 	}
 	
 	//toggle the value of our hidden input
-	function setInputValue(el)
-	{
-		if($(el).val()=="unfeatured" || $(el).val()=="")
+	function setInputValue(el) {
+		if($(el).val() === "unfeatured" || $(el).val() === "") {
 			$(el).val("featured");
-		else if($(el).val()=="featured")
+		} else if($(el).val() === "featured") {
 			$(el).val("unfeatured");
+		}
 	}
 
 	// toggles the elements class and value
-	function myButtonClickHandler(el)
-	{
+	function myButtonClickHandler(el) {
 		
 		toggleButtonClasses(el);
 		setInputValue(el.prev());
@@ -121,57 +114,36 @@ function buttonHandler(el)
 	}
 
 	//	feature the clicked item by sending it to myButtonClickHandler
-	myButtonClickHandler( $(el));
+	myButtonClickHandler($(el));
 
  	return false;
 }
 
-
 // handle clicks on featured button
-function templateSelectorClickedHandler(el)
-{
-	// required for wordpress
+function templateSelectorClickedHandler(el) {
 	var $ = jQuery;
 
 	// toggle active button via css
-	function toggleButtonClasses(el)
-	{
+	function toggleButtonClasses(el) {
 		$(el).toggleClass('template-selected');
 	}
 	
 	//toggle the value of our hidden input
-	function setInputValue(el)
-	{
-		if($(el).val()=="not-selected" || $(el).val()=="")
+	function setInputValue(el) {
+		if ($(el).val() === "not-selected" || $(el).val() === "") {
 			$(el).val("selected");
-		else if($(el).val()=="selected")
+		} else if ($(el).val() === "selected") {
 			$(el).val("not-selected");
+		}
 	}
 
 	// toggles the elements class and value
-	function myButtonClickHandler(el)
-	{
-		
+	function myButtonClickHandler(el) {
 		toggleButtonClasses(el);
 		setInputValue(el.find('.template-hidden-input'));
-
-		//change visibility of advanced design settings
 		setAdvancedDesignSettingsVisibility(el);
-
-
-		//changeButtonText(el.find('.template-button'));
-
 	}
 
-	//toggle button text - disabled for now
-	/*
-	function changeButtonText(el)
-	{
-		if($(el).text()=="Use This Template")
-			$(el).text("In Use");
-		else if($(el).text == "In Use")
-			$(el).text("Use This Template");
-	}*/
 
 	// use hasClass to figure out if current item is selected or not
 	if (!$(el).parent().hasClass('template-selected')) {
@@ -187,25 +159,18 @@ function templateSelectorClickedHandler(el)
 }
 
 //set settings visibility 
-function setAdvancedDesignSettingsVisibility(el)
-{
-	// required for wordpress
+function setAdvancedDesignSettingsVisibility(el) {
 	var $ = jQuery;
 
-	if ($(el).attr('id') == "simple-flat-selector")
-	{
+	if ($(el).attr('id') == "simple-flat-selector")	{
 		$('#simple-flat-advanced-design-settings').show();
 		$('#fancy-flat-advanced-design-settings').hide();
 		$('#stylish-flat-advanced-design-settings').hide();
-	}
-	else if ($(el).attr('id') == "fancy-flat-selector")
-	{
+	} else if ($(el).attr('id') == "fancy-flat-selector") {
 		$('#simple-flat-advanced-design-settings').hide();
 		$('#fancy-flat-advanced-design-settings').show();
 		$('#stylish-flat-advanced-design-settings').hide();
-	}
-	else if ($(el).attr('id') == "stylish-flat-selector")
-	{
+	} else if ($(el).attr('id') == "stylish-flat-selector") {
 		$('#simple-flat-advanced-design-settings').hide();
 		$('#fancy-flat-advanced-design-settings').hide();
 		$('#stylish-flat-advanced-design-settings').show();
