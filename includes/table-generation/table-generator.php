@@ -41,10 +41,14 @@ function dh_ptp_easy_pricing_table_dynamic_css( $id )
     $css = preg_replace( '/(:| )(\.?)0(%|em|ex|px|in|cm|mm|pt|pc)/i', '${1}0', $css );
     $css = preg_replace( '/0 0 0 0/', '0', $css );
     $css = preg_replace( '/#([a-f0-9])\\1([a-f0-9])\\2([a-f0-9])\\3/i', '#\1\2\3', $css );
-
-    $css = '<style type="text/css">' . $css . '</style>' . "\n";
-
-    return $css;
+	
+	$css = apply_filters( 'fca_ept_css_filter', $css);
+	if ( empty ($css) ){
+		return '';
+	} else {
+		return '<style type="text/css">' . $css . '</style>';
+	}
+	
 }
 
 /**

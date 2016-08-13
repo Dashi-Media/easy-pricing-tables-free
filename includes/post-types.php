@@ -75,36 +75,6 @@ function dh_ptp_updated_interaction_messages( $messages ) {
 add_filter( 'post_updated_messages', 'dh_ptp_updated_interaction_messages' );
 
 /**
- * changes the "Enter title here" to "Enter pricing table name here'" for pricing-table post type
- */
-add_filter('gettext', 'dh_ptp_custom_rewrites', 10, 4);
-function dh_ptp_custom_rewrites($translation, $text, $domain)
-{
-	global $post;
-	
-	if ( ! isset( $post->post_type ) || empty ( $text ) ) {
-    	return $translation;
-    }
-	
-	$translations = get_translations_for_domain($domain);
-	$translation_array = array();
- 
-	switch ($post->post_type) {
-		case 'easy-pricing-table': // enter your post type name here
-			$translation_array = array(
-				'Enter title here' => 'Enter pricing table name here'
-			);
-			break;
-	}
- 
-	if (array_key_exists($text, $translation_array)) {
-		return $translations->translate($translation_array[$text]);
-	}
-	return $translation;
-}
-
-
-/**
  * Customize pricing table overview tables ("Pricing Tables" -> "All Pricing Tables")
  * Add / modify columns at pricing table edit overview
  * @param  [type] $gallery_columns [description]
