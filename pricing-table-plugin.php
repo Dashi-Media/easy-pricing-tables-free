@@ -6,7 +6,7 @@
 	Text Domain: easy-pricing-tables
 	Domain Path: /languages
 	Author: David Hehenberger
-	Version: 2.3.3
+	Version: 2.3.4
 	Author URI: https://fatcatapps.com
 */
 
