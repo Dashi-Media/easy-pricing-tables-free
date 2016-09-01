@@ -102,30 +102,4 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
   }
   add_action( 'plugins_loaded', 'fca_eoi_load_localization_easy_pricing_tables' );
   
-  /**
-  * Dequeue some scripts from naughty plugins from our post editor
-  */
-  
-  add_action( 'admin_enqueue_scripts', 'dh_ptp_admin_dequeue');
-  function dh_ptp_admin_dequeue() {
-    $screen = get_current_screen();
-    if ( 'easy-pricing-table' != $screen->id ) {
-      return;
-    }
-    remove_action( 'admin_enqueue_scripts', 'edd_load_admin_scripts', 100 );
-	
-	if ( class_exists ( "RichSnippets" ) ) {
-		
-		wp_dequeue_script( 'bsf_jquery_star' );
-		wp_dequeue_script( 'bsf_toggle' );
-		wp_dequeue_style( 'star_style' );
-		wp_dequeue_script( 'bsf-scripts' );
-		wp_dequeue_script( 'bsf-scripts-media' );
-		wp_dequeue_style('jquery-style');
-		wp_dequeue_style( 'meta_style');
-		wp_dequeue_style( 'bsf-styles');
-	}
-	
-  }
-
 }
