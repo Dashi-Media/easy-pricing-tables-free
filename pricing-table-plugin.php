@@ -78,7 +78,7 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
   	sprintf( __('Please <a href="%s">rate us on WordPress.org</a>.',  'easy-pricing-tables' ), 'http://wordpress.org/support/view/plugin-reviews/easy-pricing-tables?filter=5#postform');
   }
 
-  function dh_ptp_plugin_footer_enqueu($hook_suffix) {
+  function dh_ptp_plugin_footer_enqueue($hook_suffix) {
     global $post;
     
     if ($post && $post->post_type == 'easy-pricing-table') {
@@ -89,7 +89,7 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
         add_filter('admin_footer_text', 'dh_ptp_plugin_footer');
     }
   }
-  add_action('admin_enqueue_scripts', 'dh_ptp_plugin_footer_enqueu');
+  add_action('admin_enqueue_scripts', 'dh_ptp_plugin_footer_enqueue');
 
   /* Localization */
   function fca_eoi_load_localization_easy_pricing_tables() {
