@@ -5,7 +5,7 @@
 	Description: Create a Beautiful, Responsive and Highly Converting Pricing or Comparison Table in Less Than 5 Minutes with Easy Pricing Tables for WordPress. No Coding Required.
 	Text Domain: easy-pricing-tables
 	Domain Path: /languages
-	Author: David Hehenberger
+	Author: Fatcat Apps
 	Version: 2.3.4
 	Author URI: https://fatcatapps.com
 */
