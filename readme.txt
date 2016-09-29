@@ -129,7 +129,7 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 == Changelog ==
 
 = Easy Pricing Tables 2.3.4 =
-* Include updated WPAlchemy library ( Fixes Warning in PHP7 )
+* Include updated WPAlchemy library for PHP7 compatibility
 
 = Easy Pricing Tables 2.3.3 =
 * Improved performance up to 50%
