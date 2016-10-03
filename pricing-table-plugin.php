@@ -5,8 +5,8 @@
 	Description: Create a Beautiful, Responsive and Highly Converting Pricing or Comparison Table in Less Than 5 Minutes with Easy Pricing Tables for WordPress. No Coding Required.
 	Text Domain: easy-pricing-tables
 	Domain Path: /languages
-	Author: David Hehenberger
-	Version: 2.3.3
+	Author: Fatcat Apps
+	Version: 2.3.4
 	Author URI: https://fatcatapps.com
 */
 
@@ -78,7 +78,7 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
   	sprintf( __('Please <a href="%s">rate us on WordPress.org</a>.',  'easy-pricing-tables' ), 'http://wordpress.org/support/view/plugin-reviews/easy-pricing-tables?filter=5#postform');
   }
 
-  function dh_ptp_plugin_footer_enqueu($hook_suffix) {
+  function dh_ptp_plugin_footer_enqueue($hook_suffix) {
     global $post;
     
     if ($post && $post->post_type == 'easy-pricing-table') {
@@ -89,7 +89,7 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
         add_filter('admin_footer_text', 'dh_ptp_plugin_footer');
     }
   }
-  add_action('admin_enqueue_scripts', 'dh_ptp_plugin_footer_enqueu');
+  add_action('admin_enqueue_scripts', 'dh_ptp_plugin_footer_enqueue');
 
   /* Localization */
   function fca_eoi_load_localization_easy_pricing_tables() {
@@ -102,30 +102,4 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
   }
   add_action( 'plugins_loaded', 'fca_eoi_load_localization_easy_pricing_tables' );
   
-  /**
-  * Dequeue some scripts from naughty plugins from our post editor
-  */
-  
-  add_action( 'admin_enqueue_scripts', 'dh_ptp_admin_dequeue');
-  function dh_ptp_admin_dequeue() {
-    $screen = get_current_screen();
-    if ( 'easy-pricing-table' != $screen->id ) {
-      return;
-    }
-    remove_action( 'admin_enqueue_scripts', 'edd_load_admin_scripts', 100 );
-	
-	if ( class_exists ( "RichSnippets" ) ) {
-		
-		wp_dequeue_script( 'bsf_jquery_star' );
-		wp_dequeue_script( 'bsf_toggle' );
-		wp_dequeue_style( 'star_style' );
-		wp_dequeue_script( 'bsf-scripts' );
-		wp_dequeue_script( 'bsf-scripts-media' );
-		wp_dequeue_style('jquery-style');
-		wp_dequeue_style( 'meta_style');
-		wp_dequeue_style( 'bsf-styles');
-	}
-	
-  }
-
 }
