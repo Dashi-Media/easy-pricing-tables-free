@@ -96,10 +96,8 @@ add_action( 'wp_ajax_dh_ptp_usage_tracking', 'dh_ptp_usage_tracking_pointer_ajax
 // Add mailing list subscription
 function dh_ptp_mailing_list_pointer() 
 {
-	global $current_user;
-	
 	// Get current user info
-    get_currentuserinfo();
+	$current_user = wp_get_current_user();
 	
     // Ajax request template    
     $ajax = '
@@ -137,7 +135,8 @@ function dh_ptp_mailing_list_pointer()
 
 function dh_ptp_mailing_list_pointer_ajax()
 {
-    global $current_user;
+	// Get current user info
+	$current_user = wp_get_current_user();
 
     // Verify nonce
     if(!wp_verify_nonce($_POST['nonce'], 'dh_ptp_mailing_list') && !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
@@ -154,11 +153,7 @@ function dh_ptp_mailing_list_pointer_ajax()
 	dh_ptp_crash_course('Lets do it!');
     }
     
-    // Get current user info
-    get_currentuserinfo();
-    
-    
-   dh_ptp_add_subscriber(
+	dh_ptp_add_subscriber(
                 'https://www.getdrip.com/forms/7564307/submissions',
 		
 		array(  'fields[name]'  => $current_user->display_name,
