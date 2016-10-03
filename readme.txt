@@ -130,6 +130,7 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 
 = Easy Pricing Tables 2.3.4 =
 * Include updated WPAlchemy library for PHP7 compatibility
+* Replace deprecated function get_currentuserinfo with wp_get_current_user
 
 = Easy Pricing Tables 2.3.3 =
 * Improved performance up to 50%
