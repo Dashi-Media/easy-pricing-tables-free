@@ -129,7 +129,11 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 == Changelog ==
 
 = Easy Pricing Tables 2.3.6 =
-TODO: update changelog
+* Allow shortcodes in Plan Name, Plan Price, Button Text and Button URL fields
+* Fix footer URL link not working
+
+= Easy Pricing Tables 2.3.5 =
+[released for premium editions only]
 
 = Easy Pricing Tables 2.3.4 =
 * Include updated WPAlchemy library for PHP7 compatibility
