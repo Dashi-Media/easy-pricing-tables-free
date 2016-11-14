@@ -115,9 +115,9 @@ function dh_ptp_generate_simple_flat_pricing_table_html ($id)
     foreach ($meta['column'] as $column) {
 
         // Column details
-        $plan_name = isset($column['planname'])?$column['planname']:'';
-        $plan_price = isset($column['planprice'])?$column['planprice']:'';
-        $plan_features = isset($column['planfeatures'])?$column['planfeatures']:'';
+        $plan_name = isset($column['planname'])?do_shortcode( $column['planname'] ):'';
+        $plan_price = isset($column['planprice'])?do_shortcode( $column['planprice'] ):'';
+        $plan_features = isset($column['planfeatures'])?do_shortcode( $column['planfeatures'] ):'';
         $button_text = isset($column['buttontext'])?$column['buttontext']:__('Add to Cart', 'easy-pricing-tables');
         $button_url = isset($column['buttonurl'])?$column['buttonurl']:'';
         $button_url = trim($button_url);
@@ -151,7 +151,7 @@ function dh_ptp_generate_simple_flat_pricing_table_html ($id)
 		  		'<div class="ptp-price">' . $plan_price . '</div>' .
                     dh_ptp_features_to_html_simple_flat($plan_features, dh_ptp_get_max_number_of_features()) .
 	  			'<div class="ptp-cta">'.
-                    (($custom_button)?$custom_button:'<a class="ptp-button" id="ptp-'.$id.'-cta-'.$loop_index.'" href="' . $button_url . '">' . $button_text . '</a>') .
+                    (($custom_button)?$custom_button:'<a class="ptp-button" id="ptp-'.$id.'-cta-'.$loop_index.'" href="' . do_shortcode ( $button_url ) . '">' . do_shortcode ( $button_text ) . '</a>') .
 	  			'</div>' .
 			'</div>' .
 		'</div>';
