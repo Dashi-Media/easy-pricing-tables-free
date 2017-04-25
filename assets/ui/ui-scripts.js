@@ -58,6 +58,7 @@ jQuery(document).ready(function($) {
 	});
 	
 	$('#dh_ptp_save').on('click', function(event) {
+		confirmUnload = null;
 		event.preventDefault();
 		
 		// Add target
@@ -72,6 +73,12 @@ jQuery(document).ready(function($) {
 		  
 		return false;
 	});
+	
+	//NAVIGATION CONFIRM PROMPT FOR THIS PAGE
+	var confirmUnload = true
+	window.onbeforeunload = function() {
+		return confirmUnload
+	}
 	
 	//activate twitter bootstrap popover
 	$(".ptp-icon-help-circled").popover();  
