@@ -5,7 +5,7 @@ Tags: pricing table, pricing tables, comparison table, pricing grid, responsive 
 Author URI: https://fatcatapps.com/?utm_campaign=author%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Plugin URI: https://fatcatapps.com/easypricingtables/?utm_campaign=plugin%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Requires at least: 3.6
-Tested up to: 4.7.0
+Tested up to: 4.7.4
 Stable tag: 2.3.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -129,7 +129,9 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 == Changelog ==
 
 = Easy Pricing Tables 2.3.7 =
-TODO: update changelog
+* Add save confirmation prompt
+* Update jQuery MatchHeight library to latest (v0.7.0)
+* Fix conflict with "Calls to Action" plugin
 
 = Easy Pricing Tables 2.3.6 =
 * Allow shortcodes in Plan Name, Plan Price, Button Text and Button URL fields
