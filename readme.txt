@@ -1,4 +1,4 @@
-=== Pricing Table Builder - Easy Pricing Tables ===
+=== Pricing Tables WordPress Plugin - Easy Pricing Tables ===
 Contributors: davidhme, fatcatapps, ryannovotny
 Donate link: https://fatcatapps.com/easypricingtables/?utm_campaign=donate%2Blink&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Tags: pricing table, pricing tables, comparison table, pricing grid, responsive pricing table, price comparison, price comparison table
@@ -10,12 +10,12 @@ Stable tag: 2.3.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Pricing Table Builder - Easy Pricing Tables Lets You Create A Beautiful, Responsive Pricing Table In 2 Minutes. No Coding Required.
+Pricing Table Plugin - Easy Pricing Tables Lets You Create A Beautiful, Responsive Pricing Table In 2 Minutes. No Coding Required.
 
 == Description ==
 *   The **Easy Pricing Tables** WordPress Plugin makes it easy to create and publish beautiful pricing tables and comparison tables on your WordPress site. You will be able to set up and publish your pricing table in no time.
 
-*   [View screenshots of pricing tables built with this plugin](https://wordpress.org/plugins/easy-pricing-tables/screenshots/).
+*   [View screenshots of WordPress pricing tables built with this plugin](https://wordpress.org/plugins/easy-pricing-tables/screenshots/).
 
 *   [View Easy Pricing Tables Premium Live Demo &raquo;](https://fatcatapps.com/easypricingtables/demo?utm_campaign=description%2Bdemo%2Blink&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
 
@@ -34,20 +34,22 @@ Pricing Table Builder - Easy Pricing Tables Lets You Create A Beautiful, Respons
 
 = Overview =
 
+* Build beautiful WordPress pricing tables in minutes.
+
 *   Easy Pricing Tables implements conversion rate optimization (CRO) best practices and guides you through the process of creating a pricing table that converts.
 
 *   Easy Pricing Tables works with any WordPress theme you have installed. After creating your first pricing table using Easy Pricing Tables, you can publish your pricing tables anywhere on your site using a shortcode.
 
 
-= Easy Pricing Tables Features =
+= Easy Pricing Tables - WordPress Pricing Table Plugin Features =
 
-*   Works with any WordPress Theme
-*   Responsive Pricing Tables
+*   Works with any WordPress theme
+*   Responsive WordPress Pricing Tables
 *   Intuitive User Interface - building pricing tables has never been easier
 *   Built-in Conversion Rate Optimization Best Practices
 *   Create Unlimited Pricing Table Rows
 *	Customize Your Pricing Table Design: Font-size, Color Pickers and Rounded Borders.
-*   Use Drag & Drop To Reorder Easy Pricing Tables Columns
+*   Use Drag & Drop To Reorder WordPress Pricing Tables Columns
 *   Featured Your Most Popular Easy Pricing Tables Column
 *   Custom CSS - Add Custom CSS to your Pricing Table
 
@@ -56,7 +58,7 @@ Pricing Table Builder - Easy Pricing Tables Lets You Create A Beautiful, Respons
 
 = WordPress.org Support =
 
-> As this is the lite version of [Easy Pricing Tables](https://fatcatapps.com/easypricingtables/?utm_campaign=donate%2Blink&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral), the only support we offer through these forums is for bugs. Support for questions regarding modifying your pricing tables, writing custom CSS, etc is available for customers of [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=donate%2Blink&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral).
+> As this is the lite version of [this WordPress pricing table plugin](https://fatcatapps.com/easypricingtables/?utm_campaign=donate%2Blink&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral), the only support we offer through these forums is for bugs. Support for questions regarding modifying your pricing tables, writing custom CSS, etc is available for customers of [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=donate%2Blink&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral).
 
 == Installation ==
 
