@@ -58,6 +58,14 @@ function dh_ptp_metabox_dequeue() {
 	}
 }
 
+//FIX CONFLICT WITH CALL TO ACTIONS PLUGIN
+ function dh_ptp_exclude_ept_cta( $exclude ) {
+	$exclude[] = 'easy-pricing-table';
+ 	return $exclude;
+}
+ 
+add_filter( 'cta_excluded_post_types', 'dh_ptp_exclude_ept_cta', 10, 1 );
+
 function dh_ptp_metabox_styles_and_scripts() {
 	global $post_type;
 
