@@ -117,7 +117,7 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 				<p><?php _e( 'You can leave me a message below. I’d really appreciate it.', 'landing-page-cat' ) ?>
 				</p>
 				
-				<p><textarea style='width: 100%;' id='fca-ept--deactivate-textarea' placeholder='<?php _e( 'What made you deactivate?', 'landing-page-cat' ) ?>'></textarea></p>
+				<p><textarea style='width: 100%;' id='fca-ept-deactivate-textarea' placeholder='<?php _e( 'What made you deactivate?', 'landing-page-cat' ) ?>'></textarea></p>
 				
 				<div style='float: right;' id='fca-deactivate-nav'>
 					<button style='margin-right: 5px;' type='button' class='button button-secondary' id='fca-ept-deactivate-skip'><?php _e( 'Skip', 'landing-page-cat' ) ?></button>
