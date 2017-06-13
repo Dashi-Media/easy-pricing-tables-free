@@ -1,7 +1,7 @@
 /* jshint asi: true */
 jQuery(document).ready(function($){
 	
-	var $deactivateButton = $('#the-list tr.active').filter( function() { return $(this).data('plugin') === 'easy-pricing-tables-free/pricing-table-plugin.php' } ).find('.deactivate a')
+	var $deactivateButton = $('#the-list tr.active').filter( function() { return $(this).data('plugin') === 'easy-pricing-tables/pricing-table-plugin.php' } ).find('.deactivate a')
 		
 	$deactivateButton.click(function(e){
 		e.preventDefault()
