@@ -136,7 +136,7 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 				'ajaxurl' => admin_url( 'admin-ajax.php' ),
 			);
 						
-			wp_enqueue_script('fca_ptp_deactivation_js', plugins_url( '', __FILE__ ) . '/includes/deactivation.js' );
+			wp_enqueue_script('fca_ptp_deactivation_js', plugins_url( '', __FILE__ ) . '/includes/deactivation.min.js' );
 			wp_localize_script( 'fca_ptp_deactivation_js', "fca_ptp", $data );
 		}
 		
