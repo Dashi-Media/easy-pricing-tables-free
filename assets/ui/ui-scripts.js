@@ -75,10 +75,13 @@ jQuery(document).ready(function($) {
 	});
 	
 	//NAVIGATION CONFIRM PROMPT FOR THIS PAGE
-	var confirmUnload = true
+	var confirmUnload = null
 	window.onbeforeunload = function() {
 		return confirmUnload
 	}
+	$('input, select').on('input', function(){
+		confirmUnload = true
+	})
 	
 	//activate twitter bootstrap popover
 	$(".ptp-icon-help-circled").popover();  
