@@ -80,7 +80,7 @@ function dh_ptp_generate_pricing_table($id)
             $return .= tt_ptp_enable_column_match_height_script_dg1();
         }
     wp_enqueue_style( 'dh-ptp-custom-css' );
-	$return .= dh_ptp_generate_simple_flat_pricing_table_html($id)
+	$return .= dh_ptp_generate_simple_flat_pricing_table_html($id);
 	//call appropriate function
     return $return;
 }
