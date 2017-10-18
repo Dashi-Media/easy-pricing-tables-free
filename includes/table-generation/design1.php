@@ -237,6 +237,7 @@ function dh_ptp_features_to_html_simple_flat ($plan_features, $max_number_of_fea
 }
 
 function tt_ptp_enable_column_match_height_script_dg1() {
+	ob_start();
     ?>
         <script type="text/javascript">
          jQuery(document).ready(function($) {    
@@ -257,5 +258,5 @@ function tt_ptp_enable_column_match_height_script_dg1() {
       </script>
       
         <?php
-      
+    return ob_get_clean();  
 }
