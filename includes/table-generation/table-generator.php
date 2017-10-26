@@ -71,16 +71,17 @@ function dh_ptp_generate_pricing_table($id)
 	//ADD A DUMMY STYLESHEET TO APPEND INLINE CSS LATER IF SET
 	wp_register_style( 'dh-ptp-custom-css', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/ptp-custom.min.css'  );
 	
+	$return = '';
     
     // Print stylish enable match-column-height
        if(isset($meta['match-column-height-dg1'])) {   
-             wp_enqueue_script( 'matchHeight', PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ui/jquery.matchHeight-min.js', array('jquery'));
+            wp_enqueue_script( 'matchHeight', PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ui/jquery.matchHeight-min.js', array('jquery'));
          
-             tt_ptp_enable_column_match_height_script_dg1();
+            $return .= tt_ptp_enable_column_match_height_script_dg1();
         }
     wp_enqueue_style( 'dh-ptp-custom-css' );
-	
+	$return .= dh_ptp_generate_simple_flat_pricing_table_html($id);
 	//call appropriate function
-    return dh_ptp_generate_simple_flat_pricing_table_html($id);
+    return $return;
 }
 
