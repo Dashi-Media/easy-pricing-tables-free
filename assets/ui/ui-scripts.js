@@ -9,6 +9,9 @@ jQuery(document).ready(function($) {
 	// Activate jquery ui tabs
 	$("#dh_ptp_tabs_container").tabs();
 	
+	$('#dh_ptp_loading').hide();
+	$('#dh_ptp_tabs_container').show();
+	
 	// Save tab state to dh_ptp_tab
 	$("a[href='#dh_ptp_tabs_1'], a[href='#dh_ptp_tabs_2']").on('click', function(){
 		$('#dh_ptp_tab').val($(this).attr('href'));

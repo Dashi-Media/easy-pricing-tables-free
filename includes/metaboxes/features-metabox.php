@@ -1,4 +1,7 @@
-<div id="dh_ptp_tabs_container">
+<div id="dh_ptp_loading">
+	<center style="margin: 50px;">Loading...</center>
+</div>
+<div id="dh_ptp_tabs_container" style="display: none;">
     <ul id="dh_ptp_metabox_tabs" class="nav-tab-wrapper">
         <li class="dh_ptp_tab_header nav-tab"><a href="#dh_ptp_tabs_1"><?php _e('Content', 'easy-pricing-tables'); ?></a></li>
         <li class="dh_ptp_tab_header nav-tab"><a href="#dh_ptp_tabs_2"><?php _e('Design', 'easy-pricing-tables'); ?></a></li>
