@@ -42,20 +42,7 @@
     <?php endif; ?>
     
     <script type="text/javascript">
-        jQuery(document).ready(function(){
-            jQuery('.button-deploy').click(function() {
-                jQuery.ajax({
-                    type: "POST",
-                    url: "<?php echo admin_url('admin-ajax.php'); ?>",
-                    data: {
-                        action: "dh_ptp_tracking_deploy",
-                        id: jQuery(this).attr('data-id')
-                    }
-                });
-            }); 
-        });
-          
-           // call the codemirror for custom css textbox
+			// call the codemirror for custom css textbox
            var cusid_ele = document.getElementsByClassName('custom-css-setting-textbox');
             for (var i = 0; i < cusid_ele.length; ++i) {
                 var item = cusid_ele[i];  

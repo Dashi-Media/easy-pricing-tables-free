@@ -16,10 +16,6 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
   define('PTP_PLUGIN_PATH', plugin_dir_path( __FILE__ ));
   define('PTP_PLUGIN_PATH_FOR_SUBDIRS', plugins_url(str_replace(dirname(dirname(__FILE__)), '', dirname(__FILE__))));
 
-  // Analytics
-  include_once PTP_PLUGIN_PATH . 'includes/analytics.php';
-  include_once PTP_PLUGIN_PATH . 'includes/tracking.php';
-
   // Include post types
   include ( PTP_PLUGIN_PATH . 'includes/post-types.php');
 
