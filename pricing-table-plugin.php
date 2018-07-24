@@ -6,7 +6,7 @@
 	Text Domain: easy-pricing-tables
 	Domain Path: /languages
 	Author: Fatcat Apps
-	Version: 2.3.10
+	Version: 2.3.11
 	Author URI: https://fatcatapps.com
 */
 

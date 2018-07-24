@@ -148,32 +148,6 @@ function dh_ptp_404()
 }
 add_action( 'wp', 'dh_ptp_404');
 
-
-/**
- * Remove the publish metabox for pricing tables
- * @return [type] [description]
- */
-
-//function dh_ptp_remove_publish_metabox()
-//{
-//    remove_meta_box( 'submitdiv', 'easy-pricing-table', 'side' );
-//}
-//add_action( 'admin_menu', 'dh_ptp_remove_publish_metabox' );
-
-function dh_ptp_admin_footer_js()
-{
-	global $post;
-	
-	if (isset($post) && $post->post_type == 'easy-pricing-table') :
-		?>
-			<script type="text/javascript">
-				jQuery('#submitdiv').hide();
-			</script>
-		<?php
-	endif;
-}
-add_action('admin_footer', 'dh_ptp_admin_footer_js');
-
 /* Save tab state */
 function dh_ptp_save_tab_state( $post_id ) {
 
