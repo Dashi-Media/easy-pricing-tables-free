@@ -32,14 +32,6 @@
             <input type="text" style="width: 300px;" readonly="readonly" onclick="this.select()" value="[easy-pricing-table id=&quot;<?php the_ID(); ?>&quot;]"/><br/>
         </div>
     </div>
-
-    <?php if (isset($_COOKIE['dh_ptp_current_tab'])) : ?>
-        <script type="text/javascript">
-            jQuery(document).ready(function(){
-                jQuery('a[href="<?php echo $_COOKIE['dh_ptp_current_tab'];?>"]').click();
-            });
-        </script>
-    <?php endif; ?>
     
     <script type="text/javascript">
 			// call the codemirror for custom css textbox
