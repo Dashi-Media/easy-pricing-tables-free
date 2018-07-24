@@ -2,6 +2,9 @@ jQuery(document).ready(function($) {
 	
 	//FIX/HIDE RICH CONTENT SNIPPET PLUGIN CONFLICT  https://wordpress.org/support/topic/plugin-conflict-all-in-one-schemaorg-rich-snippets?replies=2#post-8641169
 	$('#review_metabox').hide();
+	
+	//HIDE NORMAL SUBMIT DIV
+	$('#submitdiv').hide();
 
 	// Activate jquery ui tabs
 	$("#dh_ptp_tabs_container").tabs();
