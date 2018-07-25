@@ -35,8 +35,12 @@ function dh_ptp_mailing_list_pointer()
 	// Get current user info
 	$current_user = wp_get_current_user();
 	
-    // Ajax request template    
+    // Ajax request template
+	$gdpr_script = 'if ( jQuery("#gdpr_consent").prop("checked") == false )
+			return alert("Your consent is required to complete this action.  Please agree to the terms before proceeding.")';
+		
     $ajax = '
+		
         jQuery.ajax({
             type: "POST",
             url:  "'.admin_url('admin-ajax.php').'",
@@ -53,12 +57,13 @@ function dh_ptp_mailing_list_pointer()
     $button_1_title = __('No, thanks', 'easy-pricing-tables');
     $button_1_fn    = sprintf($ajax, 'no');
     $button_2_title = __("Let&#39;s do it!", 'easy-pricing-tables');
-    $button_2_fn    = sprintf($ajax, 'yes');
+    $button_2_fn    = $gdpr_script . sprintf($ajax, 'yes');
     
     // Content
     $content  = '<h3>' . __('Pricing Table Crash Course', 'easy-pricing-tables') . '</h3>';
     $content .= '<p>' . __("Instead of watching 99% of your visitors bounce, imagine you could increase your pricing table&#39;s conversion rate and make more money. Find out how in this ridiculously actionable (and totally free) 5-part email course.", 'easy-pricing-tables') . '</p>';
     $content .= '<p>' . '<input type="text" name="ept_email" id="ept_email" value="' . $current_user->user_email . '" style="width: 100%"/>' . '</p>';
+	$content .= '<p><label><input type="checkbox" id="gdpr_consent"></input>'. __('I agree to receive occasional email updates', 'easy-pricing-tables').'</label></p>';
 	
     // Options
     $options = array(
@@ -82,11 +87,8 @@ function dh_ptp_mailing_list_pointer_ajax()
     // Check status
     $result = ($_POST['subscribe'] == 'yes')?'yes':'no';
     if ($result == 'no') {
-	dh_ptp_crash_course('No, thanks');
         update_option('dh_ptp_mailing_list', 'no');
         exit();
-    } else {
-	dh_ptp_crash_course('Lets do it!');
     }
     
 	dh_ptp_add_subscriber(

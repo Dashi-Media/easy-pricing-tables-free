@@ -5,8 +5,8 @@ Tags: pricing table, pricing tables, comparison table, pricing grid, responsive 
 Author URI: https://fatcatapps.com/?utm_campaign=author%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Plugin URI: https://fatcatapps.com/easypricingtables/?utm_campaign=plugin%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Requires at least: 3.6
-Tested up to: 4.8.2
-Stable tag: 2.3.10
+Tested up to: 4.9.7
+Stable tag: 2.3.11
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,8 +111,12 @@ width: 25%!important;
 }
 `
 
-= Does this plugin use JavaScript? =
-We're using a small jQuery library called (jquery.matchHeight.js)[https://github.com/liabru/jquery-match-height] for the "Automatically match Row Height" feature. This small library won't significantly impact load time.
+== Privacy Disclosure ==
+
+This plugin does not store any personal data.
+
+Our full privacy policy is available here: [https://fatcatapps.com/legal/privacy-policy/](https://fatcatapps.com/legal/privacy-policy/)
+
 
 == Screenshots ==
 1. Example of a pricing table with 3 columns
@@ -129,6 +133,9 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 13. Another design from [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
 
 == Changelog ==
+
+= Easy Pricing Tables 2.3.11 =
+* Fix compatibility issue with WP SEO plugin
 
 = Easy Pricing Tables 2.3.10 =
 * Fix a possible conflict with Yoast
@@ -393,10 +400,3 @@ We're using a small jQuery library called (jquery.matchHeight.js)[https://github
 
 = Easy Pricing Tables 1.0.0 =
 * Initial release of Easy Pricing Tables
-
-
-== Upgrade Notice ==
-
-
-
-`<?php code(); // goes in backticks ?>`
