@@ -56,7 +56,7 @@ function dh_ptp_gutenblock_enqueue() {
 		}
 		$table_list[] = array(
 			'value' => $p,
-			'label' => $title,
+			'label' => html_entity_decode( $title ),
 		);
 		
 	}
