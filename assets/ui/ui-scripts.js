@@ -64,7 +64,6 @@ jQuery(document).ready(function($) {
 	});
 	
 	$('#dh_ptp_save').on('click', function(event) {
-		confirmUnload = null;
 		event.preventDefault();
 		
 		// Add target
@@ -80,13 +79,15 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 	
-	//NAVIGATION CONFIRM PROMPT FOR THIS PAGE
-	var confirmUnload = null
-	window.onbeforeunload = function() {
-		return confirmUnload
-	}
-	$('input, select').on('input', function(){
-		confirmUnload = true
+	$('form').change(function() {
+		window.onbeforeunload = function() {
+			return true
+		}
+		$(this).unbind('change')
+	})
+	
+	$('form').submit(function() {
+		window.onbeforeunload = null
 	})
 	
 	//activate twitter bootstrap popover
