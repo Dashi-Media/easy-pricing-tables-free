@@ -79,15 +79,8 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 	
-	$('form').change(function() {
-		window.onbeforeunload = function() {
-			return true
-		}
-		$(this).unbind('change')
-	})
-	
 	$('form').submit(function() {
-		window.onbeforeunload = null
+		$(window).unbind('beforeunload')
 	})
 	
 	//activate twitter bootstrap popover
