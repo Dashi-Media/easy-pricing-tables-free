@@ -134,6 +134,10 @@ Our full privacy policy is available here: [https://fatcatapps.com/legal/privacy
 
 == Changelog ==
 
+= Easy Pricing Tables 2.4.0 =
+* Add WordPress 5.0 block (Gutenberg) support
+* Fixed PHP 7.2 "misuse of count" error in metabox library ( thanks vbhunt )
+
 = Easy Pricing Tables 2.3.11 =
 * Fix compatibility issue with WP SEO plugin
 
