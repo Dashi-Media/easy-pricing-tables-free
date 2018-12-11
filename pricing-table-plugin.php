@@ -6,7 +6,7 @@
 	Text Domain: easy-pricing-tables
 	Domain Path: /languages
 	Author: Fatcat Apps
-	Version: 2.3.10
+	Version: 2.4.0
 	Author URI: https://fatcatapps.com
 */
 
@@ -15,10 +15,7 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
   // Define a constant to always include the absolute path
   define('PTP_PLUGIN_PATH', plugin_dir_path( __FILE__ ));
   define('PTP_PLUGIN_PATH_FOR_SUBDIRS', plugins_url(str_replace(dirname(dirname(__FILE__)), '', dirname(__FILE__))));
-
-  // Analytics
-  include_once PTP_PLUGIN_PATH . 'includes/analytics.php';
-  include_once PTP_PLUGIN_PATH . 'includes/tracking.php';
+  define('PTP_PLUGIN_URL', plugins_url( '', __FILE__ ));
 
   // Include post types
   include ( PTP_PLUGIN_PATH . 'includes/post-types.php');
@@ -37,6 +34,9 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 
   // Upgrade to Premium
   include ( PTP_PLUGIN_PATH . 'includes/upgrade.php');
+  
+  // Include Gutenberg support
+  include ( PTP_PLUGIN_PATH . 'includes/block.php');
 
   // Include WPAlchemy
   if(!class_exists('WPAlchemy_MetaBox')) {

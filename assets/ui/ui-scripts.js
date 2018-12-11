@@ -2,9 +2,15 @@ jQuery(document).ready(function($) {
 	
 	//FIX/HIDE RICH CONTENT SNIPPET PLUGIN CONFLICT  https://wordpress.org/support/topic/plugin-conflict-all-in-one-schemaorg-rich-snippets?replies=2#post-8641169
 	$('#review_metabox').hide();
+	
+	//HIDE NORMAL SUBMIT DIV
+	$('#submitdiv').hide();
 
 	// Activate jquery ui tabs
 	$("#dh_ptp_tabs_container").tabs();
+	
+	$('#dh_ptp_loading').hide();
+	$('#dh_ptp_tabs_container').show();
 	
 	// Save tab state to dh_ptp_tab
 	$("a[href='#dh_ptp_tabs_1'], a[href='#dh_ptp_tabs_2']").on('click', function(){
@@ -58,7 +64,6 @@ jQuery(document).ready(function($) {
 	});
 	
 	$('#dh_ptp_save').on('click', function(event) {
-		confirmUnload = null;
 		event.preventDefault();
 		
 		// Add target
@@ -74,13 +79,8 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 	
-	//NAVIGATION CONFIRM PROMPT FOR THIS PAGE
-	var confirmUnload = null
-	window.onbeforeunload = function() {
-		return confirmUnload
-	}
-	$('input, select').on('input', function(){
-		confirmUnload = true
+	$('form').submit(function() {
+		$(window).unbind('beforeunload')
 	})
 	
 	//activate twitter bootstrap popover

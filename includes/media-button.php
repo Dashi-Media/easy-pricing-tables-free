@@ -44,15 +44,6 @@ function dh_ptp_media_button_thickbox()
                     }
                     window.send_to_editor('[easy-pricing-table id="' + id + '"]');
                     
-                    // Tracking
-                    jQuery.ajax({
-                        type: "POST",
-                        url: "<?php echo admin_url('admin-ajax.php'); ?>",
-                        data: {
-                            action: "dh_ptp_tracking_deploy",
-                            id: id
-                        }
-                    });
                 });
             });
         </script>

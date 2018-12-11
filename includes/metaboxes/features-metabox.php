@@ -1,4 +1,7 @@
-<div id="dh_ptp_tabs_container">
+<div id="dh_ptp_loading">
+	<center style="margin: 50px;">Loading...</center>
+</div>
+<div id="dh_ptp_tabs_container" style="display: none;">
     <ul id="dh_ptp_metabox_tabs" class="nav-tab-wrapper">
         <li class="dh_ptp_tab_header nav-tab"><a href="#dh_ptp_tabs_1"><?php _e('Content', 'easy-pricing-tables'); ?></a></li>
         <li class="dh_ptp_tab_header nav-tab"><a href="#dh_ptp_tabs_2"><?php _e('Design', 'easy-pricing-tables'); ?></a></li>
@@ -29,30 +32,9 @@
             <input type="text" style="width: 300px;" readonly="readonly" onclick="this.select()" value="[easy-pricing-table id=&quot;<?php the_ID(); ?>&quot;]"/><br/>
         </div>
     </div>
-
-    <?php if (isset($_COOKIE['dh_ptp_current_tab'])) : ?>
-        <script type="text/javascript">
-            jQuery(document).ready(function(){
-                jQuery('a[href="<?php echo $_COOKIE['dh_ptp_current_tab'];?>"]').click();
-            });
-        </script>
-    <?php endif; ?>
     
     <script type="text/javascript">
-        jQuery(document).ready(function(){
-            jQuery('.button-deploy').click(function() {
-                jQuery.ajax({
-                    type: "POST",
-                    url: "<?php echo admin_url('admin-ajax.php'); ?>",
-                    data: {
-                        action: "dh_ptp_tracking_deploy",
-                        id: jQuery(this).attr('data-id')
-                    }
-                });
-            }); 
-        });
-          
-           // call the codemirror for custom css textbox
+			// call the codemirror for custom css textbox
            var cusid_ele = document.getElementsByClassName('custom-css-setting-textbox');
             for (var i = 0; i < cusid_ele.length; ++i) {
                 var item = cusid_ele[i];  
