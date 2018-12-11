@@ -1,7 +1,7 @@
 === Pricing Tables WordPress Plugin - Easy Pricing Tables ===
 Contributors: davidhme, fatcatapps, ryannovotny
 Donate link: https://fatcatapps.com/easypricingtables/?utm_campaign=donate%2Blink&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
-Tags: pricing table, pricing tables, comparison table, pricing grid, responsive pricing table, price comparison, price comparison table
+Tags: pricing table, pricing table block, pricing tables, comparison table, comparison table block, pricing grid, price comparison table
 Author URI: https://fatcatapps.com/?utm_campaign=author%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Plugin URI: https://fatcatapps.com/easypricingtables/?utm_campaign=plugin%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Requires at least: 3.6
@@ -18,6 +18,11 @@ Pricing Table Plugin - Easy Pricing Tables Lets You Create A Beautiful, Responsi
 *   [View screenshots of WordPress pricing tables built with this plugin](https://wordpress.org/plugins/easy-pricing-tables/screenshots/).
 
 *   [View Easy Pricing Tables Premium Live Demo &raquo;](https://fatcatapps.com/easypricingtables/demo?utm_campaign=description%2Bdemo%2Blink&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
+
+> #### Gutenberg Compatible
+> This plugin is fully compatible with WordPress 5.0's new content editor ("Gutenberg"). Simply create your pricing table, then add your pricing table block to your website.
+
+
 
 > #### Easy Pricing Tables Premium
 > Easy Pricing Tables Premium comes with the following features.<br />
@@ -40,15 +45,17 @@ Pricing Table Plugin - Easy Pricing Tables Lets You Create A Beautiful, Responsi
 
 *   Easy Pricing Tables works with any WordPress theme you have installed. After creating your first pricing table using Easy Pricing Tables, you can publish your pricing tables anywhere on your site using a shortcode.
 
+* Gutenberg / WordPress 5.0 compatible. This plugin lets you create pricing table blocks, which you can add to your website using WordPress' new content editor.
 
 = Easy Pricing Tables - WordPress Pricing Table Plugin Features =
 
 *   Works with any WordPress theme
 *   Responsive WordPress Pricing Tables
+*   WordPress 5.0 and Gutenberg support - add pricing table blocks to your site
 *   Intuitive User Interface - building pricing tables has never been easier
 *   Built-in Conversion Rate Optimization Best Practices
 *   Create Unlimited Pricing Table Rows
-*	Customize Your Pricing Table Design: Font-size, Color Pickers and Rounded Borders.
+*   Customize Your Pricing Table Design: Font-size, Color Pickers and Rounded Borders.
 *   Use Drag & Drop To Reorder WordPress Pricing Tables Columns
 *   Featured Your Most Popular Easy Pricing Tables Column
 *   Custom CSS - Add Custom CSS to your Pricing Table
