@@ -4,34 +4,17 @@
 include ( PTP_PLUGIN_PATH . '/includes/table-generation/design1.php');
 
 /* CSS Styling */
-function dh_ptp_easy_pricing_table_dynamic_css( $id )
+function dh_ptp_easy_pricing_table_dynamic_css( $id, $meta )
 {
 	//FIX YOAST MUCKING THINGS UP
 	if ( doing_action( 'wp_head' ) ) {
 		return false;
 	}
 	
-    global $features_metabox;
-    
-    $css = '';
-
-    // Retrieve all meta data for easy pricing tables
-    $query = new WP_Query( array(
-            'post_type' => 'easy-pricing-table',
-            'p' => $id,
-            'post_status' => 'any',
-    ) );
-    ob_start();
-    if ($query->have_posts()) :
-        while ($query->have_posts()) : $query->the_post();
-            // Print CSS styles per table
-            $meta = get_post_meta(get_the_ID(), $features_metabox->get_the_id(), true);
-            dh_ptp_simple_flat_css(get_the_ID(), $meta);
-        endwhile;
-    endif;
-    wp_reset_postdata();
+	ob_start();
+    dh_ptp_simple_flat_css( $id, $meta );
     $css = ob_get_clean();
-    
+	
     // Minify
     $css = preg_replace( '/\s+/', ' ', $css );
     $css = preg_replace( '/;(?=\s*})/', '', $css );
@@ -56,14 +39,18 @@ function dh_ptp_easy_pricing_table_dynamic_css( $id )
  *
  * @return string pricing table html
  */
-function dh_ptp_generate_pricing_table($id)
+function dh_ptp_generate_pricing_table( $id, $hide = false )
 {
-    global $features_metabox;
-    $meta = get_post_meta($id, $features_metabox->get_the_id(), TRUE);
+    global $wp_styles;
 
+    $meta = get_post_meta( $id, '1_dh_ptp_settings', true );
+	
+	if ( !empty( $meta['hide_table'] ) ) {
+		$hide = true;
+	}
+		
     // Enqueue IE Hacks
     wp_enqueue_style('ept-ie-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-ie.min.css');
-    global $wp_styles;
     $wp_styles->add_data('ept-ie-style', 'conditional', 'lt IE 9');
     
     //include css
@@ -74,13 +61,19 @@ function dh_ptp_generate_pricing_table($id)
 	$return = '';
     
     // Print stylish enable match-column-height
-       if(isset($meta['match-column-height-dg1'])) {   
-            wp_enqueue_script( 'matchHeight', PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ui/jquery.matchHeight-min.js', array('jquery'));
-         
-            $return .= tt_ptp_enable_column_match_height_script_dg1();
-        }
+	if(isset($meta['match-column-height-dg1'])) {   
+		wp_enqueue_script( 'matchHeight', PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ui/jquery.matchHeight-min.js', array('jquery'));	 
+		$return .= tt_ptp_enable_column_match_height_script_dg1();
+	} 
+	
     wp_enqueue_style( 'dh-ptp-custom-css' );
-	$return .= dh_ptp_generate_simple_flat_pricing_table_html($id);
+	$return .= dh_ptp_generate_simple_flat_pricing_table_html( $id, $hide );
+	
+	// ADD LOADED JS
+	if( !empty( $meta['hide_table']) ) {   
+		$return .= "<script>document.querySelector( '#ptp-$id' ).style.display='block'</script>";
+	}
+	
 	//call appropriate function
     return $return;
 }

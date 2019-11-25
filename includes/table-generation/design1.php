@@ -101,16 +101,18 @@ function dh_ptp_simple_flat_css($id, $meta)
  * Generate our simple flat pricing table HTML
  * @return [type]
  */
-function dh_ptp_generate_simple_flat_pricing_table_html ($id)
+function dh_ptp_generate_simple_flat_pricing_table_html( $id, $hide = false )
 {
     global $features_metabox;
     global $meta;
+	
 
-    $meta = get_post_meta($id, $features_metabox->get_the_id(), TRUE);
-
+	$meta = get_post_meta( $id, $features_metabox->get_the_id(), true );
+	
     $loop_index = 0;
-    $pricing_table_css = dh_ptp_easy_pricing_table_dynamic_css( $id );
-    $pricing_table_html = '<div id="ptp-'. $id .'" class="ptp-pricing-table">';
+    $hide_table = ($hide)?'style="display:none"':'';
+    $pricing_table_css = dh_ptp_easy_pricing_table_dynamic_css( $id, $meta );
+    $pricing_table_html = '<div id="ptp-'. $id .'" class="ptp-pricing-table" '.$hide_table.'>';
     
     foreach ($meta['column'] as $column) {
 
@@ -158,7 +160,7 @@ function dh_ptp_generate_simple_flat_pricing_table_html ($id)
 
         $loop_index++;
     }
-
+	
     $pricing_table_html .= '</div>';
 
     return $pricing_table_css . $pricing_table_html;
