@@ -572,6 +572,11 @@ color:#333;
   border: 3px dashed transparent;
   opacity: 0.7;
   cursor: pointer;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.template-selector:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 .template-button{
