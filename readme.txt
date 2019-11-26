@@ -142,7 +142,8 @@ Our full privacy policy is available here: [https://fatcatapps.com/legal/privacy
 == Changelog ==
 
 = Easy Pricing Tables 2.4.3 =
-* Add option to hide table visiblity until loaded
+* Performance, UI and compatibilty improvements
+* Tested up to WordPress 5.3.0
 
 = Easy Pricing Tables 2.4.0 =
 * Add WordPress 5.0 block (Gutenberg) support
