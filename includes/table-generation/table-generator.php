@@ -39,16 +39,13 @@ function dh_ptp_easy_pricing_table_dynamic_css( $id, $meta )
  *
  * @return string pricing table html
  */
-function dh_ptp_generate_pricing_table( $id, $hide = false )
+function dh_ptp_generate_pricing_table( $id )
 {
     global $wp_styles;
-
-    $meta = get_post_meta( $id, '1_dh_ptp_settings', true );
+	global $features_metabox;
 	
-	if ( !empty( $meta['hide_table'] ) ) {
-		$hide = true;
-	}
-		
+    $meta = get_post_meta($id, $features_metabox->get_the_id(), TRUE);
+	
     // Enqueue IE Hacks
     wp_enqueue_style('ept-ie-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-ie.min.css');
     $wp_styles->add_data('ept-ie-style', 'conditional', 'lt IE 9');
@@ -68,11 +65,6 @@ function dh_ptp_generate_pricing_table( $id, $hide = false )
 	
     wp_enqueue_style( 'dh-ptp-custom-css' );
 	$return .= dh_ptp_generate_simple_flat_pricing_table_html( $id, $hide );
-	
-	// ADD LOADED JS
-	if( !empty( $meta['hide_table']) ) {   
-		$return .= "<script>document.querySelector( '#ptp-$id' ).style.display='block'</script>";
-	}
 	
 	//call appropriate function
     return $return;

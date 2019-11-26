@@ -48,16 +48,6 @@
                         <input type="checkbox" onchange="return consistent_match_column_height(this) " class="tt-match-column-height-checkbox" name="<?php $metabox->the_name(); ?>" id="match-column-height-dg1" value="1" <?php      if (!$meta) { echo 'checked="checked"'; } else  if ($metabox->get_the_value()) echo 'checked="checked"'; ?>/>
                     </td>
                 </tr>
-				<!--  Hide Until Loaded -->
-                <tr>
-					<td class="settings-title">
-                        <label for="hide_table" style="margin: 0; font-weight: normal;"><?php _e('Hide table until loaded', 'easy-pricing-tables'); ?></label>
-                    </td>
-                    <td>
-						<?php $mb->the_field('hide_table'); ?>
-                        <input type="checkbox" name="<?php $metabox->the_name(); ?>" id="hide_table" value="1" <?php if ($metabox->get_the_value()) echo 'checked="checked"'; ?>/>
-                    </td>
-                </tr>
             </table>
         </div>
         <h4><?php _e('Font Sizes', 'easy-pricing-tables'); ?></h4>
