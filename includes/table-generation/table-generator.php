@@ -64,7 +64,7 @@ function dh_ptp_generate_pricing_table( $id )
 	} 
 	
     wp_enqueue_style( 'dh-ptp-custom-css' );
-	$return .= dh_ptp_generate_simple_flat_pricing_table_html( $id, $hide );
+	$return .= dh_ptp_generate_simple_flat_pricing_table_html( $id );
 	
 	//call appropriate function
     return $return;
