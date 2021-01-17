@@ -1,0 +1,690 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Easy Pricing Tables\n"
+"POT-Creation-Date: 2014-04-02 21:54+0200\n"
+"PO-Revision-Date: 2021-01-17 11:16+0200\n"
+"Last-Translator: Мария Рангелова <rangelova1186@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n;_x\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: bg_BG\n"
+"X-Poedit-SearchPath-0: /Users/mindo/Documents/git/wordpress/wp-content/"
+"plugins/easy-pricing-tables-free\n"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/pricing-table-plugin.php:60
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:12
+msgid "Add New"
+msgstr "Добавяне на нов"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/pricing-table-plugin.php:61
+msgid "Support"
+msgstr "Поддръжка"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/pricing-table-plugin.php:62
+msgid "Purchase Premium"
+msgstr "Закупване на Premium"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/pricing-table-plugin.php:78
+#, php-format
+msgid ""
+"Thank you for using <a href=\"%s\" target=\"_blank\">Easy Pricing Tables</a>."
+msgstr ""
+"Благодарим ви, че използвате <a href=\"%s\" target=\"_blank\">Easy Pricing "
+"Tables</a>."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/pricing-table-plugin.php:79
+#, php-format
+msgid "Please <a href=\"%s\">rate us on WordPress.org</a>."
+msgstr "Моля <a href=\"%s\">оценете на WordPress.org</a>."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/clone-table.php:21
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/clone-table.php:22
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/clone-table.php:25
+msgid "Make a Copy"
+msgstr "Направяне на копие"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/clone-table.php:99
+msgid "No naughty business please"
+msgstr "Без нереден бизнес, моля"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/clone-table.php:121
+#, php-format
+msgid "Copy of %s"
+msgstr "Копиране на %s"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/clone-table.php:136
+msgid "Pricing table was copied successfully."
+msgstr "Таблицата за ценообразуване беше копирана успешно."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:10
+msgid "Insert pricing table"
+msgstr "Вмъкенете таблицата за ценообразуване"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:62
+msgid "Use the form below to insert the shortcode for a pricing table."
+msgstr ""
+"Използване на формуляра по-долу, за вмъкване на краткия код за ценовата "
+"таблица."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:65
+msgid "Please select..."
+msgstr "Моля изберете..."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:82
+msgid "Insert"
+msgstr "Вмъкнете"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/media-button.php:83
+msgid "Cancel"
+msgstr "Отказ"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:59
+msgid "Do not allow tracking"
+msgstr "Не позволявайте проследяване"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:61
+msgid "Allow tracking"
+msgstr "Разрешаване на проследяването"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:65
+msgid "Help Improve Easy Pricing Tables"
+msgstr "Помощ за подобряване на таблиците за лесно ценообразуване"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:66
+msgid ""
+"Thanks for installing Easy Pricing Tables. Please help us improve this "
+"plugin by gathering usage stats so we know which features to improve and "
+"which plugins and themes to test with."
+msgstr ""
+"Благодарим ви, че инсталирахте таблици за лесно ценообразуване. Помогнете ни "
+"да подобрим този плъгин, като съберем данни за използването му, за да знаем "
+"кои от функциите му да подобрим и с кои плъгини и теми да го тестваме."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:117
+msgid "No, thanks"
+msgstr "Не благодаря"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:119
+msgid "Let&#39;s do it!"
+msgstr "Направи го!"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:123
+msgid "Pricing Table Crash Course"
+msgstr "Курс за основни знания на плъгина ценови таблици"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/pointer.php:124
+#, php-format
+msgid ""
+"Instead of watching 99% of your visitors bounce, imagine you could increase "
+"your pricing table&#39;s conversion rate and make more money. Find out how "
+"in this ridiculously actionable (and totally free) 5-part email course."
+msgstr ""
+"Вместо да гледате как 99% oт посетителите ви избягват , представете си, че "
+"можете да увеличите конверсиите към вашите ценови таблици и това да ви "
+"донесе пари. Научете как в този полезен (и безплатен) от 5-части email курс."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:10
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:22
+msgid "Pricing Tables"
+msgstr "Ценови таблици"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:11
+msgid "Pricing Table"
+msgstr "Ценови таблици"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:13
+msgid "Add New Pricing Table"
+msgstr "Добавяне на нова ценова таблица"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:14
+msgid "Edit Pricing Table"
+msgstr "Редактиране на ценова таблица"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:15
+msgid "New Pricing Table"
+msgstr "Нова ценова таблица"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:16
+msgid "All Pricing Tables"
+msgstr "Всички ценови таблици"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:17
+msgid "View Pricing Table"
+msgstr "Преглед на ценовата таблица"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:18
+msgid "Search Pricing Tables"
+msgstr "Търсене в таблиците за ценообразуване"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:19
+msgid "No Pricing Tables found"
+msgstr "Не са намерени ценови таблици"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:20
+msgid "No Pricing Tables found in Trash"
+msgstr "Ценови таблици не са намерени в кошчето"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:60
+#, php-format
+msgid "Pricing table saved. <a href=\"%s\">View pricing table</a>."
+msgstr ""
+"Ценовата таблица е запазена. <a href=\"%s\">Преглед на ценовата таблица</a>."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:61
+msgid "Custom field updated."
+msgstr "Персонализираното поле е актуализирано."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:62
+msgid "Custom field deleted."
+msgstr "Персонализираното поле е изтрито."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:63
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:66
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:70
+msgid "Pricing table saved."
+msgstr "Таблицата за ценообразуване е запазена."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:64
+#, php-format
+msgid "Pricing table restored to revision from %s"
+msgstr "Таблицата за ценообразуване е възстановена до ревизия от %s"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:65
+#, php-format
+msgid "Pricing table saved. <a href=\"%s\">View pricing table</a>"
+msgstr ""
+"Таблицата за ценообразуване е запазена. <a href=\"%s\">Преглед на ценовата "
+"таблица</a>"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:68
+msgid "Pricing table submitted."
+msgstr "Ценовата таблица е изпратена."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:69
+#, php-format
+msgid "Pricing table scheduled for: <strong>%1$s</strong>."
+msgstr "Ценова таблица, планирана за: <strong>%1$s</strong>."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:69
+msgid "M j, Y @ G:i"
+msgstr "M j, Y @ G:i"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:114
+msgid "Pricing Table Name"
+msgstr "Име на ценовата таблица"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:115
+msgid "Shortcode"
+msgstr "Кратък код"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/post-types.php:116
+msgid "Date"
+msgstr "Дата"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/shortcodes.php:29
+msgid "Pricing table does not exist. Please check your shortcode."
+msgstr ""
+"Таблицата за ценообразуване не съществува. Моля, проверете вашия кратък код."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/upgrade.php:7
+msgid "Upgrade to Premium"
+msgstr "Надстройване до Premium"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/upgrade.php:55
+#, php-format
+msgid ""
+"Thanks for using Easy Pricing Tables. If you like this plugin, please "
+"consider supporting continued development by <a href=\"%s\">purchasing the "
+"premium version</a>."
+msgstr ""
+"Благодарим ви, че използвате  Easy Pricing Tables. Ако ви харесва този "
+"плъгин, помислете да го подкрепите чрез <a href=\"%s\">закупуване на premium "
+"версия</a>."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/upgrade.php:56
+msgid ""
+"Easy Pricing Tables Premium comes with 4 additional table designs, 369 icons "
+"and tons of customization options."
+msgstr ""
+"Easy Pricing Tables Premium с 4 допълнителни дизайна, 369 икони и тон "
+"възможности за персонализиране."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/upgrade.php:57
+#, php-format
+msgid "<a href=\"%s\">Click here to learn more...</a>"
+msgstr "<a href=\"%s\">Натиснете тук, за да научите повече...</a>"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/banner-metabox.php:2
+msgid "Do you like this plugin?"
+msgstr "Харесвате ли този плъгин?"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/banner-metabox.php:2
+msgid "You will love Easy Pricing Tables Premium."
+msgstr "Ще ви хареса Easy Pricing Tables Premium."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/banner-metabox.php:3
+msgid ""
+"It comes with 4 additional table designs, tooltips, icons, tons of "
+"customization options and much more. 60-day money back guarantee."
+msgstr ""
+"Идва с 4 допълнителни дизайна за таблиците, подсказки, икони и тон "
+"възможности за персонализиране и още много. 60-дневна гаранция за връщане на "
+"парите."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/banner-metabox.php:5
+msgid "Learn More"
+msgstr "Научете повече"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/features-metabox.php:3
+msgid "Content"
+msgstr "Съдържание"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/features-metabox.php:4
+msgid "Design"
+msgstr "Дизайн"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/features-metabox.php:16
+msgid "Save & Preview"
+msgstr "Запазване & Преглед"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/features-metabox.php:17
+msgid "Save"
+msgstr "Запазване"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/features-metabox.php:18
+msgid "Deploy (Get Shortcode)"
+msgstr "Внедряване (Вземете кратък код)"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/features-metabox.php:26
+msgid ""
+"Copy the shortcode below and paste it wherever you want your pricing table "
+"to appear."
+msgstr ""
+"Копиране на краткия код по-долу и поставяне навсякъде, където искате да се "
+"появи таблицата с цените."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/spec.php:10
+msgid "Pricing Table Settings"
+msgstr "Настройки на ценовите таблици"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/spec.php:21
+msgid "Want More Design Options?"
+msgstr "Искате повече възможности за дизайн?"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:2
+msgid "Pricing Table Columns"
+msgstr "Колони на ценовите таблици"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:3
+msgid "New Column"
+msgstr "Нова колона"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:9
+msgid "Plan Name"
+msgstr "Име на плана"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:10
+msgid "Enter your pricing plan - names here."
+msgstr "Въведете своя ценови план - имената тук."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:12
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:29
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:38
+msgid "Best practice:"
+msgstr "Най-добри практики:"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:14
+msgid ""
+"Avoid generic names such as <em>Bronze</em>, <em>Silver</em> and <em>Gold</"
+"em>.<br/>"
+msgstr ""
+"Избягване на имена като <em>Bronze</em>, <em>Silver</em> и <em>Gold</em>.<br/"
+">"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:15
+msgid ""
+"Instead, choose aspirational names like <em>Personal</em>, <em>Small "
+"Business</em> and <em>Enterprise</em>.<br/><br/>"
+msgstr ""
+"Вместо това изберете имена като <em>Personal</em>, <em>Small Business</em> "
+"and <em>Enterprise</em>.<br/><br/>"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:16
+msgid ""
+"Many people choose plans based on names, not features: A corporate buyer "
+"might choose <em>Enterprise</em> even though <em>Personal</em> might be "
+"sufficient for his use-case."
+msgstr ""
+"Много хора избират планове въз основа на имена, а не на характеристики: "
+"Корпоративен купувач може да избере <em>Enterprise</em> въпреки че "
+"<em>Personal</em> може да е подходящо за неговия случай."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:21
+msgid "Pricing"
+msgstr "Ценообразуване"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:22
+msgid "Enter your pricing options here."
+msgstr "Въведете вашите опции за ценообразуване тук."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:26
+msgid "Plan Features"
+msgstr "Особености на плана"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:26
+msgid "Features"
+msgstr "Особености"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:27
+msgid "Enter your features here (one per line)."
+msgstr "Въведете вашите особености тук (по една на ред)."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:31
+msgid ""
+"Don't overwhelm users with too much content. Long pricing tables are "
+"confusing and difficult to read."
+msgstr ""
+"Не затрупвайте потребителите с твърде много съдържание. Дългите ценови "
+"таблици са объркващи и трудни за четене."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:35
+msgid "Button Text"
+msgstr "Текст на бутона"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:35
+msgid "Call To Action Text"
+msgstr "Текст на бутон с призив за действие"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:36
+msgid "Enter your call to action text here."
+msgstr "Въведете текста на бутона, призоващ към действие тук."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:40
+msgid "Here are some of the highest converting variations:"
+msgstr "Ето някои от най-конвертиращите вариации:"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:41
+msgid "Add To Cart"
+msgstr "Добави в количката"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:42
+msgid "Sign Up"
+msgstr "Регистриране"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:43
+msgid "Sign Up Free"
+msgstr "Безплатно регистриране"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:44
+msgid "Start Free Trial"
+msgstr "Започване на безплатен пробен период"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:47
+msgid "Button URL"
+msgstr "Бутон връзка"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:47
+msgid "Call To Action URL"
+msgstr "URL адрес за призив за действие"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:48
+msgid ""
+"Enter your call to action URL here. This is usually either a payment link (e."
+"g. PayPal) or a page where users can create an account."
+msgstr ""
+"Въвеждане на URL адреса си с призив за действие тук. Това обикновено е или "
+"връзка за плащане (напр. PayPal) или страница, където потребителите могат да "
+"създадат акаунт."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:68
+msgid "Feature This Column"
+msgstr "Feature This Column"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:68
+msgid ""
+"Click this button to feature this column. A featured column appears bigger "
+"and includes the wording 'Most Popular'. You can only feature one column per "
+"table."
+msgstr ""
+"Щракнете върху този бутон, за да отличите тази колона. Отличената колона "
+"изглежда по-голяма и включва формулировката „Най-популярни“. Може да "
+"включвате само една колона на таблица."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:68
+msgid "Feature"
+msgstr "Отличаване"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:69
+msgid "Delete This Column"
+msgstr "Изтриване на колоната"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:69
+msgid "Click this button to delete this column."
+msgstr "Щракнете върху този бутон, за да изтриете колоната."
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:69
+msgid "Delete"
+msgstr "Изтриване"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:72
+msgid "e.g. Small Business"
+msgstr "e.g. Small Business"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:78
+msgid "e.g. $49/mo"
+msgstr "e.g. $49/mo"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:84
+msgid "e.g. 1 Website"
+msgstr "e.g. 1 Website"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:85
+msgid "30,000 Monthly Visits"
+msgstr "30 000 месечни посещения"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:86
+msgid "Unlimited Data Transfer"
+msgstr "Неограничен трансфер на данни"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:87
+msgid "5GB Storage"
+msgstr "5GB съхранение"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:95
+msgid "e.g. Start A Free Trial"
+msgstr "напр. Започнете безплатен пробен период"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/tab-content.php:100
+msgid "e.g. http://example.com/buy"
+msgstr "e.g. http://example.com/buy"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:3
+msgid "General Settings"
+msgstr "Основни настройки"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:7
+msgid "Featured Label Text"
+msgstr "Отличителен текст на етикета"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:10
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/table-generation/design1.php:128
+msgid "Most Popular"
+msgstr "Най - известен"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:15
+msgid "Border Radius"
+msgstr "Радиус на границата"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:26
+msgid "No Rounded Corners"
+msgstr "Без заоблени ъгли"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:40
+msgid "Enlarge Column on Hover"
+msgstr "Увеличаване на колона при задържане на курсора над нея"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:44
+msgid "Shake Button on Hover"
+msgstr "Разклащане на бутона при задържане на курсора над него"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:49
+msgid "Font Sizes"
+msgstr "Големина на шрифта"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:53
+msgid "Featured Label Font Size"
+msgstr "Отличителна големина на фона на етикета"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:81
+msgid "Plan Name Font Size"
+msgstr "Размер на шрифта за името на плана"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:109
+msgid "Price Font Size"
+msgstr "Големина на шрифта на цената"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:137
+msgid "Bullet Item Font Size"
+msgstr "Размера на символите на артикулите"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:165
+msgid "Button Font Size"
+msgstr "Големина на шрифта на бутона"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:194
+msgid "Unfeatured Columns Colors"
+msgstr "Неотличителни цветове на колони"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:198
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:271
+msgid "Background Colors"
+msgstr "Цветове на фона"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:201
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:274
+msgid "Border Color"
+msgstr "Цвят на границата"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:205
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:278
+msgid "Title Background Color"
+msgstr "Цвят на фона на заглавието"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:209
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:282
+msgid "Pricing Background Color"
+msgstr "Цвят на фона на цената"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:213
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:286
+msgid "Button Area Background Color"
+msgstr "Цвят на фона на бутоните"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:217
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:290
+msgid "Bullet Item Background Color"
+msgstr "Цвят на фона на символите"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:223
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:304
+msgid "Font Colors"
+msgstr "Цветове на шрифта"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:226
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:307
+msgid "Title Font Color"
+msgstr "Цвят на шрифта на заглавието"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:230
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:311
+msgid "Pricing Font Color"
+msgstr "Цвят на шрифта на цената"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:234
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:315
+msgid "Feature Color"
+msgstr "Отличителен цвят"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:239
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:241
+msgid "Button Color"
+msgstr "Цвят на бутона"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:247
+msgid "Button Border Color"
+msgstr "Цвят на границата на бутона"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:253
+msgid "Button Hover Color"
+msgstr "Цвят на бутона, когато курсора е над него"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:259
+msgid "Button Font Color"
+msgstr "Цвят на шрифта на бутона"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:266
+msgid "Featured Columns Colors"
+msgstr "Отличителен цвят на колоните"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:294
+msgid "Featured Label Border Color"
+msgstr "Отличителен цвят на границата на етикета"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:298
+msgid "Featured Label Background Color"
+msgstr "Фонов цвят на етикета"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:319
+msgid "Feature Label Font Color"
+msgstr "Отличителен цвят на етикета"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:324
+msgid "Button Color (Featured Column)"
+msgstr "Цвят на бутона (в колона)"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:326
+msgid "Featured-Button Color"
+msgstr "Отличителен цвят на бутона"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:332
+msgid "Featured-Button Border Color"
+msgstr "Бутон за цвят на границата"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:338
+msgid "Featured-Button Hover Color"
+msgstr "Бутон за цвят на обект, когато мишката е над него"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:344
+msgid "Featured-Button Font Color"
+msgstr "Бутон цвят на шртифта"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:351
+msgid "Advanced Settings"
+msgstr "Разширени настройки"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:355
+msgid "Hide Empty Rows"
+msgstr "Скриване на празните редове"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:359
+msgid "Hide Call To Action Buttons"
+msgstr "Скриване на бутоните с призив за действие"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:363
+msgid "Open Link in New Tab"
+msgstr "Отваряне на връзката в нов раздел"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:367
+msgid "No Spacing Between Columns"
+msgstr "Без интервал между колоните"
+
+#: /Users/mindo/Documents/git/wordpress/wp-content/plugins/easy-pricing-tables-free/includes/metaboxes/metabox-blocks/advanced-settings/simple-flat-settings.php:377
+msgid "Please upgrade to Easy Pricing Tables Premium to use this setting."
+msgstr ""
+"Моля, надстройте до Easy Pricing Tables Premium, за да използвате тази "
+"настройка."
