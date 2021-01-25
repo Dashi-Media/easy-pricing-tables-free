@@ -142,8 +142,13 @@ Our full privacy policy is available here: [https://fatcatapps.com/legal/privacy
 == Changelog ==
 
 = Easy Pricing Tables 2.4.6 =
+* Changed code to use builtin Codemirror
+* Fixed Custom CSS editor
+* Fixed Gutenberg CSS issues
+* Tested up to WordPress 5.6
+
 = Easy Pricing Tables 2.4.5 =
-* Tested up to WordPress 5.5.0
+* Tested up to WordPress 5.5
 
 = Easy Pricing Tables 2.4.4 =
 * Fix undefined variable error
