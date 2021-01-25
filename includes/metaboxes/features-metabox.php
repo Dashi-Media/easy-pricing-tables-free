@@ -32,22 +32,4 @@
             <input type="text" style="width: 300px;" readonly="readonly" onclick="this.select()" value="[easy-pricing-table id=&quot;<?php the_ID(); ?>&quot;]"/><br/>
         </div>
     </div>
-    
-    <script type="text/javascript">
-			// call the codemirror for custom css textbox
-           var cusid_ele = document.getElementsByClassName('custom-css-setting-textbox');
-            for (var i = 0; i < cusid_ele.length; ++i) {
-                var item = cusid_ele[i];  
-                  
-                var editor = CodeMirror.fromTextArea(item, {
-                    mode: "text/css",                    
-                    lineNumbers: true,
-                    lineWrapping: true,
-                    foldGutter: true,
-                    gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
-                });
-                  
-            }
-
-    </script>
 </div>

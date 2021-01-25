@@ -82,9 +82,6 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
     global $post;
     
     if ($post && $post->post_type == 'easy-pricing-table') {
-        wp_enqueue_script( 'codemirror-ept', PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ui/ui-components/codemirror/codemirror.min.js' );
-        wp_enqueue_script( 'codemirror-css-ept', PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ui/ui-components/codemirror/addon-codemirror/css.min.js' );
-        wp_enqueue_style( 'codemirror-style-ept', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-components/codemirror/codemirror.min.css' );
         wp_enqueue_style( 'jquery-ui-fresh-ept', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/jquery-ui-fresh.min.css' );
         add_filter('admin_footer_text', 'dh_ptp_plugin_footer');
     }
