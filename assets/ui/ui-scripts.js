@@ -87,6 +87,13 @@ jQuery(document).ready(function($) {
 	$(".ptp-icon-help-circled").popover();  
 	$(".plan-title #delete-button").popover({placement:'top'});  
 	$(".plan-title .feature-button").popover({placement:'top'});  
+
+	if ( $('.custom-css-setting-textbox').length > 0 ) {
+		$( '.custom-css-setting-textbox' ).each( function(){
+			wp.codeEditor.initialize( $(this), code_mirror)
+		})
+	}
+	
 });
 
 

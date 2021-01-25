@@ -82,7 +82,6 @@ function dh_ptp_metabox_styles_and_scripts() {
         // Jquery lighbox - colorbox
         wp_enqueue_script( 'dh-ptp-colorbox', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-components/colorbox/jquery.colorbox-min.js', array('jquery') );
 
-
         //ui scripts - this file contains all Javascript necessary for the GUI
 	 	wp_enqueue_script( 'ept-ui-script', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-scripts.min.js', array('jquery', 'jquery-ui-tabs', 'wp-color-picker', 'dh-ptp-colorbox') );
 
@@ -95,6 +94,8 @@ function dh_ptp_metabox_styles_and_scripts() {
 		wp_enqueue_style('fontello-icon', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-components/fontello/fontello.min.css' );               
         }
 
+		$codemirror = wp_enqueue_code_editor( [ 'type' => 'text/css', 'codemirror' => [ 'matchBrackets' => true, 'lineNumbers' => true, 'foldGutter' => true, 'gutters' => ['CodeMirror-linenumbers', 'CodeMirror-foldgutter'], 'autoRefresh' => true, 'lineWrapping' => true ] ] );
+		wp_localize_script('ept-ui-script', 'code_mirror', $codemirror);
 }
 
 ?>
