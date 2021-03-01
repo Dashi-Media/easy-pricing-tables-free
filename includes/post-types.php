@@ -4,7 +4,13 @@
  * Register "Pricing Table" post type
  * @return [type] [description]
  */
+
+// EPT CLASSIC
 function dh_ptp_register_pricing_table_post_type() {
+	
+	// check if any legacy pricing tables exist
+
+	$existing_install = dh_ptp_check_existing_install();
 
 	$labels = array(
 	    'name' => __('Pricing Tables', 'easy-pricing-tables'),
@@ -28,7 +34,7 @@ function dh_ptp_register_pricing_table_post_type() {
 	    'exclude_from_search' => true,
 	    'publicly_queryable' => true,
 	    'show_ui' => true, 
-	    'show_in_menu' => true, 
+	    'show_in_menu' => $existing_install, 
 	    'query_var' => true,
 	    'rewrite' => array( 'slug' => 'pricing-table' ),
 	    'capability_type' => 'post',
@@ -106,6 +112,12 @@ function dh_ptp_manage_pricing_table_columns($column_name, $id) {
 // Add to admin_init function
 add_action('manage_easy-pricing-table_posts_custom_column', 'dh_ptp_manage_pricing_table_columns', 10, 2);
 
+// check whether this is a brand new install or has existing legacy tables
+function dh_ptp_check_existing_install (){
+	global $wpdb;
+	$results = $wpdb->get_var( "SELECT COUNT(*) FROM $wpdb->posts WHERE post_type='easy-pricing-table'");
+	return $results ? true : false;
+}
 
 /**
  * Preview functionality.

@@ -1,0 +1,178 @@
+
+/* GENERAL SETTINGS */
+
+.entry .entry-content > div.fca-ept-layout2 > *:first-child{
+	margin-top: auto;
+}
+
+div.fca-ept-layout2 {
+	font-family: sans-serif;
+	display: flex;
+	padding-top: 35px;
+	padding-right: 20px;
+}
+
+div.fca-ept-layout2 div.fca-ept-column {
+	box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.14);
+	border-radius: 24px;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 0%;
+	position: relative;
+	overflow-wrap: break-word;
+	padding-left: 40px;
+	padding-right: 40px;
+	margin: 10px 8px 0 8px;
+	display: grid;
+	grid-template-rows: auto auto auto 1fr auto;
+}
+
+div.fca-ept-layout2 div.fca-ept-column.fca-ept-selected-column {
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 25px 0px;
+}
+
+/* POPULAR */
+div.fca-ept-layout2 div.fca-ept-popular-div{
+	display: none;
+    text-align: left;
+    margin: -1px 0 -11px 0;
+}
+
+div.fca-ept-layout2 .fca-ept-popular-svg{
+	display: none;
+}
+
+div.fca-ept-layout2 .fca-ept-popular-text{
+	display: inline-block;
+    text-transform: uppercase;
+	font-weight: bold;
+	padding: 0 5px;
+}
+
+/* PLAN */
+div.fca-ept-layout2 div.fca-ept-plan-div{
+	font-family: sans-serif;
+	text-align: start;
+}
+
+div.fca-ept-layout2 .fca-ept-plan-svg{
+	display: none;
+}
+
+div.fca-ept-layout2 .fca-ept-plan{
+	word-break: break-all;
+	display: inline;
+	vertical-align: top;
+	font-weight: 600;
+}
+
+div.fca-ept-layout2 .fca-ept-plan-subtext{
+	display: block;
+	margin-top: -13px;
+	width: fit-content;
+}
+
+/* PRICE */
+
+div.fca-ept-layout2 .fca-ept-price-container{
+	padding: 0;
+	margin-top: 20px;
+}
+
+div.fca-ept-layout2 .fca-ept-price{
+	display: inline-block;
+	font-weight: bolder;
+	line-height: 1;
+	margin: 0 10px 0 0;
+}
+
+/* PRICE SUBTEXT CONTAINER */
+div.fca-ept-layout2 .fca-ept-price-subtext{
+	display: block;
+	line-height: 1;
+}
+
+div.fca-ept-layout2 .fca-ept-price-svg{
+	display: none;
+}
+
+div.fca-ept-layout2 div.fca-ept-price-div .fca-ept-price-period{
+	text-transform: unset;
+	font-weight: 500;
+	line-height: 1;
+	margin-top: 10px;
+	display: block;
+	width: fit-content;
+}
+
+div.fca-ept-layout2 div.fca-ept-price-div .fca-ept-price-billing{
+	display: none;
+}
+
+/* FEATURES */
+div.fca-ept-layout2 div.fca-ept-features-div ul{
+	font-family: inherit;
+	letter-spacing: inherit;
+	text-align: start;
+	margin: 35px 0;
+	padding-left: 0;
+	font-weight: 500;
+}
+
+div.fca-ept-layout2 div.fca-ept-features-div .fca-ept-features li{
+	list-style: none;
+	line-height: 2.7;
+	margin: 0;
+}
+
+div.fca-ept-layout2 div.fca-ept-features-div .fca-ept-features li::marker{
+	color: #0f61d8;
+}
+
+
+/* BUTTONS */
+div.fca-ept-layout2 .fca-ept-button{
+	padding: 10px;
+	width:100%;
+	border-radius: 8px;
+	white-space: normal;
+	text-align: center;
+	font-weight: 500;
+	align-self: self-end;
+	text-decoration: none !important;
+	-webkit-appearance: unset;
+}
+
+div.fca-ept-layout2 .fca-ept-button:hover{
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+/* small display */
+
+@media only screen and (max-width: 768px){
+
+	.entry .entry-content > *.alignfull{
+		max-width: unset !important;
+		width: unset !important;
+		min-width: 250px !important;
+	}
+
+	div.fca-ept-layout2 {
+		display: block;
+	}
+
+	/* keep from overlapping with previous column */
+	div.fca-ept-layout2 div.fca-ept-column{
+		margin-top: 15px !important;
+	}
+
+}
+
+body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout2 {
+	display: block;
+}
+
+
+
+
