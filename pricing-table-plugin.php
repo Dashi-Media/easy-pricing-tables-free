@@ -91,10 +91,6 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
     if ($post && $post->post_type == 'easy-pricing-table') {
         wp_enqueue_style( 'jquery-ui-fresh-ept', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/jquery-ui-fresh.min.css' );
         add_filter('admin_footer_text', 'dh_ptp_plugin_footer');
-    } else if ($post && $post->post_type == 'pricing-table-block') {
-		global $post_type;
-		$fullscreen = "window.onload = function() { const isFullscreenMode = wp.data.select( 'core/edit-post' ).isFeatureActive( 'fullscreenMode' ); if ( !isFullscreenMode ) { wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'fullscreenMode' ); } }";
-		$show_admin_bar = "window.onload = function() { const isFullscreenMode = wp.data.select( 'core/edit-post' ).isFeatureActive( 'fullscreenMode' ); if ( isFullscreenMode ) { wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'fullscreenMode' ); } }";
     }
   }
   add_action('admin_enqueue_scripts', 'dh_ptp_plugin_footer_enqueue');
