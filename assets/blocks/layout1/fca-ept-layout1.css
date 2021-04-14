@@ -1,89 +1,94 @@
 
-div.fca-ptp-layout1{
+div.fca-ept-layout1 {
 	display: flex;
-	text-decoration: none;
-	font-family: "NonBreakingSpaceOverride", "Hoefler Text", Garamond, "Times New Roman", serif;
+	font-family: inherit;
 }
 
-div.fca-ptp-layout1 div.fca-ptp-column { 
+div.fca-ept-layout1 div.fca-ept-column { 
+	font-family: inherit;
 	margin-right: 20px;
 	margin-top: 54px;
 	vertical-align: top; 
 	white-space: normal; 
 	width: 100%;
 	border: #ddd solid 1px;
+	border-radius: 4px;
 	display: grid;
 	grid-template-rows: auto auto 1fr auto;
 }
 
-div.fca-ptp-layout1 div.fca-ptp-column.fca-ptp-most-popular { 
+div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular { 
 	grid-template-rows: auto auto auto 1fr auto;
 }
 
-div.fca-ptp-layout1 div.fca-ptp-popular { 
+div.fca-ept-layout1 div.fca-ept-popular { 
+	font-family: inherit;
 	display: none;
 	padding: 0.3em; 
 	text-align: center; 
-	color: #fff; 
 	font-weight: bold; 
 	margin-bottom: 2px; 
 	margin-top: -54px;
+	border-radius: 4px;
 }
 
-div.fca-ptp-layout1 div.fca-ptp-popular.fca-ptp-most-popular { 
-	background-color: #7f8c8d; 
+div.fca-ept-layout1 div.fca-ept-popular.fca-ept-most-popular { 
 	display: block;
 }
 
-div.fca-ptp-layout1 div.fca-ptp-plan{ 
+div.fca-ept-layout1 div.fca-ept-plan-div div.fca-ept-plan{ 
+	font-family: inherit;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	word-break: break-word;
 	text-align: center; 
 	padding: .9375em 1.25em; 
 	font-weight: bold; 
 	font-size: 1em; 
-	background-color: #dddddd; 
-	color: #333333;
 }
 
-div.fca-ptp-layout1 div.fca-ptp-price{
+div.fca-ept-layout1 div.fca-ept-plan-div div.fca-ept-plan-image{
+	text-align: -webkit-center;
+}
+
+div.fca-ept-layout1 div.fca-ept-price{
+	font-family: inherit;
 	text-align: center; 
 	padding: .9375em 1.25em; 
 	font-weight: normal; 
 	font-size: 1.25em; 
-	background-color: #eeeeee; 
-	color: #333333;
 }
 
-div.fca-ptp-layout1 div.fca-ptp-bullet-item{
-	background-color: #fff; 
+div.fca-ept-layout1 div.fca-ept-features-div{
 	text-align: center; 
 	font-size: 0.875em; 
 	font-weight: normal; 
-	color: #333333; 
-	border-bottom: dotted 1px #dddddd; 
 }
 
-div.fca-ptp-layout1 div.fca-ptp-bullet-item ul{
+div.fca-ept-layout1 div.fca-ept-features-div ul{
 	font-family: inherit;
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
 
-div.fca-ptp-layout1 li{
+div.fca-ept-layout1 div.fca-ept-features-div li{
+	font-family: inherit;
 	padding: .9375em .5em .9375em .5em;
 	border-bottom: dotted 1px #ddd;
 }
 
-div.fca-ptp-layout1 div.fca-ptp-cta{ 
+div.fca-ept-layout1 div.fca-ept-button-div{ 
+	font-family: inherit;
 	text-align: center; 
-	background-color: #F5F5F5; 
 	padding-top: 1.25em; 
 	padding-bottom: 1.25em; 
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
 }
 
-div.fca-ptp-layout1 a.fca-ptp-button{
+div.fca-ept-layout1 a.fca-ept-button{
 	cursor: pointer;
-	font-family: inherit;
 	position: relative;
 	font-weight: bold;
 	padding: 16px 10px 10px 10px;
@@ -98,6 +103,7 @@ div.fca-ptp-layout1 a.fca-ptp-button{
 	border-top: 0px;
 	border-left: 0px;
 	border-right: 0px;
+	border-radius: 4px;
 
 	/* from zurb */
 	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
@@ -107,18 +113,18 @@ div.fca-ptp-layout1 a.fca-ptp-button{
 	transition: background-color 300ms ease-out;
 }
 
-div.fca-ptp-layout1 div.fca-ptp-column.fca-ptp-selected-column {
+div.fca-ept-layout1 div.fca-ept-column.fca-ept-selected-column {
 	box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 25px 0px;
 }
 
 /* smart phones */
 @media only screen and (max-width: 765px) {
 
-	div.fca-ptp-layout1{
+	div.fca-ept-layout1{
 		display: block;
 	}
 
-	div.fca-ptp-layout1 div.fca-ptp-column.fca-ptp-most-popular { 
+	div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular { 
 		margin-top:100px;
 	}
 	
