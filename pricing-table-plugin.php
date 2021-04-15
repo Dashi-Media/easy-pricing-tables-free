@@ -30,6 +30,9 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 	// Include EPT3 Gutenberg block
 	include ( PTP_PLUGIN_PATH . 'includes/ept-block.php' );
 
+	// Upgrade to Premium
+	include ( PTP_PLUGIN_PATH . 'includes/upgrade.php');
+
 	// only if legacy tables are available, include the rest
 	if( dh_ptp_check_existing_install() ){
 
@@ -44,9 +47,6 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 
 		// Include pointer popups
 		include ( PTP_PLUGIN_PATH . 'includes/pointer.php');
-
-		// Upgrade to Premium
-		include ( PTP_PLUGIN_PATH . 'includes/upgrade.php');
 
 		// Include Gutenberg support
 		include ( PTP_PLUGIN_PATH . 'includes/block.php');

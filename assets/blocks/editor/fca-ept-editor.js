@@ -1,5 +1,6 @@
+var wp = window.wp
 var el = wp.element.createElement
-var $ = jQuery
+var $ = window.jQuery
 
 var fca_ept_allowed_formats = [
 	'core/bold', 
@@ -155,9 +156,9 @@ function fca_ept_main_edit( props ) {
 					el('div', {
 						className: 'layout-name'
 					},
-						el( 'svg', {
+						el( 'img', {
 							className: 'layout1',
-							role: 'img',
+							src: fca_ept_data.directory + '/assets/blocks/layout1/screenshot.png',
 							onClick: function() {
 								props.setAttributes( { tableID: fca_ept_generate_id( props ) })
 								fca_ept_set_layout1_attributes( props )
@@ -169,9 +170,9 @@ function fca_ept_main_edit( props ) {
 					el( 'div', {
 						className: 'layout-name',
 					},
-						el( 'svg', {
+						el( 'img', {
 							className: 'layout2',
-							role: 'img',
+							src: fca_ept_data.directory + '/assets/blocks/layout2/screenshot.png',
 							onClick: function() { 
 								props.setAttributes( { tableID: fca_ept_generate_id( props ) })
 								fca_ept_set_layout2_attributes( props )
@@ -183,10 +184,9 @@ function fca_ept_main_edit( props ) {
 					el( 'div', {
 						className: 'layout-name',
 					},
-						el( 'svg', {
-							style: { filter: 'grayscale(100%)' },
+						el( 'img', {
 							className: 'layout3',
-							role: 'img',
+							src: fca_ept_data.directory + '/assets/blocks/layout3/screenshot.png',
 							onClick: function() { 
 								alert( 'This layout is only available in Easy Pricing Tables Premium!' )
 							}
@@ -197,10 +197,9 @@ function fca_ept_main_edit( props ) {
 					el( 'div', {
 						className: 'layout-name',
 					},
-						el( 'svg', {
-							style: { filter: 'grayscale(100%)' },
+						el( 'img', {
 							className: 'layout4',
-							role: 'img',
+							src: fca_ept_data.directory + '/assets/blocks/layout4/screenshot.png',
 							onClick: function() { 
 								alert( 'This layout is only available in Easy Pricing Tables Premium!' )
 							}
@@ -211,18 +210,17 @@ function fca_ept_main_edit( props ) {
 					el( 'div', {
 						className: 'layout-name',
 					},
-						el( 'svg', {
-							style: { filter: 'grayscale(100%)' },
+						el( 'img', {
 							className: 'layout5',
-							role: 'img',
+							src: fca_ept_data.directory + '/assets/blocks/layout5/screenshot.png',
 							onClick: function() { 
 								alert( 'This layout is only available in Easy Pricing Tables Premium!' )
 							}
 							
 						}),
-					'Layout5' ),
-				),
-			), // end div
+					'Layout5' )
+				)
+			) // end div
 		)
 	} // end else
 }
@@ -425,7 +423,7 @@ function fca_ept_sidebar_settings( props ){
 						props.setAttributes( { selectedLayout: '' } ) 
 					} )
 				},
-					'Choose a different layout',
+					'Choose a different layout'
 				)
 
 			),
@@ -439,7 +437,7 @@ function fca_ept_sidebar_settings( props ){
 					el( 'li', { },
 
 						el( 'div', {
-							className: 'dashicons dashicons-yes' },
+							className: 'dashicons dashicons-yes' }
 						), 'More beautiful layouts'
 
 					),
@@ -447,7 +445,7 @@ function fca_ept_sidebar_settings( props ){
 					el( 'li', { },
 
 						el( 'div', {
-							className: 'dashicons dashicons-yes' },
+							className: 'dashicons dashicons-yes' }
 						), 'Add images to your tables'
 
 					),
@@ -455,7 +453,7 @@ function fca_ept_sidebar_settings( props ){
 					el( 'li', { },
 
 						el( 'div', {
-							className: 'dashicons dashicons-yes' },
+							className: 'dashicons dashicons-yes' }
 						), 'Comparison tables'
 
 					),
@@ -463,7 +461,7 @@ function fca_ept_sidebar_settings( props ){
 					el( 'li', { },
 
 						el( 'div', {
-							className: 'dashicons dashicons-yes' },
+							className: 'dashicons dashicons-yes' }
 						), 'WooCommerce integration'
 
 					),
@@ -471,7 +469,7 @@ function fca_ept_sidebar_settings( props ){
 					el( 'li', { },
 
 						el( 'div', {
-							className: 'dashicons dashicons-yes' },
+							className: 'dashicons dashicons-yes' }
 						), 'More customization options'
 
 					),
@@ -479,7 +477,7 @@ function fca_ept_sidebar_settings( props ){
 					el( 'li', { },
 
 						el( 'div', {
-							className: 'dashicons dashicons-yes' },
+							className: 'dashicons dashicons-yes' }
 						), 'Fast & friendly email support'
 
 					),
@@ -505,10 +503,12 @@ function fca_ept_sidebar_settings( props ){
 function fca_ept_increase_fontsize ( props ){
 	var section = props.attributes.selectedSection
 	var fontSizeStr = eval( 'props.attributes.' + section + 'FontSize' ).toString()
-	var fontSizeAttr = section + 'FontSize'
+	var fontSizeAttr = section + 'FontSize' 
+	var fontsize = ( Number( fontSizeStr.slice( 0,-3 ) ) ) + 0.0625
 
-	fontsize = ( Number( fontSizeStr.slice( 0,-3 ) ) ) + 0.0625
-	props.setAttributes( { [fontSizeAttr]: fontsize + 'rem' } )
+	var fontSizeObj = JSON.parse( '{"' + fontSizeAttr + '": "' + fontsize + 'rem"' + '}' )
+
+	props.setAttributes( fontSizeObj )
 
 }
 
@@ -516,9 +516,11 @@ function fca_ept_decrease_fontsize ( props ){
 	var section = props.attributes.selectedSection
 	var fontSizeStr = eval( 'props.attributes.' + section + 'FontSize' ).toString()
 	var fontSizeAttr = section + 'FontSize'
+ 	var fontsize = ( Number( fontSizeStr.slice( 0,-3 ) ) ) - 0.0625
 
- 	fontsize = ( Number( fontSizeStr.slice( 0,-3 ) ) ) - 0.0625
-	props.setAttributes( { [fontSizeAttr]: fontsize + 'rem' } )
+ 	var fontSizeObj = JSON.parse( '{"' + fontSizeAttr + '": "' + fontsize + 'rem"' + '}' )
+
+	props.setAttributes( fontSizeObj )
 
 }
 
@@ -557,30 +559,32 @@ function fca_ept_select_column ( props, id ) {
 	})
 	$( '.fca-ept-column' )[id].classList.add( 'fca-ept-selected-column' )
 
-	columnSettings[id].columnPopular ? props.setAttributes ( { popularToolbarIcon: 'star-filled' } ) : props.setAttributes ( { popularToolbarIcon: 'star-empty' } )
-
+	if( columnSettings[id].columnPopular ){
+		props.setAttributes ( { popularToolbarIcon: 'star-filled' } )
+	} else {
+		 props.setAttributes ( { popularToolbarIcon: 'star-empty' } )
+	}
 }
 
 function fca_ept_move_column ( props, direction ) {
 
 	var columnSettings = JSON.parse( props.attributes.columnSettings )
 	var selectedCol = parseInt( props.attributes.selectedCol )
+	var fromPosition = selectedCol
+	var columnData = columnSettings.splice( fromPosition, 1 )[0]
+	var toPosition = selectedCol + 1
 
-	if ( direction === 'left' && selectedCol !== 0 ){
-		var fromPosition = selectedCol
-		var toPosition = fromPosition - 1
+	if ( direction === 'left' ){
+		toPosition = selectedCol -1 < 0 ? columnSettings.length : selectedCol -1
 	}
-	if ( direction === 'right' && selectedCol < ( columnSettings.length - 1 ) ){
-		var fromPosition = selectedCol
-		var toPosition = fromPosition + 1
+	if ( direction === 'right' ){
+		toPosition = selectedCol +1 > columnSettings.length ? 0 : selectedCol +1
 	}
 
-	if ( fromPosition || toPosition ){
-		var columnData = columnSettings.splice( fromPosition, 1 )[0]
-		columnSettings.splice( toPosition, 0, columnData )
-		props.setAttributes( { columnSettings: JSON.stringify( columnSettings ) } )
-		fca_ept_select_column( props, toPosition )
-	}
+	columnSettings.splice( toPosition, 0, columnData )
+	props.setAttributes( { columnSettings: JSON.stringify( columnSettings ) } )
+	fca_ept_select_column( props, toPosition )
+
 }
 
 function fca_ept_add_column ( props ) {
@@ -767,8 +771,4 @@ function fca_ept_toolbar_controls( props ){
 		})
 	))
 }
-
-
-
-
 

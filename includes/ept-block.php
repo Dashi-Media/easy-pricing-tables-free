@@ -5,6 +5,11 @@ function fca_ept_register_block() {
 	// MAIN
 	wp_register_script( 'fca_ept_editor_script', PTP_PLUGIN_URL . '/assets/blocks/editor/fca-ept-editor.min.js', array( 'wp-blocks', 'wp-element', 'fca_ept_layout2_script', 'fca_ept_layout1_script' ), PTP_PLUGIN_VER );
 	wp_register_style( 'fca-ept-editor-style', PTP_PLUGIN_URL . '/assets/blocks/editor/fca-ept-editor.min.css', PTP_PLUGIN_VER );
+	
+	$data = array( 
+		'directory' => PTP_PLUGIN_URL
+	);
+	wp_localize_script( 'fca_ept_editor_script', 'fca_ept_data', $data );
 
 	// LAYOUT2
 	wp_register_script( 'fca_ept_layout2_script', PTP_PLUGIN_URL . '/assets/blocks/layout2/fca-ept-layout2.min.js', array( 'wp-blocks', 'wp-element' ), PTP_PLUGIN_VER );
@@ -14,16 +19,11 @@ function fca_ept_register_block() {
 	wp_register_script( 'fca_ept_layout1_script', PTP_PLUGIN_URL . '/assets/blocks/layout1/fca-ept-layout1.min.js', array( 'wp-blocks', 'wp-element' ), PTP_PLUGIN_VER );
 	wp_register_style( 'fca-ept-layout1-style', PTP_PLUGIN_URL . '/assets/blocks/layout1/fca-ept-layout1.min.css', PTP_PLUGIN_VER );
 
-	// FRONTEND
-	wp_register_script(	'fca_ept_frontend',	PTP_PLUGIN_URL . '/assets/blocks/frontend/fca-ept-frontend.min.js', array( 'jquery' ), PTP_PLUGIN_VER	);
-	wp_register_style( 'fca-ept-frontend-style', PTP_PLUGIN_URL . '/assets/blocks/frontend/fca-ept-frontend.min.css', PTP_PLUGIN_VER );
-
 	if ( function_exists( 'register_block_type' ) ) {
 		register_block_type( 'fatcatapps/easy-pricing-tables',	array(
 			'editor_script' => 'fca_ept_editor_script',
 			'editor_style' => 'fca-ept-editor-style',
-			'style' => array( 'fca-ept-layout1-style', 'fca-ept-layout2-style', 'fca-ept-frontend-style' ),
-			'script' => array( 'fca_ept_frontend' ),
+			'style' => array( 'fca-ept-layout1-style', 'fca-ept-layout2-style' ),
 			'render_callback' => 'fca_ept_render',
 		));
 	}
@@ -69,7 +69,7 @@ function fca_ept_render_layout1( $attributes ){
 	$layoutBGTint3 = empty( $attributes['layoutBGTint3'] ) ? '#dddddd' : ( $attributes['layoutBGTint3'] );
 	$layoutBGTint4 = empty( $attributes['layoutBGTint4'] ) ? '#7f8c8d' : ( $attributes['layoutBGTint4'] );
 	$layoutFontColor = empty( $attributes['layoutFontColor'] ) ? '#333333' : ( $attributes['layoutFontColor'] );
-	$buttonColor = $toggleColor = empty( $attributes['buttonColor'] ) ? '#3498db' : ( $attributes['buttonColor'] );
+	$buttonColor = empty( $attributes['buttonColor'] ) ? '#3498db' : ( $attributes['buttonColor'] );
 	$buttonFontColor = empty( $attributes['buttonFontColor'] ) ? '#fff' : ( $attributes['buttonFontColor'] );
 	$accentColor = empty( $attributes['accentColor'] ) ? '#e74c3c' : ( $attributes['accentColor'] );
 
@@ -79,7 +79,6 @@ function fca_ept_render_layout1( $attributes ){
 	$priceFontSize = empty( $attributes['priceFontSize'] ) ? '28px' : ( $attributes['priceFontSize'] );
 	$featuresFontSize = empty( $attributes['featuresFontSize'] ) ? '20px' : ( $attributes['featuresFontSize'] );
 	$buttonFontSize = empty( $attributes['buttonFontSize'] ) ? '22px' : ( $attributes['buttonFontSize'] );
-	$toggleFontSize = empty( $attributes['toggleFontSize'] ) ? '18px' : ( $attributes['toggleFontSize'] );
 
 	/* SETTINGS */
 	$fontFamily = empty( $attributes['fontFamily'] ) ? 'sans-serif' : $attributes['fontFamily'];
@@ -88,28 +87,12 @@ function fca_ept_render_layout1( $attributes ){
 	$popularText = empty( $attributes['popularText'] ) ? 'Most Popular' : ( $attributes['popularText'] );
 	$showButtons = empty( $attributes['showButtons'] ) ? 'block' : ( $attributes['showButtons'] );
 	$urlTarget = empty( $attributes['urlTarget'] ) ? 'https://www.fatcatapps.com' : ( $attributes['urlTarget'] );
-	$showToggle = empty( $attributes['togglePeriodToggle'] ) ? 'none' : 'block';
-	$togglePeriod = empty( $attributes['togglePeriod'] ) ? false : $attributes['togglePeriod'];
-	$togglePeriodText1 = empty( $attributes['togglePeriodText1'] ) ? 'Monthly' : $attributes['togglePeriodText1'];
-	$togglePeriodText2 = empty( $attributes['togglePeriodText2'] ) ? 'Yearly' : $attributes['togglePeriodText2'];
 
 	ob_start(); 
 
 	?>
 
 	<div style="display: contents; font-family: <?php echo $fontFamily ?>" class='fca-ept-main' id=<?php echo 'fca-ept-table-' . $tableID ?>>
-
-		<div style="display: <?php echo $showToggle ?>" class="fca-ept-toggle-period-container">
-			<?php echo $togglePeriodText1 ?>
-
-			<label class="fca-ept-switch">
-				<input type="checkbox" class="fca-ept-period-toggle">
-			 	<span style="background-color: <?php echo $toggleColor ?>" class="fca-ept-slider fca-ept-round"></span>
-			</label>
-
-			<?php echo $togglePeriodText2 ?>
-		</div>
-
 
 		<div style="align-items: <?php echo $columnHeight ?>" class="wp-block-fatcatapps-pricing-table-blocks align<?php echo $align ?> fca-ept-layout1">
 
@@ -123,11 +106,8 @@ function fca_ept_render_layout1( $attributes ){
 
 			//Integrations
 			$planText1 = $column['planText1'];
-			$planText2 = $column['planText2'];
 			$priceText1 = $column['priceText1'];
-			$priceText2 = $column['priceText2'];
 			$buttonURL1 = $column['buttonURL1'];
-			$buttonURL2 = $column['buttonURL2'];
 
 			$featuresText = $column['featuresText'] ? $column['featuresText'] : '' ;
 			$buttonText = $column['buttonText'] ? $column['buttonText'] : ' ' ;
@@ -143,11 +123,11 @@ function fca_ept_render_layout1( $attributes ){
 
 				<div class="fca-ept-plan-div" style="background-color: <?php echo $layoutBGTint3 ?>">
 
-					<div style="font-size: <?php echo $planFontSize ?>; color: <?php echo $layoutFontColor ?>; background-color: <?php echo $layoutBGTint3 ?>" class="fca-ept-plan" data-plan1="<?php echo $planText1 ?>" data-plan2="<?php echo $planText2 ?>"></div>
+					<div style="font-size: <?php echo $planFontSize ?>; color: <?php echo $layoutFontColor ?>; background-color: <?php echo $layoutBGTint3 ?>" class="fca-ept-plan"><?php echo $planText1 ?></div>
 
 				</div>
 
-				<div style="font-size: <?php echo $priceFontSize ?>; color: <?php echo $layoutFontColor ?>; background-color: <?php echo $layoutBGTint2 ?>" class="fca-ept-price" data-price1="<?php echo $priceText1 ?>" data-price2="<?php echo $priceText2 ?>"></div>
+				<div style="font-size: <?php echo $priceFontSize ?>; color: <?php echo $layoutFontColor ?>; background-color: <?php echo $layoutBGTint2 ?>" class="fca-ept-price"><?php echo $priceText1 ?></div>
 
 				<div style="font-size: <?php echo $featuresFontSize ?>; color: <?php echo $layoutFontColor ?>; background-color: <?php echo $layoutBGColor ?>" class="fca-ept-features-div">
 
@@ -157,7 +137,7 @@ function fca_ept_render_layout1( $attributes ){
 
 				<div style="display: <?php echo $showButtons ?>; background-color: <?php echo $layoutBGTint2 ?>" class="fca-ept-button-div">
 
-					<a style="font-size: <?php echo $buttonFontSize ?>; color: <?php echo $buttonFontColor ?>;" href="<?php echo $buttonURL1 ?>" class="fca-ept-button" data-url1="<?php echo $buttonURL1 ?>" data-url2="<?php echo $buttonURL2 ?>"><?php echo $buttonText ?></a>
+					<a style="font-size: <?php echo $buttonFontSize ?>; color: <?php echo $buttonFontColor ?>;" href="<?php echo $buttonURL1 ?>" class="fca-ept-button"><?php echo $buttonText ?></a>
 
 				</div>
 
@@ -197,7 +177,7 @@ function fca_ept_render_layout2( $attributes ){
 	$popularBGColor = empty( $attributes['popularBGColor'] ) ? 'rgba(98,54,255,0.8)' : ( $attributes['popularBGColor'] );
 	$layoutBGColor = empty( $attributes['layoutBGColor'] ) ? '#f2f2f2' : ( $attributes['layoutBGColor'] );
 	$layoutFontColor = empty( $attributes['layoutFontColor'] ) ? '#000' : ( $attributes['layoutFontColor'] );
-	$buttonColor = $toggleColor = empty( $attributes['buttonColor'] ) ? '#6236ff' : ( $attributes['buttonColor'] );
+	$buttonColor = empty( $attributes['buttonColor'] ) ? '#6236ff' : ( $attributes['buttonColor'] );
 	$buttonFontColor = empty( $attributes['buttonFontColor'] ) ? '#fff' : ( $attributes['buttonFontColor'] );
 	$accentColor = empty( $attributes['accentColor'] ) ? '#6236ff' : ( $attributes['accentColor'] );
 
@@ -209,7 +189,6 @@ function fca_ept_render_layout2( $attributes ){
 	$pricePeriodFontSize = empty( $attributes['pricePeriodFontSize'] ) ? '16px' : ( $attributes['pricePeriodFontSize'] );
 	$featuresFontSize = empty( $attributes['featuresFontSize'] ) ? '20px' : ( $attributes['featuresFontSize'] );
 	$buttonFontSize = empty( $attributes['buttonFontSize'] ) ? '24px' : ( $attributes['buttonFontSize'] );
-	$toggleFontSize = empty( $attributes['toggleFontSize'] ) ? '18px' : ( $attributes['toggleFontSize'] );
 
 	/* SETTINGS */
 	$fontFamily = empty( $attributes['fontFamily'] ) ? 'sans-serif' : $attributes['fontFamily'];
@@ -220,28 +199,12 @@ function fca_ept_render_layout2( $attributes ){
 	$showPriceSubtext = empty( $columnSettings ) ? 'block' : ( count($columnSettings) > 1 ? 'block' : 'none' );
 	$showButtons = empty( $attributes['showButtons'] ) ? 'block' : ( $attributes['showButtons'] );
 	$urlTarget = empty( $attributes['urlTarget'] ) ? 'https://www.fatcatapps.com' : ( $attributes['urlTarget'] );
-	$showToggle = empty( $attributes['togglePeriodToggle'] ) ? 'none' : 'block';
-	$togglePeriod = empty( $attributes['togglePeriod'] ) ? false : $attributes['togglePeriod'];
-	$togglePeriodText1 = empty( $attributes['togglePeriodText1'] ) ? 'Monthly' : $attributes['togglePeriodText1'];
-	$togglePeriodText2 = empty( $attributes['togglePeriodText2'] ) ? 'Yearly' : $attributes['togglePeriodText2'];
 
 	ob_start(); 
 
 	?>
 
 	<div style="display: contents; font-family: <?php echo $fontFamily ?>" class='fca-ept-main' id=<?php echo 'fca-ept-table-' . $tableID ?>>
-
-		<div style="display: <?php echo $showToggle ?>" class="fca-ept-toggle-period-container">
-			<?php echo $togglePeriodText1 ?>
-
-			<label class="fca-ept-switch">
-				<input type="checkbox" class="fca-ept-period-toggle">
-			 	<span style="background-color: <?php echo $toggleColor ?>" class="fca-ept-slider fca-ept-round"></span>
-			</label>
-			
-			<?php echo $togglePeriodText2 ?>
-		</div>
-
 
 		<div style="text-decoration:none; align-items:<?php echo $columnHeight ?>;" class="wp-block-fatcatapps-pricing-table-blocks align<?php echo $align ?> fca-ept-layout2">
 				
@@ -259,15 +222,11 @@ function fca_ept_render_layout2( $attributes ){
 			$columnBorder = $columnPopular ? '2px solid ' . $accentColor : '0px solid';
 
 			$planText1 = $column['planText1'];
-			$planText2 = $column['planText2'];
 			$priceText1 = $column['priceText1'];
-			$priceText2 = $column['priceText2'];
 			$buttonURL1 = $column['buttonURL1'];
-			$buttonURL2 = $column['buttonURL2'];
 
 			$planSubText = $column['planSubText'] ? $column['planSubText'] : '';
 			$pricePeriod1 = $column['pricePeriod1'] ? $column['pricePeriod1'] : '';
-			$pricePeriod2 = $column['pricePeriod2'] ? $column['pricePeriod2'] : '';
 			$featuresText = $column['featuresText'] ? $column['featuresText'] : '';
 			$buttonText = $column['buttonText'] ? $column['buttonText'] : '';
 
@@ -283,7 +242,7 @@ function fca_ept_render_layout2( $attributes ){
 			
 				<div class="fca-ept-plan-div">
 
-					<span style="font-size:<?php echo $planFontSize ?>; color:<?php echo $accentColor ?>" class="fca-ept-plan" data-plan1="<?php echo $planText1 ?>" data-plan2="<?php echo $planText2 ?>"></span>
+					<span style="font-size:<?php echo $planFontSize ?>; color:<?php echo $accentColor ?>" class="fca-ept-plan"><?php echo $planText1 ?></span>
 			
 					<span style="font-size:<?php echo $planSubtextFontSize ?>; color:<?php echo $layoutFontColor ?>;" class="fca-ept-plan-subtext"><?php echo $planSubText ?></span>
 			
@@ -293,13 +252,13 @@ function fca_ept_render_layout2( $attributes ){
 			
 					<div class="fca-ept-price-container">
 			
-						<span style="font-size: <?php echo $priceFontSize ?>; color:<?php echo $layoutFontColor ?>" class="fca-ept-price" data-price1="<?php echo $priceText1 ?>" data-price2="<?php echo $priceText2 ?>"></span>
+						<span style="font-size: <?php echo $priceFontSize ?>; color:<?php echo $layoutFontColor ?>" class="fca-ept-price"><?php echo $priceText1 ?></span>
 			
 						<div style="display: <?php echo $showPriceSubtext ?>" class="fca-ept-price-subtext">
 			
 							<svg class="fca-ept-price-svg" style="background-color:<?php echo $buttonColor ?>"></svg>
 			
-							<span style="font-size:<?php echo $pricePeriodFontSize ?>; color:<?php echo $layoutFontColor ?>" class="fca-ept-price-period" data-period1="<?php echo $pricePeriod1 ?>" data-period2="<?php echo $pricePeriod2 ?>"></span>
+							<span style="font-size:<?php echo $pricePeriodFontSize ?>; color:<?php echo $layoutFontColor ?>" class="fca-ept-price-period"><?php echo $pricePeriod1 ?></span>
 			
 						</div>
 			
@@ -317,7 +276,7 @@ function fca_ept_render_layout2( $attributes ){
 			
 				</div>
 			
-				<a style="display:<?php echo $showButtons ?>; font-size:<?php echo $buttonFontSize ?>; color:<?php echo $buttonFontColor ?>; background-color:<?php echo $buttonColor ?>" href="<?php echo $buttonURL1 ?>" class="fca-ept-button" data-url1="<?php echo $buttonURL1 ?>" data-url2="<?php echo $buttonURL2 ?>" target="<?php echo $urlTarget ?>" rel="noopener noreferrer"><span class="fca-ept-button-text"><?php echo $buttonText ?> </span></a>
+				<a style="display:<?php echo $showButtons ?>; font-size:<?php echo $buttonFontSize ?>; color:<?php echo $buttonFontColor ?>; background-color:<?php echo $buttonColor ?>" href="<?php echo $buttonURL1 ?>" class="fca-ept-button" target="<?php echo $urlTarget ?>" rel="noopener noreferrer"><span class="fca-ept-button-text"><?php echo $buttonText ?> </span></a>
 			
 			</div>
 		

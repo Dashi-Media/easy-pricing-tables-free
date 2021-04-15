@@ -1,17 +1,25 @@
 
-div.fca-ept-layout-selection svg{
+div.fca-ept-layout-selection img{
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: 10px;
     background-position-x: center;
     background-position-y: bottom;
-   	min-width: 400px;
-    min-height: 280px;
+   	max-width: 400px;
+    max-height: 280px;
     box-shadow: none;
 }
 
-div.fca-ept-layout-selection svg:hover{
+div.fca-ept-layout-selection img:hover{
 	outline: 2px dashed #2b78e4;
+}
+
+div.fca-ept-layout-selection .layout3, div.fca-ept-layout-selection .layout4, div.fca-ept-layout-selection .layout5{
+	filter: grayscale(100%);
+}
+
+div.fca-ept-layout-selection .layout3:hover, div.fca-ept-layout-selection .layout4:hover, div.fca-ept-layout-selection .layout5:hover{
+	filter: grayscale(0%);
 }
 
 div.fca-ept-layout-selection .layout-title {
@@ -38,24 +46,25 @@ div.fca-ept-layout-selection .layout-name {
 	margin-bottom: 20px;
 }
 
+/*
 div.fca-ept-layout-selection .layout1 {
-	background-image: url('layout1/screenshot.png');
+	background-image: url('../layout1/screenshot.png');
 }
-
+*/
 div.fca-ept-layout-selection .layout2 {
-	background-image: url('layout2/screenshot.png');
+	background-image: url('../layout2/screenshot.png');
 }
 
 div.fca-ept-layout-selection .layout3 {
-	background-image: url('layout3/screenshot.png');
+	background-image: url('../layout3/screenshot.png');
 }
 
 div.fca-ept-layout-selection .layout4 {
-	background-image: url('layout4/screenshot.png');
+	background-image: url('../layout4/screenshot.png');
 }
 
 div.fca-ept-layout-selection .layout5 {
-	background-image: url('layout5/screenshot.png');
+	background-image: url('../layout5/screenshot.png');
 }
 
 
@@ -98,29 +107,6 @@ div.fca-ept-sidebar-url {
 div.fca-ept-sidebar-url label {
 	font-weight: 500;
 	width: 100%;
-}
-
-button.fca-ept-import-data-button {
-	display: block;
-	width:100%;
-	background-color: #3274b7;
-	color: white;
-	height: 30px;
-	border-radius: 2px;
-	margin-top: -3px;
-    margin-bottom: 10px;
-	border: 1px solid grey;
-	white-space: normal;
-	text-align: center;
-	font-weight: 500;
-	align-self: self-end;
-	text-decoration: none !important;
-	-webkit-appearance: unset;
-}
-
-button.fca-ept-import-data-button:hover {
-	background-color: #6693c1;
-	color: white;
 }
 
 button.fca-ept-unlink-data-button {

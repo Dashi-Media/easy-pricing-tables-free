@@ -1,5 +1,6 @@
+var wp = window.wp
 var el = wp.element.createElement
-var $ = jQuery
+var $ = window.jQuery
 
 var fca_ept_layout2_presetColors = [
 	{
@@ -57,7 +58,6 @@ function fca_ept_set_layout2_attributes( props ) {
 
 function fca_ept_layout2_block_edit( props ) {
 	
-	var $ = jQuery
 	var columnSettings = JSON.parse( props.attributes.columnSettings )
 	var selectedLayout = props.attributes.selectedLayout
 	var selectedCol = props.attributes.selectedCol
@@ -150,7 +150,7 @@ function fca_ept_layout2_block_edit( props ) {
 								}),
 								onChange: ( function( newValue ) { 
 									var columnSettingsData = Array.from( columnSettings )
-									columnSettingsData[props.attributes.selectedCol].planText1 = newValue
+									columnSettingsData[selectedCol].planText1 = newValue
 									props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
 								})
 							}),
@@ -173,7 +173,7 @@ function fca_ept_layout2_block_edit( props ) {
 								},
 								onChange: function( newValue ) { 
 									var columnSettingsData = Array.from( columnSettings )
-									columnSettingsData[props.attributes.selectedCol].planSubText = newValue
+									columnSettingsData[selectedCol].planSubText = newValue
 									props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
 								}
 							})
@@ -204,7 +204,7 @@ function fca_ept_layout2_block_edit( props ) {
 									}),
 									onChange: ( function( newValue ) { 
 										var columnSettingsData = Array.from( columnSettings )
-										columnSettingsData[props.attributes.selectedCol].priceText1 = newValue
+										columnSettingsData[selectedCol].priceText1 = newValue
 										props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
 									})
 								}),
@@ -236,7 +236,7 @@ function fca_ept_layout2_block_edit( props ) {
 										}),
 										onChange: ( function( newValue ) { 
 											var columnSettingsData = Array.from( columnSettings )
-											columnSettingsData[props.attributes.selectedCol].pricePeriod1 = newValue
+											columnSettingsData[selectedCol].pricePeriod1 = newValue
 											props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
 										})
 									}),
@@ -254,7 +254,7 @@ function fca_ept_layout2_block_edit( props ) {
 										value: columnSettings[i].priceBilling1, 
 										onChange: ( function( newValue ) { 
 											var columnSettingsData = Array.from( columnSettings )
-											columnSettingsData[props.attributes.selectedCol].priceBilling1 = newValue
+											columnSettingsData[selectedCol].priceBilling1 = newValue
 											props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
 										})
 									})
@@ -283,7 +283,7 @@ function fca_ept_layout2_block_edit( props ) {
 								}),
 								onChange: ( function( newValue ) { 
 									var columnSettingsData = Array.from( columnSettings )
-									columnSettingsData[props.attributes.selectedCol].featuresText = newValue
+									columnSettingsData[selectedCol].featuresText = newValue
 									props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
 								})
 							})
@@ -310,7 +310,7 @@ function fca_ept_layout2_block_edit( props ) {
 								value: columnSettings[i].buttonText, 
 								onChange: ( function( newValue ) { 
 									var columnSettingsData = Array.from( columnSettings )
-									columnSettingsData[props.attributes.selectedCol].buttonText = newValue
+									columnSettingsData[selectedCol].buttonText = newValue
 									props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } ) 
 								})
 							})
@@ -324,7 +324,7 @@ function fca_ept_layout2_block_edit( props ) {
 
 function fca_ept_layout2_additional_styles( props ){
 
-	id = props.attributes.tableID
+	var id = props.attributes.tableID
 
 	$(id).remove()
 
