@@ -1,7 +1,8 @@
 $ = jQuery
 $(document).ready(function(){
 
-	if( fca_ept.id == 'easy-pricing-table' ){
+	if( fca_ept.id == 'edit-easy-pricing-table' ){
+
 		// hide notice until loaded
 		$('#fca-ept-setup-notice').css('display', 'block')
 
@@ -9,9 +10,7 @@ $(document).ready(function(){
 		$('#fca-ept-hide-notice').click( function(){
 			$('.notice-dismiss').click()
 		})
-	}
 
-	if( fca_ept.id == 'edit-easy-pricing-table' ){
 		// editor page Add New url
 		$('.page-title-action').click( function( event ){
 			event.preventDefault()
