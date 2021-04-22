@@ -8,13 +8,15 @@ $(document).ready(function(){
 
 		// set 'skip for now' to close screen
 		$('#fca-ept-hide-notice').click( function(){
+			// never show again and close this
+			$forever_dismiss = window.location.href + '&dh_ptp_forever_dismiss_notice'
+			window.location = $forever_dismiss
 			$('.notice-dismiss').click()
 		})
 
 		// editor page Add New url
 		$('.page-title-action').click( function( event ){
 			event.preventDefault()
-			console.log(window.location.href)
 			$try_gutenberg = window.location.href + '&dh_ptp_try_gutenberg'
 			window.location = $try_gutenberg
 		})

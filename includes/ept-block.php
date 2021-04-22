@@ -45,7 +45,7 @@ function fca_ept_get_block_html_ajax( ){
 
 function fca_ept_render( $attributes ) {
 	
-	$selectedLayout = empty( $attributes['selectedLayout'] ) ? 'layout2' : $attributes['selectedLayout'];
+	$selectedLayout = empty( $attributes['selectedLayout'] ) ? '' : $attributes['selectedLayout'];
 
 	switch ( $selectedLayout ) {
 		
@@ -69,7 +69,6 @@ function fca_ept_render_layout1( $attributes ){
 	$layoutBGTint3 = empty( $attributes['layoutBGTint3'] ) ? '#dddddd' : ( $attributes['layoutBGTint3'] );
 	$layoutBGTint4 = empty( $attributes['layoutBGTint4'] ) ? '#7f8c8d' : ( $attributes['layoutBGTint4'] );
 	$layoutFontColor = empty( $attributes['layoutFontColor'] ) ? '#333333' : ( $attributes['layoutFontColor'] );
-	$buttonColor = empty( $attributes['buttonColor'] ) ? '#3498db' : ( $attributes['buttonColor'] );
 	$buttonFontColor = empty( $attributes['buttonFontColor'] ) ? '#fff' : ( $attributes['buttonFontColor'] );
 	$accentColor = empty( $attributes['accentColor'] ) ? '#e74c3c' : ( $attributes['accentColor'] );
 

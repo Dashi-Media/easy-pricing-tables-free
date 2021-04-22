@@ -146,79 +146,99 @@ function fca_ept_main_edit( props ) {
 			el( 'div', { 
 				className: 'fca-ept-layout-selection',
 				},
-				el( 'div', {
-					className: 'layout-title',
+				el('div', {
+					className: 'layout-headline'
 				}, 'Select your layout' ),
 
-				el( 'div', {
-					className: 'img-container'},
+				el('div', {
+					className: 'layout-container' },
 
-					el('div', {
-						className: 'layout-name'
+					el( 'div', {
+						className: 'layout',
+						onClick: function() { 
+							props.setAttributes( { tableID: fca_ept_generate_id( props ) } )
+							fca_ept_set_layout1_attributes( props )
+						}
 					},
+						el( 'div', { 
+							className: 'layout-title',
+						}, 'Layout1' ),
 						el( 'img', {
-							className: 'layout1',
 							src: fca_ept_data.directory + '/assets/blocks/layout1/screenshot.png',
-							onClick: function() {
-								props.setAttributes( { tableID: fca_ept_generate_id( props ) })
-								fca_ept_set_layout1_attributes( props )
-							}
-							
-						}),
-					'Layout1'),
+						})
+					),
 
 					el( 'div', {
-						className: 'layout-name',
+						className: 'layout',
+						onClick: function() { 
+							props.setAttributes( { tableID: fca_ept_generate_id( props ) } )
+							fca_ept_set_layout2_attributes( props )
+						}
 					},
+						el( 'div', { 
+							className: 'layout-title',
+						}, 'Layout2' ),
 						el( 'img', {
-							className: 'layout2',
 							src: fca_ept_data.directory + '/assets/blocks/layout2/screenshot.png',
-							onClick: function() { 
-								props.setAttributes( { tableID: fca_ept_generate_id( props ) })
-								fca_ept_set_layout2_attributes( props )
-							}
-							
-						}),
-					'Layout2' ),
+						})
+					),
 
 					el( 'div', {
-						className: 'layout-name',
+						className: 'layout-premium',
+						onClick: function() { 
+							alert( 'This layout is only available in Easy Pricing Tables Premium!' )
+						}
 					},
+						el( 'div', { 
+							className: 'layout-title',
+						}, 'Layout3' ),
 						el( 'img', {
-							className: 'layout3',
 							src: fca_ept_data.directory + '/assets/blocks/layout3/screenshot.png',
-							onClick: function() { 
-								alert( 'This layout is only available in Easy Pricing Tables Premium!' )
-							}
-							
-						}),
-					'Layout3' ),
+						})
+					),
 
 					el( 'div', {
-						className: 'layout-name',
+						className: 'layout-premium',
+						onClick: function() { 
+							alert( 'This layout is only available in Easy Pricing Tables Premium!' )
+						}
 					},
+						el( 'div', { 
+							className: 'layout-title',
+						}, 'Layout4' ),
 						el( 'img', {
-							className: 'layout4',
 							src: fca_ept_data.directory + '/assets/blocks/layout4/screenshot.png',
-							onClick: function() { 
-								alert( 'This layout is only available in Easy Pricing Tables Premium!' )
-							}
-							
-						}),
-					'Layout4' ),
+						})
+					),
 
 					el( 'div', {
-						className: 'layout-name',
+						className: 'layout-premium',
+						onClick: function() { 
+							alert( 'This layout is only available in Easy Pricing Tables Premium!' )
+						}
 					},
+						el( 'div', { 
+							className: 'layout-title',
+						}, 'Layout5' ),
 						el( 'img', {
-							className: 'layout5',
 							src: fca_ept_data.directory + '/assets/blocks/layout5/screenshot.png',
-							onClick: function() { 
-								alert( 'This layout is only available in Easy Pricing Tables Premium!' )
-							}
-							
-						}),
-					'Layout5' )
+						})
+					),
+
+					el( 'div', {
+						className: 'layout-premium',
+						onClick: function() { 
+							alert( 'This layout is only available in Easy Pricing Tables Premium!' )
+						}
+					},
+						el( 'div', { 
+							className: 'layout-title',
+						}, 'Layout6' ),
+						el( 'img', {
+							src: fca_ept_data.directory + '/assets/blocks/layout6/screenshot.png',
+						})
+					)
+					
 				)
 			) // end div
 		)
@@ -484,6 +504,7 @@ function fca_ept_sidebar_settings( props ){
 
 					el( 'a', {
 						type: 'button',
+						target: '_blank',
 						href: 'https://www.fatcatapps.com/easypricingtables/pricing',
 						className: 'get-premium-button',
 					}, 'Learn more' )
@@ -605,12 +626,13 @@ function fca_ept_del_column ( props ) {
 
 	if ( columnSettings.length > 1 ){
 
-		columnSettings.splice( ( selectedCol - 1 ), 0 )
+		columnSettings.splice( ( selectedCol ), 1 )
 		props.setAttributes( { selectedCol: ( columnSettings.length - 1 ) } )
 		props.setAttributes( { columnSettings: JSON.stringify( columnSettings ) } )
 
 		fca_ept_select_column( props, columnSettings.length - 1 )
 	}
+	
 }
 
 function fca_ept_generate_id( props ) {

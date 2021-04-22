@@ -7,6 +7,8 @@
 
 // EPT CLASSIC
 function dh_ptp_register_pricing_table_post_type() {
+
+	$existing_install = dh_ptp_check_existing_install();
 	
 	$labels = array(
 	    'name' => __('Pricing Tables', 'easy-pricing-tables'),
@@ -30,7 +32,7 @@ function dh_ptp_register_pricing_table_post_type() {
 	    'exclude_from_search' => true,
 	    'publicly_queryable' => true,
 	    'show_ui' => true, 
-	    'show_in_menu' => true, 
+	    'show_in_menu' => $existing_install, 
 	    'query_var' => true,
 	    'rewrite' => array( 'slug' => 'pricing-table' ),
 	    'capability_type' => 'post',
@@ -112,7 +114,6 @@ add_action('manage_easy-pricing-table_posts_custom_column', 'dh_ptp_manage_prici
 function dh_ptp_check_existing_install (){
 	global $wpdb;
 	$results = $wpdb->get_var( "SELECT COUNT(*) FROM $wpdb->posts WHERE post_type='easy-pricing-table'");
-	//return false;
 	return $results ? true : false;
 }
 

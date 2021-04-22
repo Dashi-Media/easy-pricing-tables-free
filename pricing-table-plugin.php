@@ -134,6 +134,8 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 		$is_ept_screen = empty( $current_screen->post_type ) ? false : $current_screen->post_type === 'easy-pricing-table';
 		$notice_dismissed = get_option( 'dh_ptp_show_gutenberg_notice', 'on' ) === 'off';
 		$show_notice = !$is_ept_screen && ( !$notice_dismissed || PTP_DEBUG );
+		$show_fullscreen_notice = $is_ept_screen && ( !$notice_dismissed || PTP_DEBUG );
+		$show_reminder = $is_ept_screen && ( $notice_dismissed || PTP_DEBUG );
 
 		$try_gutenberg = add_query_arg( 'dh_ptp_try_gutenberg', true );
 		$forever_dismiss_url = add_query_arg( 'dh_ptp_forever_dismiss_notice', true );
@@ -155,13 +157,20 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 				echo '<br style="clear:both">';
 			echo '</div>';
 		}
-		if ( $is_ept_screen ){
-			echo '<div id="fca-ept-setup-notice" class="notice notice-info is-dismissible" style="display: none; text-align: center; padding-left: 250px; padding-right: 250px; padding-bottom: 8px; padding-top: 40px; position: fixed; top: 27px; left: 160px; right: 0; bottom: -15px; z-index: 999999;">';
-				echo '<h1>' . __( "You are using the old Easy Pricing Tables interface.", $plugin_name ) . "</h1>" ;
-				echo '<p>' . __( " We've completely redesigned Easy Pricing Tables from scratch and added a brand new design. We'll eventually phase out support for this old interface.", $plugin_name ) . "</p>" ;
-				echo "<a href='$try_gutenberg' class='button button-primary' style='margin-top: 15px;'>" . __( 'Try the new interface', $plugin_name) . "</a> ";
+		if ( $show_reminder ){
+			echo '<div id="fca-ept-setup-notice" class="notice notice-info" style="padding-bottom: 8px; padding-top: 8px;">';
+				echo '<p>' . __( "We’ve completely redesigned Easy Pricing Tables from scratch, with brand new designs and a slick new way to create tables using the Block Editor. We’ll eventually phase out support for this old interface.", $plugin_name ) . "</p>" ;
+				echo "<a href='$try_gutenberg' class='button button-primary' style='margin-top: 2px;'>" . __( 'Try it', $plugin_name) . "</a> ";
 				echo '<br style="clear:both">';
-				echo '<a id="fca-ept-hide-notice" style="position: relative; top: 10px; left: 7px;" href="#" style="margin-top: 15px;">' . __( 'Skip for now', $plugin_name) . '</a> ';
+			echo '</div>';
+		}
+		if ( $show_fullscreen_notice ){
+			echo '<div id="fca-ept-setup-notice" class="notice notice-info is-dismissible" style="display: none; text-align: center; padding-left: 250px; padding-right: 250px; padding-bottom: 8px; padding-top: 40px; position: fixed; top: 27px; left: 160px; right: 0; bottom: -15px; z-index: 999999;">';
+				echo '<h1>' . __( "Try the brand new Easy Pricing Tables.", $plugin_name ) . "</h1>" ;
+				echo '<p>' . __( "We’ve completely redesigned Easy Pricing Tables from scratch, with brand new designs and a slick new way to create tables using the Block Editor. We’ll eventually phase out support for this old interface.", $plugin_name ) . "</p>" ;
+				echo "<a href='$try_gutenberg' class='button button-primary' style='margin-top: 15px;'>" . __( 'Try it', $plugin_name) . "</a> ";
+				echo '<a id="fca-ept-hide-notice" style="display: block; position: relative; top: 10px;" href="#" style="margin-top: 15px;">' . __( 'Skip', $plugin_name) . '</a> ';
+				echo '<br style="clear:both">';
 			echo '</div>';
 		}
 	}
