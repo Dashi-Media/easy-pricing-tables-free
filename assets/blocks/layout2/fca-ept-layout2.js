@@ -45,14 +45,13 @@ function fca_ept_set_layout2_attributes( props ) {
 
 	// FONT SETTINGS
 	props.setAttributes( { fontFamily: 'sans-serif' } )
-	props.setAttributes( { popularFontSize: '0.75rem' } ) 
-	props.setAttributes( { planFontSize: '3rem' } ) 
-	props.setAttributes( { planSubtextFontSize: '1rem' } ) 
-	props.setAttributes( { priceFontSize: '4rem' } ) 
-	props.setAttributes( { pricePeriodFontSize: '1rem' }) 
-	props.setAttributes( { priceBillingFontSize: '0.8125rem' } ) 
-	props.setAttributes( { featuresFontSize: '1.25rem' } ) 
-	props.setAttributes( { buttonFontSize: '1.5rem' } ) 
+	props.setAttributes( { popularFontSize: '75%' } ) 
+	props.setAttributes( { planFontSize: '300%' } ) 
+	props.setAttributes( { planSubtextFontSize: '100%' } ) 
+	props.setAttributes( { priceFontSize: '400%' } ) 
+	props.setAttributes( { pricePeriodFontSize: '100%' }) 
+	props.setAttributes( { featuresFontSize: '125%' } ) 
+	props.setAttributes( { buttonFontSize: '150%' } ) 
 
 }
 
@@ -60,7 +59,6 @@ function fca_ept_layout2_block_edit( props ) {
 	
 	var columnSettings = JSON.parse( props.attributes.columnSettings )
 	var selectedLayout = props.attributes.selectedLayout
-	var selectedCol = props.attributes.selectedCol
 
 	fca_ept_layout2_additional_styles( props )
  
@@ -150,7 +148,7 @@ function fca_ept_layout2_block_edit( props ) {
 								}),
 								onChange: ( function( newValue ) { 
 									var columnSettingsData = Array.from( columnSettings )
-									columnSettingsData[selectedCol].planText1 = newValue
+									columnSettingsData[props.attributes.selectedCol].planText1 = newValue
 									props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
 								})
 							}),
@@ -173,7 +171,7 @@ function fca_ept_layout2_block_edit( props ) {
 								},
 								onChange: function( newValue ) { 
 									var columnSettingsData = Array.from( columnSettings )
-									columnSettingsData[selectedCol].planSubText = newValue
+									columnSettingsData[props.attributes.selectedCol].planSubText = newValue
 									props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
 								}
 							})
@@ -204,7 +202,7 @@ function fca_ept_layout2_block_edit( props ) {
 									}),
 									onChange: ( function( newValue ) { 
 										var columnSettingsData = Array.from( columnSettings )
-										columnSettingsData[selectedCol].priceText1 = newValue
+										columnSettingsData[props.attributes.selectedCol].priceText1 = newValue
 										props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
 									})
 								}),
@@ -236,25 +234,7 @@ function fca_ept_layout2_block_edit( props ) {
 										}),
 										onChange: ( function( newValue ) { 
 											var columnSettingsData = Array.from( columnSettings )
-											columnSettingsData[selectedCol].pricePeriod1 = newValue
-											props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
-										})
-									}),
-
-									el( wp.blockEditor.RichText, { 
-										style: { 
-											fontSize: props.attributes.priceBillingFontSize,
-											color: props.attributes.layoutFontColor
-										},
-										allowedFormats: fca_ept_allowed_formats,
-										className: 'fca-ept-price-billing', 
-										placeholder: 'billed annually', 
-										type: "text", 
-										tagName: 'span',
-										value: columnSettings[i].priceBilling1, 
-										onChange: ( function( newValue ) { 
-											var columnSettingsData = Array.from( columnSettings )
-											columnSettingsData[selectedCol].priceBilling1 = newValue
+											columnSettingsData[props.attributes.selectedCol].pricePeriod1 = newValue
 											props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
 										})
 									})
@@ -283,7 +263,7 @@ function fca_ept_layout2_block_edit( props ) {
 								}),
 								onChange: ( function( newValue ) { 
 									var columnSettingsData = Array.from( columnSettings )
-									columnSettingsData[selectedCol].featuresText = newValue
+									columnSettingsData[props.attributes.selectedCol].featuresText = newValue
 									props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
 								})
 							})
@@ -310,7 +290,7 @@ function fca_ept_layout2_block_edit( props ) {
 								value: columnSettings[i].buttonText, 
 								onChange: ( function( newValue ) { 
 									var columnSettingsData = Array.from( columnSettings )
-									columnSettingsData[selectedCol].buttonText = newValue
+									columnSettingsData[props.attributes.selectedCol].buttonText = newValue
 									props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } ) 
 								})
 							})
@@ -326,7 +306,7 @@ function fca_ept_layout2_additional_styles( props ){
 
 	var id = props.attributes.tableID
 
-	$(id).remove()
+	$( id ).remove()
 
 	$( 'body' ).append( 
 		"<style id='" + id + "'>" +

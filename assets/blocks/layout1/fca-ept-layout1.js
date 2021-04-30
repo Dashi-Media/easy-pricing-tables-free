@@ -34,28 +34,28 @@ var fca_ept_layout1_presetColors = [
 function fca_ept_set_layout1_attributes( props ) {
 	
 	props.setAttributes( { align: 'wide' } )
-	props.setAttributes( { selectedLayout: 'layout1'})
-	props.setAttributes( { columnSettings: JSON.stringify( fca_ept_defaultColumnSettings ) })
+	props.setAttributes( { selectedLayout: 'layout1'} )
+	props.setAttributes( { columnSettings: JSON.stringify( fca_ept_defaultColumnSettings ) } )
 
 	// COLORS
-	props.setAttributes( { layoutBGColor: '#fff' }) 
-	props.setAttributes( { layoutBGTint2: '#eeeeee' })
-	props.setAttributes( { layoutBGTint3: '#dddddd' })
-	props.setAttributes( { layoutBGTint4: '#7f8c8d' })
-	props.setAttributes( { layoutFontColor: '#333333' })
-	props.setAttributes( { buttonColor: '#3498db' })
-	props.setAttributes( { buttonFontColor: '#fff' })
-	props.setAttributes( { buttonBorderColor: '#2980b9' })
-	props.setAttributes( { buttonBorderColorPop: '#c0392b' })
-	props.setAttributes( { accentColor: '#e74c3c' })
+	props.setAttributes( { layoutBGColor: '#fff' } ) 
+	props.setAttributes( { layoutBGTint2: '#eeeeee' } )
+	props.setAttributes( { layoutBGTint3: '#dddddd' } )
+	props.setAttributes( { layoutBGTint4: '#7f8c8d' } )
+	props.setAttributes( { layoutFontColor: '#333333' } )
+	props.setAttributes( { buttonColor: '#3498db' } )
+	props.setAttributes( { buttonFontColor: '#fff' } )
+	props.setAttributes( { buttonBorderColor: '#2980b9' } )
+	props.setAttributes( { buttonBorderColorPop: '#c0392b' } )
+	props.setAttributes( { accentColor: '#e74c3c' } )
 		
 	// FONT SETTINGS
-	props.setAttributes( { fontFamily: 'Hoefler Text' })
-	props.setAttributes( { popularFontSize: '1.25rem' }) 
-	props.setAttributes( { planFontSize: '1.375rem' }) 
-	props.setAttributes( { priceFontSize: '1.75rem' }) 
-	props.setAttributes( { featuresFontSize: '1.25rem' }) 
-	props.setAttributes( { buttonFontSize: '1.375rem' }) 
+	props.setAttributes( { fontFamily: 'Hoefler Text' } )
+	props.setAttributes( { popularFontSize: '125%' } ) 
+	props.setAttributes( { planFontSize: '137.5%' } ) 
+	props.setAttributes( { priceFontSize: '175%' } ) 
+	props.setAttributes( { featuresFontSize: '125%' } ) 
+	props.setAttributes( { buttonFontSize: '137.5%' } ) 
 
 }
 
@@ -63,7 +63,6 @@ function fca_ept_layout1_block_edit( props ) {
 	
 	var columnSettings = JSON.parse( props.attributes.columnSettings )
 	var selectedLayout = props.attributes.selectedLayout
-	var selectedCol = props.attributes.selectedCol
 
 	// append extra variable css settings
 	fca_ept_layout1_additional_styles( props )
@@ -148,7 +147,7 @@ function fca_ept_layout1_block_edit( props ) {
 									}),
 									onChange: ( function( newValue ) { 
 										var columnSettingsData = Array.from( columnSettings )
-										columnSettingsData[selectedCol].planText1 = newValue
+										columnSettingsData[props.attributes.selectedCol].planText1 = newValue
 										props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
 									})
 								})
@@ -175,7 +174,7 @@ function fca_ept_layout1_block_edit( props ) {
 								}),
 								onChange: ( function( newValue ) { 
 									var columnSettingsData = Array.from( columnSettings )
-									columnSettingsData[selectedCol].priceText1 = newValue
+									columnSettingsData[props.attributes.selectedCol].priceText1 = newValue
 									props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
 								})
 							})
@@ -202,7 +201,7 @@ function fca_ept_layout1_block_edit( props ) {
 								}),
 								onChange: ( function( newValue ) { 
 									var columnSettingsData = Array.from( columnSettings )
-									columnSettingsData[selectedCol].featuresText = newValue
+									columnSettingsData[props.attributes.selectedCol].featuresText = newValue
 									props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
 								})
 							})
@@ -237,7 +236,7 @@ function fca_ept_layout1_block_edit( props ) {
 									value: columnSettings[i].buttonText, 
 									onChange: ( function( newValue ) { 
 										var columnSettingsData = Array.from( columnSettings )
-										columnSettingsData[selectedCol].buttonText = newValue
+										columnSettingsData[props.attributes.selectedCol].buttonText = newValue
 										props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } ) 
 									})
 								})
@@ -254,14 +253,13 @@ function fca_ept_layout1_additional_styles( props ){
 
 	var id = props.attributes.tableID
 
-	$(id).remove()
+	$( id ).remove()
 
 	$( 'body' ).append( 
 		"<style id='" + id + "'>" +
-			"div.fca-ept-toggle-period-container .fca-ept-slider { background-color: " + props.attributes.buttonColor + " }" +
-			"div.fca-ept-column a.fca-ept-button:hover { background-color: " + props.attributes.buttonBorderColor + " !important;}" +
-			"div.fca-ept-column.fca-ept-most-popular a.fca-ept-button:hover { background-color: " + props.attributes.buttonBorderColorPop + " !important;}" +
-			"div.fca-ept-column div.fca-ept-features li { border-bottom: dotted 1px " + props.attributes.layoutBGTint3 + ";}" +
+			"div.fca-ept-layout1 div.fca-ept-column a.fca-ept-button:hover { background-color: " + props.attributes.buttonBorderColor + " !important;}" +
+			"div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular a.fca-ept-button:hover { background-color: " + props.attributes.buttonBorderColorPop + " !important;}" +
+			"div.fca-ept-layout1 div.fca-ept-column div.fca-ept-features li { border-bottom: dotted 1px " + props.attributes.layoutBGTint3 + ";}" +
 		"</style>" 
 	)
 

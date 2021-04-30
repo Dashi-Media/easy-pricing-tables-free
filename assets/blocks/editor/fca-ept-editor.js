@@ -60,10 +60,7 @@ var fca_ept_main_attributes = {
 	layoutBGTint3: { type: 'string', default: '#dddddd' },
 	layoutBGTint4: { type: 'string', default: '#7f8c8d' },
 	layoutFontColor: { type: 'string', default: '#000' },
-	layoutFontColor1: { type: 'string', default: '#dddddd' },
-	popularBorderColor: { type: 'string', default: 'rgb(220, 175, 15)' },
 	popularBGColor: { type: 'string', default: 'rgba(98,54,255,0.8)' },
-	planSvgColor: { type: 'string', default: 'rgba(15, 97, 216, 0.3)' },
 	priceSubtextColor: { type: 'string', default: '#0c1f28' },
 	buttonColor: { type: 'string', default: '#6236ff' },
 	buttonFontColor: { type: 'string', default: '#fff' },
@@ -77,14 +74,13 @@ var fca_ept_main_attributes = {
 
 	// FONT SETTINGS
 	fontFamily: { type: 'string', default: 'Sans Serif' },
-	popularFontSize: { type: 'string', default: '0.75rem' }, 
-	planFontSize: { type: 'string', default: '3rem' }, 
-	planSubtextFontSize: { type: 'string', default: '1rem' }, 
-	priceFontSize: { type: 'string', default: '4rem' }, 
-	pricePeriodFontSize: { type: 'string', default: '1rem' }, 
-	priceBillingFontSize: { type: 'string', default: '0.8125rem' }, 
-	featuresFontSize: { type: 'string', default: '1.25rem' }, 
-	buttonFontSize: { type: 'string', default: '1.5rem' }, 
+	popularFontSize: { type: 'string', default: '75%' }, 
+	planFontSize: { type: 'string', default: '300%' }, 
+	planSubtextFontSize: { type: 'string', default: '100%' }, 
+	priceFontSize: { type: 'string', default: '400%' }, 
+	pricePeriodFontSize: { type: 'string', default: '100%' }, 
+	featuresFontSize: { type: 'string', default: '125%' }, 
+	buttonFontSize: { type: 'string', default: '150%' }, 
 
 	// EXTRA SETTINGS
 	columnHeight: { type: 'string', default: 'auto' },
@@ -162,7 +158,7 @@ function fca_ept_main_edit( props ) {
 					},
 						el( 'div', { 
 							className: 'layout-title',
-						}, 'Layout1' ),
+						}, 'Layout 1' ),
 						el( 'img', {
 							src: fca_ept_data.directory + '/assets/blocks/layout1/screenshot.png',
 						})
@@ -177,7 +173,7 @@ function fca_ept_main_edit( props ) {
 					},
 						el( 'div', { 
 							className: 'layout-title',
-						}, 'Layout2' ),
+						}, 'Layout 2' ),
 						el( 'img', {
 							src: fca_ept_data.directory + '/assets/blocks/layout2/screenshot.png',
 						})
@@ -191,7 +187,7 @@ function fca_ept_main_edit( props ) {
 					},
 						el( 'div', { 
 							className: 'layout-title',
-						}, 'Layout3' ),
+						}, 'Layout 3' ),
 						el( 'img', {
 							src: fca_ept_data.directory + '/assets/blocks/layout3/screenshot.png',
 						})
@@ -205,7 +201,7 @@ function fca_ept_main_edit( props ) {
 					},
 						el( 'div', { 
 							className: 'layout-title',
-						}, 'Layout4' ),
+						}, 'Layout 4' ),
 						el( 'img', {
 							src: fca_ept_data.directory + '/assets/blocks/layout4/screenshot.png',
 						})
@@ -219,7 +215,7 @@ function fca_ept_main_edit( props ) {
 					},
 						el( 'div', { 
 							className: 'layout-title',
-						}, 'Layout5' ),
+						}, 'Layout 5' ),
 						el( 'img', {
 							src: fca_ept_data.directory + '/assets/blocks/layout5/screenshot.png',
 						})
@@ -233,7 +229,7 @@ function fca_ept_main_edit( props ) {
 					},
 						el( 'div', { 
 							className: 'layout-title',
-						}, 'Layout6' ),
+						}, 'Layout 6' ),
 						el( 'img', {
 							src: fca_ept_data.directory + '/assets/blocks/layout6/screenshot.png',
 						})
@@ -278,7 +274,6 @@ function fca_ept_sidebar_settings( props ){
 						"colors": presetColors,
 						"onChange": function( newValue ){ 
 							props.setAttributes( { "layoutFontColor": newValue } )
-							props.setAttributes( { "layoutFontColor1": fca_ept_hexToRGB( newValue, 0.4, 0 ) } )
 						}
 					},
 					{
@@ -287,7 +282,6 @@ function fca_ept_sidebar_settings( props ){
 						"colors": presetColors,
 						"onChange": function( newValue ){ 
 							props.setAttributes( { "buttonColor": newValue } )
-							props.setAttributes( { "popularBorderColor": fca_ept_hexToRGB( newValue, 0, 35 ) } )
 							props.setAttributes( { "popularBGColor": fca_ept_hexToRGB( newValue, 0.65, 0 ) } )
 							props.setAttributes( { "priceSubtextColor": fca_ept_hexToRGB( newValue, 0.4, 0 ) } )
 							props.setAttributes( { "buttonBorderColor": fca_ept_hexToRGB( newValue, 0, 55 ) } )
@@ -307,7 +301,6 @@ function fca_ept_sidebar_settings( props ){
 						"colors": presetColors,
 						"onChange": function( newValue ){ 
 							props.setAttributes( { "accentColor": newValue } )
-							props.setAttributes( { "planSvgColor": fca_ept_hexToRGB( newValue, 0.3, 0 ) } )
 							props.setAttributes( { "buttonBorderColorPop": fca_ept_hexToRGB( newValue, 0, 55 ) } )
 						}
 					}
@@ -525,9 +518,9 @@ function fca_ept_increase_fontsize ( props ){
 	var section = props.attributes.selectedSection
 	var fontSizeStr = eval( 'props.attributes.' + section + 'FontSize' ).toString()
 	var fontSizeAttr = section + 'FontSize' 
-	var fontsize = ( Number( fontSizeStr.slice( 0,-3 ) ) ) + 0.0625
+	var fontsize = ( Number( fontSizeStr.slice( 0,-1 ) ) ) + 15
 
-	var fontSizeObj = JSON.parse( '{"' + fontSizeAttr + '": "' + fontsize + 'rem"' + '}' )
+	var fontSizeObj = JSON.parse( '{"' + fontSizeAttr + '": "' + fontsize + '%"' + '}' )
 
 	props.setAttributes( fontSizeObj )
 
@@ -537,9 +530,9 @@ function fca_ept_decrease_fontsize ( props ){
 	var section = props.attributes.selectedSection
 	var fontSizeStr = eval( 'props.attributes.' + section + 'FontSize' ).toString()
 	var fontSizeAttr = section + 'FontSize'
- 	var fontsize = ( Number( fontSizeStr.slice( 0,-3 ) ) ) - 0.0625
+ 	var fontsize = ( Number( fontSizeStr.slice( 0,-1 ) ) ) - 15
 
- 	var fontSizeObj = JSON.parse( '{"' + fontSizeAttr + '": "' + fontsize + 'rem"' + '}' )
+ 	var fontSizeObj = JSON.parse( '{"' + fontSizeAttr + '": "' + fontsize + '%"' + '}' )
 
 	props.setAttributes( fontSizeObj )
 
@@ -549,7 +542,7 @@ function fca_ept_set_popular ( props ) {
 
 	var columnSettings = JSON.parse( props.attributes.columnSettings )
 	var selectedCol = parseInt( props.attributes.selectedCol )
-	
+
 	columnSettings.filter( function ( col, i ){
 
 		if ( i === selectedCol ){ 
@@ -557,16 +550,23 @@ function fca_ept_set_popular ( props ) {
 				col.columnPopular = false
 				props.setAttributes( { columnSettings: JSON.stringify( columnSettings ) } )
 				props.setAttributes ( { popularToolbarIcon: 'star-empty' } )
+				setTimeout( function(){
+					$( '.fca-ept-column' )[selectedCol].classList.add( 'fca-ept-selected-column' )
+				}, 30 )
 			} else {
 				col.columnPopular = true
 				props.setAttributes( { columnSettings: JSON.stringify( columnSettings ) } )
 				props.setAttributes ( { popularToolbarIcon: 'star-filled' } )
+				setTimeout( function(){
+					$( '.fca-ept-column' )[selectedCol].classList.add( 'fca-ept-selected-column' )
+				}, 30 )
 			}
 		} else {
 			col.columnPopular = false
 			props.setAttributes( { columnSettings: JSON.stringify( columnSettings ) } )
 		}
 	})
+
 }
 
 function fca_ept_select_column ( props, id ) {
@@ -575,16 +575,25 @@ function fca_ept_select_column ( props, id ) {
 
 	props.setAttributes ( { selectedCol: id } )
 
-	$( '.fca-ept-column' ).filter( function( i, column ){
-		column.classList.remove( 'fca-ept-selected-column' )
-	})
-	$( '.fca-ept-column' )[id].classList.add( 'fca-ept-selected-column' )
-
 	if( columnSettings[id].columnPopular ){
 		props.setAttributes ( { popularToolbarIcon: 'star-filled' } )
 	} else {
 		 props.setAttributes ( { popularToolbarIcon: 'star-empty' } )
 	}
+
+	$( '.fca-ept-column' ).filter( function( i, column ){
+		if( column.classList.contains( 'fca-ept-selected-column' ) ){
+			if( i === id ){
+				return;
+			} 
+			column.classList.remove( 'fca-ept-selected-column' )
+		} else if( i === id ) {
+			setTimeout( function(){
+				column.classList.add( 'fca-ept-selected-column' )
+			}, 30 )
+		}
+	})
+
 }
 
 function fca_ept_move_column ( props, direction ) {

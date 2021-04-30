@@ -28,18 +28,17 @@ div.fca-ept-layout-selection .layout-premium:hover{
 	filter: grayscale(0%);
 }
 
-
-
 div.fca-ept-layout-selection .layout-container {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
+	justify-content: space-around;
 }
 
 div.fca-ept-layout-selection .layout-container .layout, div.fca-ept-layout-selection .layout-container .layout-premium {
 	align-self: flex-end;
 	text-align: center;
 	font-weight: bolder;
+	margin: 0 4%;
 	font-size: 16px;
 	font-family: sans-serif;
 	margin-top: 30px;

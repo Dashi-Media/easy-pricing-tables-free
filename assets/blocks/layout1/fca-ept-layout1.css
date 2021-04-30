@@ -1,5 +1,7 @@
 
 div.fca-ept-layout1 {
+	font-size: 16px;
+	margin: 0 auto;
 	display: flex;
 	font-family: inherit;
 }
@@ -45,10 +47,6 @@ div.fca-ept-layout1 div.fca-ept-plan-div div.fca-ept-plan{
 	padding: .9375em 1.25em; 
 	font-weight: bold; 
 	font-size: 1em; 
-}
-
-div.fca-ept-layout1 div.fca-ept-plan-div div.fca-ept-plan-image{
-	text-align: -webkit-center;
 }
 
 div.fca-ept-layout1 div.fca-ept-price{
@@ -113,7 +111,7 @@ div.fca-ept-layout1 a.fca-ept-button{
 	transition: background-color 300ms ease-out;
 }
 
-div.fca-ept-layout1 div.fca-ept-column.fca-ept-selected-column {
+div.fca-ept-layout1 div.fca-ept-column.fca-ept-selected-column, div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular.fca-ept-selected-column {
 	box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 25px 0px;
 }
 
@@ -128,4 +126,16 @@ div.fca-ept-layout1 div.fca-ept-column.fca-ept-selected-column {
 		margin-top:100px;
 	}
 	
+}
+
+body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout1, body .editor-styles-wrapper[style*="width: 780px;"] div.fca-ept-layout1 {
+	font-size: 75%;
+	display: block;
+	padding-right: 0;
+}
+body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout1 div.fca-ept-toggle-period-container, body .editor-styles-wrapper[style*="width: 780px;"] div.fca-ept-layout1 div.fca-ept-toggle-period-container{
+	padding-right: 0;
+}
+body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular, body .editor-styles-wrapper[style*="width: 780px;"] div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular {
+	margin-top:100px;
 }

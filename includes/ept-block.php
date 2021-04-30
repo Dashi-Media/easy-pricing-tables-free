@@ -73,11 +73,11 @@ function fca_ept_render_layout1( $attributes ){
 	$accentColor = empty( $attributes['accentColor'] ) ? '#e74c3c' : ( $attributes['accentColor'] );
 
 	/* FONT SIZES */
-	$popularFontSize = empty( $attributes['popularFontSize'] ) ? '20px' : ( $attributes['popularFontSize'] );
-	$planFontSize = empty( $attributes['planFontSize'] ) ? '22px' : ( $attributes['planFontSize'] );
-	$priceFontSize = empty( $attributes['priceFontSize'] ) ? '28px' : ( $attributes['priceFontSize'] );
-	$featuresFontSize = empty( $attributes['featuresFontSize'] ) ? '20px' : ( $attributes['featuresFontSize'] );
-	$buttonFontSize = empty( $attributes['buttonFontSize'] ) ? '22px' : ( $attributes['buttonFontSize'] );
+	$popularFontSize = empty( $attributes['popularFontSize'] ) ? '125%' : ( $attributes['popularFontSize'] );
+	$planFontSize = empty( $attributes['planFontSize'] ) ? '137.5%' : ( $attributes['planFontSize'] );
+	$priceFontSize = empty( $attributes['priceFontSize'] ) ? '175%' : ( $attributes['priceFontSize'] );
+	$featuresFontSize = empty( $attributes['featuresFontSize'] ) ? '125%' : ( $attributes['featuresFontSize'] );
+	$buttonFontSize = empty( $attributes['buttonFontSize'] ) ? '137.5%' : ( $attributes['buttonFontSize'] );
 
 	/* SETTINGS */
 	$fontFamily = empty( $attributes['fontFamily'] ) ? 'sans-serif' : $attributes['fontFamily'];
@@ -97,7 +97,7 @@ function fca_ept_render_layout1( $attributes ){
 
 		<?php
 
-		forEach ($columnSettings as $column) {
+		forEach ( $columnSettings as $column ) {
 
 			$columnPopular = empty( $column['columnPopular'] ) ? false : true;
 
@@ -110,7 +110,7 @@ function fca_ept_render_layout1( $attributes ){
 
 			$featuresText = $column['featuresText'] ? $column['featuresText'] : '' ;
 			$buttonText = $column['buttonText'] ? $column['buttonText'] : ' ' ;
-			$buttonColor = $columnPopular ? $accentColor : $attributes['buttonColor'];
+			$buttonColor = $columnPopular ? $accentColor : ( empty( $attributes['buttonColor'] ) ? '#3498db' : ( $attributes['buttonColor'] ) );
 			$buttonBorderColor = empty( $attributes['buttonBorderColor'] ) ? '#2980b9' : $attributes['buttonBorderColor'];
 			$buttonBorderColorPop = empty( $attributes['buttonBorderColorPop'] ) ? '#c0392b' : $attributes['buttonBorderColorPop'];
 
@@ -143,10 +143,10 @@ function fca_ept_render_layout1( $attributes ){
 			</div>
 
 			<style>
-				#fca-ept-table-<?php echo $tableID ?> div.fca-ept-column a.fca-ept-button { background-color: <?php echo $buttonColor ?>; border-bottom: 4px solid <?php echo $buttonBorderColor ?>}
-				#fca-ept-table-<?php echo $tableID ?> div.fca-ept-column a.fca-ept-button:hover { background-color: <?php echo $buttonBorderColor ?>; }
-				#fca-ept-table-<?php echo $tableID ?> div.fca-ept-column.fca-ept-most-popular a.fca-ept-button { background-color: <?php echo $accentColor ?>; border-bottom: 4px solid <?php echo $buttonBorderColorPop ?>}
-				#fca-ept-table-<?php echo $tableID ?> div.fca-ept-column.fca-ept-most-popular a.fca-ept-button:hover { background-color: <?php echo $buttonBorderColorPop ?>; }
+				#fca-ept-table-<?php echo $tableID ?> div.fca-ept-layout1 div.fca-ept-column a.fca-ept-button { background-color: <?php echo $buttonColor ?>; border-bottom: 4px solid <?php echo $buttonBorderColor ?>}
+				#fca-ept-table-<?php echo $tableID ?> div.fca-ept-layout1 div.fca-ept-column a.fca-ept-button:hover { background-color: <?php echo $buttonBorderColor ?>; }
+				#fca-ept-table-<?php echo $tableID ?> div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular a.fca-ept-button { background-color: <?php echo $accentColor ?>; border-bottom: 4px solid <?php echo $buttonBorderColorPop ?>}
+				#fca-ept-table-<?php echo $tableID ?> div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular a.fca-ept-button:hover { background-color: <?php echo $buttonBorderColorPop ?>; }
 			</style>
 
 		<?php
@@ -181,13 +181,13 @@ function fca_ept_render_layout2( $attributes ){
 	$accentColor = empty( $attributes['accentColor'] ) ? '#6236ff' : ( $attributes['accentColor'] );
 
 	/* FONT SIZES */
-	$popularFontSize = empty( $attributes['popularFontSize'] ) ? '12px' : ( $attributes['popularFontSize'] );
-	$planFontSize = empty( $attributes['planFontSize'] ) ? '48px' : ( $attributes['planFontSize'] );
-	$planSubtextFontSize = empty( $attributes['planSubtextFontSize'] ) ? '16px' : ( $attributes['planSubtextFontSize'] );
-	$priceFontSize = empty( $attributes['priceFontSize'] ) ? '64px' : ( $attributes['priceFontSize'] );
-	$pricePeriodFontSize = empty( $attributes['pricePeriodFontSize'] ) ? '16px' : ( $attributes['pricePeriodFontSize'] );
-	$featuresFontSize = empty( $attributes['featuresFontSize'] ) ? '20px' : ( $attributes['featuresFontSize'] );
-	$buttonFontSize = empty( $attributes['buttonFontSize'] ) ? '24px' : ( $attributes['buttonFontSize'] );
+	$popularFontSize = empty( $attributes['popularFontSize'] ) ? '125%' : ( $attributes['popularFontSize'] );
+	$planFontSize = empty( $attributes['planFontSize'] ) ? '137.5%' : ( $attributes['planFontSize'] );
+	$planSubtextFontSize = empty( $attributes['planSubtextFontSize'] ) ? '100%' : ( $attributes['planSubtextFontSize'] );
+	$priceFontSize = empty( $attributes['priceFontSize'] ) ? '175%' : ( $attributes['priceFontSize'] );
+	$pricePeriodFontSize = empty( $attributes['pricePeriodFontSize'] ) ? '100%' : ( $attributes['pricePeriodFontSize'] );
+	$featuresFontSize = empty( $attributes['featuresFontSize'] ) ? '125%' : ( $attributes['featuresFontSize'] );
+	$buttonFontSize = empty( $attributes['buttonFontSize'] ) ? '137.5%' : ( $attributes['buttonFontSize'] );
 
 	/* SETTINGS */
 	$fontFamily = empty( $attributes['fontFamily'] ) ? 'sans-serif' : $attributes['fontFamily'];
@@ -212,7 +212,7 @@ function fca_ept_render_layout2( $attributes ){
 		forEach ( $columnSettings as $column ) {
 
 			/* Column specific variables */
-			$columnPopular = $column['columnPopular'];
+			$columnPopular = empty( $column['columnPopular'] ) ? false : true;
 			$showPopular = $columnPopular ? 'block' : 'none';
 			$popularClass = $columnPopular ? 'fca-ept-most-popular' : '';
 
