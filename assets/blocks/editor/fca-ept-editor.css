@@ -160,6 +160,7 @@ a.dh-ept-gutenblock-link {
 .fca-ept-sidebar-popover {
 	margin: 0;
 	padding: 4px;
+	width: 250px;
 	background-color: black;
 	color: white;
 }

@@ -127,7 +127,7 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 	}
 	add_action('admin_enqueue_scripts', 'dh_ptp_plugin_footer_enqueue');
 
-	function dh_ptp_try_gutenberg_notice(){
+	function dh_ptp_admin_notices(){
 
 		$plugin_name = 'easy-pricing-tables';
 		$current_screen = get_current_screen();
@@ -140,6 +140,9 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 		$try_gutenberg = add_query_arg( 'dh_ptp_try_gutenberg', true );
 		$forever_dismiss_url = add_query_arg( 'dh_ptp_forever_dismiss_notice', true );
 		$existing_install = dh_ptp_check_existing_install();
+		$review_url = add_query_arg( 'dh_ptp_leave_review', true );
+		$postpone_url = add_query_arg( 'dh_ptp_postpone_review_notice', true );
+		$forever_dismiss_url = add_query_arg( 'dh_ptp_forever_dismiss_notice', true );
 
 		if ( $existing_install && $show_notice ){
 			echo '<div id="fca-ept-setup-notice" class="notice notice-success is-dismissible" style="padding-bottom: 8px; padding-top: 8px;">';
@@ -173,10 +176,69 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 				echo '<br style="clear:both">';
 			echo '</div>';
 		}
+
+
+
+
+
+
+		if ( isSet( $_GET['dh_ptp_leave_review'] ) ) {
+
+			$review_url = 'https://wordpress.org/support/plugin/facebook-conversion-pixel/reviews/';
+			update_option( 'dh_ptp_show_review_notice', false );
+			wp_redirect($review_url);
+			exit;
+
+		}
+
+		$show_review_option = get_option( 'dh_ptp_show_review_notice', 'not-set' );
+
+		if ( $show_review_option === 'not-set' && !wp_next_scheduled( 'dh_ptp_schedule_review_notice' )  ) {
+
+			wp_schedule_single_event( time() + 30 * DAY_IN_SECONDS, 'dh_ptp_schedule_review_notice' );
+
+		}
+
+		if ( isSet( $_GET['dh_ptp_postpone_review_notice'] ) ) {
+
+			$show_review_option = false;
+			update_option( 'dh_ptp_show_review_notice', $show_review_option );
+			wp_schedule_single_event( time() + 30 * DAY_IN_SECONDS, 'dh_ptp_schedule_review_notice' );
+
+		}
+
+		if ( isSet( $_GET['dh_ptp_forever_dismiss_notice'] ) ) {
+
+			$show_review_option = false;
+			update_option( 'dh_ptp_show_review_notice', $show_review_option );
+
+		}
+
+		if ( $show_review_option && $show_review_option !== 'not-set' ){
+
+			$plugin_name = 'easy-pricing-tables';
+
+			echo '<div id="fca-pc-setup-notice" class="notice notice-success is-dismissible" style="padding-bottom: 8px; padding-top: 8px;">';
+				echo '<p>' . __( "Hi! You've been using Easy Pricing Tables Free for a while now, so who better to ask for a review than you? Would you please mind leaving us one? It really helps us a lot!", $plugin_name ) . '</p>';
+				echo "<a href='$review_url' class='button button-primary' style='margin-top: 2px;'>" . __( 'Leave review', $plugin_name) . "</a> ";
+				echo "<a style='position: relative; top: 10px; left: 7px;' href='$postpone_url' >" . __( 'Maybe later', $plugin_name) . "</a> ";
+				echo "<a style='position: relative; top: 10px; left: 16px;' href='$forever_dismiss_url' >" . __( 'No thank you', $plugin_name) . "</a> ";
+				echo '<br style="clear:both">';
+			echo '</div>';
+
+		}
+
 	}
 
 
-	add_action( 'admin_notices', 'dh_ptp_try_gutenberg_notice' );
+	add_action( 'admin_notices', 'dh_ptp_admin_notices' );
+
+	function dh_ptp_enable_review_notice(){
+		update_option( 'dh_ptp_show_review_notice', true );
+		wp_clear_scheduled_hook( 'dh_ptp_schedule_review_notice' );
+	}
+
+	add_action ( 'dh_ptp_schedule_review_notice', 'dh_ptp_enable_review_notice' );
 
 
 	function dh_ptp_try_gutenberg_tables (){

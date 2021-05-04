@@ -122,7 +122,7 @@ wp.blocks.registerBlockType('fatcatapps/easy-pricing-tables', {
 	supports: { 
 		align: true,
 		html: false,
-		reusable: false
+		reusable: true
 	},
 
 	edit: fca_ept_main_edit,
@@ -196,7 +196,7 @@ function fca_ept_main_edit( props ) {
 					el( 'div', {
 						className: 'layout-premium',
 						onClick: function() { 
-							alert( 'This layout is only available in Easy Pricing Tables Premium!' )
+							//confirm( 'This layout is only available in Easy Pricing Tables Premium!' )
 						}
 					},
 						el( 'div', { 
@@ -308,22 +308,28 @@ function fca_ept_sidebar_settings( props ){
 				]
 			}),	
 			
-			el( wp.components.PanelHeader, { label: 'Show plan subtext' },
-				el( wp.components.ToggleControl, { 
-					checked: props.attributes.showPlanSubtextToggle,
-					className: 'fca-ept-toggle',
-					onChange: (
-						function( newValue ){ 
-							if ( newValue ){
-								props.setAttributes( { showPlanSubtext: 'block' } )
+			el( 'div', {
+				style: { 
+					display: props.attributes.selectedLayout === 'layout2' ? 'block' : 'none',
+				},
+			},
 
-							} else {
-								props.setAttributes( { showPlanSubtext: 'none' } )
+				el( wp.components.PanelHeader, { label: 'Show plan subtext' },
+					el( wp.components.ToggleControl, { 
+						checked: props.attributes.showPlanSubtextToggle,
+						className: 'fca-ept-toggle',
+						onChange: (
+							function( newValue ){ 
+								if ( newValue ){
+									props.setAttributes( { showPlanSubtext: 'block' } )
+								} else {
+									props.setAttributes( { showPlanSubtext: 'none' } )
+								}
+								props.setAttributes( { showPlanSubtextToggle: newValue } )
 							}
-							props.setAttributes( { showPlanSubtextToggle: newValue } )
-						}
-					)
-				})
+						)
+					})
+				)
 			),
 
 			el( wp.components.PanelHeader, { label: 'Match column height' },

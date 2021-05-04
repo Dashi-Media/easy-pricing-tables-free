@@ -21,7 +21,7 @@ function fca_ept_register_block() {
 
 	if ( function_exists( 'register_block_type' ) ) {
 		register_block_type( 'fatcatapps/easy-pricing-tables',	array(
-			'editor_script' => 'fca_ept_editor_script',
+			'editor_script' => array( 'fca_ept_editor_script','jquery-ui-dialog' ),
 			'editor_style' => 'fca-ept-editor-style',
 			'style' => array( 'fca-ept-layout1-style', 'fca-ept-layout2-style' ),
 			'render_callback' => 'fca_ept_render',
