@@ -60,7 +60,6 @@ var fca_ept_main_attributes = {
 	layoutBGTint3: { type: 'string', default: '#dddddd' },
 	layoutBGTint4: { type: 'string', default: '#7f8c8d' },
 	layoutFontColor: { type: 'string', default: '#000' },
-	popularBGColor: { type: 'string', default: 'rgba(98,54,255,0.8)' },
 	priceSubtextColor: { type: 'string', default: '#0c1f28' },
 	buttonColor: { type: 'string', default: '#6236ff' },
 	buttonFontColor: { type: 'string', default: '#fff' },
@@ -181,13 +180,22 @@ function fca_ept_main_edit( props ) {
 
 					el( 'div', {
 						className: 'layout-premium',
+						onMouseOver: ( function(){
+							$('.learn-more3').css( 'display', 'block' )
+						}),
+						onMouseOut: ( function(){
+							$('.learn-more3').css( 'display', 'none' )
+						}),
 						onClick: function() { 
-							alert( 'This layout is only available in Easy Pricing Tables Premium!' )
+							window.open('https://www.fatcatapps.com/easypricingtables/pricing', '_blank')
 						}
 					},
 						el( 'div', { 
 							className: 'layout-title',
-						}, 'Layout 3' ),
+						}, 'Layout 3 (Premium only)' ),
+						el( wp.components.Button, { 
+							className: 'learn-more3 button button-primary button-large'
+						}, 'Learn more' ),
 						el( 'img', {
 							src: fca_ept_data.directory + '/assets/blocks/layout3/screenshot.png',
 						})
@@ -195,13 +203,22 @@ function fca_ept_main_edit( props ) {
 
 					el( 'div', {
 						className: 'layout-premium',
+						onMouseOver: ( function(){
+							$('.learn-more4').css( 'display', 'block' )
+						}),
+						onMouseOut: ( function(){
+							$('.learn-more4').css( 'display', 'none' )
+						}),
 						onClick: function() { 
-							//confirm( 'This layout is only available in Easy Pricing Tables Premium!' )
+							window.open('https://www.fatcatapps.com/easypricingtables/pricing', '_blank')
 						}
 					},
 						el( 'div', { 
 							className: 'layout-title',
-						}, 'Layout 4' ),
+						}, 'Layout 4 (Premium only)' ),
+						el( wp.components.Button, { 
+							className: 'learn-more4 button button-primary button-large'
+						}, 'Learn more' ),
 						el( 'img', {
 							src: fca_ept_data.directory + '/assets/blocks/layout4/screenshot.png',
 						})
@@ -209,13 +226,22 @@ function fca_ept_main_edit( props ) {
 
 					el( 'div', {
 						className: 'layout-premium',
+						onMouseOver: ( function(){
+							$('.learn-more5').css( 'display', 'block' )
+						}),
+						onMouseOut: ( function(){
+							$('.learn-more5').css( 'display', 'none' )
+						}),
 						onClick: function() { 
-							alert( 'This layout is only available in Easy Pricing Tables Premium!' )
+							window.open('https://www.fatcatapps.com/easypricingtables/pricing', '_blank')
 						}
 					},
 						el( 'div', { 
 							className: 'layout-title',
-						}, 'Layout 5' ),
+						}, 'Layout 5 (Premium only)' ),
+						el( wp.components.Button, { 
+							className: 'learn-more5 button button-primary button-large',
+						}, 'Learn more' ),
 						el( 'img', {
 							src: fca_ept_data.directory + '/assets/blocks/layout5/screenshot.png',
 						})
@@ -223,13 +249,22 @@ function fca_ept_main_edit( props ) {
 
 					el( 'div', {
 						className: 'layout-premium',
+						onMouseOver: ( function(){
+							$('.learn-more6').css( 'display', 'block' )
+						}),
+						onMouseOut: ( function(){
+							$('.learn-more6').css( 'display', 'none' )
+						}),
 						onClick: function() { 
-							alert( 'This layout is only available in Easy Pricing Tables Premium!' )
+							window.open('https://www.fatcatapps.com/easypricingtables/pricing', '_blank')
 						}
 					},
 						el( 'div', { 
 							className: 'layout-title',
-						}, 'Layout 6' ),
+						}, 'Layout 6 (Premium only)' ),
+						el( wp.components.Button, { 
+							className: 'learn-more6 button button-primary button-large'
+						}, 'Learn more' ),
 						el( 'img', {
 							src: fca_ept_data.directory + '/assets/blocks/layout6/screenshot.png',
 						})
@@ -282,7 +317,6 @@ function fca_ept_sidebar_settings( props ){
 						"colors": presetColors,
 						"onChange": function( newValue ){ 
 							props.setAttributes( { "buttonColor": newValue } )
-							props.setAttributes( { "popularBGColor": fca_ept_hexToRGB( newValue, 0.65, 0 ) } )
 							props.setAttributes( { "priceSubtextColor": fca_ept_hexToRGB( newValue, 0.4, 0 ) } )
 							props.setAttributes( { "buttonBorderColor": fca_ept_hexToRGB( newValue, 0, 55 ) } )
 						}
@@ -308,84 +342,90 @@ function fca_ept_sidebar_settings( props ){
 				]
 			}),	
 			
-			el( 'div', {
-				style: { 
-					display: props.attributes.selectedLayout === 'layout2' ? 'block' : 'none',
-				},
-			},
+			el( wp.components.PanelBody, { 
+				title: 'Misc Settings',
+				className: 'fca-ept-misc-settings',
+				initialOpen: false },
 
-				el( wp.components.PanelHeader, { label: 'Show plan subtext' },
+				el( 'div', {
+					style: { 
+						display: props.attributes.selectedLayout === 'layout2' ? 'block' : 'none',
+					},
+				},
+
+					el( wp.components.PanelHeader, { label: 'Show plan subtext' },
+						el( wp.components.ToggleControl, { 
+							checked: props.attributes.showPlanSubtextToggle,
+							className: 'fca-ept-toggle',
+							onChange: (
+								function( newValue ){ 
+									if ( newValue ){
+										props.setAttributes( { showPlanSubtext: 'block' } )
+									} else {
+										props.setAttributes( { showPlanSubtext: 'none' } )
+									}
+									props.setAttributes( { showPlanSubtextToggle: newValue } )
+								}
+							)
+						})
+					)
+				),
+
+				el( wp.components.PanelHeader, { label: 'Match column height' },
+					el( wp.components.Icon, {
+						icon: 'editor-help',
+						className: 'fca-ept-tooltip',
+						onMouseOver: ( function(){
+							props.setAttributes( { columnHeightTooltip: 'block' } )
+						}),
+						onMouseOut: ( function(){
+							props.setAttributes( { columnHeightTooltip: 'none' } )
+						})
+					}),
+					el( wp.components.Popover, {
+						style: { 
+							display: props.attributes.columnHeightTooltip
+						}
+					},
+						el( 'p', { 
+							className: 'fca-ept-sidebar-popover',
+						},
+							'Force all columns to be the same height. Useful if some columns have more features rows than others.'
+						)
+					),
 					el( wp.components.ToggleControl, { 
-						checked: props.attributes.showPlanSubtextToggle,
+						checked: props.attributes.columnHeightToggle,
 						className: 'fca-ept-toggle',
 						onChange: (
 							function( newValue ){ 
 								if ( newValue ){
-									props.setAttributes( { showPlanSubtext: 'block' } )
+									props.setAttributes( { columnHeight: 'auto' } )
 								} else {
-									props.setAttributes( { showPlanSubtext: 'none' } )
+									props.setAttributes( { columnHeight: 'fit-content' } )
 								}
-								props.setAttributes( { showPlanSubtextToggle: newValue } )
+								props.setAttributes( { columnHeightToggle: newValue } )
+							}
+						)
+					})
+				),
+
+				el( wp.components.PanelHeader, { label: 'Show buttons' },
+					el( wp.components.ToggleControl, { 
+						checked: props.attributes.showButtonsToggle,
+						className: 'fca-ept-toggle',
+						onChange: (
+							function( newValue ){ 
+								if ( newValue ){
+									props.setAttributes( { showButtons: 'block' } )
+
+								} else {
+									props.setAttributes( { showButtons: 'none' } )
+								}
+								props.setAttributes( { showButtonsToggle: newValue } )
 							}
 						)
 					})
 				)
-			),
-
-			el( wp.components.PanelHeader, { label: 'Match column height' },
-				el( wp.components.Icon, {
-					icon: 'editor-help',
-					className: 'fca-ept-tooltip',
-					onMouseOver: ( function(){
-						props.setAttributes( { columnHeightTooltip: 'block' } )
-					}),
-					onMouseOut: ( function(){
-						props.setAttributes( { columnHeightTooltip: 'none' } )
-					})
-				}),
-				el( wp.components.Popover, {
-					style: { 
-						display: props.attributes.columnHeightTooltip
-					}
-				},
-					el( 'p', { 
-						className: 'fca-ept-sidebar-popover',
-					},
-						'Force all columns to be the same height. Useful if some columns have more features rows than others.'
-					)
-				),
-				el( wp.components.ToggleControl, { 
-					checked: props.attributes.columnHeightToggle,
-					className: 'fca-ept-toggle',
-					onChange: (
-						function( newValue ){ 
-							if ( newValue ){
-								props.setAttributes( { columnHeight: 'auto' } )
-							} else {
-								props.setAttributes( { columnHeight: 'fit-content' } )
-							}
-							props.setAttributes( { columnHeightToggle: newValue } )
-						}
-					)
-				})
-			),
-
-			el( wp.components.PanelHeader, { label: 'Show buttons' },
-				el( wp.components.ToggleControl, { 
-					checked: props.attributes.showButtonsToggle,
-					className: 'fca-ept-toggle',
-					onChange: (
-						function( newValue ){ 
-							if ( newValue ){
-								props.setAttributes( { showButtons: 'block' } )
-
-							} else {
-								props.setAttributes( { showButtons: 'none' } )
-							}
-							props.setAttributes( { showButtonsToggle: newValue } )
-						}
-					)
-				})
 			),
 
 			el( 'div', {
