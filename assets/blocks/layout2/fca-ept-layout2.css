@@ -65,12 +65,8 @@ div.fca-ept-layout2 div.fca-ept-plan-div div {
 div.fca-ept-layout2 div.fca-ept-plan-div .fca-ept-plan img{
 	display: block;
 	margin: auto;
+	max-height: 128px;
 }
-
-div.fca-ept-layout2 div.fca-ept-plan-image {
-	justify-items: center;
-}
-
 
 div.fca-ept-layout2 .fca-ept-plan-svg{
 	display: none;

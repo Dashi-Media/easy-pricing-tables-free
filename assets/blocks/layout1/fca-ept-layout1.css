@@ -49,6 +49,12 @@ div.fca-ept-layout1 div.fca-ept-plan-div div.fca-ept-plan{
 	font-size: 1em; 
 }
 
+div.fca-ept-layout1 div.fca-ept-plan-div div.fca-ept-plan img {
+	display: block;
+	margin: auto;
+	max-height: 128px;
+}
+
 div.fca-ept-layout1 div.fca-ept-price{
 	font-family: inherit;
 	text-align: center; 

@@ -173,7 +173,6 @@ function fca_ept_render_layout2( $attributes ){
 	$columnSettings = empty( $attributes['columnSettings'] ) ? false : json_decode( $attributes['columnSettings'], true );
 
 	/* COLORS */
-	$popularBGColor = empty( $attributes['popularBGColor'] ) ? 'rgba(98,54,255,0.8)' : ( $attributes['popularBGColor'] );
 	$layoutBGColor = empty( $attributes['layoutBGColor'] ) ? '#f2f2f2' : ( $attributes['layoutBGColor'] );
 	$layoutFontColor = empty( $attributes['layoutFontColor'] ) ? '#000' : ( $attributes['layoutFontColor'] );
 	$buttonColor = empty( $attributes['buttonColor'] ) ? '#6236ff' : ( $attributes['buttonColor'] );
@@ -235,7 +234,7 @@ function fca_ept_render_layout2( $attributes ){
 				
 				<div style="display: <?php echo $showPopular ?>; border-color:<?php echo $accentColor ?>" class="fca-ept-popular-div">
 				
-					<span style="font-size:<?php echo $popularFontSize ?>; background-color:<?php echo $popularBGColor ?>; color:<?php echo $buttonFontColor ?>" class="fca-ept-popular-text"><?php echo $popularText ?></span>
+					<span style="font-size:<?php echo $popularFontSize ?>; background-color:<?php echo $accentColor ?>; color:<?php echo $buttonFontColor ?>" class="fca-ept-popular-text"><?php echo $popularText ?></span>
 				
 				</div>
 			

@@ -4,19 +4,19 @@ var $ = window.jQuery
 
 var fca_ept_layout1_presetColors = [
 	{
-		name: 'white',
+		name: 'White',
 		slug: 'fca-white',
 		color: '#fff'
+	},
+	{
+		name: 'Black',
+		slug: 'fca-black',
+		color: '#333333'
 	},
 	{
 		name: 'Blue',
 		slug: 'fca-blue',
 		color: '#3498db'
-	},
-	{
-		name: 'Deep Blue',
-		slug: 'fca-deepblue',
-		color: '#2980b9'
 	},
 	{
 		name: 'Red',
@@ -35,7 +35,11 @@ function fca_ept_set_layout1_attributes( props ) {
 	
 	props.setAttributes( { align: 'wide' } )
 	props.setAttributes( { selectedLayout: 'layout1'} )
-	props.setAttributes( { columnSettings: JSON.stringify( fca_ept_defaultColumnSettings ) } )
+	if( !props.attributes.columnSettings ){
+		props.setAttributes( { columnSettings: JSON.stringify( fca_ept_defaultColumnSettings ) } )
+	}
+	props.setAttributes( { columnHeight: 'auto' } )
+	props.setAttributes( { columnHeightToggle: true } )
 
 	// COLORS
 	props.setAttributes( { layoutBGColor: '#fff' } ) 

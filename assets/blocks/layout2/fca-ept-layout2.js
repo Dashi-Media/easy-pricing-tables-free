@@ -21,7 +21,7 @@ var fca_ept_layout2_presetColors = [
 	{
 		name: 'Red',
 		slug: 'fca-red',
-		color: '#EA2027'
+		color: '#ea2027'
 	},
 	{
 		name: 'Grey',
@@ -34,9 +34,13 @@ function fca_ept_set_layout2_attributes( props ) {
 	
 	props.setAttributes( { align: 'wide' } )
 	props.setAttributes( { selectedLayout: 'layout2'} )
-	props.setAttributes( { columnSettings: JSON.stringify( fca_ept_defaultColumnSettings ) } )
+	if( !props.attributes.columnSettings ){
+		props.setAttributes( { columnSettings: JSON.stringify( fca_ept_defaultColumnSettings ) } )
+	}
+	props.setAttributes( { columnHeight: 'auto' } )
+	props.setAttributes( { columnHeightToggle: true } )
+
 	// COLORS
-	props.setAttributes( { popularBGColor: 'rgba(98,54,255,0.8)' } )
 	props.setAttributes( { layoutBGColor: '#f2f2f2' } ) 
 	props.setAttributes( { layoutFontColor: '#000' } )
 	props.setAttributes( { buttonColor: '#6236ff' } )
@@ -110,7 +114,7 @@ function fca_ept_layout2_block_edit( props ) {
 								style: { 
 									fontSize: props.attributes.popularFontSize,
 									color: props.attributes.buttonFontColor,
-									backgroundColor: props.attributes.popularBGColor
+									backgroundColor: props.attributes.accentColor
 								},
 								allowedFormats: fca_ept_allowed_formats,
 								className: 'fca-ept-popular-text',
