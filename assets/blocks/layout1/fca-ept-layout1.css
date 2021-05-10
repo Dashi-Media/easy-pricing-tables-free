@@ -44,7 +44,7 @@ div.fca-ept-layout1 div.fca-ept-plan-div div.fca-ept-plan{
 	border-top-right-radius: 4px;
 	word-break: break-word;
 	text-align: center; 
-	padding: .9375em 1.25em; 
+	padding: 15px 20px
 	font-weight: bold; 
 	font-size: 1em; 
 }
@@ -52,7 +52,6 @@ div.fca-ept-layout1 div.fca-ept-plan-div div.fca-ept-plan{
 div.fca-ept-layout1 div.fca-ept-plan-div div.fca-ept-plan img {
 	display: block;
 	margin: auto;
-	max-height: 128px;
 }
 
 div.fca-ept-layout1 div.fca-ept-price{

@@ -75,6 +75,7 @@ function fca_ept_layout2_block_edit( props ) {
 		el( 'div', {
 			style: { fontFamily: props.attributes.fontFamily + ', sans-serif' },
 			id: 'fca-ept-table-' + props.attributes.tableID,
+			onClick: ( function(){ console.log('test')}),
 			className: props.attributes.togglePeriod ? 'fca-ept-table-container toggle-active' : 'fca-ept-table-container'
 		},
 
@@ -93,7 +94,7 @@ function fca_ept_layout2_block_edit( props ) {
 							backgroundColor: props.attributes.layoutBGColor,
 							paddingTop: columnSettings[i].columnPopular ? '30px' : '45px',
 							paddingBottom: props.attributes.showButtons === 'block' ? '30px' : '0px',
-							marginTop: columnSettings[i].columnPopular ? '-5px' : '10px',
+							marginTop: columnSettings[i].columnPopular ? '0px' : '10px',
 							border: columnSettings[i].columnPopular ? '2px solid ' + props.attributes.accentColor : '0px solid'
 						},
 							className: columnSettings[i].columnPopular ? 'fca-ept-column fca-ept-most-popular' : 'fca-ept-column',
