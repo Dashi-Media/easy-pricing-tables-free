@@ -295,6 +295,7 @@ function fca_ept_sidebar_settings( props ){
 						"label": "Background Color",
 						"colors": presetColors,
 						"value": props.attributes.layoutBGColor,
+						"clearable": false,
 						"onChange": function( newValue ){ 
 							props.setAttributes( { "layoutBGColor": newValue } )
 							props.setAttributes( { "layoutBGTint1": fca_ept_hexToRGB( newValue, 0, 10 ) } )
@@ -306,6 +307,7 @@ function fca_ept_sidebar_settings( props ){
 					{
 						"label": "Text Color",
 						"value": props.attributes.layoutFontColor,
+						"clearable": false,
 						"colors": presetColors,
 						"onChange": function( newValue ){ 
 							props.setAttributes( { "layoutFontColor": newValue } )
@@ -314,6 +316,7 @@ function fca_ept_sidebar_settings( props ){
 					{
 						"label": "Button Color",
 						"value": props.attributes.buttonColor,
+						"clearable": false,
 						"colors": presetColors,
 						"onChange": function( newValue ){ 
 							props.setAttributes( { "buttonColor": newValue } )
@@ -324,6 +327,7 @@ function fca_ept_sidebar_settings( props ){
 					{
 						"label": "Button Font Color",
 						"value": props.attributes.buttonFontColor,
+						"clearable": false,
 						"colors": presetColors,
 						"onChange": function( newValue ){ 
 							props.setAttributes( { "buttonFontColor": newValue } )
@@ -332,6 +336,7 @@ function fca_ept_sidebar_settings( props ){
 					{
 						"label": "Accent Color",
 						"value": props.attributes.accentColor,
+						"clearable": false,
 						"colors": presetColors,
 						"onChange": function( newValue ){ 
 							props.setAttributes( { "accentColor": newValue } )

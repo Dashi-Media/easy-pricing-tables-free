@@ -23,10 +23,6 @@ div.fca-ept-layout-selection .layout-premium img{
 	opacity: 0.6;
 }
 
-div.fca-ept-layout-selection .layout-premium img:hover{
-	opacity: 1;
-}
-
 div.fca-ept-layout-selection .layout-premium .learn-more3, div.fca-ept-layout-selection .layout-premium .learn-more4, div.fca-ept-layout-selection .layout-premium .learn-more5, div.fca-ept-layout-selection .layout-premium .learn-more6{
 	display: none;
     position: absolute;
@@ -63,13 +59,6 @@ div.fca-ept-layout-selection .layout-container .layout-title {
 	font-size: 16px;
 	font-family: sans-serif;
 }
-
-
-div.fca-ept-toggle-period-container {
-	font-family: inherit;
-	padding-right: 20px;
-}
-
 
 div.fca-ept-toggle-period-container .fca-ept-toggle-period-toggle {
 	padding-left: 10px;
@@ -199,7 +188,7 @@ div.fca-ept-input.components-base-control{
 }
 
 .fca-ept-tooltip{
-	margin-left: -20px;
+	margin-left: -10px;
 }
 
 /*surround blue wrapper */

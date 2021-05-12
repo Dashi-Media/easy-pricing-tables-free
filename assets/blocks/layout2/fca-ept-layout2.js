@@ -311,7 +311,7 @@ function fca_ept_layout2_additional_styles( props ){
 
 	var id = props.attributes.tableID
 
-	$( id ).remove()
+	$( '#' + id ).remove()
 
 	$( 'body' ).append( 
 		"<style id='" + id + "'>" +

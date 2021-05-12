@@ -168,7 +168,7 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 			echo '</div>';
 		}
 		if ( $show_fullscreen_notice ){
-			echo '<div id="fca-ept-setup-notice" class="notice notice-info is-dismissible" style="display: none; text-align: center; padding-left: 250px; padding-right: 250px; padding-bottom: 8px; padding-top: 40px; position: fixed; top: 27px; left: 160px; right: 0; bottom: -15px; z-index: 999999;">';
+			echo '<div id="fca-ept-fullscreen-notice" class="notice notice-info is-dismissible" style="display: none; text-align: center; padding-left: 250px; padding-right: 250px; padding-bottom: 8px; padding-top: 40px; position: fixed; top: 27px; left: 160px; right: 0; bottom: -15px; z-index: 999999;">';
 				echo '<h1>' . __( "Try the brand new Easy Pricing Tables.", $plugin_name ) . "</h1>" ;
 				echo '<p>' . __( "We’ve completely redesigned Easy Pricing Tables from scratch, with brand new designs and a slick new way to create tables using the Block Editor. We’ll eventually phase out support for this old interface.", $plugin_name ) . "</p>" ;
 				echo "<a href='$try_gutenberg' class='button button-primary' style='margin-top: 15px;'>" . __( 'Try it', $plugin_name) . "</a> ";

@@ -4,7 +4,7 @@ $(document).ready(function(){
 	if( fca_ept.id == 'edit-easy-pricing-table' ){
 
 		// hide notice until loaded
-		$('#fca-ept-setup-notice').css('display', 'block')
+		$('#fca-ept-fullscreen-notice').css('display', 'block')
 
 		// set 'skip for now' to close screen
 		$('#fca-ept-hide-notice').click( function(){
