@@ -60,6 +60,7 @@ var fca_ept_main_attributes = {
 	layoutBGTint3: { type: 'string', default: '#dddddd' },
 	layoutBGTint4: { type: 'string', default: '#7f8c8d' },
 	layoutFontColor: { type: 'string', default: '#000' },
+	layoutFontColor1: { type: 'string', default: '#6236ff' },
 	priceSubtextColor: { type: 'string', default: '#0c1f28' },
 	buttonColor: { type: 'string', default: '#6236ff' },
 	buttonFontColor: { type: 'string', default: '#fff' },
@@ -313,6 +314,15 @@ function fca_ept_sidebar_settings( props ){
 							props.setAttributes( { "layoutFontColor": newValue } )
 						}
 					},
+					selectedLayout === 'layout2' ? {
+							"label": "Plan Text Color",
+							"value": props.attributes.layoutFontColor1,
+							"colors": presetColors,
+							"clearable": false,
+							"onChange": function( newValue ){ 
+								props.setAttributes( { "layoutFontColor1": newValue } )
+							}
+						} : '',
 					{
 						"label": "Button Color",
 						"value": props.attributes.buttonColor,
@@ -378,6 +388,7 @@ function fca_ept_sidebar_settings( props ){
 
 				el( wp.components.PanelHeader, { label: 'Match column height' },
 					el( wp.components.Icon, {
+						style: { marginLeft: '-3px' },
 						icon: 'editor-help',
 						className: 'fca-ept-tooltip',
 						onMouseOver: ( function(){

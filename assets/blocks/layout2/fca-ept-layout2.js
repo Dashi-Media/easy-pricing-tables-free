@@ -43,6 +43,7 @@ function fca_ept_set_layout2_attributes( props ) {
 	// COLORS
 	props.setAttributes( { layoutBGColor: '#f2f2f2' } ) 
 	props.setAttributes( { layoutFontColor: '#000' } )
+	props.setAttributes( { layoutFontColor1: '#6236ff' } )
 	props.setAttributes( { buttonColor: '#6236ff' } )
 	props.setAttributes( { buttonFontColor: '#fff' } )
 	props.setAttributes( { accentColor: '#6236ff' } )
@@ -139,7 +140,7 @@ function fca_ept_layout2_block_edit( props ) {
 							el( wp.blockEditor.RichText, { 
 								style: { 
 									fontSize: props.attributes.planFontSize,
-									color: props.attributes.accentColor
+									color: props.attributes.layoutFontColor1
 								}, 
 								allowedFormats: fca_ept_allowed_formats,
 								className: 'fca-ept-plan', 

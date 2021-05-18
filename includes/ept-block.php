@@ -175,18 +175,19 @@ function fca_ept_render_layout2( $attributes ){
 	/* COLORS */
 	$layoutBGColor = empty( $attributes['layoutBGColor'] ) ? '#f2f2f2' : ( $attributes['layoutBGColor'] );
 	$layoutFontColor = empty( $attributes['layoutFontColor'] ) ? '#000' : ( $attributes['layoutFontColor'] );
+	$layoutFontColor1 = empty( $attributes['layoutFontColor1'] ) ? '#6236ff' : ( $attributes['layoutFontColor1'] );
 	$buttonColor = empty( $attributes['buttonColor'] ) ? '#6236ff' : ( $attributes['buttonColor'] );
 	$buttonFontColor = empty( $attributes['buttonFontColor'] ) ? '#fff' : ( $attributes['buttonFontColor'] );
 	$accentColor = empty( $attributes['accentColor'] ) ? '#6236ff' : ( $attributes['accentColor'] );
 
 	/* FONT SIZES */
-	$popularFontSize = empty( $attributes['popularFontSize'] ) ? '125%' : ( $attributes['popularFontSize'] );
-	$planFontSize = empty( $attributes['planFontSize'] ) ? '137.5%' : ( $attributes['planFontSize'] );
+	$popularFontSize = empty( $attributes['popularFontSize'] ) ? '75%' : ( $attributes['popularFontSize'] );
+	$planFontSize = empty( $attributes['planFontSize'] ) ? '300%' : ( $attributes['planFontSize'] );
 	$planSubtextFontSize = empty( $attributes['planSubtextFontSize'] ) ? '100%' : ( $attributes['planSubtextFontSize'] );
-	$priceFontSize = empty( $attributes['priceFontSize'] ) ? '175%' : ( $attributes['priceFontSize'] );
+	$priceFontSize = empty( $attributes['priceFontSize'] ) ? '400%' : ( $attributes['priceFontSize'] );
 	$pricePeriodFontSize = empty( $attributes['pricePeriodFontSize'] ) ? '100%' : ( $attributes['pricePeriodFontSize'] );
 	$featuresFontSize = empty( $attributes['featuresFontSize'] ) ? '125%' : ( $attributes['featuresFontSize'] );
-	$buttonFontSize = empty( $attributes['buttonFontSize'] ) ? '137.5%' : ( $attributes['buttonFontSize'] );
+	$buttonFontSize = empty( $attributes['buttonFontSize'] ) ? '150%' : ( $attributes['buttonFontSize'] );
 
 	/* SETTINGS */
 	$fontFamily = empty( $attributes['fontFamily'] ) ? 'sans-serif' : $attributes['fontFamily'];
@@ -240,7 +241,7 @@ function fca_ept_render_layout2( $attributes ){
 			
 				<div class="fca-ept-plan-div">
 
-					<span style="font-size:<?php echo $planFontSize ?>; color:<?php echo $accentColor ?>" class="fca-ept-plan"><?php echo $planText1 ?></span>
+					<span style="font-size:<?php echo $planFontSize ?>; color:<?php echo $layoutFontColor1 ?>" class="fca-ept-plan"><?php echo $planText1 ?></span>
 			
 					<span style="font-size:<?php echo $planSubtextFontSize ?>; color:<?php echo $layoutFontColor ?>;" class="fca-ept-plan-subtext"><?php echo $planSubText ?></span>
 			

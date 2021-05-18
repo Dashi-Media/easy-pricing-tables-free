@@ -187,10 +187,6 @@ div.fca-ept-input.components-base-control{
     padding: 4px 8px;
 }
 
-.fca-ept-tooltip{
-	margin-left: -10px;
-}
-
 /*surround blue wrapper */
 .block-editor-block-list__layout .block-editor-block-list__block:after,
 .block-editor-block-list__layout .block-editor-block-list__block:not([contenteditable]):focus:after,
