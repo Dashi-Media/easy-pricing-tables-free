@@ -136,7 +136,7 @@ function fca_ept_render_layout1( $attributes ){
 
 				<div style="display: <?php echo $showButtons ?>; background-color: <?php echo $layoutBGTint2 ?>" class="fca-ept-button-div">
 
-					<a style="font-size: <?php echo $buttonFontSize ?>; color: <?php echo $buttonFontColor ?>;" href="<?php echo $buttonURL1 ?>" class="fca-ept-button"><?php echo $buttonText ?></a>
+					<a style="font-size: <?php echo $buttonFontSize ?>; color: <?php echo $buttonFontColor ?>;" href="<?php echo $buttonURL1 ?>" class="fca-ept-button" target="<?php echo $urlTarget ?>" rel="noopener noreferrer"><?php echo $buttonText ?></a>
 
 				</div>
 

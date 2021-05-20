@@ -109,8 +109,6 @@ div.fca-ept-layout1 a.fca-ept-button{
 	border-radius: 4px;
 
 	/* from zurb */
-	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 	-webkit-transition: background-color 300ms ease-out;
 	-moz-transition: background-color 300ms ease-out;
 	transition: background-color 300ms ease-out;
