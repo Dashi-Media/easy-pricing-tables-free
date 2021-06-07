@@ -43,6 +43,17 @@ function fca_ept_get_block_html_ajax( ){
 
 }
 
+// Standard shortcode
+function fca_ept_block_shortcode($atts){
+
+	$table_ID = empty( $atts['id'] ) ? 0 : $atts['id'];
+	$table = get_post( $table_ID );
+
+	return apply_filters( 'the_content', $table->post_content);
+
+}
+add_shortcode('ept3-block', 'fca_ept_block_shortcode');
+
 function fca_ept_render( $attributes ) {
 	
 	$selectedLayout = empty( $attributes['selectedLayout'] ) ? '' : $attributes['selectedLayout'];
@@ -195,6 +206,7 @@ function fca_ept_render_layout2( $attributes ){
 	$paddingBottom = empty( $attributes['showButtons'] ) ? '30px' : ( $attributes['showButtons'] === 'block' ? '30px' : '0px' );
 	$align = empty( $attributes['align'] ) ? 'wide' : ( $attributes['align'] );
 	$popularText = empty( $attributes['popularText'] ) ? 'Most Popular' : ( $attributes['popularText'] );
+	$showPlanSubtext = empty( $attributes['showPlanSubtext'] ) ? 'block' : $attributes['showPlanSubtext'];
 	$showPriceSubtext = empty( $columnSettings ) ? 'block' : ( count($columnSettings) > 1 ? 'block' : 'none' );
 	$showButtons = empty( $attributes['showButtons'] ) ? 'block' : ( $attributes['showButtons'] );
 	$urlTarget = empty( $attributes['urlTarget'] ) ? 'https://www.fatcatapps.com' : ( $attributes['urlTarget'] );
@@ -233,17 +245,17 @@ function fca_ept_render_layout2( $attributes ){
 
 			<div style="background-color:<?php echo $layoutBGColor ?>; padding-top:<?php echo $columnPaddingTop ?>; padding-bottom:<?php echo $paddingBottom ?>; margin-top:<?php echo $marginTop?>; border:<?php echo $columnBorder ?>" class="fca-ept-column <?php echo $popularClass ?>">
 				
-				<div style="display: <?php echo $showPopular ?>; border-color:<?php echo $accentColor ?>" class="fca-ept-popular-div">
-				
-					<span style="font-size:<?php echo $popularFontSize ?>; background-color:<?php echo $accentColor ?>; color:<?php echo $buttonFontColor ?>" class="fca-ept-popular-text"><?php echo $popularText ?></span>
-				
-				</div>
-			
 				<div class="fca-ept-plan-div">
+
+					<div style="display: <?php echo $showPopular ?>; border-color:<?php echo $accentColor ?>" class="fca-ept-popular-div">
+					
+						<span style="font-size:<?php echo $popularFontSize ?>; background-color:<?php echo $accentColor ?>; color:<?php echo $buttonFontColor ?>" class="fca-ept-popular-text"><?php echo $popularText ?></span>
+					
+					</div>
 
 					<span style="font-size:<?php echo $planFontSize ?>; color:<?php echo $layoutFontColor1 ?>" class="fca-ept-plan"><?php echo $planText1 ?></span>
 			
-					<span style="font-size:<?php echo $planSubtextFontSize ?>; color:<?php echo $layoutFontColor ?>;" class="fca-ept-plan-subtext"><?php echo $planSubText ?></span>
+					<span style="display: <?php echo $showPlanSubtext ?>;font-size:<?php echo $planSubtextFontSize ?>; color:<?php echo $layoutFontColor ?>;" class="fca-ept-plan-subtext"><?php echo $planSubText ?></span>
 			
 				</div>
 			

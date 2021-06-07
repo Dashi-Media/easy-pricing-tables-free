@@ -81,6 +81,11 @@ div.fca-ept-layout1 div.fca-ept-features-div li{
 	border-bottom: dotted 1px #ddd;
 }
 
+/* Fix for Gutenberg bug where removing an entire line adds a span to the element */
+div.fca-ept-layout1 div.fca-ept-features-div li span{
+	font-size: inherit !important;
+}
+
 div.fca-ept-layout1 div.fca-ept-button-div{ 
 	font-family: inherit;
 	text-align: center; 
@@ -114,8 +119,14 @@ div.fca-ept-layout1 a.fca-ept-button{
 	transition: background-color 300ms ease-out;
 }
 
+div.fca-ept-layout1 a.fca-ept-button span{
+	cursor: auto;
+}
+
 div.fca-ept-layout1 div.fca-ept-column.fca-ept-selected-column, div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular.fca-ept-selected-column {
 	box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 25px 0px;
+	border: 0px solid;
+	padding: 1px;
 }
 
 /* smart phones */

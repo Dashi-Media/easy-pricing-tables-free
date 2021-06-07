@@ -201,7 +201,7 @@ div.fca-ept-input.components-base-control{
 /***************/
 
 div.fca-ept-sidebar-items .components-panel__header {
-	padding: 15px;
+	padding-top: 15px;
     align-items: end;
     margin-right: -10px;
 }
@@ -212,6 +212,11 @@ div.fca-ept-sidebar-items .fca-ept-misc-settings .components-panel__header{
 
 div.fca-ept-sidebar-items .block-editor-panel-color-gradient-settings__panel-title .component-color-indicator {
 	display: none;
+}
+
+div.fca-ept-sidebar-items .block-editor-color-gradient-control .block-editor-color-gradient-control__color-indicator{
+	padding-bottom: 12px;
+	margin-bottom: 0;
 }
 
 /********************/

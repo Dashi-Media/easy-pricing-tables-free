@@ -97,7 +97,6 @@ var fca_ept_main_attributes = {
 
 }
 
-
 wp.blocks.registerBlockType('fatcatapps/easy-pricing-tables', {
 
 	title: 'Pricing Table',
@@ -388,7 +387,10 @@ function fca_ept_sidebar_settings( props ){
 
 				el( wp.components.PanelHeader, { label: 'Match column height' },
 					el( wp.components.Icon, {
-						style: { marginLeft: '-3px' },
+						style: { 
+							marginLeft: '-8px',
+							marginBottom: '18px' 
+						},
 						icon: 'editor-help',
 						className: 'fca-ept-tooltip',
 						onMouseOver: ( function(){
@@ -490,12 +492,30 @@ function fca_ept_sidebar_settings( props ){
 				)
 			),
 
+			wp.data.select( 'core/editor' ).getCurrentPost().type === 'wp_block' ? 
+				el( 'div', {
+					className: 'fca-ept-sidebar-url'
+				},
+
+					el( 'label', { }, 'Pricing Table Name' ),
+					el( wp.components.TextControl, { 
+						value: props.attributes.postTitle,
+						onChange: (
+							function( newValue ){ 
+								props.setAttributes( { postTitle: newValue } )
+							} 
+						)
+					})
+				) : '',
+
 			el( wp.components.PanelHeader, {},
 				el( wp.components.Button, { 
-					className: 'components-button is-link',
+					style: { paddingBottom: '15px' },
+					className: 'components-button is-link fca-ept-select-layout',
 					onClick: ( function(){ 
 						props.setAttributes( { align: 'wide' } )
 						props.setAttributes( { selectedLayout: '' } ) 
+						$( '#' + props.attributes.tableID ).remove()
 					} )
 				},
 					'Choose a different layout'

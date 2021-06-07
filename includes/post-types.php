@@ -5,10 +5,8 @@
  * @return [type] [description]
  */
 
-// EPT CLASSIC
-function dh_ptp_register_pricing_table_post_type() {
 
-	$existing_install = dh_ptp_check_existing_install();
+function dh_ptp_register_pricing_table_post_type() {
 	
 	$labels = array(
 	    'name' => __('Pricing Tables', 'easy-pricing-tables'),
@@ -17,14 +15,14 @@ function dh_ptp_register_pricing_table_post_type() {
 	    'add_new_item' => __('Add New Pricing Table', 'easy-pricing-tables'),
 	    'edit_item' => __('Edit Pricing Table', 'easy-pricing-tables'),
 	    'new_item' => __('New Pricing Table', 'easy-pricing-tables'),
-	    'all_items' => __('All Pricing Tables', 'easy-pricing-tables'),
+	    'all_items' => __('Legacy Pricing Tables', 'easy-pricing-tables'),
 	    'view_item' => __('View Pricing Table', 'easy-pricing-tables'),
 	    'search_items' => __('Search Pricing Tables', 'easy-pricing-tables'),
 	    'not_found' =>  __('No Pricing Tables found', 'easy-pricing-tables'),
 	    'not_found_in_trash' => __('No Pricing Tables found in Trash', 'easy-pricing-tables'),
 	    'parent_item_colon' => '',
 	    'menu_name' => __('Pricing Tables', 'easy-pricing-tables')
-	  );
+	);
 
   	$args = array(
 	    'labels' => $labels,
@@ -32,7 +30,7 @@ function dh_ptp_register_pricing_table_post_type() {
 	    'exclude_from_search' => true,
 	    'publicly_queryable' => true,
 	    'show_ui' => true, 
-	    'show_in_menu' => $existing_install, 
+	    'show_in_menu' => true, 
 	    'query_var' => true,
 	    'rewrite' => array( 'slug' => 'pricing-table' ),
 	    'capability_type' => 'post',
@@ -40,13 +38,14 @@ function dh_ptp_register_pricing_table_post_type() {
 	    'hierarchical' => false,
 	    'menu_position' => 104,
 	    'menu_icon' => PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ept-icon-16x16.png',
-	    'supports' => array( 'title', 'revisions')
+	    'supports' => array( 'title', 'revisions' )
   	); 
 
 	register_post_type( 'easy-pricing-table', $args);
 
 }
 add_action( 'init', 'dh_ptp_register_pricing_table_post_type');
+
 
 /**
  * customize UI interaction messages
@@ -94,7 +93,6 @@ function dh_ptp_add_new_pricing_table_columns($gallery_columns) {
 }
 // Add to admin_init function
 add_filter('manage_edit-easy-pricing-table_columns', 'dh_ptp_add_new_pricing_table_columns');
-
 function dh_ptp_manage_pricing_table_columns($column_name, $id) {
     global $wpdb;
 
@@ -114,6 +112,7 @@ add_action('manage_easy-pricing-table_posts_custom_column', 'dh_ptp_manage_prici
 function dh_ptp_check_existing_install (){
 	global $wpdb;
 	$results = $wpdb->get_var( "SELECT COUNT(*) FROM $wpdb->posts WHERE post_type='easy-pricing-table'");
+	
 	return $results ? true : false;
 }
 

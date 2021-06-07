@@ -144,6 +144,11 @@ div.fca-ept-layout2 div.fca-ept-features-div .fca-ept-features li{
 	margin: 0;
 }
 
+/* Fix for Gutenberg bug where removing an entire line adds a span to the element */
+div.fca-ept-layout2 div.fca-ept-features-div .fca-ept-features li span{
+	font-size: inherit !important;
+}
+
 div.fca-ept-layout2 div.fca-ept-features-div .fca-ept-features li::marker{
 	color: #0f61d8;
 }
@@ -171,6 +176,10 @@ div.fca-ept-layout2 a.fca-ept-button{
 div.fca-ept-layout2 a.fca-ept-button:hover{
 	-webkit-box-shadow: none;
 	box-shadow: none;
+}
+
+div.fca-ept-layout2 a.fca-ept-button span{
+	cursor: auto;
 }
 
 /* small display */
