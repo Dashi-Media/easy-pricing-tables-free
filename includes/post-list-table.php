@@ -8,31 +8,14 @@
  * @license   GPL-2.0+
  */
 
-/**
- * Example List Table Child Class
- *
- * Create a new list table package that extends the core WP_List_Table class.
- * WP_List_Table contains most of the framework for generating the table, but we
- * need to define and override some methods so that our data can be displayed
- * exactly the way we need it to be.
- *
- * To display this example on a page, you will first need to instantiate the class,
- * then call $yourInstance->prepare_items() to handle any data manipulation, then
- * finally call $yourInstance->display() to render the table to the page.
- *
- * Our topic for this list table is going to be movies.
- *
- * @package WPListTableExample
- * @author  Matt van Andel
- */
 class EPT3_List_Table extends WP_List_Table {
 
 	public function __construct() {
 		// Set parent defaults.
 		parent::__construct( array(
-			'singular' => 'table',     // Singular name of the listed records.
-			'plural'   => 'tables',    // Plural name of the listed records.
-			'ajax'     => false,       // Does this table support ajax?
+			'singular' => 'table',
+			'plural'   => 'tables',
+			'ajax'     => false,
 		) );
 	}
 
@@ -62,8 +45,8 @@ class EPT3_List_Table extends WP_List_Table {
 	protected function column_cb( $item ) {
 		return sprintf(
 			'<input type="checkbox" name="%1$s[]" value="%2$s" />',
-			$this->_args['singular'],  // Let's simply repurpose the table's singular label ("movie").
-			$item->ID                // The value of the checkbox should be the record's ID.
+			$this->_args['singular'],
+			$item->ID
 		);
 	}
 
@@ -74,7 +57,7 @@ class EPT3_List_Table extends WP_List_Table {
 		$edit_query_args = array(
 			'post'  => $item->ID,
 			'action' => 'edit',
-			'ept3' => true
+			'ept3' => ''
 		);
 
 		$actions['edit'] = sprintf(
@@ -106,26 +89,10 @@ class EPT3_List_Table extends WP_List_Table {
 	protected function process_bulk_action() {
 		// Detect when a bulk action is being triggered.
 		if ( 'trash' === $this->current_action() ) {
-			// javascript > move to trash here
+
 			$postID = intval( $_GET['post'] );
-			?>
-				<script type="text/javascript">
-					function ConfirmDelete(){
-						if ( confirm("Delete Post?") ){ 
-							//location.href='www.google2.com';
-							<?php echo( 'test1234132' ); ?>
-							//wp_delete_post( $postID );
-						} else {
-							location.href='www.google.com';
-						}
-					}
-					ConfirmDelete()
-				</script>
+			wp_delete_post( $postID );
 
-			<?php
-
-			//wp_delete_post( $postID );
-			//wp_die( 'Items moved to Trash!' );
 		}
 	}
 
@@ -145,8 +112,9 @@ class EPT3_List_Table extends WP_List_Table {
     	$args = array(
     			'post_status'	 => $post_status,
                 'post_type'      => 'wp_block',
+				'meta_key'		 => '1_dh_ptp_settings', 
                 'posts_per_page' => '-1'
-        	);
+        );
 
 		$data = get_posts( $args );
 
@@ -159,9 +127,9 @@ class EPT3_List_Table extends WP_List_Table {
 		$this->items = $data;
 
 		$this->set_pagination_args( array(
-			'total_items' => $total_items,                     // WE have to calculate the total number of items.
-			'per_page'    => $per_page,                        // WE have to determine how many items to show on a page.
-			'total_pages' => ceil( $total_items / $per_page ), // WE have to calculate the total number of pages.
+			'total_items' => $total_items,
+			'per_page'    => $per_page,
+			'total_pages' => ceil( $total_items / $per_page ),
 		) );
 	}
 

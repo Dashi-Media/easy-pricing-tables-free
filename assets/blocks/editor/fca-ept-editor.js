@@ -51,6 +51,8 @@ var fca_ept_main_attributes = {
 	
 	align: { type: 'string', default: 'wide' },
 	selectedLayout: { type: 'string', default: '' },
+	selectedCol: { type: 'int', default: 0 }, 
+	selectedSection: { type: 'string', default: 'plan' },
 	tableID: { type: 'string', default: '' },
 	columnSettings: { type: 'string', default: '' },
 	// COLORS
@@ -67,10 +69,6 @@ var fca_ept_main_attributes = {
 	buttonBorderColor: { type: 'string', default: 'rgb(0,103,103)' },
 	buttonBorderColorPop: { type: 'string', default: 'rgb(200,104,12)' },
 	accentColor: { type: 'string', default: '#6236ff' },
-
-	// DYNAMIC COLUMN SETTINGS
-	selectedCol: { type: 'int', default: 0 }, 
-	selectedSection: { type: 'string', default: 'plan' },
 
 	// FONT SETTINGS
 	fontFamily: { type: 'string', default: 'Sans Serif' },
@@ -131,6 +129,8 @@ wp.blocks.registerBlockType('fatcatapps/easy-pricing-tables', {
 })
 
 function fca_ept_main_edit( props ) {
+
+	fca_ept_custom_reusable_block()
 
 	if ( props.attributes.selectedLayout ){
 		return eval( 'fca_ept_' + props.attributes.selectedLayout + '_block_edit' )( props )
@@ -492,22 +492,6 @@ function fca_ept_sidebar_settings( props ){
 				)
 			),
 
-			wp.data.select( 'core/editor' ).getCurrentPost().type === 'wp_block' ? 
-				el( 'div', {
-					className: 'fca-ept-sidebar-url'
-				},
-
-					el( 'label', { }, 'Pricing Table Name' ),
-					el( wp.components.TextControl, { 
-						value: props.attributes.postTitle,
-						onChange: (
-							function( newValue ){ 
-								props.setAttributes( { postTitle: newValue } )
-							} 
-						)
-					})
-				) : '',
-
 			el( wp.components.PanelHeader, {},
 				el( wp.components.Button, { 
 					style: { paddingBottom: '15px' },
@@ -595,6 +579,77 @@ function fca_ept_sidebar_settings( props ){
 /********************/
 /* Shared functions */
 /********************/
+
+function fca_ept_custom_reusable_block(){
+
+	var currentPost = wp.data.select( 'core/editor' ).getCurrentPost()
+
+	if( currentPost.type === 'wp_block' && currentPost.content.split( '<!--' )[1].includes( 'wp:fatcatapps/easy-pricing-table' ) ) {
+
+		// custom save hook
+		wp.data.subscribe(function () {
+
+			var isSavingPost = wp.data.select('core/editor').isSavingPost();
+			var isAutosavingPost = wp.data.select('core/editor').isAutosavingPost();
+			if ( isSavingPost && !isAutosavingPost ) {
+
+				var activeNotices = wp.data.select( 'core/notices' ).getNotices()
+				var result = activeNotices.filter( function( notice, i ){
+					return notice.id === 'fcaEptSuccessNotice'
+				})
+
+				if( !result.length ){
+
+				    wp.data.dispatch( 'core/notices' ).createNotice(
+				        'success',
+				       	'Pricing Table saved successfully! Your shortcode: [ept3-block id="' + wp.data.select('core/editor').getCurrentPost().id + '"]', // Text string to display.
+				        {
+				        	id: 'fcaEptSuccessNotice',
+				            isDismissible: true,
+				            actions: [
+				                {
+				                    onClick: ( function(){ window.open( 'https://fatcatapps.com/article-categories/easy-pricing-tables/', '_blank') } ),
+				                    label: 'Need help publishing your new block?',
+				                },
+				            ],
+				        }
+				    );
+				}
+			}
+		})
+
+		// After the block is rendered, keep it selected
+		$( document ).ready( function(){
+		 	var eptBlock = wp.data.select( 'core/block-editor' ).getBlocks().filter( function( block ){
+		 		return block.name === 'fatcatapps/easy-pricing-tables'
+		 	})
+
+			// on first load, select block
+			if( $('.components-button.edit-post-header-toolbar__inserter-toggle.is-primary.has-icon')[0].style.display !== 'none' ){
+				wp.data.dispatch( 'core/block-editor' ).selectBlock( eptBlock[0].clientId )
+			}
+
+		 	// on click anywhere but post title, select block
+			$( document ).on( 'click', function( event ) {
+				if( event.target.id !== 'post-title-1' ){
+					wp.data.dispatch( 'core/block-editor' ).selectBlock( eptBlock[0].clientId )
+				}
+			})
+
+			$( '.components-button.edit-post-header-toolbar__inserter-toggle.is-primary.has-icon' ).css( 'display', 'none' )
+			$( '.components-button.edit-post-fullscreen-mode-close.has-icon' )[0].href = 'edit.php?post_type=easy-pricing-table&page=ept3-list'
+			$( '.components-panel__header.interface-complementary-area-header.edit-post-sidebar__panel-tabs' ).css( 'display', 'none' )
+			$( '#post-title-1' ).css( 'textAlign', 'center' )
+			$( '#post-title-1' ).css( 'padding', '0' )
+			$('.edit-post-header-toolbar__left' ).find( 'div' ).each( function(){
+				this.style.display = 'none'
+			})
+			
+		})
+
+	}
+
+}
 
 function fca_ept_increase_fontsize ( props ){
 	var section = props.attributes.selectedSection

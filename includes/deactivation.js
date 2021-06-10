@@ -31,7 +31,6 @@ function fca_ptp_uninstall_button_handlers( url ) {
 				"msg": $('#fca-ept-deactivate-textarea').val()
 			}
 		}).done( function( response ) {
-			console.log ( response )
 			window.location.href = url			
 		})	
 	})

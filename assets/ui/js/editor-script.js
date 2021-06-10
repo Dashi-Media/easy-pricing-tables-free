@@ -13,13 +13,7 @@ $( document ).ready( function(){
 			window.location = $forever_dismiss
 			$( '.notice-dismiss' ).click()
 		} )
-		
-		// editor page Add New url
-		$( '.page-title-action' ).click( function( event ){
-			event.preventDefault()
-			$try_gutenberg = window.location.href + '&dh_ptp_new_gutenberg_table'
-			window.location = $try_gutenberg
-		} )
+
 	}
 
 	// Change EPT sidebar Add New url

@@ -196,6 +196,30 @@ div.fca-ept-input.components-base-control{
     left: -12.5%;
 }
 
+body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout1, body .editor-styles-wrapper[style*="width: 780px;"] div.fca-ept-layout1 {
+	font-size: 75%;
+	display: block;
+	padding-right: 0;
+}
+body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout1 div.fca-ept-toggle-period-container, body .editor-styles-wrapper[style*="width: 780px;"] div.fca-ept-layout1 div.fca-ept-toggle-period-container{
+	padding-right: 0;
+}
+body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular, body .editor-styles-wrapper[style*="width: 780px;"] div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular {
+	margin-top:100px;
+}
+
+body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout2, body .editor-styles-wrapper[style*="width: 780px;"] div.fca-ept-layout2 {	
+	font-size: 75%;	
+	display: block;	
+	padding-right: 0;	
+}	
+body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout2 div.fca-ept-toggle-period-container, body .editor-styles-wrapper[style*="width: 780px;"] div.fca-ept-layout2 div.fca-ept-toggle-period-container{	
+	padding-right: 0;	
+}	
+body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout2 div.fca-ept-column, body .editor-styles-wrapper[style*="width: 780px;"] div.fca-ept-layout2 div.fca-ept-column{	
+	margin-top: 15px !important;	
+}
+
 /***************/
 /* Sidebar CSS */
 /***************/
@@ -240,6 +264,10 @@ div.block-editor-block-toolbar__slot{
 div.fca-ept-table-container .block-editor-rich-text__editable:focus, 
 div.fca-ept-table-container .block-editor-rich-text__editable:hover {
 	outline: 2px dashed #2b78e4;
+}
+
+div.fca-ept-table-container{
+	padding-top: 50px;
 }
 
 /* small display */

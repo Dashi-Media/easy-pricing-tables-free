@@ -66,6 +66,7 @@ function fca_ept_layout2_block_edit( props ) {
 	var selectedLayout = props.attributes.selectedLayout
 
 	fca_ept_layout2_additional_styles( props )
+	fca_ept_custom_reusable_block()
  
 	return el( wp.element.Fragment, { },
 
@@ -76,7 +77,6 @@ function fca_ept_layout2_block_edit( props ) {
 		el( 'div', {
 			style: { fontFamily: props.attributes.fontFamily + ', sans-serif' },
 			id: 'fca-ept-table-' + props.attributes.tableID,
-			onClick: ( function(){ console.log('test')}),
 			className: props.attributes.togglePeriod ? 'fca-ept-table-container toggle-active' : 'fca-ept-table-container'
 		},
 

@@ -70,6 +70,7 @@ function fca_ept_layout1_block_edit( props ) {
 
 	// append extra variable css settings
 	fca_ept_layout1_additional_styles( props )
+	fca_ept_custom_reusable_block()
 
 	return el( wp.element.Fragment, { },
 

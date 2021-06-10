@@ -226,11 +226,11 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 				'post_author'    => get_current_user_id(),
 				'post_status'    => 'publish',
 				'post_content'   => '<!-- wp:fatcatapps\/easy-pricing-tables \/-->',
-				'meta_input' 	 => array( '1_dh_ptp_settings' => [ 'ept3' => true ] )
+				'meta_input' 	 => array( '1_dh_ptp_settings' => [ 'ept3' => '' ] )
 			);
 
 			$post_ID = wp_insert_post( $args );
-			wp_redirect( admin_url( "post.php?post=" . $post_ID . "&action=edit&ept3=1" ) );
+			wp_redirect( admin_url( "post.php?post=" . $post_ID . "&action=edit&ept3" ) );
 			exit;
 
 		}
@@ -243,21 +243,15 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
  	add_action( 'init', 'dh_ptp_try_gutenberg_tables' );
 
 
-	function fca_ept_toggle_fullscreen(){
-		$script = "window.onload = function() { const isFullscreenMode = wp.data.select( 'core/edit-post' ).isFeatureActive( 'fullscreenMode' ); if ( isFullscreenMode ) { wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'fullscreenMode' ); } }";
-		wp_add_inline_script( 'wp-blocks', $script );
-	}
-
-
 	function fca_ept_modify_template() {
 
+		global $_wp_theme_features;
 		$add_template = isset( $_GET['ept3'] );
 		$post_type_object = get_post_type_object( 'wp_block' );
 
 		if ( $add_template ) {
 
-			// Disable fullscreen
-			add_action( 'enqueue_block_editor_assets', 'fca_ept_toggle_fullscreen' );
+			unset( $_wp_theme_features[ 'editor-styles' ] );
 
 			$post_type_object->template = array(
 				array( 'fatcatapps/easy-pricing-tables', array(

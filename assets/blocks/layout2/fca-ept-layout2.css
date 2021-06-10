@@ -205,14 +205,3 @@ div.fca-ept-layout2 a.fca-ept-button span{
 
 }
 
-body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout2, body .editor-styles-wrapper[style*="width: 780px;"] div.fca-ept-layout2 {	
-	font-size: 75%;	
-	display: block;	
-	padding-right: 0;	
-}	
-body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout2 div.fca-ept-toggle-period-container, body .editor-styles-wrapper[style*="width: 780px;"] div.fca-ept-layout2 div.fca-ept-toggle-period-container{	
-	padding-right: 0;	
-}	
-body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout2 div.fca-ept-column, body .editor-styles-wrapper[style*="width: 780px;"] div.fca-ept-layout2 div.fca-ept-column{	
-	margin-top: 15px !important;	
-}

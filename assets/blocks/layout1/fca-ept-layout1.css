@@ -142,14 +142,3 @@ div.fca-ept-layout1 div.fca-ept-column.fca-ept-selected-column, div.fca-ept-layo
 	
 }
 
-body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout1, body .editor-styles-wrapper[style*="width: 780px;"] div.fca-ept-layout1 {
-	font-size: 75%;
-	display: block;
-	padding-right: 0;
-}
-body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout1 div.fca-ept-toggle-period-container, body .editor-styles-wrapper[style*="width: 780px;"] div.fca-ept-layout1 div.fca-ept-toggle-period-container{
-	padding-right: 0;
-}
-body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular, body .editor-styles-wrapper[style*="width: 780px;"] div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular {
-	margin-top:100px;
-}
