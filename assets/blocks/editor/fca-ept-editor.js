@@ -644,6 +644,8 @@ function fca_ept_custom_reusable_block(){
 			$('.edit-post-header-toolbar__left' ).find( 'div' ).each( function(){
 				this.style.display = 'none'
 			})
+			$( '.editor-styles-wrapper' ).css( 'paddingTop', '35px' )
+			$( '.edit-post-visual-editor__post-title-wrapper' )[0].setAttribute( "style", "position: fixed; top: -30px; width: calc( 100% - 350px ); margin: auto 0; z-index: 99" );
 			
 		})
 
