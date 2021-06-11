@@ -4,8 +4,8 @@ Donate link: https://fatcatapps.com/easypricingtables/?utm_campaign=donate%2Blin
 Tags: pricing table, pricing table block, pricing tables, comparison table, comparison table block, pricing grid, price comparison table
 Author URI: https://fatcatapps.com/?utm_campaign=author%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Plugin URI: https://fatcatapps.com/easypricingtables/?utm_campaign=plugin%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
-Requires at least: 5.5
-Tested up to: 5.7
+Requires at least: 3.6
+Tested up to: 5.7.2
 Stable tag: 3.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -143,7 +143,12 @@ Our full privacy policy is available here: [https://fatcatapps.com/legal/privacy
 
 
 = Easy Pricing Tables 3.0.0 =
-
+* Rebuilt Easy Pricing Tables from scratch for Gutenberg
+* Added a cleaner way to switch between layouts
+* Added font picker
+* Added WooCommerce integration for EPT Gutenberg
+* Cleaned up unused code
+* Tested up to WordPress 5.7.2
 
 = Easy Pricing Tables 2.4.6 =
 * Changed code to use builtin Codemirror

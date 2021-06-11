@@ -586,9 +586,22 @@ function fca_ept_custom_reusable_block(){
 
 	if( currentPost.type === 'wp_block' && currentPost.content.split( '<!--' )[1].includes( 'wp:fatcatapps/easy-pricing-table' ) ) {
 
-		// custom save hook
+	 	var eptBlock = wp.data.select( 'core/block-editor' ).getBlocks().filter( function( block ){
+	 		return block.name === 'fatcatapps/easy-pricing-tables'
+	 	})
+
 		wp.data.subscribe(function () {
 
+			// prevent block from being removed
+		 	var newBlockList = wp.data.select( 'core/block-editor' ).getBlocks().filter( function( block ){
+		 		return block.name === 'fatcatapps/easy-pricing-tables'
+		 	})
+
+			if ( newBlockList.length < eptBlock.length ) {
+				wp.data.dispatch( 'core/block-editor' ).resetBlocks( eptBlock );
+			}
+
+			// save hook
 			var isSavingPost = wp.data.select('core/editor').isSavingPost();
 			var isAutosavingPost = wp.data.select('core/editor').isAutosavingPost();
 			if ( isSavingPost && !isAutosavingPost ) {
@@ -608,7 +621,7 @@ function fca_ept_custom_reusable_block(){
 				            isDismissible: true,
 				            actions: [
 				                {
-				                    onClick: ( function(){ window.open( 'https://fatcatapps.com/article-categories/easy-pricing-tables/', '_blank') } ),
+				                    onClick: ( function(){ window.open( 'https://fatcatapps.com/knowledge-base/how-to-create-your-first-pricing-table/', '_blank') } ),
 				                    label: 'Need help publishing your new block?',
 				                },
 				            ],
@@ -618,11 +631,9 @@ function fca_ept_custom_reusable_block(){
 			}
 		})
 
-		// After the block is rendered, keep it selected
+		// After the block is rendered, add style changes
 		$( document ).ready( function(){
-		 	var eptBlock = wp.data.select( 'core/block-editor' ).getBlocks().filter( function( block ){
-		 		return block.name === 'fatcatapps/easy-pricing-tables'
-		 	})
+
 
 			// on first load, select block
 			if( $('.components-button.edit-post-header-toolbar__inserter-toggle.is-primary.has-icon')[0].style.display !== 'none' ){
@@ -640,13 +651,14 @@ function fca_ept_custom_reusable_block(){
 			$( '.components-button.edit-post-fullscreen-mode-close.has-icon' )[0].href = 'edit.php?post_type=easy-pricing-table&page=ept3-list'
 			$( '.components-panel__header.interface-complementary-area-header.edit-post-sidebar__panel-tabs' ).css( 'display', 'none' )
 			$( '#post-title-1' ).css( 'textAlign', 'center' )
-			$( '#post-title-1' ).css( 'padding', '0' )
+			$( '.wp-block editor-post-title.editor-post-title__block' ).css( 'paddingBottom', '30px' )
 			$('.edit-post-header-toolbar__left' ).find( 'div' ).each( function(){
 				this.style.display = 'none'
 			})
-			$( '.editor-styles-wrapper' ).css( 'paddingTop', '35px' )
-			$( '.edit-post-visual-editor__post-title-wrapper' )[0].setAttribute( "style", "position: fixed; top: -30px; width: calc( 100% - 350px ); margin: auto 0; z-index: 99" );
-			
+			$( '.edit-post-visual-editor__post-title-wrapper' ).css( 'paddingBottom', '5px' )
+			$( '.editor-styles-wrapper' ).css( 'marginTop', '-50px' )
+			$( '.block-editor-block-list__layout.is-root-container .block-list-appender.wp-block' ).css( 'display', 'none' )
+
 		})
 
 	}

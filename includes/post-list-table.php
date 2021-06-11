@@ -57,7 +57,6 @@ class EPT3_List_Table extends WP_List_Table {
 		$edit_query_args = array(
 			'post'  => $item->ID,
 			'action' => 'edit',
-			'ept3' => ''
 		);
 
 		$actions['edit'] = sprintf(

@@ -230,7 +230,7 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 			);
 
 			$post_ID = wp_insert_post( $args );
-			wp_redirect( admin_url( "post.php?post=" . $post_ID . "&action=edit&ept3" ) );
+			wp_redirect( admin_url( "post.php?post=" . $post_ID . "&action=edit" ) );
 			exit;
 
 		}
@@ -243,27 +243,30 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
  	add_action( 'init', 'dh_ptp_try_gutenberg_tables' );
 
 
-	function fca_ept_modify_template() {
+	function fca_ept_override_gutenberg_css() {
 
 		global $_wp_theme_features;
-		$add_template = isset( $_GET['ept3'] );
-		$post_type_object = get_post_type_object( 'wp_block' );
 
-		if ( $add_template ) {
+		$post_id = empty( $_GET['post'] ) ? '' : intval( $_GET['post'] );
+		$screen = get_current_screen();
 
-			unset( $_wp_theme_features[ 'editor-styles' ] );
+		$post_type = empty( $screen->post_type ) ? '' : $screen->post_type;
+		$base = empty( $screen->base ) ? '' : $screen->base;
 
-			$post_type_object->template = array(
-				array( 'fatcatapps/easy-pricing-tables', array(
-					'post_content'   => '<!-- wp:fatcatapps\/easy-pricing-tables \/-->',
-				) ),
-			);
-			$post_type_object->template_lock = 'all';
+		if ( $post_type === 'wp_block' && $base === 'post' ) {
+
+			$post_meta = get_post_meta( $post_id, '1_dh_ptp_settings', true );
+
+			if( !empty( $post_meta ) ){
+
+				unset( $_wp_theme_features[ 'editor-styles' ] );
+			
+			}
 
 		} 
 
 	}
-	add_action( 'init', 'fca_ept_modify_template' );
+	add_action( 'current_screen', 'fca_ept_override_gutenberg_css' );
 
 
 	//DEACTIVATION SURVEY 

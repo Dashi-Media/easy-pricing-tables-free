@@ -82,6 +82,10 @@ div.fca-ept-toggle-period-container .components-form-toggle .components-form-tog
 	border: 1px solid #000;
 }
 
+.block-editor-block-inspector .fca-ept-sidebar-items .components-base-control{
+	margin: auto 0;
+}
+
 div.fca-ept-sidebar-url {
 	padding: 16px;
 	background-color: #F5E6AB;
@@ -187,10 +191,10 @@ div.fca-ept-input.components-base-control{
     padding: 4px 8px;
 }
 
-/*surround blue wrapper */
-.block-editor-block-list__layout .block-editor-block-list__block:after,
-.block-editor-block-list__layout .block-editor-block-list__block:not([contenteditable]):focus:after,
-.block-editor-block-list__layout .block-editor-block-list__block.is-highlighted:after{
+/*surrounding blue wrapper */
+.block-editor-block-list__layout .block-editor-block-list__block[data-type="fatcatapps/easy-pricing-tables"]:after,
+.block-editor-block-list__layout .block-editor-block-list__block[data-type="fatcatapps/easy-pricing-tables"]:not([contenteditable]):focus:after,
+.block-editor-block-list__layout .block-editor-block-list__block.is-highlighted[data-type="fatcatapps/easy-pricing-tables"]:after{
 	width: calc( 125% + 20px);
     max-width: calc( 125% );
     left: -12.5%;
@@ -246,10 +250,6 @@ div.fca-ept-sidebar-items .block-editor-color-gradient-control .block-editor-col
 /********************/
 /*** Toolbar CSS ****/
 /********************/
-
-div.block-editor-block-toolbar__slot{
-	align-items: center;
-}
 
 .fca-ept-increase-fontsize {
 	border-left: 1px solid;
