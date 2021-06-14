@@ -146,7 +146,6 @@ Our full privacy policy is available here: [https://fatcatapps.com/legal/privacy
 * Rebuilt Easy Pricing Tables from scratch for Gutenberg
 * Added a cleaner way to switch between layouts
 * Added font picker
-* Added WooCommerce integration for EPT Gutenberg
 * Cleaned up unused code
 * Tested up to WordPress 5.7.2
 
