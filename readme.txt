@@ -1,5 +1,5 @@
 === Pricing Tables WordPress Plugin - Easy Pricing Tables ===
-Contributors: davidhme, fatcatapps, ryannovotny
+Contributors: davidhme, fatcatapps, ryannovotny, flippy101
 Donate link: https://fatcatapps.com/easypricingtables/?utm_campaign=donate%2Blink&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Tags: pricing table, pricing table block, pricing tables, comparison table, comparison table block, pricing grid, price comparison table
 Author URI: https://fatcatapps.com/?utm_campaign=author%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
