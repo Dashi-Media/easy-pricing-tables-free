@@ -221,7 +221,15 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 		if ( isSet( $_GET['dh_ptp_new_gutenberg_table'] ) ) {
 
 			$args = array(
-				'post_title'     => 'Easy Pricing Tables',
+				'post_type'      => 'wp_block',
+				'meta_key' 		 => '1_dh_ptp_settings',
+				'posts_per_page' => '-1'
+			);
+
+			$count = count( get_posts ( $args ) ) + 1;
+
+			$args = array(
+				'post_title'     => 'Pricing Table ' . $count,
 				'post_type'      => 'wp_block',
 				'post_author'    => get_current_user_id(),
 				'post_status'    => 'publish',

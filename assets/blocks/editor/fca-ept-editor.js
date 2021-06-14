@@ -187,7 +187,7 @@ function fca_ept_main_edit( props ) {
 							$('.learn-more3').css( 'display', 'none' )
 						}),
 						onClick: function() { 
-							window.open('https://www.fatcatapps.com/easypricingtables/pricing', '_blank')
+							window.open('https://fatcatapps.com/easypricingtables/?utm_campaign=wp%2Bgutenberg&utm_source=Easy%2BPricing%2BTables%2BFree&utm_medium=plugin&utm_content=v1', '_blank')
 						}
 					},
 						el( 'div', { 
@@ -210,7 +210,7 @@ function fca_ept_main_edit( props ) {
 							$('.learn-more4').css( 'display', 'none' )
 						}),
 						onClick: function() { 
-							window.open('https://www.fatcatapps.com/easypricingtables/pricing', '_blank')
+							window.open('https://fatcatapps.com/easypricingtables/?utm_campaign=wp%2Bgutenberg&utm_source=Easy%2BPricing%2BTables%2BFree&utm_medium=plugin&utm_content=v1', '_blank')
 						}
 					},
 						el( 'div', { 
@@ -233,7 +233,7 @@ function fca_ept_main_edit( props ) {
 							$('.learn-more5').css( 'display', 'none' )
 						}),
 						onClick: function() { 
-							window.open('https://www.fatcatapps.com/easypricingtables/pricing', '_blank')
+							window.open('https://fatcatapps.com/easypricingtables/?utm_campaign=wp%2Bgutenberg&utm_source=Easy%2BPricing%2BTables%2BFree&utm_medium=plugin&utm_content=v1', '_blank')
 						}
 					},
 						el( 'div', { 
@@ -256,7 +256,7 @@ function fca_ept_main_edit( props ) {
 							$('.learn-more6').css( 'display', 'none' )
 						}),
 						onClick: function() { 
-							window.open('https://www.fatcatapps.com/easypricingtables/pricing', '_blank')
+							window.open('https://fatcatapps.com/easypricingtables/?utm_campaign=wp%2Bgutenberg&utm_source=Easy%2BPricing%2BTables%2BFree&utm_medium=plugin&utm_content=v1', '_blank')
 						}
 					},
 						el( 'div', { 
@@ -564,7 +564,7 @@ function fca_ept_sidebar_settings( props ){
 					el( 'a', {
 						type: 'button',
 						target: '_blank',
-						href: 'https://www.fatcatapps.com/easypricingtables/pricing',
+						href: 'https://fatcatapps.com/easypricingtables/?utm_campaign=wp%2Bgutenberg&utm_source=Easy%2BPricing%2BTables%2BFree&utm_medium=plugin&utm_content=v1',
 						className: 'get-premium-button',
 					}, 'Learn more' )
 
@@ -650,7 +650,8 @@ function fca_ept_custom_reusable_block(){
 			$( '.components-button.edit-post-header-toolbar__inserter-toggle.is-primary.has-icon' ).css( 'display', 'none' )
 			$( '.components-button.edit-post-fullscreen-mode-close.has-icon' )[0].href = 'edit.php?post_type=easy-pricing-table&page=ept3-list'
 			$( '.components-panel__header.interface-complementary-area-header.edit-post-sidebar__panel-tabs' ).css( 'display', 'none' )
-			$( '#post-title-1' ).css( 'textAlign', 'center' )
+			$( '.editor-post-title__input' ).css( 'textAlign', 'center' )
+			$( '.editor-post-title__input' ).css( 'height', 'unset' )
 			$( '.wp-block editor-post-title.editor-post-title__block' ).css( 'paddingBottom', '30px' )
 			$('.edit-post-header-toolbar__left' ).find( 'div' ).each( function(){
 				this.style.display = 'none'
@@ -658,6 +659,13 @@ function fca_ept_custom_reusable_block(){
 			$( '.edit-post-visual-editor__post-title-wrapper' ).css( 'paddingBottom', '5px' )
 			$( '.editor-styles-wrapper' ).css( 'marginTop', '-50px' )
 			$( '.block-editor-block-list__layout.is-root-container .block-list-appender.wp-block' ).css( 'display', 'none' )
+			$( '.wp-block.editor-post-title.editor-post-title__block' ).appendTo( '.edit-post-header__toolbar' )
+			$( '.wp-block.editor-post-title.editor-post-title__block' ).css( 'margin', '0 auto' )
+			$( '.wp-block.editor-post-title.editor-post-title__block' ).css( 'width', '100%' )
+			$( '.wp-block.editor-post-title.editor-post-title__block' ).css( 'paddingRight', '110px' )
+			$( '.wp-block.editor-post-title.editor-post-title__block' ).css( 'fontSize', '0.5vw' )
+			$( '.edit-post-header-toolbar').css( 'flexGrow', '0' )
+			$( '.editor-styles-wrapper' ).css( 'paddingTop', '80px' )
 
 		})
 
