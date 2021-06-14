@@ -141,6 +141,9 @@ Our full privacy policy is available here: [https://fatcatapps.com/legal/privacy
 
 == Changelog ==
 
+# Version 3.0.1 #
+* Some CSS fixes
+* Add URL with instruction video
 
 = Easy Pricing Tables 3.0.0 =
 * Rebuilt Easy Pricing Tables from scratch for Gutenberg
