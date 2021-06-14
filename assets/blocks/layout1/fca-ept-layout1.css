@@ -120,7 +120,7 @@ div.fca-ept-layout1 a.fca-ept-button{
 }
 
 div.fca-ept-layout1 a.fca-ept-button span{
-	cursor: pointer;
+	cursor: auto;
 }
 
 div.fca-ept-layout1 div.fca-ept-column.fca-ept-selected-column, div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular.fca-ept-selected-column {

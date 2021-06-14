@@ -7,7 +7,6 @@ function fca_ept_post_list_menu() {
 	
 	// hide legacy tables submenu if this is a fresh install
 	if( !dh_ptp_check_existing_install() ){
-		
 
 		global $submenu;
 		unset($submenu['edit.php?post_type=easy-pricing-table'][1]);
