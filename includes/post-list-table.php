@@ -1,12 +1,4 @@
 <?php
-/**
- * WP List Table Example class
- *
- * @package   WPListTableExample
- * @author    Matt van Andel
- * @copyright 2016 Matthew van Andel
- * @license   GPL-2.0+
- */
 
 class EPT3_List_Table extends WP_List_Table {
 
