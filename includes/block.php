@@ -3,9 +3,11 @@
 GUTENBERG BLOCK INTEGRATION
 */
 
+/**************/
+/* EPT LEGACY */
+/**************/
+function dh_ptp_gutenblock_register() {
 
-function dh_ptp_gutenblock() {
-	
 	wp_register_script(
 		'dh_ptp_gutenblock_script',
 		PTP_PLUGIN_URL . '/includes/block.js',
@@ -24,18 +26,17 @@ function dh_ptp_gutenblock() {
 					'post_id' => array( 
 						'type' => 'string',
 						'default' => '0'				
-					)
+					),
 				)
 			)
 		);
 	}
-	
 }
-add_action( 'init', 'dh_ptp_gutenblock' );
 
+add_action( 'init', 'dh_ptp_gutenblock_register' );
 
 function dh_ptp_gutenblock_enqueue() {
-	
+
 	$posts = get_posts( array(
 		'post_type' => 'easy-pricing-table',
 		'post_status' => 'publish',
@@ -55,14 +56,17 @@ function dh_ptp_gutenblock_enqueue() {
 		if ( empty( $title ) ) {
 			$title = __("(no title)", 'easy-pricing-tables' );
 		}
+
 		$table_list[] = array(
 			'value' => $p,
 			'label' => html_entity_decode( $title ),
 		);
 		
 	}
+
+	$existing_install = dh_ptp_check_existing_install();
 	
-	wp_localize_script( 'dh_ptp_gutenblock_script', 'dh_ptp_gutenblock_script_data', array( 'tables' => $table_list, 'editurl' => admin_url( 'post.php' ), 'newurl' => admin_url( 'post-new.php' )  ) );
+	wp_localize_script( 'dh_ptp_gutenblock_script', 'dh_ptp_gutenblock_script_data', array( 'existing' => $existing_install, 'tables' => $table_list, 'editurl' => admin_url( 'post.php' ), 'newurl' => admin_url( 'post-new.php' )  ) );
 	
 }
 add_action( 'enqueue_block_editor_assets', 'dh_ptp_gutenblock_enqueue' );
@@ -73,6 +77,8 @@ function dh_ptp_gutenblock_render( $attributes ) {
 	$id = empty( $attributes['post_id'] ) ? 0 : $attributes['post_id'];
 	if ( $id ) {		
 		return do_shortcode( "[easy-pricing-table id='$id']" );
+		//return ;
 	}
 	return '<p>' . __( 'Click here and select a pricing table from the menu above.', 'easy-pricing-tables' ) . '</p>';
+	
 }
