@@ -179,7 +179,7 @@ div.fca-ept-layout2 a.fca-ept-button:hover{
 }
 
 div.fca-ept-layout2 a.fca-ept-button span{
-	cursor: auto;
+	cursor: pointer;
 }
 
 /* small display */

@@ -6,7 +6,7 @@
 	Text Domain: easy-pricing-tables
 	Domain Path: /languages
 	Author: Fatcat Apps
-	Version: 3.0.0
+	Version: 3.0.1
 	Author URI: https://fatcatapps.com
 */
 
@@ -21,7 +21,7 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 	if ( PTP_DEBUG ) {
 		define( 'PTP_PLUGIN_VER', '3.0.' . time() );
 	} else {
-		define( 'PTP_PLUGIN_VER', '3.0.0' );
+		define( 'PTP_PLUGIN_VER', '3.0.1' );
 	}
 
 	// Include post types
@@ -144,6 +144,7 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 			echo '<div id="fca-ept-setup-notice" class="notice notice-info" style="padding-bottom: 8px; padding-top: 8px;">';
 				echo '<p>' . __( "We’ve completely redesigned Easy Pricing Tables from scratch, with brand new designs and a slick new way to create tables using the Block Editor. We’ll eventually phase out support for this old interface.", $plugin_name ) . "</p>" ;
 				echo "<a href='$try_gutenberg' class='button button-primary' style='margin-top: 2px;'>" . __( 'Try it', $plugin_name) . "</a> ";
+				echo '<a href="https://youtu.be/iU3mC8vXKt8" target="_blank" style="margin-top: 2px;" class=button button-primary>See it in action</a>';
 				echo '<br style="clear:both">';
 			echo '</div>';
 		}

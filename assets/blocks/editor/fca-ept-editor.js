@@ -468,8 +468,7 @@ function fca_ept_sidebar_settings( props ){
 				
 				el( 'div', { 
 					style: { 
-						display: 'flex',
-						marginTop: '-16px'
+						display: 'flex'
 					}
 				},
 
