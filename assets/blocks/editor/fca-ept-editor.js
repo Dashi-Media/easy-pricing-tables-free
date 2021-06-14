@@ -642,7 +642,7 @@ function fca_ept_custom_reusable_block(){
 
 		 	// on click anywhere but post title, select block
 			$( document ).on( 'click', function( event ) {
-				if( event.target.id !== 'post-title-1' ){
+				if( event.target.className !== 'editor-post-title__input' ){
 					wp.data.dispatch( 'core/block-editor' ).selectBlock( eptBlock[0].clientId )
 				}
 			})
