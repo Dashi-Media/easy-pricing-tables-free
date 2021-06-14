@@ -106,6 +106,16 @@ function dh_ptp_manage_pricing_table_columns($column_name, $id) {
 // Add to admin_init function
 add_action('manage_easy-pricing-table_posts_custom_column', 'dh_ptp_manage_pricing_table_columns', 10, 2);
 
+<<<<<<< Updated upstream
+=======
+// check whether this is a brand new install or has existing legacy tables
+function dh_ptp_check_existing_install (){
+	global $wpdb;
+	$results = $wpdb->get_var( "SELECT COUNT(*) FROM $wpdb->posts WHERE post_type='easy-pricing-table'");
+
+	return $results ? true : false;
+}
+>>>>>>> Stashed changes
 
 /**
  * Preview functionality.

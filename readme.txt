@@ -13,25 +13,27 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Pricing Table Plugin - Easy Pricing Tables Lets You Create A Beautiful, Responsive Pricing Table In 2 Minutes. No Coding Required.
 
 == Description ==
-*   The **Easy Pricing Tables** WordPress Plugin makes it easy to create and publish beautiful pricing tables and comparison tables on your WordPress site. You will be able to set up and publish your pricing table in no time.
+*   The **Easy Pricing Tables** WordPress Plugin makes it easy to create and publish beautiful pricing tables and comparison tables on your WordPress site. You can build, customize and publish a pricing table in just a few minutes, straight from the post editor, with zero coding required.
 
-*   [View screenshots of WordPress pricing tables built with this plugin](https://wordpress.org/plugins/easy-pricing-tables/screenshots/).
+[View screenshots of WordPress pricing tables built with this plugin](https://wordpress.org/plugins/easy-pricing-tables/screenshots/).
 
-*   [View Easy Pricing Tables Premium Live Demo &raquo;](https://fatcatapps.com/easypricingtables/demo?utm_campaign=description%2Bdemo%2Blink&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
+[View Easy Pricing Tables Premium Live Demo &raquo;](https://fatcatapps.com/easypricingtables/demo?utm_campaign=description%2Bdemo%2Blink&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
 
 > #### Gutenberg Compatible
-> This plugin is fully compatible with WordPress 5.0's new content editor ("Gutenberg"). Simply create your pricing table, then add your pricing table block to your website.
+> This plugin is fully compatible with WordPress 5.0's new block editor ("Gutenberg"). You can build and edit pricing tables directly in the post editor. Also features support for classic editor and page builders.
 
 
 
 > #### Easy Pricing Tables Premium
 > Easy Pricing Tables Premium comes with the following features.<br />
 >
-> Ten Gorgeous Pricing Table Designs.<br />
+> Six Gorgeous Pricing Table Designs.<br />
+> Comparison Tables.<br />
 > Fully Customize your Pricing Table (Colors, etc...).<br />
+> Choose From 15 Font Options. <br />
+> Add Inline Images to Pricing Tables. <br />
+> One-Click WooCommerce Integration. <br />
 > Priority Email Support.<br />
-> Tooltips.<br />
-> Google Analytics Integration (track pricing table button clicks).<br />
 > Pricing Toggles (switch between multiple pricing tables - eg. currencies or monthly/yearly pricing.<br />
 > And much more....<br />
 >
@@ -39,26 +41,45 @@ Pricing Table Plugin - Easy Pricing Tables Lets You Create A Beautiful, Responsi
 
 = Overview =
 
-* Build beautiful WordPress pricing tables in minutes.
+Easy Pricing Tables is the first WordPress pricing table plugin built specifically for the block editor.
 
-*   Easy Pricing Tables implements conversion rate optimization (CRO) best practices and guides you through the process of creating a pricing table that converts.
+Building pricing tables on your site has never been easier. Simply add the pricing table block to your post, fill in your prices and features, and publish.
 
-*   Easy Pricing Tables works with any WordPress theme you have installed. After creating your first pricing table using Easy Pricing Tables, you can publish your pricing tables anywhere on your site using a shortcode.
-
-* Gutenberg / WordPress 5.0 compatible. This plugin lets you create pricing table blocks, which you can add to your website using WordPress' new content editor.
+No coding required. Easy Pricing Tables lets anyone create a responsive pricing table in just a few minutes.
 
 = Easy Pricing Tables - WordPress Pricing Table Plugin Features =
 
-*   Works with any WordPress theme
-*   Responsive WordPress Pricing Tables
-*   WordPress 5.0 and Gutenberg support - add pricing table blocks to your site
-*   Intuitive User Interface - building pricing tables has never been easier
-*   Built-in Conversion Rate Optimization Best Practices
-*   Create Unlimited Pricing Table Rows
-*   Customize Your Pricing Table Design: Font-size, Color Pickers and Rounded Borders.
-*   Use Drag & Drop To Reorder WordPress Pricing Tables Columns
-*   Featured Your Most Popular Easy Pricing Tables Column
-*   Custom CSS - Add Custom CSS to your Pricing Table
+* Build beautiful WordPress pricing tables in minutes.
+
+* Works with any WordPress theme.
+
+* Responsive WordPress Pricing Tables - responds to fit any device.
+
+* Easy Pricing Tables implements conversion rate optimization (CRO) best practices and guides you through the process of creating a pricing table that converts.
+
+* Easy Pricing Tables works with any WordPress theme you have installed. Use the pricing table block to build pricing tables in the post editor, or build in the plugin dashboard and add to your page via shortcode.
+
+* Gutenberg / WordPress 5.0 compatible. Not just compatible. Easy Pricing Tables is built specifically for the block editor.
+
+* Intuitive User Interface - building pricing tables has never been easier. Point and click to edit your table.
+
+* Create unlimited pricing table rows.
+
+* Customize your pricing table design with color pickers, font pickers and native design settings.
+
+* Reorder pricing table columns with one click.
+
+* Featured Column - draw people to your most popular products by highlighting a featured column.
+
+* Save pricing tables as reusable blocks to add in multiple posts or pages.
+
+* Shortcode support for use with classic editor and page builders.
+
+* Add PayPal payment links, Stripe payment links, or any other checkout link to your pricing table buttons.
+
+* Automatically match column heights to keep rows aligned.
+
+* Customize text size and formatting with one click.
 
 
 *   [Check out Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=ept-description-cta&utm_source=wordpress.org%2Fplugins&utm_medium=referral)
@@ -75,48 +96,19 @@ Pricing Table Plugin - Easy Pricing Tables Lets You Create A Beautiful, Responsi
 
 == Frequently Asked Questions ==
 
-= I'm using S2 member / WooCommerce / etc and would like to replace your built-in Easy Pricing Tables button with a button generated from a shortcode =
-To disable the pricing table button and replace it with a shortcode, simply enter the following in the 'Button Text' row:
-`[shortcode][my-example-shortcode/][/shortcode]`
+= Can I use Easy Pricing Tables with Elementor? = 
+Yes, Easy Pricing Tables is compatible with Elementor and any other page builder plugin that supports shortcodes.
 
-= My pricing table rows aren't aligned properly =
-If within the same row, you use a lot more text in some features than in others, your feature height alignment might be weird.
-This problem is due to tables being responsive instead of fixed width. You can fix it by adding manual linebreaks for your features.
-<br/><br/> results in one linebreak.
+To add a pricing table anywhere other than the block editor, go to the Easy Pricing Tables plugin dashboard, create your table, and add it to your post with the shortcode provided.
 
-= I want to change the design for each individual column =
-This currently isn't supported in the user interface. However, each column has its own unique HTML class that can be modified using a css class selector.
+= How can I save pricing tables to publish in multiple parts of my site? =
+Create your pricing table and save it as a reusable block. Choose this reusable block anywhere you wish to add your pricing table.
 
-*	Class of the first column: ptp-col-id-0
-*	Class of the second column: ptp-col-id-1
-*	Class of the third column: ptp-col-id-2
-*	etc...
+= How do I change the width of my pricing table? =
+Your pricing tables will fit to the content area your theme allows. You can edit how wide or narrow it appears with the “change alignment” setting (in the settings toolbar above the block). Change the alignment settings to set how much of the content area your pricing table fits to (e.g. “wide width” or “full width”).
 
-= How do I change the design of individual pricing table feature rows? =
-This currently isn't supported in the user interface. However, each feature row has its own unique HTML class that can be modified using a css class selector.
-
-*	Class of the first feature row: ptp-row-id-0
-*	Class of the second feature row: ptp-row-id-1
-*	Class of the third feature row: ptp-row-id-2
-*	etc...
-
-= I want to adjust my pricing table column width =
-This currently isn't supported in the user interface. This plugin uses a fixed percentage column width based on how many columns your pricing table has.
-For example, if your pricing table has 3 columns, each column has the following HTML class: ``ptp-three-col``.
-
-The default CSS in this case looks like this:
-`
-.ptp-three-col {
-	width: 31%;
-}
-`
-
-Example code for changing your column width you can add to your theme:
-`
-.ptp-three-col {
-width: 25%!important;
-}
-`
+= How can I integrate Easy Pricing Tables with WooCommerce? =
+Easy Pricing Tables premium comes with a one-click integration to add WooCommerce products to your pricing table. [Check out Easy Pricing Tables Premium here.](https://fatcatapps.com/easypricingtables/?utm_campaign=ept-description-cta&utm_source=wordpress.org%2Fplugins&utm_medium=referral)
 
 == Privacy Disclosure ==
 
@@ -126,18 +118,18 @@ Our full privacy policy is available here: [https://fatcatapps.com/legal/privacy
 
 
 == Screenshots ==
-1. Example of a pricing table with 3 columns
-2. Example of a pricing table with 2 columns
-3. Creating a new pricing table
-4. Design options of Easy Pricing Tables Lite
-6. Additional settings of [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
-7. One of the designs from [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
-8. Another design from [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
-9. Another design from [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
-10. Another design from [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
-11. Another design from [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
-12. Another design from [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
-13. Another design from [Easy Pricing Tables Premium](https://fatcatapps.com/easypricingtables/?utm_campaign=screenshots%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral)
+1. Creating a pricing table
+2. Example of a published pricing table
+3. Another example of a published pricing table
+4. Another example of a published pricing table
+5. Plugin dashboard, showing saved tables and shortcode feature
+6. Easy Pricing Tables Premium layouts
+7. Design editor of Easy Pricing Tables Premium
+8. Premium pricing table with toggle
+9. Premium comparison table with toggle
+10. Premium pricing table layout
+11. Premium pricing table layout with inline images
+12. Premium pricing table layout with inline images 
 
 == Changelog ==
 
