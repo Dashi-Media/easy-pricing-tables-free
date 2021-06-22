@@ -134,7 +134,7 @@ Our full privacy policy is available here: [https://fatcatapps.com/legal/privacy
 == Changelog ==
 
 = Easy Pricing Tables 3.0.3 =
-
+* Add option to display legacy pricing tables in Pricing Tables Settings
 
 = Easy Pricing Tables 3.0.2 =
 * Add Pricing Table custom theme compatibilities
