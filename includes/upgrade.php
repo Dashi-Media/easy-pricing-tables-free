@@ -41,5 +41,4 @@ function dh_ptp_upgrade_to_premium_menu_js()
 }
 add_action( 'admin_footer', 'dh_ptp_upgrade_to_premium_menu_js');
 
-
 ?>

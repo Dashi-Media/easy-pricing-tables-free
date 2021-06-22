@@ -5,8 +5,10 @@ function fca_ept_post_list_menu() {
 
 	add_submenu_page( 'edit.php?post_type=easy-pricing-table', __('Easy Pricing Tables', 'easy-pricing-tables'), __('All Pricing Tables', 'easy-pricing-tables'), 'manage_options', 'ept3-list', 'fca_ept_render_post_list', 0 );
 	
-	// hide legacy tables submenu if this is a fresh install
-	if( !dh_ptp_check_existing_install() ){
+	// hide legacy tables submenu if this is a fresh install OR if it's disabled through settings menu
+	$show_legacy_tables = ( empty( get_option( 'dh_ptp_show_legacy_tables') ) ? false : true );
+
+	if( !dh_ptp_check_existing_install() && !$show_legacy_tables ){
 
 		global $submenu;
 		unset($submenu['edit.php?post_type=easy-pricing-table'][1]);
