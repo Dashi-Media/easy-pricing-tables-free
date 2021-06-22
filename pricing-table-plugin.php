@@ -36,6 +36,9 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 	// Upgrade to Premium
 	include ( PTP_PLUGIN_PATH . 'includes/upgrade.php');
 
+	// Include settings page
+	include ( PTP_PLUGIN_PATH . 'includes/settings.php');
+
 	// only if legacy tables are available, include the rest
 	if( dh_ptp_check_existing_install() ){
 
@@ -137,8 +140,11 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 		$notice_dismissed = get_option( 'dh_ptp_show_gutenberg_notice', 'on' ) === 'off';
 		$show_fullscreen_notice = $is_legacy_screen && ( !$notice_dismissed );
 		$show_reminder = $is_legacy_screen && $notice_dismissed;
+		$show_legacy_tables = ( empty( get_option( 'dh_ptp_show_legacy_tables') ) ? false : true );
+		$legacy_reminder = empty( $_GET['page'] ) ? false : ( $_GET['page'] === 'ept3-list' );
 
 		$try_gutenberg = add_query_arg( 'dh_ptp_new_gutenberg_table', true );
+		$settings_page = add_query_arg( 'dh_ptp_settings_page', true );
 
 		if ( $show_reminder ){
 			echo '<div id="fca-ept-setup-notice" class="notice notice-info" style="padding-bottom: 8px; padding-top: 8px;">';
@@ -148,6 +154,15 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 				echo '<br style="clear:both">';
 			echo '</div>';
 		}
+
+		if ( !$show_legacy_tables && $legacy_reminder ){
+			echo '<div id="fca-ept-legacy-notice" class="notice notice-info is-dismissible" style="padding-bottom: 8px; padding-top: 8px;">';
+				echo '<p>' . __( "We recommend using the visual interface to build your new pricing tables. Still prefer the legacy experience?", $plugin_name ) . "</p>" ;
+				echo "<a href='$settings_page' class='button button-primary' style='margin-top: 2px;'>" . __( 'Turn it back on', $plugin_name) . "</a> ";
+				echo '<br style="clear:both">';
+			echo '</div>';
+		}	
+
 		if ( $show_fullscreen_notice ){
 			echo '<div id="fca-ept-fullscreen-notice" class="notice notice-info is-dismissible" style="display: none; text-align: center; padding-left: 250px; padding-right: 250px; padding-bottom: 8px; padding-top: 40px; position: fixed; top: 27px; left: 160px; right: 0; bottom: -15px; z-index: 999999;">';
 				echo '<h1>' . __( "Try the brand new Easy Pricing Tables.", $plugin_name ) . "</h1>" ;
@@ -218,6 +233,12 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 
 
 	function dh_ptp_try_gutenberg_tables (){
+
+		if ( isSet( $_GET['dh_ptp_settings_page'] ) ){
+
+			wp_redirect( admin_url( "edit.php?post_type=easy-pricing-table&page=easy-pricing-tables-settings" ) );
+
+		}
 
 		if ( isSet( $_GET['dh_ptp_new_gutenberg_table'] ) ) {
 
