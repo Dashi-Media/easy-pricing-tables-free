@@ -31,7 +31,7 @@ function dh_ptp_settings() {
 					<tbody>
 						<tr valign="top">
 							<th scope="row" valign="top">
-								<?php _e('Show legacy pricing tables', 'easy-pricing-tables'); ?>
+								<?php _e('Show legacy pricing tables sidebar menu', 'easy-pricing-tables'); ?>
 							</th>
 							<td>
 								<input id="dh_ptp_show_legacy_tables" name="dh_ptp_show_legacy_tables" type="checkbox" value="yes" <?php echo $dh_ptp_show_legacy_tables ?>/><br/>
