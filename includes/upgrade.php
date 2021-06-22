@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 function dh_ptp_upgrade_to_premium_menu()
 {
-    $page_hook = add_submenu_page('edit.php?post_type=easy-pricing-table', __('Upgrade to Premium', 'easy-pricing-tables'), __('Upgrade to Premium', 'easy-pricing-tables'), 'manage_options', 'easy-pricing-tables-upgrade', 'dh_ptp_upgrade_to_premium');
+    $page_hook = add_submenu_page('edit.php?post_type=easy-pricing-table', __('Upgrade to Premium', 'easy-pricing-tables'), __('Upgrade to Premium', 'easy-pricing-tables'), 'manage_options', 'easy-pricing-tables-upgrade', 'dh_ptp_upgrade_to_premium', NULL);
     add_action('load-' . $page_hook , 'dh_ptp_upgrade_ob_start');
 }
 add_action('admin_menu', 'dh_ptp_upgrade_to_premium_menu');
@@ -40,6 +40,5 @@ function dh_ptp_upgrade_to_premium_menu_js()
     <?php 
 }
 add_action( 'admin_footer', 'dh_ptp_upgrade_to_premium_menu_js');
-
 
 ?>
