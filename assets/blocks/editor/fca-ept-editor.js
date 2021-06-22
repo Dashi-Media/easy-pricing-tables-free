@@ -151,7 +151,7 @@ function fca_ept_main_edit( props ) {
 					el( 'div', {
 						className: 'layout',
 						onClick: function() { 
-							props.setAttributes( { tableID: fca_ept_generate_id( props ) } )
+							props.setAttributes( { tableID: fca_ept_generate_id() } )
 							fca_ept_set_layout1_attributes( props )
 						}
 					},
@@ -166,7 +166,7 @@ function fca_ept_main_edit( props ) {
 					el( 'div', {
 						className: 'layout',
 						onClick: function() { 
-							props.setAttributes( { tableID: fca_ept_generate_id( props ) } )
+							props.setAttributes( { tableID: fca_ept_generate_id() } )
 							fca_ept_set_layout2_attributes( props )
 						}
 					},
@@ -806,7 +806,7 @@ function fca_ept_del_column ( props ) {
 	
 }
 
-function fca_ept_generate_id( props ) {
+function fca_ept_generate_id() {
 
 	var newID = 'xxxx'.replace(/[x]/g, function(c) {
 		var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8)
