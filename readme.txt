@@ -133,8 +133,8 @@ Our full privacy policy is available here: [https://fatcatapps.com/legal/privacy
 
 == Changelog ==
 
-= Easy Pricing Tables 3.0.3 =
-* Fixed bug to access Settings page for some users
+= Easy Pricing Tables 3.0.4 =
+* Fixed bug to access Settings page
 
 = Easy Pricing Tables 3.0.3 =
 * Add option to display legacy pricing tables in Pricing Tables Settings

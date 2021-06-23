@@ -155,7 +155,7 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 			echo '</div>';
 		}
 
-		if ( !$show_legacy_tables && $legacy_reminder ){
+		if ( !dh_ptp_check_existing_install() && !$show_legacy_tables && $legacy_reminder ){
 			echo '<div id="fca-ept-legacy-notice" class="notice notice-info is-dismissible" style="padding-bottom: 8px; padding-top: 8px;">';
 				echo '<p>' . __( "We recommend using the visual interface to build your new pricing tables. Still prefer the legacy experience?", $plugin_name ) . "</p>" ;
 				echo "<a href='$settings_page' class='button button-primary' style='margin-top: 2px;'>" . __( 'Turn it back on', $plugin_name) . "</a> ";
