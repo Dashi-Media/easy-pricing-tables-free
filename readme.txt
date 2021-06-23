@@ -6,7 +6,7 @@ Author URI: https://fatcatapps.com/?utm_campaign=author%2Buri&utm_source=https%3
 Plugin URI: https://fatcatapps.com/easypricingtables/?utm_campaign=plugin%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Requires at least: 3.6
 Tested up to: 5.7
-Stable tag: 3.0.3
+Stable tag: 3.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -132,6 +132,9 @@ Our full privacy policy is available here: [https://fatcatapps.com/legal/privacy
 12. Premium pricing table layout with inline images 
 
 == Changelog ==
+
+= Easy Pricing Tables 3.0.3 =
+* Fixed bug to access Settings page for some users
 
 = Easy Pricing Tables 3.0.3 =
 * Add option to display legacy pricing tables in Pricing Tables Settings
