@@ -155,7 +155,7 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 			echo '</div>';
 		}
 
-		if ( !$show_legacy_tables && $legacy_reminder ){
+		if ( !dh_ptp_check_existing_install() && !$show_legacy_tables && $legacy_reminder ){
 			echo '<div id="fca-ept-legacy-notice" class="notice notice-info is-dismissible" style="padding-bottom: 8px; padding-top: 8px;">';
 				echo '<p>' . __( "We recommend using the visual interface to build your new pricing tables. Still prefer the legacy experience?", $plugin_name ) . "</p>" ;
 				echo "<a href='$settings_page' class='button button-primary' style='margin-top: 2px;'>" . __( 'Turn it back on', $plugin_name) . "</a> ";
@@ -205,13 +205,17 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 
 		}
 
+		$leave_review = add_query_arg( 'dh_ptp_leave_review', true );
+		$postpone_url = add_query_arg( 'dh_ptp_postpone_review_notice', true );
+		$forever_dismiss_url = add_query_arg( 'dh_ptp_forever_dismiss_notice', true );
+
 		if ( $show_review_option && $show_review_option !== 'not-set' ){
 
 			$plugin_name = 'easy-pricing-tables';
 
 			echo '<div id="fca-ept-review-notice" class="notice notice-success is-dismissible" style="padding-bottom: 8px; padding-top: 8px;">';
 				echo '<p>' . __( "Hi! You've been using Easy Pricing Tables Free for a while now, so who better to ask for a review than you? Would you please mind leaving us one? It really helps us a lot!", $plugin_name ) . '</p>';
-				echo "<a href='$review_url' class='button button-primary' style='margin-top: 2px;'>" . __( 'Leave review', $plugin_name) . "</a> ";
+				echo "<a href='$leave_review' class='button button-primary' style='margin-top: 2px;'>" . __( 'Leave review', $plugin_name) . "</a> ";
 				echo "<a style='position: relative; top: 10px; left: 7px;' href='$postpone_url' >" . __( 'Maybe later', $plugin_name) . "</a> ";
 				echo "<a style='position: relative; top: 10px; left: 16px;' href='$forever_dismiss_url' >" . __( 'No thank you', $plugin_name) . "</a> ";
 				echo '<br style="clear:both">';
