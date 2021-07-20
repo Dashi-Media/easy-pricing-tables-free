@@ -493,7 +493,6 @@ function fca_ept_sidebar_settings( props ){
 
 			el( wp.components.PanelHeader, {},
 				el( wp.components.Button, { 
-					style: { paddingBottom: '15px' },
 					className: 'components-button is-link fca-ept-select-layout',
 					onClick: ( function(){ 
 						props.setAttributes( { align: 'wide' } )
@@ -654,11 +653,12 @@ function fca_ept_custom_reusable_block(){
 			$( '.editor-post-title__input' ).css( 'fontSize', '300%' )
 			$( '.editor-post-title__input' ).css( 'margin', '0%' )
 			$( '.wp-block editor-post-title.editor-post-title__block' ).css( 'paddingBottom', '30px' )
-			$('.edit-post-header-toolbar__left' ).find( 'div' ).each( function(){
+			$( '.block-editor-default-block-appender' ).css( 'display', 'none' )
+			$( '.components-dropdown.block-editor-inserter' ).css( 'display', 'none' )
+			$( '.edit-post-header-toolbar__left' ).find( 'div' ).each( function(){
 				this.style.display = 'none'
 			})
 			$( '.edit-post-visual-editor__post-title-wrapper' ).css( 'paddingBottom', '5px' )
-			$( '.editor-styles-wrapper' ).css( 'marginTop', '-50px' )
 			$( '.editor-styles-wrapper' ).css( 'backgroundColor', 'white' )
 			$( '.block-editor-block-list__layout.is-root-container .block-list-appender.wp-block' ).css( 'display', 'none' )
 			$( '.wp-block.editor-post-title.editor-post-title__block' ).appendTo( '.edit-post-header__toolbar' )
@@ -666,8 +666,8 @@ function fca_ept_custom_reusable_block(){
 			$( '.wp-block.editor-post-title.editor-post-title__block' ).css( 'width', '100%' )
 			$( '.wp-block.editor-post-title.editor-post-title__block' ).css( 'padding', '0 110px 0 0' )
 			$( '.wp-block.editor-post-title.editor-post-title__block' ).css( 'fontSize', '0.5vw' )
-			$( '.edit-post-header-toolbar').css( 'flexGrow', '0' )
-			$( '.editor-styles-wrapper' ).css( 'paddingTop', '80px' )
+			$( '.edit-post-header-toolbar' ).css( 'flexGrow', '0' )
+			$( '.editor-styles-wrapper' ).css( 'paddingTop', '30px' )
 
 
 		})
@@ -965,3 +965,9 @@ function fca_ept_toolbar_controls( props ){
 	))
 }
 
+function fca_ept_update_section( props, section ){
+
+	props.setAttributes({ selectedSection: section })
+	section === 'button' ? props.setAttributes({ showURLPopover: 'block' }) : props.setAttributes({ showURLPopover: 'none' })
+
+}

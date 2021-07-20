@@ -229,9 +229,7 @@ body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout2 div.fca-
 /***************/
 
 div.fca-ept-sidebar-items .components-panel__header {
-	padding-top: 15px;
-    align-items: end;
-    margin-right: -10px;
+    align-items: center;
 }
 
 div.fca-ept-sidebar-items .fca-ept-misc-settings .components-panel__header{
