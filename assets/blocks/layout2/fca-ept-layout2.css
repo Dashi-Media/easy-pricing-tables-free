@@ -12,6 +12,7 @@ div.fca-ept-layout2 {
 	font-family: inherit;
 	padding-top: 5px;
 	padding-right: 20px;
+	line-height: 1.5;
 }
 
 div.fca-ept-layout2 div.fca-ept-column {
@@ -59,10 +60,6 @@ div.fca-ept-layout2 div.fca-ept-plan-div{
 	text-align: start;
 }
 
-div.fca-ept-layout2 div.fca-ept-plan-div div {
-	display: grid;
-}
-
 div.fca-ept-layout2 div.fca-ept-plan-div .fca-ept-plan img{
 	display: block;
 	margin: 0 auto 20px;
@@ -81,6 +78,7 @@ div.fca-ept-layout2 .fca-ept-plan{
 	display: inline;
 	vertical-align: top;
 	font-weight: 600;
+	line-height: 1.5;
 }
 
 div.fca-ept-layout2 .fca-ept-plan-subtext{
