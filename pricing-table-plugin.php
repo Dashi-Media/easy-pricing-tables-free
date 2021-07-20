@@ -27,8 +27,10 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 	// Include post types
 	include ( PTP_PLUGIN_PATH . 'includes/post-types.php');
 
-	// Include EPT3 Gutenberg block
+	// Include EPT3 Gutenberg blocks
 	include ( PTP_PLUGIN_PATH . 'includes/ept-block.php' );
+	include ( PTP_PLUGIN_PATH . 'assets/blocks/layout1/fca-ept-layout1-block.php' );
+	include ( PTP_PLUGIN_PATH . 'assets/blocks/layout2/fca-ept-layout2-block.php' );
 
 	// Include EPT3 post list
 	include ( PTP_PLUGIN_PATH . 'includes/post-list.php' );
