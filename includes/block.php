@@ -17,10 +17,12 @@ function dh_ptp_gutenblock_register() {
 	wp_register_style( 'dh-ptp-design1', PTP_PLUGIN_URL . '/assets/pricing-tables/design1/pricingtable.min.css' );
 		
 	if ( function_exists( 'register_block_type' ) ) {
+
+		wp_enqueue_style( array( 'dh-ptp-block-css', 'dh-ptp-design1' ) );
+		
 		register_block_type( 'easy-pricing-tables/gutenblock',
 			array(
 				'editor_script' => 'dh_ptp_gutenblock_script',
-				'editor_style' => array( 'dh-ptp-block-css', 'dh-ptp-design1' ),
 				'render_callback' => 'dh_ptp_gutenblock_render',
 				'attributes' => array( 
 					'post_id' => array( 
