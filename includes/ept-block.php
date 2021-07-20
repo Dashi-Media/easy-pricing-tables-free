@@ -3,7 +3,7 @@
 function fca_ept_register_block() {
 
 	// MAIN
-	wp_register_script( 'fca_ept_editor_script', PTP_PLUGIN_URL . '/assets/blocks/editor/fca-ept-editor.min.js', array( 'wp-blocks', 'wp-element', 'fca_ept_layout2_script', 'fca_ept_layout1_script' ), PTP_PLUGIN_VER );
+	wp_register_script( 'fca_ept_editor_script', PTP_PLUGIN_URL . '/assets/blocks/editor/fca-ept-editor.min.js', array( 'wp-blocks', 'wp-element' ), PTP_PLUGIN_VER );
 	wp_register_style( 'fca-ept-editor-style', PTP_PLUGIN_URL . '/assets/blocks/editor/fca-ept-editor.min.css', PTP_PLUGIN_VER );
 	
 	$data = array( 
@@ -11,25 +11,37 @@ function fca_ept_register_block() {
 	);
 	wp_localize_script( 'fca_ept_editor_script', 'fca_ept_data', $data );
 
-	// LAYOUT2
-	wp_register_script( 'fca_ept_layout2_script', PTP_PLUGIN_URL . '/assets/blocks/layout2/fca-ept-layout2.min.js', array( 'wp-blocks', 'wp-element' ), PTP_PLUGIN_VER );
-	wp_register_style( 'fca-ept-layout2-style', PTP_PLUGIN_URL . '/assets/blocks/layout2/fca-ept-layout2.min.css', PTP_PLUGIN_VER );
-
 	// LAYOUT1
 	wp_register_script( 'fca_ept_layout1_script', PTP_PLUGIN_URL . '/assets/blocks/layout1/fca-ept-layout1.min.js', array( 'wp-blocks', 'wp-element' ), PTP_PLUGIN_VER );
 	wp_register_style( 'fca-ept-layout1-style', PTP_PLUGIN_URL . '/assets/blocks/layout1/fca-ept-layout1.min.css', PTP_PLUGIN_VER );
 
+	// LAYOUT2
+	wp_register_script( 'fca_ept_layout2_script', PTP_PLUGIN_URL . '/assets/blocks/layout2/fca-ept-layout2.min.js', array( 'wp-blocks', 'wp-element' ), PTP_PLUGIN_VER );
+	wp_register_style( 'fca-ept-layout2-style', PTP_PLUGIN_URL . '/assets/blocks/layout2/fca-ept-layout2.min.css', PTP_PLUGIN_VER );
+
+	// enqueue styles for both frontend & editor
+	wp_enqueue_style( array( 'fca-ept-layout1-style', 'fca-ept-layout2-style' ) );
+
 	if ( function_exists( 'register_block_type' ) ) {
-		register_block_type( 'fatcatapps/easy-pricing-tables',	array(
-			'editor_script' => array( 'fca_ept_editor_script','jquery-ui-dialog' ),
-			'editor_style' => 'fca-ept-editor-style',
-			'style' => array( 'fca-ept-layout1-style', 'fca-ept-layout2-style' ),
-			'render_callback' => 'fca_ept_render',
-		));
+		register_block_type( 'fatcatapps/easy-pricing-tables', array( 'render_callback' => 'fca_ept_render' ) );
 	}
+
 }
 
 add_action( 'init', 'fca_ept_register_block' );
+
+
+function fca_ept_block_enqueue( ) {
+
+	// enqueue editor style
+	wp_enqueue_style( 'fca-ept-editor-style' );
+
+	// enqueue layout scripts for editor
+	wp_enqueue_script( array( 'fca_ept_editor_script', 'fca_ept_layout1_script', 'fca_ept_layout2_script' ) );
+
+}
+add_action( 'enqueue_block_editor_assets', 'fca_ept_block_enqueue' );
+
 
 function fca_ept_get_block_html_ajax( ){
 
