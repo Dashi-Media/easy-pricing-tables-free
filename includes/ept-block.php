@@ -73,13 +73,12 @@ function fca_ept_render( $attributes ) {
 	
 	$selectedLayout = empty( $attributes['selectedLayout'] ) ? '' : $attributes['selectedLayout'];
 
-	switch ( $selectedLayout ) {
-		
-		case 'layout1':
-			if( function_exists( 'fca_ept_render_layout1' ) ){ return fca_ept_render_layout1( $attributes ); }
-		case 'layout2':
-			if( function_exists( 'fca_ept_render_layout2' ) ){ return fca_ept_render_layout2( $attributes ); }
-			
+	$renderLayout = 'fca_ept_render_' . $selectedLayout;
+
+	if ( function_exists( $renderLayout ) ) {
+
+		return call_user_func( $renderLayout, $attributes );
+
 	}
 
 }

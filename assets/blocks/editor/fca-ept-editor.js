@@ -634,7 +634,7 @@ function fca_ept_custom_reusable_block(){
 
 
 			// on first load, select block
-			if( $('.components-button.edit-post-header-toolbar__inserter-toggle.is-primary.has-icon')[0].style.display !== 'none' ){
+			if( $('.components-button.edit-post-header-toolbar__inserter-toggle.is-primary.has-icon').css( 'display' ) !== 'none' ){
 				wp.data.dispatch( 'core/block-editor' ).selectBlock( eptBlock[0].clientId )
 			}
 
