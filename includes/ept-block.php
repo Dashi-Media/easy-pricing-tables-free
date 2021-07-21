@@ -20,7 +20,8 @@ function fca_ept_register_block() {
 	wp_register_style( 'fca-ept-layout2-style', PTP_PLUGIN_URL . '/assets/blocks/layout2/fca-ept-layout2.min.css', PTP_PLUGIN_VER );
 
 	// enqueue styles for both frontend & editor
-	wp_enqueue_style( array( 'fca-ept-layout1-style', 'fca-ept-layout2-style' ) );
+	wp_enqueue_style( 'fca-ept-layout1-style' );
+	wp_enqueue_style( 'fca-ept-layout2-style' );
 
 	if ( function_exists( 'register_block_type' ) ) {
 		register_block_type( 'fatcatapps/easy-pricing-tables', array( 'render_callback' => 'fca_ept_render' ) );
@@ -37,7 +38,9 @@ function fca_ept_block_enqueue( ) {
 	wp_enqueue_style( 'fca-ept-editor-style' );
 
 	// enqueue layout scripts for editor
-	wp_enqueue_script( array( 'fca_ept_editor_script', 'fca_ept_layout1_script', 'fca_ept_layout2_script' ) );
+	wp_enqueue_script( 'fca_ept_editor_script' );
+	wp_enqueue_script( 'fca_ept_layout1_script' );
+	wp_enqueue_script( 'fca_ept_layout2_script' );
 
 }
 add_action( 'enqueue_block_editor_assets', 'fca_ept_block_enqueue' );

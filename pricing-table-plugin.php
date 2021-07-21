@@ -249,7 +249,7 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 
 			if( class_exists( 'DisableGutenberg' ) ){
 
-				echo '<script language="javascript">';
+				echo '<script>';
 				echo 'alert("Easy Pricing Tables relies on Gutenberg components. \nTo build tables with the new editor, please deactivate the \"Disable Gutenberg\" plugin.")';
 				echo '</script>';
 
