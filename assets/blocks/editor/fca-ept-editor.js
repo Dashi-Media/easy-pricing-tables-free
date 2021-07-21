@@ -655,9 +655,7 @@ function fca_ept_custom_reusable_block(){
 			$( '.wp-block editor-post-title.editor-post-title__block' ).css( 'paddingBottom', '30px' )
 			$( '.block-editor-default-block-appender' ).css( 'display', 'none' )
 			$( '.components-dropdown.block-editor-inserter' ).css( 'display', 'none' )
-			$( '.edit-post-header-toolbar__left' ).find( 'div' ).each( function(){
-				this.style.display = 'none'
-			})
+			$( '.edit-post-header-toolbar__left div.components-dropdown' ).css( 'display', 'none' )
 			$( '.edit-post-visual-editor__post-title-wrapper' ).css( 'paddingBottom', '5px' )
 			$( '.editor-styles-wrapper' ).css( 'backgroundColor', 'white' )
 			$( '.block-editor-block-list__layout.is-root-container .block-list-appender.wp-block' ).css( 'display', 'none' )
@@ -668,7 +666,6 @@ function fca_ept_custom_reusable_block(){
 			$( '.wp-block.editor-post-title.editor-post-title__block' ).css( 'fontSize', '0.5vw' )
 			$( '.edit-post-header-toolbar' ).css( 'flexGrow', '0' )
 			$( '.editor-styles-wrapper' ).css( 'paddingTop', '30px' )
-
 
 		})
 

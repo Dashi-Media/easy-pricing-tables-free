@@ -242,6 +242,7 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 		if ( isSet( $_GET['dh_ptp_settings_page'] ) ){
 
 			wp_redirect( admin_url( "edit.php?post_type=easy-pricing-table&page=easy-pricing-tables-settings" ) );
+			exit;
 
 		}
 
