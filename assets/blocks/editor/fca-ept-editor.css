@@ -1,13 +1,13 @@
 
 div.fca-ept-layout-selection img{
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-x: center;
-    background-position-y: bottom;
-   	max-width: 400px;
-    max-height: 280px;
-    box-shadow: none;
-    align-self: self-end;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position-x: center;
+	background-position-y: bottom;
+	max-width: 400px;
+	max-height: 280px;
+	box-shadow: none;
+	align-self: self-end;
 }
 
 div.fca-ept-layout-selection .layout-headline {
@@ -25,9 +25,9 @@ div.fca-ept-layout-selection .layout-premium img{
 
 div.fca-ept-layout-selection .layout-premium .learn-more3, div.fca-ept-layout-selection .layout-premium .learn-more4, div.fca-ept-layout-selection .layout-premium .learn-more5, div.fca-ept-layout-selection .layout-premium .learn-more6{
 	display: none;
-    position: absolute;
-    z-index: 999;
-    margin: 55px 100px;
+	position: absolute;
+	z-index: 999;
+	margin: 55px 100px;
 	width: 200px;
 	height: 25px;
 }
@@ -103,7 +103,7 @@ button.fca-ept-unlink-data-button {
 	height: 30px;
 	border-radius: 2px;
 	margin-top: -5px;
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 	border: 1px solid grey;
 	white-space: normal;
 	text-align: center;
@@ -168,7 +168,7 @@ a.dh-ept-gutenblock-link {
 div.fca-ept-input.components-base-control{
 	width: 50px;
 	margin-top: 12px;
-    margin-right: 5px;
+	margin-right: 5px;
 }
 
 /**********/
@@ -176,19 +176,19 @@ div.fca-ept-input.components-base-control{
 /**********/
 
 .fca-ept-url-popover .components-popover__content{
-    min-width: unset;
-    width: 250px;
-    top: -25px;
-    padding: 4px 8px;
+	min-width: unset;
+	width: 250px;
+	top: -25px;
+	padding: 4px 8px;
 }
 
 .fca-ept-tooltip-popover .components-popover__content{
 	background-color: black;
-    color: white;
-    min-width: unset;
-    width: 250px;
-    top: -25px;
-    padding: 4px 8px;
+	color: white;
+	min-width: unset;
+	width: 250px;
+	top: -25px;
+	padding: 4px 8px;
 }
 
 /*surrounding blue wrapper */
@@ -196,32 +196,8 @@ div.fca-ept-input.components-base-control{
 .block-editor-block-list__layout .block-editor-block-list__block[data-type="fatcatapps/easy-pricing-tables"]:not([contenteditable]):focus:after,
 .block-editor-block-list__layout .block-editor-block-list__block.is-highlighted[data-type="fatcatapps/easy-pricing-tables"]:after{
 	width: calc( 125% + 20px);
-    max-width: calc( 125% );
-    left: -12.5%;
-}
-
-body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout1, body .editor-styles-wrapper[style*="width: 780px;"] div.fca-ept-layout1 {
-	font-size: 75%;
-	display: block;
-	padding-right: 0;
-}
-body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout1 div.fca-ept-toggle-period-container, body .editor-styles-wrapper[style*="width: 780px;"] div.fca-ept-layout1 div.fca-ept-toggle-period-container{
-	padding-right: 0;
-}
-body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular, body .editor-styles-wrapper[style*="width: 780px;"] div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular {
-	margin-top:100px;
-}
-
-body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout2, body .editor-styles-wrapper[style*="width: 780px;"] div.fca-ept-layout2 {	
-	font-size: 75%;	
-	display: block;	
-	padding-right: 0;	
-}	
-body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout2 div.fca-ept-toggle-period-container, body .editor-styles-wrapper[style*="width: 780px;"] div.fca-ept-layout2 div.fca-ept-toggle-period-container{	
-	padding-right: 0;	
-}	
-body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout2 div.fca-ept-column, body .editor-styles-wrapper[style*="width: 780px;"] div.fca-ept-layout2 div.fca-ept-column{	
-	margin-top: 15px !important;	
+	max-width: calc( 125% );
+	left: -12.5%;
 }
 
 /***************/
@@ -229,7 +205,7 @@ body .editor-styles-wrapper[style*="width: 360px;"] div.fca-ept-layout2 div.fca-
 /***************/
 
 div.fca-ept-sidebar-items .components-panel__header {
-    align-items: center;
+	align-items: center;
 }
 
 div.fca-ept-sidebar-items .fca-ept-misc-settings .components-panel__header{

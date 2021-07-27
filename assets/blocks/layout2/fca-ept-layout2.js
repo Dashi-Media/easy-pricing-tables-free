@@ -67,6 +67,7 @@ function fca_ept_layout2_block_edit( props ) {
 
 	fca_ept_layout2_additional_styles( props )
 	fca_ept_custom_reusable_block()
+	fca_ept_get_preview_settings( props )
  
 	return el( wp.element.Fragment, { },
 
