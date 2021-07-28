@@ -645,7 +645,9 @@ function fca_ept_custom_reusable_block(){
 			})
 
 			$( '.components-button.edit-post-header-toolbar__inserter-toggle.is-primary.has-icon' ).css( 'display', 'none' )
-			$( '.components-button.edit-post-fullscreen-mode-close.has-icon' )[0].href = 'edit.php?post_type=easy-pricing-table&page=ept3-list'
+			if( wp.data.select( 'core/edit-post' ).isFeatureActive( 'fullscreenMode' ) ){
+				$( '.components-button.edit-post-fullscreen-mode-close.has-icon' ).first().attr( 'href', 'edit.php?post_type=easy-pricing-table&page=ept3-list' )
+			}
 			$( '.components-panel__header.interface-complementary-area-header.edit-post-sidebar__panel-tabs' ).css( 'display', 'none' )
 			$( '.editor-post-title__input' ).css( 'textAlign', 'center' )
 			$( '.editor-post-title__input' ).css( 'height', 'unset' )
