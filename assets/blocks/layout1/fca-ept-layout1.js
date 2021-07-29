@@ -71,6 +71,7 @@ function fca_ept_layout1_block_edit( props ) {
 	// append extra variable css settings
 	fca_ept_layout1_additional_styles( props )
 	fca_ept_custom_reusable_block()
+	fca_ept_get_preview_settings( props )
 
 	return el( wp.element.Fragment, { },
 
@@ -133,30 +134,33 @@ function fca_ept_layout1_block_edit( props ) {
 							style: { backgroundColor: props.attributes.layoutBGTint3 },
 							className: 'fca-ept-plan-div'
 						},
-							el( 'div', { 
-								className: 'fca-ept-plan'
-								},
-								el( wp.blockEditor.RichText, { 
-									style: { 
-										fontSize: props.attributes.planFontSize,
-										color: props.attributes.layoutFontColor
-									}, 
-									allowedFormats: fca_ept_allowed_formats,
-									placeholder: 'Plan name', 
-									type: "text", 
-									tagName: 'span',
-									value: columnSettings[i].planText1,
-									onClick: ( function() { 
-										props.setAttributes( { selectedSection: 'plan' } ) 
-										props.setAttributes( { showURLPopover: 'none' } )
-									}),
-									onChange: ( function( newValue ) { 
+							el( wp.blockEditor.RichText, { 
+								style: { 
+									fontSize: props.attributes.planFontSize,
+									color: props.attributes.layoutFontColor
+								}, 
+								allowedFormats: fca_ept_allowed_formats,
+								className: 'fca-ept-plan',
+								placeholder: 'Plan name', 
+								type: "text", 
+								tagName: 'span',
+								value: columnSettings[i].planText1,
+								onClick: ( function() { 
+									props.setAttributes( { selectedSection: 'plan' } ) 
+									props.setAttributes( { showURLPopover: 'none' } )
+								}),
+								onChange: ( function( newValue ) { 
+									if( props.attributes.selectedCol !== i ){
+										fca_ept_select_column( props, i )
+										fca_ept_update_section( props, 'plan' )
+									} else {
 										var columnSettingsData = Array.from( columnSettings )
 										columnSettingsData[props.attributes.selectedCol].planText1 = newValue
 										props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
-									})
+									}
 								})
-							)
+							})
+							
 						),
 
 						el( 'div', { 
@@ -178,9 +182,14 @@ function fca_ept_layout1_block_edit( props ) {
 									props.setAttributes( { showURLPopover: 'none' } )
 								}),
 								onChange: ( function( newValue ) { 
-									var columnSettingsData = Array.from( columnSettings )
-									columnSettingsData[props.attributes.selectedCol].priceText1 = newValue
-									props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
+									if( props.attributes.selectedCol !== i ){
+										fca_ept_select_column( props, i )
+										fca_ept_update_section( props, 'price' )
+									} else {
+										var columnSettingsData = Array.from( columnSettings )
+										columnSettingsData[props.attributes.selectedCol].priceText1 = newValue
+										props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
+									}
 								})
 							})
 						),
@@ -195,6 +204,7 @@ function fca_ept_layout1_block_edit( props ) {
 									color: props.attributes.layoutFontColor
 								}, 
 								allowedFormats: fca_ept_allowed_formats,
+								className: 'fca-ept-features',
 								tagName: 'ul', 
 								multiline: 'li', 
 								placeholder: 'features offered', 
@@ -205,9 +215,14 @@ function fca_ept_layout1_block_edit( props ) {
 									props.setAttributes( { showURLPopover: 'none' } )
 								}),
 								onChange: ( function( newValue ) { 
-									var columnSettingsData = Array.from( columnSettings )
-									columnSettingsData[props.attributes.selectedCol].featuresText = newValue
-									props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
+									if( props.attributes.selectedCol !== i ){
+										fca_ept_select_column( props, i )
+										fca_ept_update_section( props, 'features' )
+									} else {
+										var columnSettingsData = Array.from( columnSettings )
+										columnSettingsData[props.attributes.selectedCol].featuresText = newValue
+										props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
+									}
 								})
 							})
 						),
@@ -240,9 +255,14 @@ function fca_ept_layout1_block_edit( props ) {
 									tagName: 'span',
 									value: columnSettings[i].buttonText, 
 									onChange: ( function( newValue ) { 
-										var columnSettingsData = Array.from( columnSettings )
-										columnSettingsData[props.attributes.selectedCol].buttonText = newValue
-										props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } ) 
+										if( props.attributes.selectedCol !== i ){
+											fca_ept_select_column( props, i )
+											fca_ept_update_section( props, 'button' )
+										} else {
+											var columnSettingsData = Array.from( columnSettings )
+											columnSettingsData[props.attributes.selectedCol].buttonText = newValue
+											props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } ) 
+										}
 									})
 								})
 							)

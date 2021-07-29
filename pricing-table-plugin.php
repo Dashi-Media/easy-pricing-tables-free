@@ -6,7 +6,7 @@
 	Text Domain: easy-pricing-tables
 	Domain Path: /languages
 	Author: Fatcat Apps
-	Version: 3.0.5
+	Version: 3.1.0
 	Author URI: https://fatcatapps.com
 */
 
@@ -19,16 +19,18 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 	define('PTP_DEBUG', FALSE );
 
 	if ( PTP_DEBUG ) {
-		define( 'PTP_PLUGIN_VER', '3.0.' . time() );
+		define( 'PTP_PLUGIN_VER', '3.1.' . time() );
 	} else {
-		define( 'PTP_PLUGIN_VER', '3.0.5' );
+		define( 'PTP_PLUGIN_VER', '3.1.0' );
 	}
 
 	// Include post types
 	include ( PTP_PLUGIN_PATH . 'includes/post-types.php');
 
-	// Include EPT3 Gutenberg block
+	// Include EPT3 Gutenberg blocks
 	include ( PTP_PLUGIN_PATH . 'includes/ept-block.php' );
+	include ( PTP_PLUGIN_PATH . 'assets/blocks/layout1/fca-ept-layout1-block.php' );
+	include ( PTP_PLUGIN_PATH . 'assets/blocks/layout2/fca-ept-layout2-block.php' );
 
 	// Include EPT3 post list
 	include ( PTP_PLUGIN_PATH . 'includes/post-list.php' );
@@ -69,9 +71,6 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 			include_once ( PTP_PLUGIN_PATH . 'includes/metaboxes/setup.php');
 		}
 
-		$plugin = plugin_basename(__FILE__); 
-		add_filter("plugin_action_links_$plugin", 'dh_ptp_plugin_settings_link' );
-
 		// Footer text
 		function dh_ptp_plugin_footer ($text) {
 			echo
@@ -109,6 +108,9 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 
 		return $links; 
 	}
+	
+	$plugin = plugin_basename(__FILE__); 
+	add_filter("plugin_action_links_$plugin", 'dh_ptp_plugin_settings_link' );
 
 	/**
 	* Enqueue Admin Javascript in Pricing Tables edit page
@@ -240,31 +242,42 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 		if ( isSet( $_GET['dh_ptp_settings_page'] ) ){
 
 			wp_redirect( admin_url( "edit.php?post_type=easy-pricing-table&page=easy-pricing-tables-settings" ) );
+			exit;
 
 		}
 
 		if ( isSet( $_GET['dh_ptp_new_gutenberg_table'] ) ) {
 
-			$args = array(
-				'post_type'      => 'wp_block',
-				'meta_key' 		 => '1_dh_ptp_settings',
-				'posts_per_page' => '-1'
-			);
+			if( class_exists( 'DisableGutenberg' ) ){
 
-			$count = count( get_posts ( $args ) ) + 1;
+				echo '<script>';
+				echo 'alert("Easy Pricing Tables relies on Gutenberg components. \nTo build tables with the new editor, please deactivate the \"Disable Gutenberg\" plugin.")';
+				echo '</script>';
 
-			$args = array(
-				'post_title'     => 'Pricing Table ' . $count,
-				'post_type'      => 'wp_block',
-				'post_author'    => get_current_user_id(),
-				'post_status'    => 'publish',
-				'post_content'   => '<!-- wp:fatcatapps\/easy-pricing-tables \/-->',
-				'meta_input' 	 => array( '1_dh_ptp_settings' => [ 'ept3' => '' ] )
-			);
+			} else {
 
-			$post_ID = wp_insert_post( $args );
-			wp_redirect( admin_url( "post.php?post=" . $post_ID . "&action=edit" ) );
-			exit;
+				$args = array(
+					'post_type'      => 'wp_block',
+					'meta_key' 		 => '1_dh_ptp_settings',
+					'posts_per_page' => '-1'
+				);
+
+				$count = count( get_posts ( $args ) ) + 1;
+
+				$args = array(
+					'post_title'     => 'Pricing Table ' . $count,
+					'post_type'      => 'wp_block',
+					'post_author'    => get_current_user_id(),
+					'post_status'    => 'publish',
+					'post_content'   => '<!-- wp:fatcatapps\/easy-pricing-tables \/-->',
+					'meta_input' 	 => array( '1_dh_ptp_settings' => [ 'ept3' => '' ] )
+				);
+
+				$post_ID = wp_insert_post( $args );
+				wp_redirect( admin_url( "post.php?post=" . $post_ID . "&action=edit" ) );
+				exit;
+				
+			}
 
 		}
 

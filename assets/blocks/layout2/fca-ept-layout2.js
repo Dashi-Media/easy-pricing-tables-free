@@ -67,6 +67,7 @@ function fca_ept_layout2_block_edit( props ) {
 
 	fca_ept_layout2_additional_styles( props )
 	fca_ept_custom_reusable_block()
+	fca_ept_get_preview_settings( props )
  
 	return el( wp.element.Fragment, { },
 
@@ -125,8 +126,7 @@ function fca_ept_layout2_block_edit( props ) {
 								tagName: 'span',
 								value: props.attributes.popularText, 
 								onClick: ( function() { 
-									props.setAttributes( { selectedSection: 'popular' } ) 
-									props.setAttributes( { showURLPopover: 'none' } )
+									fca_ept_update_section( props, 'popular' )
 								}),
 								onChange: ( function( newValue ) { 
 									props.setAttributes( { popularText: newValue } )
@@ -149,13 +149,17 @@ function fca_ept_layout2_block_edit( props ) {
 								tagName: 'span',
 								value: columnSettings[i].planText1,
 								onClick: ( function() { 
-									props.setAttributes( { selectedSection: 'plan' } ) 
-									props.setAttributes( { showURLPopover: 'none' } )
+									fca_ept_update_section( props, 'plan' )
 								}),
 								onChange: ( function( newValue ) { 
-									var columnSettingsData = Array.from( columnSettings )
-									columnSettingsData[props.attributes.selectedCol].planText1 = newValue
-									props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
+									if( props.attributes.selectedCol !== i ){
+										fca_ept_select_column( props, i )
+										fca_ept_update_section( props, 'plan' )
+									} else {
+										var columnSettingsData = Array.from( columnSettings )
+										columnSettingsData[props.attributes.selectedCol].planText1 = newValue
+										props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
+									}
 								})
 							}),
 
@@ -171,15 +175,19 @@ function fca_ept_layout2_block_edit( props ) {
 								type: "text", 
 								tagName: 'span',
 								value: columnSettings[i].planSubText, 
-								onClick: function() { 
-									props.setAttributes( { selectedSection: 'planSubtext' } ) 
-									props.setAttributes( { showURLPopover: 'none' } )
-								},
-								onChange: function( newValue ) { 
-									var columnSettingsData = Array.from( columnSettings )
-									columnSettingsData[props.attributes.selectedCol].planSubText = newValue
-									props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
-								}
+								onClick: ( function() { 
+									fca_ept_update_section( props, 'planSubtext' )
+								}),
+								onChange: ( function( newValue ) { 
+									if( props.attributes.selectedCol !== i ){
+										fca_ept_select_column( props, i )
+										fca_ept_update_section( props, 'planSubtext' )
+									} else {
+										var columnSettingsData = Array.from( columnSettings )
+										columnSettingsData[props.attributes.selectedCol].planSubText = newValue
+										props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
+									}
+								})
 							})
 						),
 
@@ -203,13 +211,17 @@ function fca_ept_layout2_block_edit( props ) {
 									tagName: 'span',
 									value: columnSettings[i].priceText1, 
 									onClick: ( function( section ) { 
-										props.setAttributes( { selectedSection: 'price' } )
-										props.setAttributes( { showURLPopover: 'none' } )
+										fca_ept_update_section( props, 'price' )
 									}),
 									onChange: ( function( newValue ) { 
-										var columnSettingsData = Array.from( columnSettings )
-										columnSettingsData[props.attributes.selectedCol].priceText1 = newValue
-										props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
+										if( props.attributes.selectedCol !== i ){
+											fca_ept_select_column( props, i )
+											fca_ept_update_section( props, 'price' )
+										} else {
+											var columnSettingsData = Array.from( columnSettings )
+											columnSettingsData[props.attributes.selectedCol].priceText1 = newValue
+											props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
+										}
 									})
 								}),
 
@@ -235,13 +247,17 @@ function fca_ept_layout2_block_edit( props ) {
 										tagName: 'span',
 										value: columnSettings[i].pricePeriod1,
 										onClick: ( function() { 
-											props.setAttributes( { selectedSection: 'pricePeriod' } ) 
-											props.setAttributes( { showURLPopover: 'none' } )
+											fca_ept_update_section( props, 'pricePeriod' )
 										}),
 										onChange: ( function( newValue ) { 
-											var columnSettingsData = Array.from( columnSettings )
-											columnSettingsData[props.attributes.selectedCol].pricePeriod1 = newValue
-											props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
+											if( props.attributes.selectedCol !== i ){
+												fca_ept_select_column( props, i )
+												fca_ept_update_section( props, 'pricePeriod' )
+											} else {
+												var columnSettingsData = Array.from( columnSettings )
+												columnSettingsData[props.attributes.selectedCol].pricePeriod1 = newValue
+												props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
+											}
 										})
 									})
 								)
@@ -264,13 +280,17 @@ function fca_ept_layout2_block_edit( props ) {
 								type: "text", 
 								value: columnSettings[i].featuresText, 
 								onClick: ( function() { 
-									props.setAttributes( { selectedSection: 'features' } )
-
+									fca_ept_update_section( props, 'features' )
 								}),
 								onChange: ( function( newValue ) { 
-									var columnSettingsData = Array.from( columnSettings )
-									columnSettingsData[props.attributes.selectedCol].featuresText = newValue
-									props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
+									if( props.attributes.selectedCol !== i ){
+										fca_ept_select_column( props, i )
+										fca_ept_update_section( props, 'features' )
+									} else {
+										var columnSettingsData = Array.from( columnSettings )
+										columnSettingsData[props.attributes.selectedCol].featuresText = newValue
+										props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
+									}
 								})
 							})
 						),
@@ -284,8 +304,7 @@ function fca_ept_layout2_block_edit( props ) {
 							}, 
 							className: 'fca-ept-button', 
 							onClick: ( function() { 
-								props.setAttributes( { selectedSection: 'button' } ) 
-								props.setAttributes( { showURLPopover: 'block' } )
+								fca_ept_update_section( props, 'button' )
 							})
 						},
 							el( wp.blockEditor.RichText, { 
@@ -295,9 +314,14 @@ function fca_ept_layout2_block_edit( props ) {
 								tagName: 'span',
 								value: columnSettings[i].buttonText, 
 								onChange: ( function( newValue ) { 
-									var columnSettingsData = Array.from( columnSettings )
-									columnSettingsData[props.attributes.selectedCol].buttonText = newValue
-									props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } ) 
+									if( props.attributes.selectedCol !== i ){
+										fca_ept_select_column( props, i )
+										fca_ept_update_section( props, 'button' )
+									} else {
+										var columnSettingsData = Array.from( columnSettings )
+										columnSettingsData[props.attributes.selectedCol].buttonText = newValue
+										props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } ) 
+									}
 								})
 							})
 						)
