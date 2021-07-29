@@ -134,10 +134,15 @@ Our full privacy policy is available here: [https://fatcatapps.com/legal/privacy
 == Changelog ==
 
 = Easy Pricing Tables 3.1.0 =
-
+* Clean up frontend render page
+* CSS improvements / bugfixes
+* Tested with and updated some code for WordPress 5.8
 
 = Easy Pricing Tables 3.0.5 =
 * Fixed bug in review request
+
+= Easy Pricing Tables 3.0.4 =
+* Fixed bug where Settings page was inaccessible
 
 = Easy Pricing Tables 3.0.3 =
 * Add option to display legacy pricing tables in Pricing Tables Settings
