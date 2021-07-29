@@ -71,9 +71,6 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 			include_once ( PTP_PLUGIN_PATH . 'includes/metaboxes/setup.php');
 		}
 
-		$plugin = plugin_basename(__FILE__); 
-		add_filter("plugin_action_links_$plugin", 'dh_ptp_plugin_settings_link' );
-
 		// Footer text
 		function dh_ptp_plugin_footer ($text) {
 			echo
@@ -111,6 +108,9 @@ if( ! defined( 'PTP_PLUGIN_PATH' ) ) {
 
 		return $links; 
 	}
+	
+	$plugin = plugin_basename(__FILE__); 
+	add_filter("plugin_action_links_$plugin", 'dh_ptp_plugin_settings_link' );
 
 	/**
 	* Enqueue Admin Javascript in Pricing Tables edit page
