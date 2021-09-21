@@ -54,12 +54,16 @@ div.fca-ept-layout1 div.fca-ept-plan-div .fca-ept-plan img {
 	margin: auto;
 }
 
-div.fca-ept-layout1 div.fca-ept-price{
+div.fca-ept-layout1 div.fca-ept-price-div{
 	font-family: inherit;
 	text-align: center; 
 	padding: .9375em 1.25em; 
 	font-weight: normal; 
 	font-size: 1.25em; 
+}
+
+div.fca-ept-layout1 div.fca-ept-price-div .fca-ept-price{
+	line-height: 1.5;
 }
 
 div.fca-ept-layout1 div.fca-ept-features-div{
