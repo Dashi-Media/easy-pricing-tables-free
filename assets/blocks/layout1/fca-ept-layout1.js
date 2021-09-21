@@ -165,7 +165,7 @@ function fca_ept_layout1_block_edit( props ) {
 
 						el( 'div', { 
 							style: { backgroundColor: props.attributes.layoutBGTint2 },
-							className: 'fca-ept-price'
+							className: 'fca-ept-price-div'
 							},
 							el( wp.blockEditor.RichText, { 
 								style: { 
@@ -173,6 +173,7 @@ function fca_ept_layout1_block_edit( props ) {
 									color: props.attributes.layoutFontColor
 								}, 
 								allowedFormats: fca_ept_allowed_formats,
+								className: 'fca-ept-price',
 								placeholder: '$29', 
 								type: "text", 
 								tagName: 'span',

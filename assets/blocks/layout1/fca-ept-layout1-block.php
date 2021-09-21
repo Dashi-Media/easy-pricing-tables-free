@@ -71,7 +71,7 @@ function fca_ept_render_layout1( $attributes ){
 
 				<div style="background-color: <?php echo $layoutBGTint2 ?>;" class="fca-ept-price-div">
 
-					<span style="font-size: <?php echo $priceFontSize ?>; color: <?php echo $layoutFontColor ?>;" class="fca-ept-price" data-price1="<?php echo esc_attr( $priceText1 ) ?>" data-price2="<?php echo esc_attr( $priceText2 ) ?>"><?php echo $priceText1 ?></span>
+					<span style="font-size: <?php echo $priceFontSize ?>; color: <?php echo $layoutFontColor ?>;" class="fca-ept-price"><?php echo $priceText1 ?></span>
 
 				</div>
 				
