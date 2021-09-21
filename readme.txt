@@ -5,8 +5,8 @@ Tags: pricing table, pricing table block, pricing tables, comparison table, comp
 Author URI: https://fatcatapps.com/?utm_campaign=author%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Plugin URI: https://fatcatapps.com/easypricingtables/?utm_campaign=plugin%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Requires at least: 3.6
-Tested up to: 5.8
-Stable tag: 3.1.0
+Tested up to: 5.8.1
+Stable tag: 3.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -132,6 +132,11 @@ Our full privacy policy is available here: [https://fatcatapps.com/legal/privacy
 12. Premium pricing table layout with inline images 
 
 == Changelog ==
+
+= Easy Pricing Tables 3.1.2 =
+
+= Easy Pricing Tables 3.1.1 =
+* Fixes for Easy Pricing Tables Premium
 
 = Easy Pricing Tables 3.1.0 =
 * Clean up frontend render page
