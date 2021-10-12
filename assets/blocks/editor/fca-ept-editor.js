@@ -698,6 +698,7 @@ function fca_ept_set_popular ( props ) {
 
 	var columnSettings = JSON.parse( props.attributes.columnSettings )
 	var selectedCol = parseInt( props.attributes.selectedCol )
+	var tableID = props.attributes.tableID
 
 	columnSettings.filter( function ( col, i ){
 
@@ -707,14 +708,14 @@ function fca_ept_set_popular ( props ) {
 				props.setAttributes( { columnSettings: JSON.stringify( columnSettings ) } )
 				props.setAttributes ( { popularToolbarIcon: 'star-empty' } )
 				setTimeout( function(){
-					$( '.fca-ept-column' )[selectedCol].classList.add( 'fca-ept-selected-column' )
+					$( '#fca-ept-table-' + tableID + ' .fca-ept-column' )[selectedCol].classList.add( 'fca-ept-selected-column' )
 				}, 30 )
 			} else {
 				col.columnPopular = true
 				props.setAttributes( { columnSettings: JSON.stringify( columnSettings ) } )
 				props.setAttributes ( { popularToolbarIcon: 'star-filled' } )
 				setTimeout( function(){
-					$( '.fca-ept-column' )[selectedCol].classList.add( 'fca-ept-selected-column' )
+					$( '#fca-ept-table-' + tableID + ' .fca-ept-column' )[selectedCol].classList.add( 'fca-ept-selected-column' )
 				}, 30 )
 			}
 		} else {
@@ -728,28 +729,29 @@ function fca_ept_set_popular ( props ) {
 function fca_ept_get_preview_settings( props ){
 
 	var selectedLayout = props.attributes.selectedLayout
+	var tableID = props.attributes.tableID
 
 	wp.data.subscribe(function () {
 
 		var previewDisplay = wp.data.select( 'core/edit-post' ).__experimentalGetPreviewDeviceType()
 
 		if( previewDisplay === 'Mobile' || previewDisplay === 'Tablet' ){
-			$( '.fca-ept-table-container div.fca-ept-toggle-period-container' ).css( 'paddingRight', '0' )
-			$( 'div.fca-ept-' + selectedLayout ).css( 'display', 'block' )
-			$( 'div.fca-ept-' + selectedLayout ).css( 'fontSize', '75%' )
-			$( 'div.fca-ept-' + selectedLayout ).css( 'paddingRight', '0' )
-			$( 'div.fca-ept-' + selectedLayout + ' div.fca-ept-column' ).css( 'marginTop', '15px' )
+			$( '#fca-ept-table-' + tableID + ' .fca-ept-table-container div.fca-ept-toggle-period-container' ).css( 'paddingRight', '0' )
+			$( '#fca-ept-table-' + tableID + ' div.fca-ept-' + selectedLayout ).css( 'display', 'block' )
+			$( '#fca-ept-table-' + tableID + ' div.fca-ept-' + selectedLayout ).css( 'fontSize', '75%' )
+			$( '#fca-ept-table-' + tableID + ' div.fca-ept-' + selectedLayout ).css( 'paddingRight', '0' )
+			$( '#fca-ept-table-' + tableID + ' div.fca-ept-' + selectedLayout + ' div.fca-ept-column' ).css( 'marginTop', '15px' )
 			if( selectedLayout === 'layout1' ){
-				$( 'div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular' ).css( 'marginTop', '70px' )
+				$( '#fca-ept-table-' + tableID + ' div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular' ).css( 'marginTop', '70px' )
 			} 	
 		} else {
-			$( '.fca-ept-table-container div.fca-ept-toggle-period-container' ).css( 'paddingRight', '20px' )
-			$( 'div.fca-ept-' + selectedLayout ).css( 'display', 'flex' )
-			$( 'div.fca-ept-' + selectedLayout ).css( 'fontSize', '16px' )
-			$( 'div.fca-ept-' + selectedLayout ).css( 'paddingRight', '20px' )
-			$( 'div.fca-ept-' + selectedLayout + ' div.fca-ept-column' ).css( 'marginTop', '10px' )
+			$( '#fca-ept-table-' + tableID + ' .fca-ept-table-container div.fca-ept-toggle-period-container' ).css( 'paddingRight', '20px' )
+			$( '#fca-ept-table-' + tableID + ' div.fca-ept-' + selectedLayout ).css( 'display', 'flex' )
+			$( '#fca-ept-table-' + tableID + ' div.fca-ept-' + selectedLayout ).css( 'fontSize', '16px' )
+			$( '#fca-ept-table-' + tableID + ' div.fca-ept-' + selectedLayout ).css( 'paddingRight', '20px' )
+			$( '#fca-ept-table-' + tableID + ' div.fca-ept-' + selectedLayout + ' div.fca-ept-column' ).css( 'marginTop', '10px' )
 			if( selectedLayout === 'layout1' ){
-				$( 'div.fca-ept-layout1 div.fca-ept-column' ).css( 'marginTop', '54px' )
+				$( '#fca-ept-table-' + tableID + ' div.fca-ept-layout1 div.fca-ept-column' ).css( 'marginTop', '54px' )
 			} 
 			
 		}
