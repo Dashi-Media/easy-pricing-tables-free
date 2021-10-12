@@ -761,6 +761,7 @@ function fca_ept_get_preview_settings( props ){
 function fca_ept_select_column ( props, id ) {
 
 	var columnSettings = JSON.parse( props.attributes.columnSettings )
+	var tableID = props.attributes.tableID
 
 	props.setAttributes ( { selectedCol: id } )
 
@@ -770,7 +771,7 @@ function fca_ept_select_column ( props, id ) {
 		 props.setAttributes ( { popularToolbarIcon: 'star-empty' } )
 	}
 
-	$( '.fca-ept-column' ).filter( function( i, column ){
+	$( '#fca-ept-table-' + tableID + ' .fca-ept-column' ).filter( function( i, column ){
 		if( column.classList.contains( 'fca-ept-selected-column' ) ){
 			if( i === id ){
 				return;
