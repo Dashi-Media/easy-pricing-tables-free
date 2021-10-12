@@ -1,6 +1,7 @@
 var wp = window.wp
 var el = wp.element.createElement
 var $ = window.jQuery
+var customBlock = 1
 
 var fca_ept_allowed_formats = [
 	'core/bold', 
@@ -582,7 +583,7 @@ function fca_ept_custom_reusable_block(){
 
 	var currentPost = wp.data.select( 'core/editor' ).getCurrentPost()
 
-	if( currentPost.type === 'wp_block' && currentPost.content.split( '<!--' )[1].includes( 'wp:fatcatapps/easy-pricing-table' ) ) {
+	if( customBlock && currentPost.type === 'wp_block' && currentPost.content.split( '<!--' )[1].includes( 'wp:fatcatapps/easy-pricing-table' ) ) {
 
 	 	var eptBlock = wp.data.select( 'core/block-editor' ).getBlocks().filter( function( block ){
 	 		return block.name === 'fatcatapps/easy-pricing-tables'
@@ -637,13 +638,6 @@ function fca_ept_custom_reusable_block(){
 				wp.data.dispatch( 'core/block-editor' ).selectBlock( eptBlock[0].clientId )
 			}
 
-		 	// on click anywhere but post title, select block
-			$( document ).on( 'click', function( event ) {
-				if( event.target.className !== 'editor-post-title__input' ){
-					wp.data.dispatch( 'core/block-editor' ).selectBlock( eptBlock[0].clientId )
-				}
-			})
-
 			$( '.components-button.edit-post-header-toolbar__inserter-toggle.is-primary.has-icon' ).css( 'display', 'none' )
 			if( wp.data.select( 'core/edit-post' ).isFeatureActive( 'fullscreenMode' ) ){
 				$( '.components-button.edit-post-fullscreen-mode-close.has-icon' ).first().attr( 'href', 'edit.php?post_type=easy-pricing-table&page=ept3-list' )
@@ -669,6 +663,8 @@ function fca_ept_custom_reusable_block(){
 			$( '.editor-styles-wrapper' ).css( 'paddingTop', '30px' )
 
 		})
+
+		customBlock = 0
 
 	}
 
