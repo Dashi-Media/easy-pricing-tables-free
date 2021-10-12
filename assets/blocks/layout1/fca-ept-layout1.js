@@ -283,9 +283,9 @@ function fca_ept_layout1_additional_styles( props ){
 
 	$( 'body' ).append( 
 		"<style id='" + id + "'>" +
-			"div.fca-ept-layout1 div.fca-ept-column a.fca-ept-button:hover { background-color: " + props.attributes.buttonBorderColor + " !important;}" +
-			"div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular a.fca-ept-button:hover { background-color: " + props.attributes.buttonBorderColorPop + " !important;}" +
-			"div.fca-ept-layout1 div.fca-ept-column div.fca-ept-features li { border-bottom: dotted 1px " + props.attributes.layoutBGTint3 + ";}" +
+			"#fca-ept-table-" + id + " div.fca-ept-column a.fca-ept-button:hover { background-color: " + props.attributes.buttonBorderColor + " !important;}" +
+			"#fca-ept-table-" + id + " div.fca-ept-column.fca-ept-most-popular a.fca-ept-button:hover { background-color: " + props.attributes.buttonBorderColorPop + " !important;}" +
+			"#fca-ept-table-" + id + " div.fca-ept-column div.fca-ept-features li { border-bottom: dotted 1px " + props.attributes.layoutBGTint3 + ";}" +
 		"</style>" 
 	)
 

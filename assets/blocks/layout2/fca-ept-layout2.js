@@ -340,7 +340,7 @@ function fca_ept_layout2_additional_styles( props ){
 
 	$( 'body' ).append( 
 		"<style id='" + id + "'>" +
-			"div.fca-ept-toggle-period-container .fca-ept-slider { background-color: " + props.attributes.buttonColor + " }" +
+			"#fca-ept-table-" + id + " div.fca-ept-toggle-period-container .fca-ept-slider { background-color: " + props.attributes.buttonColor + " }" +
 		"</style>" 
 	)
 
