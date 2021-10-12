@@ -2,6 +2,9 @@
 
 function fca_ept_render_layout1( $attributes ){
 
+	// enqueue frontend style
+	wp_enqueue_style( 'fca-ept-layout1-style' );
+
 	$tableID = empty( $attributes['tableID'] ) ? 0 : empty( $attributes['tableID'] );
 
 	$columnSettings = empty( $attributes['columnSettings'] ) ? false : json_decode( $attributes['columnSettings'], true );
