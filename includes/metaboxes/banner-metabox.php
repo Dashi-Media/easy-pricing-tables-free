@@ -4,16 +4,16 @@
     </p>
     
     <ul>
-					<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Ten Gorgeous Designs', 'easy-pricing-tables' ); ?></li>
-                    <li><div class="dashicons dashicons-yes"></div> <?php _e( 'Fully Customizable (Colors, etc...)', 'easy-pricing-tables' ); ?></li>
+					<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Six Gorgeous Designs', 'easy-pricing-tables' ); ?></li>
+                    <li><div class="dashicons dashicons-yes"></div> <?php _e( 'Fully Customizable (Colors, Fontsize, etc...)', 'easy-pricing-tables' ); ?></li>
                     <li><div class="dashicons dashicons-yes"></div> <?php _e( 'Priority Email Support', 'easy-pricing-tables' ); ?></li>
+                    <li><div class="dashicons dashicons-yes"></div> <?php _e( '700+ Icons To Add To Your Tables', 'easy-pricing-tables' ); ?></li>
 					<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Tooltips', 'easy-pricing-tables' ); ?></li>
                     <li><div class="dashicons dashicons-yes"></div> <?php _e( 'Google Analytics Integration', 'easy-pricing-tables' ); ?></li>
                     <li><div class="dashicons dashicons-yes"></div> <?php _e( 'Pricing Toggles (switch between currencies or monthly/yearly pricing)', 'easy-pricing-tables' ); ?></li>
                     <li><div class="dashicons dashicons-yes"></div> <?php _e( 'WooCommerce Extension', 'easy-pricing-tables' ); ?></li>
                     <li><div class="dashicons dashicons-yes"></div> <?php _e( 'Stripe Extension', 'easy-pricing-tables' ); ?></li>
                     <li><div class="dashicons dashicons-yes"></div> <?php _e( 'Easy Digital Downloads Extension', 'easy-pricing-tables' ); ?></li>
-
     </ul>
     
    <p style="text-align: center;">

@@ -2,7 +2,7 @@
 ( function( blocks, editor, element ) {
 
 	var createElement  = element.createElement
-	var BlockControls = editor.BlockControls
+	var BlockControls = wp.blockEditor.BlockControls
 	var SelectControl = wp.components.SelectControl
 	var Toolbar = wp.components.Toolbar
 	var tables = dh_ptp_gutenblock_script_data.tables
@@ -18,7 +18,7 @@
 					createElement(
 						BlockControls,
 						{ 
-							key: 'controls'
+							key: 'ptp-controls'
 						},		
 						createElement(
 							SelectControl,
@@ -50,7 +50,8 @@
 						)
 					),
 
-					createElement( wp.components.ServerSideRender, {
+					createElement( wp.serverSideRender, {
+						key: 'ptp-ssr',
 						block: 'easy-pricing-tables/gutenblock',
 						attributes:  props.attributes,
 					})

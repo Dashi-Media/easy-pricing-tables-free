@@ -2,6 +2,9 @@
 
 function fca_ept_render_layout1( $attributes ){
 
+	// enqueue frontend style
+	wp_enqueue_style( 'fca-ept-layout1-style' );
+
 	$tableID = empty( $attributes['tableID'] ) ? 0 : empty( $attributes['tableID'] );
 
 	$columnSettings = empty( $attributes['columnSettings'] ) ? false : json_decode( $attributes['columnSettings'], true );
@@ -69,8 +72,12 @@ function fca_ept_render_layout1( $attributes ){
 
 				</div>
 
-				<div style="font-size: <?php echo $priceFontSize ?>; color: <?php echo $layoutFontColor ?>; background-color: <?php echo $layoutBGTint2 ?>" class="fca-ept-price"><?php echo $priceText1 ?></div>
+				<div style="background-color: <?php echo $layoutBGTint2 ?>;" class="fca-ept-price-div">
 
+					<span style="font-size: <?php echo $priceFontSize ?>; color: <?php echo $layoutFontColor ?>;" class="fca-ept-price"><?php echo $priceText1 ?></span>
+
+				</div>
+				
 				<div style="font-size: <?php echo $featuresFontSize ?>; color: <?php echo $layoutFontColor ?>; background-color: <?php echo $layoutBGColor ?>" class="fca-ept-features-div">
 
 					<ul class="fca-ept-features"><?php echo $featuresText ?></ul>
