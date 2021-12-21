@@ -8,13 +8,13 @@
                     <?php $mb->the_field('most-popular-label-text'); ?>
                     <td>
                         <?php $value = (!is_null($mb->get_the_value()))?$metabox->get_the_value():__('Most Popular', 'easy-pricing-tables'); ?>
-                        <input type="text" name="<?php $metabox->the_name(); ?>" id="<?php $metabox->the_name(); ?>" value="<?php echo $value;?>" />
+                        <input type="text" name="<?php esc_attr( $metabox->the_name() ); ?>" id="<?php $metabox->the_name(); ?>" value="<?php echo esc_attr( $value ); ?>" />
                     </td>
                 </tr>
                 <tr>
                     <td class="settings-title"><?php _e('Border Radius', 'easy-pricing-tables'); ?></td>
                     <?php $mb->the_field('rounded-corners'); ?>
-                    <td><select class="form-control" name="<?php $metabox->the_name(); ?>">
+                    <td><select class="form-control" name="<?php esc_attr( $metabox->the_name() ); ?>">
                             <option value="0px" <?php
                             if(!is_null($mb->get_the_value())) {
                                 if($mb->get_the_value() == '0px') {
@@ -44,8 +44,8 @@
                         <label for="match-column-height-dg1" style="margin: 0; font-weight: normal;"><?php _e('Automatically match Row Height', 'easy-pricing-tables'); ?></label>
                     </td>
                     <td>
-                        <?php $mb->the_field('match-column-height-dg1'); ?>
-                        <input type="checkbox" onchange="return consistent_match_column_height(this) " class="tt-match-column-height-checkbox" name="<?php $metabox->the_name(); ?>" id="match-column-height-dg1" value="1" <?php      if (!$meta) { echo 'checked="checked"'; } else  if ($metabox->get_the_value()) echo 'checked="checked"'; ?>/>
+                        <?php esc_attr( $mb->the_field('match-column-height-dg1') ); ?>
+                        <input type="checkbox" onchange="return consistent_match_column_height(this) " class="tt-match-column-height-checkbox" name="<?php esc_attr( $metabox->the_name() ); ?>" id="match-column-height-dg1" value="1" <?php      if (!$meta) { echo 'checked="checked"'; } else  if ($metabox->get_the_value()) echo 'checked="checked"'; ?>/>
                     </td>
                 </tr>
             </table>
@@ -57,11 +57,11 @@
                     <td class="settings-title"><?php _e('Featured Label Font Size', 'easy-pricing-tables'); ?></td>
                     <td>
                         <?php $mb->the_field('most-popular-font-size'); ?>
-                        <input class="form-control float-input" type="text" name="<?php $metabox->the_name(); ?>" value="<?php if(!is_null($mb->get_the_value())) echo $metabox->the_value(); else echo "0.9"; ?>"/>
+                        <input class="form-control float-input" type="text" name="<?php esc_attr( $metabox->the_name() ); ?>" value="<?php if(!is_null($mb->get_the_value())) echo esc_attr( $metabox->the_value() ); else echo "0.9"; ?>"/>
                     </td>
                     <td>
                         <?php $mb->the_field('most-popular-font-size-type'); ?>
-                        <select  name="<?php $metabox->the_name(); ?>">
+                        <select  name="<?php esc_attr( $metabox->the_name() ); ?>">
                             <option value="em" <?php
                             if(!is_null($mb->get_the_value())) {
                                 if($mb->get_the_value() == 'em') {
@@ -85,11 +85,11 @@
                     <td class="settings-title"><?php _e('Plan Name Font Size', 'easy-pricing-tables'); ?></td>
                     <td>
                         <?php $mb->the_field('plan-name-font-size'); ?>
-                        <input class="form-control float-input" type="text" name="<?php $metabox->the_name(); ?>" value="<?php if(!is_null($mb->get_the_value())) echo $metabox->the_value(); else echo "1"; ?>"/>
+                        <input class="form-control float-input" type="text" name="<?php esc_attr( $metabox->the_name() ); ?>" value="<?php if(!is_null($mb->get_the_value())) echo esc_attr( $metabox->the_value() ); else echo "1"; ?>"/>
                     </td>
                     <td>
                         <?php $mb->the_field('plan-name-font-size-type'); ?>
-                        <select  name="<?php $metabox->the_name(); ?>">
+                        <select  name="<?php esc_attr( $metabox->the_name() ); ?>">
                             <option value="em" <?php
                             if(!is_null($mb->get_the_value())) {
                                 if($mb->get_the_value() == 'em') {
@@ -113,11 +113,11 @@
                     <td class="settings-title"><?php _e('Price Font Size', 'easy-pricing-tables'); ?></td>
                     <td>
                         <?php $mb->the_field('price-font-size'); ?>
-                        <input class="form-control float-input" type="text" name="<?php $metabox->the_name(); ?>" value="<?php if(!is_null($mb->get_the_value())) echo $metabox->the_value(); else echo "1.25"; ?>"/>
+                        <input class="form-control float-input" type="text" name="<?php esc_attr( $metabox->the_name() ); ?>" value="<?php if(!is_null($mb->get_the_value())) echo esc_attr( $metabox->the_value() ); else echo "1.25"; ?>"/>
                     </td>
                     <td>
                         <?php $mb->the_field('price-font-size-type'); ?>
-                        <select  name="<?php $metabox->the_name(); ?>">
+                        <select  name="<?php esc_attr( $metabox->the_name() ); ?>">
                             <option value="em" <?php
                             if(!is_null($mb->get_the_value())) {
                                 if($mb->get_the_value() == 'em') {
@@ -141,11 +141,11 @@
                     <td class="settings-title"><?php _e('Bullet Item Font Size', 'easy-pricing-tables'); ?></td>
                     <td>
                         <?php $mb->the_field('bullet-item-font-size'); ?>
-                        <input class="form-control float-input" type="text" name="<?php $metabox->the_name(); ?>" value="<?php if(!is_null($mb->get_the_value())) echo $metabox->the_value(); else echo "0.875"; ?>"/>
+                        <input class="form-control float-input" type="text" name="<?php esc_attr( $metabox->the_name() ); ?>" value="<?php if(!is_null($mb->get_the_value())) echo esc_attr( $metabox->the_value() ); else echo "0.875"; ?>"/>
                     </td>
                     <td>
                         <?php $mb->the_field('bullet-item-font-size-type'); ?>
-                        <select  name="<?php $metabox->the_name(); ?>">
+                        <select  name="<?php esc_attr( $metabox->the_name() ); ?>">
                             <option value="em" <?php
                             if(!is_null($mb->get_the_value())) {
                                 if($mb->get_the_value() == 'em') {
@@ -169,11 +169,11 @@
                     <td class="settings-title"><?php _e('Button Font Size', 'easy-pricing-tables'); ?></td>
                     <td>
                         <?php $mb->the_field('button-font-size'); ?>
-                        <input class="form-control float-input" type="text" name="<?php $metabox->the_name(); ?>" value="<?php if(!is_null($mb->get_the_value())) echo $metabox->the_value(); else echo "1"; ?>"/>
+                        <input class="form-control float-input" type="text" name="<?php esc_attr( $metabox->the_name() ); ?>" value="<?php if(!is_null($mb->get_the_value())) echo esc_attr( $metabox->the_value() ); else echo "1"; ?>"/>
                     </td>
                     <td>
                         <?php $mb->the_field('button-font-size-type'); ?>
-                        <select  name="<?php $metabox->the_name(); ?>">
+                        <select  name="<?php esc_attr( $metabox->the_name() ); ?>">
                             <option value="em" <?php
                             if(!is_null($mb->get_the_value())) {
                                 if($mb->get_the_value() == 'em') {
@@ -205,25 +205,25 @@
                     <td class="settings-title"><?php _e('Button Color', 'easy-pricing-tables'); ?></td>
                     <?php $mb->the_field('button-color'); ?>
                     <?php $value = (!is_null($mb->get_the_value()))?$mb->get_the_value():'#3498db'; ?>
-                    <td><input type="text" name="<?php $mb->the_name(); ?>" class="button-color" value="<?php echo $value; ?>" class="my-color-field form-control" data-default-color="#3498db" /></td>
+                    <td><input type="text" name="<?php esc_attr( $mb->the_name() ); ?>" class="button-color" value="<?php echo esc_attr( $value ); ?>" class="my-color-field form-control" data-default-color="#3498db" /></td>
                 </tr>
                 <tr>
                     <td class="settings-title"><?php _e('Button Border Color', 'easy-pricing-tables'); ?></td>
                     <?php $mb->the_field('button-border-color'); ?>
                     <?php $value = (!is_null($mb->get_the_value()))?$mb->get_the_value():'#2980b9'; ?>
-                    <td><input type="text" name="<?php $mb->the_name(); ?>" class="button-border-color" value="<?php echo $value; ?>" class="my-color-field" data-default-color="#2980b9" /></td>
+                    <td><input type="text" name="<?php esc_attr( $mb->the_name() ); ?>" class="button-border-color" value="<?php echo esc_attr( $value ); ?>" class="my-color-field" data-default-color="#2980b9" /></td>
                 </tr>
                 <tr>
                     <td class="settings-title"><?php _e('Button Hover Color', 'easy-pricing-tables'); ?></td>
                     <?php $mb->the_field('button-hover-color'); ?>
                     <?php $value = (!is_null($mb->get_the_value()))?$mb->get_the_value():'#2980b9'; ?>
-                    <td><input type="text" name="<?php $mb->the_name(); ?>" class="button-border-color" value="<?php echo $value; ?>" class="my-color-field" data-default-color="#2980b9" /></td>
+                    <td><input type="text" name="<?php esc_attr( $mb->the_name() ); ?>" class="button-border-color" value="<?php echo esc_attr( $value ); ?>" class="my-color-field" data-default-color="#2980b9" /></td>
                 </tr>
                 <tr>
                     <td class="settings-title"><?php _e('Button Font Color', 'easy-pricing-tables'); ?></td>
                     <?php $mb->the_field('button-font-color'); ?>
                     <?php $value = (!is_null($mb->get_the_value()))?$mb->get_the_value():'#ffffff'; ?>
-                    <td><input type="text" name="<?php $mb->the_name(); ?>" class="colorpicker-no-palettes" value="<?php echo $value; ?>" class="my-color-field" data-default-color="#ffffff" /></td>
+                    <td><input type="text" name="<?php esc_attr( $mb->the_name() ); ?>" class="colorpicker-no-palettes" value="<?php echo esc_attr( $value ); ?>" class="my-color-field" data-default-color="#ffffff" /></td>
                 </tr>
                 
                 <!-- Headline -->
@@ -232,167 +232,30 @@
                     <td class="settings-title"><?php _e('Featured-Button Color', 'easy-pricing-tables'); ?></td>
                     <?php $mb->the_field('featured-button-color'); ?>
                     <?php $value = (!is_null($mb->get_the_value()))?$mb->get_the_value():'#e74c3c'; ?>
-                    <td><input type="text" name="<?php $mb->the_name(); ?>" class="button-color" value="<?php echo $value; ?>" class="my-color-field form-control" data-default-color="#e74c3c" /></td>
+                    <td><input type="text" name="<?php esc_attr( $mb->the_name() ); ?>" class="button-color" value="<?php echo esc_attr( $value ); ?>" class="my-color-field form-control" data-default-color="#e74c3c" /></td>
                 </tr>
                 <tr>
                     <td class="settings-title"><?php _e('Featured-Button Border Color', 'easy-pricing-tables'); ?></td>
                     <?php $mb->the_field('featured-button-border-color'); ?>
                     <?php $value = (!is_null($mb->get_the_value()))?$mb->get_the_value():'#c0392b'; ?>
-                    <td><input type="text" name="<?php $mb->the_name(); ?>" class="button-border-color" value="<?php echo $value; ?>" class="my-color-field" data-default-color="#c0392b" /></td>
+                    <td><input type="text" name="<?php esc_attr( $mb->the_name() ); ?>" class="button-border-color" value="<?php echo esc_attr( $value ); ?>" class="my-color-field" data-default-color="#c0392b" /></td>
                 </tr>
                 <tr>
                     <td class="settings-title"><?php _e('Featured-Button Hover Color', 'easy-pricing-tables'); ?></td>
                     <?php $mb->the_field('featured-button-hover-color'); ?>
                     <?php $value = (!is_null($mb->get_the_value()))?$mb->get_the_value():'#c0392b'; ?>
-                    <td><input type="text" name="<?php $mb->the_name(); ?>" class="button-border-color" value="<?php echo $value; ?>" class="my-color-field" data-default-color="#c0392b" /></td>
+                    <td><input type="text" name="<?php esc_attr( $mb->the_name() ); ?>" class="button-border-color" value="<?php echo esc_attr( $value ); ?>" class="my-color-field" data-default-color="#c0392b" /></td>
                 </tr>
                 <tr>
                     <td class="settings-title"><?php _e('Featured-Button Font Color', 'easy-pricing-tables'); ?></td>
                     <?php $mb->the_field('featured-button-font-color'); ?>
                     <?php $value = (!is_null($mb->get_the_value()))?$mb->get_the_value():'#ffffff'; ?>
-                    <td><input type="text" name="<?php $mb->the_name(); ?>" class="colorpicker-no-palettes" value="<?php echo $value; ?>" class="my-color-field" data-default-color="#ffffff" /></td>
+                    <td><input type="text" name="<?php esc_attr( $mb->the_name() ); ?>" class="colorpicker-no-palettes" value="<?php echo esc_attr( $value ); ?>" class="my-color-field" data-default-color="#ffffff" /></td>
                 </tr>
                 
             </table>
         </div>
         
-        <?php 
-        /*   
-         * 
-         *    Hide the greyed out area
-         * 
-        <h3><?php _e("Font & Background Colors (Premium Only)", 'easy-pricing-tables'); ?></h3>
-        <div>
-            <table>
-                <tr class="table-headline">
-                    <td><?php _e('Background Colors (Unfeatured Columns)', 'easy-pricing-tables'); ?></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="unfeatured-border-color-demo"><?php _e('Border Color', 'easy-pricing-tables'); ?></label></td>
-                    <td><div class="wp-picker-container"><a tabindex="0" class="wp-color-result" title="Select Color" data-current="Current Color" style="background-color: #dddddd;"></a></div></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="title-area-background-color-demo"><?php _e('Title Background Color', 'easy-pricing-tables'); ?></label></td>
-                    <td><div class="wp-picker-container"><a tabindex="0" class="wp-color-result" title="Select Color" data-current="Current Color" style="background-color: #dddddd;"></a></div></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="pricing-background-color-demo"><?php _e('Pricing Background Color', 'easy-pricing-tables'); ?></label></td>
-                    <td><div class="wp-picker-container"><a tabindex="0" class="wp-color-result" title="Select Color" data-current="Current Color" style="background-color: #eeeeee;"></a></div></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="unfeatured-button-area-background-color-demo"><?php _e('Button Area Background Color', 'easy-pricing-tables'); ?></label></td>
-                    <td><div class="wp-picker-container"><a tabindex="0" class="wp-color-result" title="Select Color" data-current="Current Color" style="background-color: #eeeeee;"></a></div></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="featured-background-color-demo"><?php _e('Bullet Item Background Color', 'easy-pricing-tables'); ?></label></td>
-                    <td><div class="wp-picker-container"><a tabindex="0" class="wp-color-result" title="Select Color" data-current="Current Color" style="background-color: #ffffff;"></a></div></td>
-                </tr>
-                
-                <!-- Headline -->
-                <tr class="table-headline">
-                    <td><br/><?php _e('Font Colors (Unfeatured Columns)', 'easy-pricing-tables'); ?></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="title-area-font-color-demo"><?php _e('Title Font Color', 'easy-pricing-tables'); ?></label></td>
-                    <td><div class="wp-picker-container"><a tabindex="0" class="wp-color-result" title="Select Color" data-current="Current Color" style="background-color: #333333;"></a></div></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="pricing-area-font-color-demo"><?php _e('Pricing Font Color', 'easy-pricing-tables'); ?></label></td>
-                    <td><div class="wp-picker-container"><a tabindex="0" class="wp-color-result" title="Select Color" data-current="Current Color" style="background-color: #333333;"></a></div></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="featured-font-color-demo"><?php _e('Feature Color', 'easy-pricing-tables'); ?></label></td>
-                    <td><div class="wp-picker-container"><a tabindex="0" class="wp-color-result" title="Select Color" data-current="Current Color" style="background-color: #333333;"></a></div></td>
-                </tr>
-                
-                 <!-- Headline -->
-                <tr class="table-headline">
-                    <td><?php _e('Background Colors (Featured Columns)', 'easy-pricing-tables'); ?></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="featured-border-color-demo"><?php _e('Border Color', 'easy-pricing-tables'); ?></label></td>
-                    <td><div class="wp-picker-container"><a tabindex="0" class="wp-color-result" title="Select Color" data-current="Current Color" style="background-color: #dddddd;"></a></div></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="featured-title-area-background-color-demo"><?php _e('Title Background Color', 'easy-pricing-tables'); ?></label></td>
-                    <td><div class="wp-picker-container"><a tabindex="0" class="wp-color-result" title="Select Color" data-current="Current Color" style="background-color: #dddddd;"></a></div></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="featured-pricing-background-color-demo"><?php _e('Pricing Background Color', 'easy-pricing-tables'); ?></label></td>
-                    <td><div class="wp-picker-container"><a tabindex="0" class="wp-color-result" title="Select Color" data-current="Current Color" style="background-color: #eeeeee;"></a></div></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="featured-button-area-background-color-demo"><?php _e('Button Area Background Color', 'easy-pricing-tables'); ?></label></td>
-                    <td><div class="wp-picker-container"><a tabindex="0" class="wp-color-result" title="Select Color" data-current="Current Color" style="background-color: #eeeeee;"></a></div></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="featured-feature-background-color-demo"><?php _e('Bullet Item Background Color', 'easy-pricing-tables'); ?></label></td>
-                    <td><div class="wp-picker-container"><a tabindex="0" class="wp-color-result" title="Select Color" data-current="Current Color" style="background-color: #ffffff;"></a></div></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="featured-feature-label-border-color-demo"><?php _e('Featured Label Border Color', 'easy-pricing-tables'); ?></label></td>
-                    <td><div class="wp-picker-container"><a tabindex="0" class="wp-color-result" title="Select Color" data-current="Current Color" style="background-color: #7f8c8d;"></a></div></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="most-popular-area-background-color-demo"><?php _e('Featured Label Background Color', 'easy-pricing-tables'); ?></label></td>
-                    <td><div class="wp-picker-container"><a tabindex="0" class="wp-color-result" title="Select Color" data-current="Current Color" style="background-color: #7f8c8d;"></a></div></td>
-                </tr>
-                
-                <!-- Headline -->
-                <tr class="table-headline">
-                    <td><br/><?php _e('Font Colors (Featured Columns)', 'easy-pricing-tables'); ?></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="featured-title-area-font-color-demo"><?php _e('Title Font Color', 'easy-pricing-tables'); ?></label></td>
-                    <td><div class="wp-picker-container"><a tabindex="0" class="wp-color-result" title="Select Color" data-current="Current Color" style="background-color: #333333;"></a></div></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="featured-pricing-area-font-color-demo"><?php _e('Pricing Font Color', 'easy-pricing-tables'); ?></label></td>
-                    <td><div class="wp-picker-container"><a tabindex="0" class="wp-color-result" title="Select Color" data-current="Current Color" style="background-color: #333333;"></a></div></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="featured-feature-font-color-demo"><?php _e('Feature Color', 'easy-pricing-tables'); ?></label></td>
-                    <td><div class="wp-picker-container"><a tabindex="0" class="wp-color-result" title="Select Color" data-current="Current Color" style="background-color: #333333;"></a></div></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="most-popular-font-color-demo"><?php _e('Feature Label Font Color', 'easy-pricing-tables'); ?></label></td>
-                    <td><div class="wp-picker-container"><a tabindex="0" class="wp-color-result" title="Select Color" data-current="Current Color" style="background-color: #ffffff;"></a></div></td>
-                </tr>
-                
-            </table>
-        </div>
-
-        <h3><?php _e("Advanced Settings (Premium Only)", 'easy-pricing-tables'); ?></h3>
-        <div>
-            <table>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="design1-hide-empty-rows-demo"><?php _e('Hide Empty Rows', 'easy-pricing-tables'); ?></label></td>
-                    <td><input type="checkbox" name="design1-hide-empty-rows-demo" id="design1-hide-empty-rows-demo" value="1"/></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="design1-call-action-buttons-demo"><?php _e('Hide Call To Action Buttons', 'easy-pricing-tables'); ?></label></td>
-                    <td><input type="checkbox" name="design1-call-action-buttons-demo" id="design1-call-action-buttons-demo" value="1" /></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="design1-open-link-in-new-tab-demo"><?php _e('Open Link in New Tab', 'easy-pricing-tables'); ?></label></td>
-                    <td><input type="checkbox" name="design1-open-link-in-new-tab-demo" id="design1-open-link-in-new-tab-demo" value="1"/></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="design1-no-spacing-betwen-columns-demo"><?php _e('No Spacing Between Columns', 'easy-pricing-tables'); ?></label></td>
-                    <td><input type="checkbox" name="design1-no-spacing-betwen-columns-demo" id="design1-no-spacing-betwen-columns-demo" value="1"/></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="design1-hover-effects-demo"><?php _e('Enlarge Column on Hover', 'easy-pricing-tables'); ?></label></td>
-                    <td><input type="checkbox" name="design1-hover-effects-demo" id="design1-hover-effects-demo" value="1"/></td>
-                </tr>
-                <tr class="ept-demo">
-                    <td class="settings-title"><label for="design1-shake-buttons-on-hover-demo"><?php _e('Shake Button on Hover', 'easy-pricing-tables'); ?></label></td>
-                    <td><input type="checkbox" name="design1-shake-buttons-on-hover-demo" id="design1-shake-buttons-on-hover-demo" value="1"/></td>
-                </tr>
-            </table>
-        </div>
-         */ ?> 
-         
      <!-- ept-custom-css-setting -->
         <h4><?php _e('Custom CSS', 'easy-pricing-tables'); ?></h4>
         <div >
@@ -405,7 +268,7 @@
                     </td>
                     <td class="custom-css-setting-td">
                         
-                        <textarea  class="custom-css-setting-textbox" name="<?php $metabox->the_name(); ?>"  rows="10" cols="60" <?php if (!$metabox->get_the_value()) echo  'placeholder=" Type your custom css here"' ?> ><?php if ($metabox->get_the_value()) echo " ".$metabox->get_the_value();else {
+                        <textarea  class="custom-css-setting-textbox" name="<?php esc_attr( $metabox->the_name() ); ?>"  rows="10" cols="60" <?php if (!$metabox->get_the_value()) echo  'placeholder=" Type your custom css here"' ?> ><?php if ($metabox->get_the_value()) echo " " . esc_attr( $metabox->get_the_value() ); else {
                          echo " ";
                      } ?></textarea>
                         </td>
@@ -416,27 +279,4 @@
            </div>
     </div>
 
-    <script type="text/javascript">
-       /* jQuery(document).ready(function($){            
-            // Alert
-            var alert_text = "<?php //_e("Please upgrade to Easy Pricing Tables Premium to use this setting.", 'easy-pricing-tables'); ?>";
-            $('.ept-demo').on('click', function(){
-                alert(alert_text);
-                return false;
-            });
-            $('.ept-demo .wp-picker-container a').click(function(event){
-                alert(alert_text);
-                return false;
-            });
-            
-             $('.custom-css-setting-textbox').on('click', function(){
-                alert(alert_text);
-                return false;
-            });
-             $('.custom-css-setting-td').on('click', function(){
-                alert(alert_text);
-                return false;
-            });
-        }); */
-    </script>
 </div>
