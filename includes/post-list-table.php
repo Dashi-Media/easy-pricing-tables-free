@@ -28,7 +28,7 @@ class EPT3_List_Table extends WP_List_Table {
 				return '<input type="text" style="width: 300px;" readonly="readonly" onclick="this.select()" value="[ept3-block id=&quot;'. $item->ID . '&quot;]"/>';
 			case 'date':
 				$date_format = get_option( 'links_updated_date_format', 'Y/m/d \a\t g:i a' );
-				return '<span>Published</span></br>' . wp_date( $date_format, strtotime( $item->post_date ) );
+				return '<span>Published</span></br>' . date_i18n( $date_format, strtotime( $item->post_date ) );
 			default:
 				return print_r( $item, true ); // Show the whole array for troubleshooting purposes.
 		}
@@ -60,7 +60,8 @@ class EPT3_List_Table extends WP_List_Table {
 		// Build delete row action.
 		$delete_query_args = array(
 			'post'  => $item->ID,
-			'action' => 'trash'
+			'action' => 'trash',
+			'ept_nonce' => wp_create_nonce( 'ept_delete' )
 		);
 
 		$actions['trash'] = sprintf(
@@ -80,10 +81,13 @@ class EPT3_List_Table extends WP_List_Table {
 	protected function process_bulk_action() {
 		// Detect when a bulk action is being triggered.
 		if ( 'trash' === $this->current_action() ) {
-
-			$postID = intval( $_GET['post'] );
-			wp_delete_post( $postID );
-
+			$postID = empty( $_GET['post'] ) ? '' : intval( $_GET['post'] );
+			$nonce = empty( $_GET['ept_nonce'] ) ? '' : sanitize_text_field( $_GET['ept_nonce'] );
+			if( wp_verify_nonce( $nonce, 'ept_delete' ) && $postID ){
+				wp_delete_post( $postID );
+			} else {
+				wp_die( 'Not authorized, please try logging in again' );
+			}
 		}
 	}
 
