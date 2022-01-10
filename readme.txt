@@ -134,7 +134,9 @@ Our full privacy policy is available here: [https://fatcatapps.com/legal/privacy
 == Changelog ==
 
 = Easy Pricing Tables 3.1.3 =
-
+* Cleaned up code for legacy table
+* Improved plugin security
+* Tested up to WordPress 5.8.3
 
 = Easy Pricing Tables 3.1.2 =
 * Improved table builder performance on Gutenberg editor
