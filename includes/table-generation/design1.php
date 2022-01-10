@@ -32,7 +32,7 @@ function dh_ptp_simple_flat_css($id, $meta)
     ?>
 
     #ptp-<?php echo $id ?> div.ptp-item-container {
-        border-radius: <?php echo $design1_rounded_corner_width; ?>;
+        border-radius: <?php echo esc_attr( $design1_rounded_corner_width ); ?>;
         padding: 0px;
         margin-left: 0px;
         margin-right: 0px;
@@ -41,48 +41,48 @@ function dh_ptp_simple_flat_css($id, $meta)
         margin: 0px; 
     }
     #ptp-<?php echo $id ?> div.ptp-plan{
-        border-top-right-radius: <?php echo $design1_rounded_corner_width; ?>;
-        border-top-left-radius: <?php echo $design1_rounded_corner_width; ?>;
-        font-size: <?php echo $design1_plan_name_font_size . $design1_plan_name_font_size_type; ?>;
+        border-top-right-radius: <?php echo esc_attr( $design1_rounded_corner_width ); ?>;
+        border-top-left-radius: <?php echo esc_attr( $design1_rounded_corner_width ); ?>;
+        font-size: <?php echo esc_attr( $design1_plan_name_font_size ) . esc_attr( $design1_plan_name_font_size_type ); ?>;
         padding: 0.9375em 1.25em;
     }
     #ptp-<?php echo $id ?> div.ptp-price{
-        font-size: <?php echo $design1_price_font_size . $design1_price_font_size_type; ?>;
+        font-size: <?php echo esc_attr( $design1_price_font_size ) . esc_attr( $design1_price_font_size_type ); ?>;
         padding: 0.9375em 1.25em;
     }
     #ptp-<?php echo $id ?> div.ptp-cta{
-        border-bottom-right-radius: <?php echo $design1_rounded_corner_width; ?>;
-        border-bottom-left-radius: <?php echo $design1_rounded_corner_width; ?>;
+        border-bottom-right-radius: <?php echo esc_attr( $design1_rounded_corner_width ); ?>;
+        border-bottom-left-radius: <?php echo esc_attr( $design1_rounded_corner_width ); ?>;
         padding-top: 1.25em;
         padding-bottom: 1.25em;
     }
     #ptp-<?php echo $id ?> a.ptp-button{
-        border-radius: <?php echo $design1_rounded_corner_width; ?>;
-        font-size: <?php echo $design1_button_font_size . $design1_button_font_size_type; ?>;
-        color: <?php echo $design1_button_font_color; ?>;
-        background-color: <?php echo $design1_button_color; ?>;
-        border-bottom: <?php echo $design1_button_border_color;?> 4px solid;
+        border-radius: <?php echo esc_attr( $design1_rounded_corner_width ); ?>;
+        font-size: <?php echo esc_attr( $design1_button_font_size ) . esc_attr( $design1_button_font_size_type ); ?>;
+        color: <?php echo esc_attr( $design1_button_font_color ); ?>;
+        background-color: <?php echo esc_attr( $design1_button_color ); ?>;
+        border-bottom: <?php echo esc_attr( $design1_button_border_color );?> 4px solid;
         margin: 0px;
     }
     #ptp-<?php echo $id ?> a.ptp-button:hover{
-        background-color: <?php echo $design1_button_hover_color; ?>
+        background-color: <?php echo esc_attr( $design1_button_hover_color ); ?>
     }
 
     div#ptp-<?php echo $id ?> .ptp-highlight a.ptp-button{
-        color: <?php echo $design1_featured_button_font_color; ?>;
-        background-color: <?php echo $design1_featured_button_color; ?>;
-        border-bottom: <?php echo $design1_featured_button_border_color;?> 4px solid;
+        color: <?php echo esc_attr( $design1_featured_button_font_color ); ?>;
+        background-color: <?php echo esc_attr( $design1_featured_button_color ); ?>;
+        border-bottom: <?php echo esc_attr( $design1_featured_button_border_color );?> 4px solid;
     }
     div#ptp-<?php echo $id ?> .ptp-highlight a.ptp-button:hover{
-        background-color: <?php echo $design1_featured_button_hover_color; ?>;
+        background-color: <?php echo esc_attr( $design1_featured_button_hover_color ); ?>;
     }
     #ptp-<?php echo $id ?> div.ptp-bullet-item{
-        font-size: <?php echo $design1_bullet_item_font_size . $design1_bullet_item_font_size_type; ?>;
+        font-size: <?php echo esc_attr( $design1_bullet_item_font_size ) . esc_attr( $design1_bullet_item_font_size_type ); ?>;
         padding: 0.9375em 0.5em 0.9375em 0.5em;
     }
     #ptp-<?php echo $id ?> div.ptp-most-popular{
         border-radius: <?php echo $design1_rounded_corner_width; ?>;
-        font-size: <?php echo $design1_most_popular_font_size . $design1_most_popular_font_size_type; ?>;
+        font-size: <?php echo esc_attr( $design1_most_popular_font_size ) . esc_attr( $design1_most_popular_font_size_type ); ?>;
     }
     <?php
 		
@@ -149,11 +149,11 @@ function dh_ptp_generate_simple_flat_pricing_table_html( $id, $hide = false )
 		<div class="ptp-col ' . dh_ptp_get_number_of_columns() . ' '. $feature . ' ptp-col-id-' . $loop_index . '">' .
             $feature_label .
             '<div class="ptp-item-container">' . 
-				'<div class="ptp-plan">' . $plan_name . '</div> ' .
-		  		'<div class="ptp-price">' . $plan_price . '</div>' .
-                    dh_ptp_features_to_html_simple_flat($plan_features, dh_ptp_get_max_number_of_features()) .
+				'<div class="ptp-plan">' . esc_attr( $plan_name ) . '</div> ' .
+		  		'<div class="ptp-price">' . esc_attr( $plan_price ) . '</div>' .
+                    dh_ptp_features_to_html_simple_flat( esc_attr( $plan_features ), dh_ptp_get_max_number_of_features()) .
 	  			'<div class="ptp-cta">'.
-                    (($custom_button)?$custom_button:'<a class="ptp-button" id="ptp-'.$id.'-cta-'.$loop_index.'" href="' . do_shortcode ( $button_url ) . '">' . do_shortcode ( $button_text ) . '</a>') .
+                    (($custom_button)?$custom_button:'<a class="ptp-button" id="ptp-'.$id.'-cta-'.$loop_index.'" href="' . esc_url( do_shortcode ( $button_url ) ) . '">' . esc_attr( do_shortcode ( $button_text ) ) . '</a>') .
 	  			'</div>' .
 			'</div>' .
 		'</div>';
