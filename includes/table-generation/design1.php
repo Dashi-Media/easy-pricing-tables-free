@@ -149,11 +149,11 @@ function dh_ptp_generate_simple_flat_pricing_table_html( $id, $hide = false )
 		<div class="ptp-col ' . dh_ptp_get_number_of_columns() . ' '. $feature . ' ptp-col-id-' . $loop_index . '">' .
             $feature_label .
             '<div class="ptp-item-container">' . 
-				'<div class="ptp-plan">' . esc_attr( $plan_name ) . '</div> ' .
-		  		'<div class="ptp-price">' . esc_attr( $plan_price ) . '</div>' .
-                    dh_ptp_features_to_html_simple_flat( esc_attr( $plan_features ), dh_ptp_get_max_number_of_features()) .
+				'<div class="ptp-plan">' . $plan_name . '</div> ' .
+		  		'<div class="ptp-price">' . $plan_price . '</div>' .
+                    dh_ptp_features_to_html_simple_flat( $plan_features, dh_ptp_get_max_number_of_features()) .
 	  			'<div class="ptp-cta">'.
-                    (($custom_button)?$custom_button:'<a class="ptp-button" id="ptp-'.$id.'-cta-'.$loop_index.'" href="' . esc_url( do_shortcode ( $button_url ) ) . '">' . esc_attr( do_shortcode ( $button_text ) ) . '</a>') .
+                    (($custom_button)?$custom_button:'<a class="ptp-button" id="ptp-'.$id.'-cta-'.$loop_index.'" href="' . esc_url( do_shortcode ( $button_url ) ) . '">' . do_shortcode ( $button_text ) . '</a>') .
 	  			'</div>' .
 			'</div>' .
 		'</div>';
