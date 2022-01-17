@@ -136,6 +136,8 @@ function dh_ptp_generate_simple_flat_pricing_table_html( $id, $hide = false )
 		),
 	);
 
+	$ept_allowed_tags = apply_filters( 'fca_ept_allowed_tags', $ept_allowed_tags );
+
 	$meta = get_post_meta( $id, $features_metabox->get_the_id(), true );
 	
 	$loop_index = 0;
