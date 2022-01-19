@@ -111,6 +111,7 @@ function dh_ptp_generate_simple_flat_pricing_table_html( $id, $hide = false )
 			'href'   => array(),
 			'title'  => array(),
 			'target' => array(),
+			'style' => array(),
 		),
 		'abbr'    => array( 'title' => array() ),
 		'acronym' => array( 'title' => array() ),
