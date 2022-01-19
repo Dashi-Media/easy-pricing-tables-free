@@ -5,7 +5,7 @@ Tags: pricing table, pricing table block, pricing tables, comparison table, comp
 Author URI: https://fatcatapps.com/?utm_campaign=author%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Plugin URI: https://fatcatapps.com/easypricingtables/?utm_campaign=plugin%2Buri&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Feasy-pricing-tables%2F&utm_medium=referral
 Requires at least: 3.6
-Tested up to: 5.8
+Tested up to: 5.9
 Stable tag: 3.1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -134,7 +134,8 @@ Our full privacy policy is available here: [https://fatcatapps.com/legal/privacy
 == Changelog ==
 
 = Easy Pricing Tables 3.1.5 =
-* Added the option to add a custom filter to allow specific HTML tags in frontend
+* Added the option to add a custom function to allow more HTML tags to legacy pricing tables content
+* Tested up to WordPress 5.9
 
 = Easy Pricing Tables 3.1.4 =
 * Fix frontend HTML tag issue
