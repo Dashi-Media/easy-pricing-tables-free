@@ -6,7 +6,7 @@
 function dh_ptp_settings_menu() {
 	global $submenu;
 	$submenu_list = $submenu['edit.php?post_type=easy-pricing-table'];
-	$position = count( $submenu_list ) -1;
+	$position = empty( $submenu_list ) ? 3 : count( $submenu_list ) -1;
 	$existing_install = dh_ptp_check_existing_install();
 
 	if ( $existing_install === false ){ 
