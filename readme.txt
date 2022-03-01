@@ -135,6 +135,8 @@ Our full privacy policy is available here: [https://fatcatapps.com/legal/privacy
 
 = Easy Pricing Tables 3.1.6 =
 * Fixed a bug on the settings page that caused an error for some users
+* Added some more allowed HTML tags for the frontend
+* Tested up to WordPress 5.9.1
 
 = Easy Pricing Tables 3.1.5 =
 * Added the option to add a custom function to allow more HTML tags to legacy pricing tables content
