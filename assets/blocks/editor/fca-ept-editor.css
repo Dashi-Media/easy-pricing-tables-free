@@ -266,6 +266,7 @@ div.fca-ept-get-premium ul.get-premium-features {
 
 div.fca-ept-get-premium a.get-premium-button {
 	padding: 5px;
+	margin-bottom: 10px;
 	width:100%;
 	display: inline-block;
 	background-color: #3274b7;

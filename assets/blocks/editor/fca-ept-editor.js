@@ -565,7 +565,14 @@ function fca_ept_sidebar_settings( props ){
 						target: '_blank',
 						href: 'https://fatcatapps.com/easypricingtables/?utm_campaign=wp%2Bgutenberg&utm_source=Easy%2BPricing%2BTables%2BFree&utm_medium=plugin&utm_content=v1',
 						className: 'get-premium-button',
-					}, 'Learn more' )
+					}, 'Learn more' ),
+
+					el( 'a', {
+						type: 'button',
+						target: '_blank',
+						href: 'https://fatcatapps.com/knowledge-base/how-to-create-your-first-pricing-table/',
+						className: 'help-button',
+					}, 'Need help building your table?' )
 
 				)
 				
