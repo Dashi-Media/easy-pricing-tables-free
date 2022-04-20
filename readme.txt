@@ -133,6 +133,10 @@ Our full privacy policy is available here: [https://fatcatapps.com/legal/privacy
 
 == Changelog ==
 
+= Easy Pricing Tables 3.2.0 =
+* 
+
+
 = Easy Pricing Tables 3.1.6 =
 * Fixed a bug on the settings page that caused an error for some users
 * Added some more allowed HTML tags for the frontend
