@@ -13,7 +13,6 @@ class EPT3_List_Table extends WP_List_Table {
 
 	public function get_columns() {
 		$columns = array(
-			'cb'       => '<input type="checkbox" />', // Render a checkbox instead of text.
 			'title'    => _x( 'Pricing Table Name', 'Column label', 'wp-list-table-example' ),
 			'shortcode'   => _x( 'Shortcode', 'Column label', 'wp-list-table-example' ),
 			'date' => _x( 'Date', 'Column label', 'wp-list-table-example' ),
@@ -33,15 +32,7 @@ class EPT3_List_Table extends WP_List_Table {
 				return print_r( $item, true ); // Show the whole array for troubleshooting purposes.
 		}
 	}
-
-	protected function column_cb( $item ) {
-		return sprintf(
-			'<input type="checkbox" name="%1$s[]" value="%2$s" />',
-			$this->_args['singular'],
-			$item->ID
-		);
-	}
-
+	
 	protected function column_title( $item ) {
 		$page = wp_unslash( $_REQUEST['page'] ); // WPCS: Input var ok.
 
@@ -49,6 +40,7 @@ class EPT3_List_Table extends WP_List_Table {
 		$edit_query_args = array(
 			'post'  => $item->ID,
 			'action' => 'edit',
+			'block-editor' => 1,
 		);
 
 		$actions['edit'] = sprintf(
@@ -56,7 +48,15 @@ class EPT3_List_Table extends WP_List_Table {
 			esc_url( add_query_arg( $edit_query_args, 'post.php' ), $item->post_title ),
 			_x( 'Edit', 'List table row action', 'wp-list-table-example' )
 		);
-
+		
+		$clone_query =  add_query_arg( array(
+			'post'  => $item->ID,
+			'action' => 'clone',
+			'ept_nonce' => wp_create_nonce( 'ept_clone' )
+		));
+		
+		$actions['duplicate'] = "<a href='" . esc_url( $clone_query ) . "'>Make a Copy</a>";
+		
 		// Build delete row action.
 		$delete_query_args = array(
 			'post'  => $item->ID,
@@ -65,11 +65,12 @@ class EPT3_List_Table extends WP_List_Table {
 		);
 
 		$actions['trash'] = sprintf(
-			'<a href="%1$s">%2$s</a>',
-			esc_url( wp_nonce_url( add_query_arg( $delete_query_args ), $item->ID ) ),
-			_x( 'Trash', 'List table row action', 'wp-list-table-example' )
+			'<a class="ept-trash" href="%1$s" onclick="confirm( \'Are you sure?\' ) == false ? event.preventDefault() : null",>%2$s</a>',
+			esc_url( add_query_arg( $delete_query_args ), $item->ID ),
+			_x( 'Delete', 'List table row action', 'wp-list-table-example' ),
+			
 		);
-
+		
 		// Return the title contents.
 		return sprintf( '<a class="row-title" href="' . esc_url( add_query_arg( $edit_query_args, 'post.php' ), $item->post_title ) . '">%1$s</a> <span style="display:none;">(id:%2$s)</span>%3$s',
 			$item->post_title,
@@ -85,6 +86,16 @@ class EPT3_List_Table extends WP_List_Table {
 			$nonce = empty( $_GET['ept_nonce'] ) ? '' : sanitize_text_field( $_GET['ept_nonce'] );
 			if( wp_verify_nonce( $nonce, 'ept_delete' ) && $postID ){
 				wp_delete_post( $postID );
+			} else {
+				wp_die( 'Not authorized, please try logging in again' );
+			}
+		}
+		
+		if ( 'clone' === $this->current_action() ) {
+			$postID = empty( $_GET['post'] ) ? '' : intval( $_GET['post'] );
+			$nonce = empty( $_GET['ept_nonce'] ) ? '' : sanitize_text_field( $_GET['ept_nonce'] );
+			if( wp_verify_nonce( $nonce, 'ept_clone' ) && $postID ){
+				fca_ept_clone_table( $postID );
 			} else {
 				wp_die( 'Not authorized, please try logging in again' );
 			}
@@ -105,10 +116,10 @@ class EPT3_List_Table extends WP_List_Table {
 		$this->process_bulk_action();
 
     	$args = array(
-    			'post_status'	 => $post_status,
-                'post_type'      => 'wp_block',
-				'meta_key'		 => '1_dh_ptp_settings', 
-                'posts_per_page' => '-1'
+			'post_status'	 => $post_status,
+			'post_type'      => 'wp_block',
+			'meta_key'		 => '1_dh_ptp_settings', 
+			'posts_per_page' => '-1'
         );
 
 		$data = get_posts( $args );
