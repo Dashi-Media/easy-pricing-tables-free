@@ -4,6 +4,7 @@ div.fca-ept-layout1 {
 	margin: 0 auto;
 	display: flex;
 	font-family: inherit;
+	line-height: 1.5;
 }
 
 div.fca-ept-layout1 div.fca-ept-column { 
@@ -44,14 +45,27 @@ div.fca-ept-layout1 div.fca-ept-plan-div{
 	border-top-right-radius: 4px;
 	word-break: break-word;
 	text-align: center; 
-	padding: 15px 20px;
+	padding: 15px 20px; 
 	font-weight: bold; 
 	font-size: 1em; 
 }
 
-div.fca-ept-layout1 div.fca-ept-plan-div .fca-ept-plan img {
+div.fca-ept-layout1 div.fca-ept-plan-div div.fca-ept-plan-image img {
 	display: block;
+	max-width: 100%;
+	margin: 25px auto 0;
+}
+
+div.fca-ept-layout1 div.fca-ept-plan-div .fca-ept-plan img{
 	margin: auto;
+}
+
+div.fca-ept-layout1 div.fca-ept-plan-div div.fca-ept-plan-image img.fca-ept-image2{
+	display: none;
+}
+
+div.fca-ept-layout1 div.fca-ept-plan-image{
+	text-align: center;
 }
 
 div.fca-ept-layout1 div.fca-ept-price-div{
@@ -74,19 +88,19 @@ div.fca-ept-layout1 div.fca-ept-features-div{
 
 div.fca-ept-layout1 div.fca-ept-features-div ul{
 	font-family: inherit;
-	list-style: none;
 	padding: 0;
 	margin: 0;
 }
 
 div.fca-ept-layout1 div.fca-ept-features-div li{
+	list-style-type: none;
 	font-family: inherit;
 	padding: .9375em .5em .9375em .5em;
 	border-bottom: dotted 1px #ddd;
 }
 
 /* Fix for Gutenberg bug where removing an entire line adds a span to the element */
-div.fca-ept-layout1 div.fca-ept-features-div li span{
+div.fca-ept-layout1 div.fca-ept-features-div .fca-ept-features li span:not( div.fca-ept-tooltip-div>span.fca-ept-tooltiptext ){
 	font-size: inherit !important;
 }
 
@@ -123,20 +137,90 @@ div.fca-ept-layout1 a.fca-ept-button{
 	transition: background-color 300ms ease-out;
 }
 
-div.fca-ept-layout1 a.fca-ept-button span{
-	cursor: pointer;
-}
-
-div.fca-ept-layout1 div.fca-ept-column.fca-ept-selected-column, div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular.fca-ept-selected-column {
+div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular.fca-ept-selected-column {
 	box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 25px 0px;
 	border: 0px solid;
 	padding: 1px;
 }
 
-/* smart phones */
-@media only screen and (max-width: 765px) {
+/* Custom tooltips - General settings */
+.fca-ept-tooltip {
+	position: relative;
+}
+
+.fca-ept-tooltip:before {
+	visibility: hidden;
+	position: absolute;
+	
+	bottom: 18px;
+	max-width: 300px;
+	
+	line-height: 1;
+	font-family: sans-serif;
+	font-size: 14px;
+	font-weight: initial;
+	
+	color: #ffffff;
+	background-color: #424242;
+	text-align: center;
+	padding: 5px;
+	
+	text-transform: initial;
+	border-radius: 5px;
+	/* LIGHT WIZARDRY */
+	width: max-content;
+	content: attr( data-tooltip );
+	transform:translateX( calc( -50% + 7px ) );
+}
+
+.fca-ept-tooltip:active:before {
+	visibility: visible;
+	z-index: 2;
+}
+
+/* OLD TOOLTIPS */
+div.fca-ept-tooltip-div {
+	position: relative;
+	font-size: 20px;
+	display: inline-block !important;
+	line-height: 1;
+}
+
+div.fca-ept-tooltip-div .fca-ept-tooltiptext {
+	visibility: hidden;
+	width: max-content;
+	background-color: #424242;
+	font-weight: initial;
+	color: #ffffff;
+	text-align: center;
+	padding: 5px;
+	bottom: -23px;
+	position: absolute;
+	line-height: 1;
+	z-index: 1;
+	font-size: 14px;
+	text-transform: initial;
+	border-radius: 5px;
+	font-family: sans-serif;
+}
+
+div.fca-ept-tooltip-div:hover .fca-ept-tooltiptext {
+	visibility: visible;
+}
+
+div.fca-ept-tooltip-div .fca-ept-tooltiptext:hover {
+	visibility: hidden;
+}
+
+div.wp-block-fatcatapps-easy-pricing-tables .fca-ept-plan-image .fca-ept-image1, div.wp-block-fatcatapps-easy-pricing-tables .fca-ept-plan-image .fca-ept-image2{
+  display: none;
+}
+
+/* smartphones */
+@media only screen and (max-width: 765px){
 
 	div.fca-ept-layout1{
+		font-size: 75%;
 		display: block;
 	}
 

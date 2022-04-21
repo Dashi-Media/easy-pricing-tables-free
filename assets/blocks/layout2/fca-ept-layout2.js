@@ -1,54 +1,19 @@
 var wp = window.wp
 var el = wp.element.createElement
-var $ = window.jQuery
 
-var fca_ept_layout2_presetColors = [
-	{
-		name: 'Black',
-		slug: 'black',
-		color: '#000'
-	},
-	{
-		name: 'white',
-		slug: 'fca-white',
-		color: '#fff'
-	},
-	{
-		name: 'Purple',
-		slug: 'fca-purple',
-		color: '#6236ff'
-	},
-	{
-		name: 'Red',
-		slug: 'fca-red',
-		color: '#ea2027'
-	},
-	{
-		name: 'Grey',
-		slug: 'fca-grey',
-		color: '#f2f2f2'
-	},
-]
-
-function fca_ept_set_layout2_attributes( props ) {
+function fca_ept_set_layout2_attributes( props ){
 	
-	props.setAttributes( { align: 'wide' } )
 	props.setAttributes( { selectedLayout: 'layout2'} )
-	if( !props.attributes.columnSettings ){
-		props.setAttributes( { columnSettings: JSON.stringify( fca_ept_defaultColumnSettings ) } )
-	}
-	props.setAttributes( { columnHeight: 'auto' } )
-	props.setAttributes( { columnHeightToggle: true } )
-
+		
 	// COLORS
 	props.setAttributes( { layoutBGColor: '#f2f2f2' } ) 
-	props.setAttributes( { layoutFontColor: '#000' } )
+	props.setAttributes( { layoutFontColor: '#333333' } )
 	props.setAttributes( { layoutFontColor1: '#6236ff' } )
 	props.setAttributes( { buttonColor: '#6236ff' } )
-	props.setAttributes( { buttonFontColor: '#fff' } )
+	props.setAttributes( { buttonFontColor: '#ffffff' } )
 	props.setAttributes( { accentColor: '#6236ff' } )
 
-	// FONT SETTINGS
+	// FONT SETTINGS 
 	props.setAttributes( { fontFamily: 'sans-serif' } )
 	props.setAttributes( { popularFontSize: '75%' } ) 
 	props.setAttributes( { planFontSize: '300%' } ) 
@@ -57,291 +22,234 @@ function fca_ept_set_layout2_attributes( props ) {
 	props.setAttributes( { pricePeriodFontSize: '100%' }) 
 	props.setAttributes( { featuresFontSize: '125%' } ) 
 	props.setAttributes( { buttonFontSize: '150%' } ) 
+	props.setAttributes( { toggleFontSize: '112.5%' } ) 
 
-}
 
-function fca_ept_layout2_block_edit( props ) {
-	
+} 
+
+function fca_ept_layout2_block_edit( props ){
+
 	var columnSettings = JSON.parse( props.attributes.columnSettings )
-	var selectedLayout = props.attributes.selectedLayout
-
-	fca_ept_layout2_additional_styles( props )
-	fca_ept_custom_reusable_block()
-	fca_ept_get_preview_settings( props )
- 
-	return el( wp.element.Fragment, { },
-
-		fca_ept_toolbar_controls( props ),
-		fca_ept_sidebar_settings( props ),
-
-	// MAIN DIV
-		el( 'div', {
-			style: { fontFamily: props.attributes.fontFamily + ', sans-serif' },
-			id: 'fca-ept-table-' + props.attributes.tableID,
-			className: props.attributes.togglePeriod ? 'fca-ept-table-container toggle-active' : 'fca-ept-table-container'
-		},
+	
+	return el( 'div', {
+		style: { fontFamily: props.attributes.fontFamily + ', sans-serif' },
+		id: 'fca-ept-table-' + props.attributes.tableID,
+		className: 'fca-ept-table-container'
+	},
+		( fcaEptEditorData.toggle_integration ? fca_ept_render_toggle( props ) : null ),
 
 		// TABLE
-			el( 'div', { 
-				style: { 
-					textDecoration: 'none',
-					alignItems: props.attributes.columnHeight === 'auto' ? 'stretch' : 'flex-end'
-				}, 
-				className: 'fca-ept-' + selectedLayout
-			},
-				Array.from( columnSettings, function( x, i ) {
-					return el( 'div', { 
-						key: i,
+		el( 'div', { 
+			style: { 
+				textDecoration: 'none',
+			}, 
+			className: 'fca-ept-layout2'
+		},
+			Array.from( columnSettings, function( x, i ){
+				return el( 'div', { 
+					key: i,
+					style: { 
+						backgroundColor: props.attributes.layoutBGColor,
+						paddingTop: columnSettings[i].columnPopular ? '30px' : '45px',
+						paddingBottom: props.attributes.showButtonsToggle ? '30px' : '0px',
+						marginTop: columnSettings[i].columnPopular ? '0px' : '10px',
+						border: columnSettings[i].columnPopular ? '2px solid ' + props.attributes.accentColor : '0px solid'
+					},
+						className: fca_ept_column_class_name( props, i ),
+						onClick: ( function(){ 
+							props.setAttributes ( { selectedCol: i } )
+						})
+					},
+
+						el( 'div', {
+							style: { display: props.attributes.showImagesToggle ? 'block' : 'none' },
+							className: 'fca-ept-plan-image',
+							onClick: function(){
+								
+								document.querySelectorAll( '.fca-ept-mediaOpen' )[0].click()
+							}
+						},
+							el( 'img', {
+								src: fca_ept_get_planImage( props, i )
+							})
+						), 
+					
+					el( 'div', { 
 						style: { 
-							backgroundColor: props.attributes.layoutBGColor,
-							paddingTop: columnSettings[i].columnPopular ? '30px' : '45px',
-							paddingBottom: props.attributes.showButtons === 'block' ? '30px' : '0px',
-							marginTop: columnSettings[i].columnPopular ? '0px' : '10px',
-							border: columnSettings[i].columnPopular ? '2px solid ' + props.attributes.accentColor : '0px solid'
+							display: columnSettings[i].columnPopular ? 'block' : 'none',
+							borderColor: props.attributes.accentColor
 						},
-							className: columnSettings[i].columnPopular ? 'fca-ept-column fca-ept-most-popular' : 'fca-ept-column',
-							onClick: ( function() { 
-								fca_ept_select_column( props, i )
-							})
+						className: 'fca-ept-popular-div'
 						},
 
-						el( 'div', { 
+						el( wp.blockEditor.RichText, { 
 							style: { 
-								display: columnSettings[i].columnPopular ? 'block' : 'none',
-								borderColor: props.attributes.accentColor
+								fontSize: props.attributes.popularFontSize,
+								color: props.attributes.buttonFontColor,
+								backgroundColor: props.attributes.accentColor
 							},
-							className: 'fca-ept-popular-div'
+							allowedFormats: fca_ept_allowed_formats,
+							className: 'fca-ept-popular-text',
+							placeholder: 'Most Popular', 
+							type: "text", 
+							tagName: 'span',
+							value: props.attributes.popularText, 
+							onClick: function(){ 
+								fca_ept_update_ui_state( props, 'popular' )
 							},
+							onChange: function( newValue ){ 
+								props.setAttributes( { popularText: newValue } )
+							}
+						})
+					),
 
-							el( wp.blockEditor.RichText, { 
-								style: { 
-									fontSize: props.attributes.popularFontSize,
-									color: props.attributes.buttonFontColor,
-									backgroundColor: props.attributes.accentColor
-								},
-								allowedFormats: fca_ept_allowed_formats,
-								className: 'fca-ept-popular-text',
-								placeholder: 'Most Popular', 
-								type: "text", 
-								tagName: 'span',
-								value: props.attributes.popularText, 
-								onClick: ( function() { 
-									fca_ept_update_section( props, 'popular' )
-								}),
-								onChange: ( function( newValue ) { 
-									props.setAttributes( { popularText: newValue } )
-								})
-							})
-						),
+					el( 'div', { 
+						className: 'fca-ept-plan-div'
+						},
+						el( wp.blockEditor.RichText, { 
+							style: { 
+								fontSize: props.attributes.planFontSize,
+								color: props.attributes.layoutFontColor1
+							}, 
+							allowedFormats: fca_ept_allowed_formats,
+							className: 'fca-ept-plan', 
+							placeholder: 'Plan name', 
+							type: "text", 
+							tagName: 'span',
+							value: fca_ept_get_plantext( props, i ),
+							onClick: function(){									
+								fca_ept_update_ui_state( props, 'plan' )									
+							}, 
+							onChange: function( newValue ){
+								fca_ept_update_plantext( props, newValue )
+							},
+						}),
+
+						el( wp.blockEditor.RichText, { 
+							style: { 
+								display: props.attributes.showPlanSubtextToggle ? 'block' : 'none',
+								color: props.attributes.layoutFontColor,
+								fontSize: props.attributes.planSubtextFontSize
+							}, 
+							allowedFormats: fca_ept_allowed_formats,
+							className: 'fca-ept-plan-subtext', 
+							placeholder: 'To get started', 
+							type: "text", 
+							tagName: 'span',
+							value: columnSettings[i].planSubText, 
+							onClick: function(){ 
+								fca_ept_update_ui_state( props, 'planSubtext' )
+							},
+							onChange: function( newValue ){ 
+								var columnSettingsData = JSON.parse( props.attributes.columnSettings )
+								columnSettingsData[props.attributes.selectedCol].planSubText = newValue
+								props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
+							}
+						})
+					),
+
+					el( 'div', { 
+						className: 'fca-ept-price-div'
+						},
 
 						el( 'div', { 
-							className: 'fca-ept-plan-div'
-							},
-							el( wp.blockEditor.RichText, { 
-								style: { 
-									fontSize: props.attributes.planFontSize,
-									color: props.attributes.layoutFontColor1
-								}, 
-								allowedFormats: fca_ept_allowed_formats,
-								className: 'fca-ept-plan', 
-								placeholder: 'Plan name', 
-								type: "text", 
-								tagName: 'span',
-								value: columnSettings[i].planText1,
-								onClick: ( function() { 
-									fca_ept_update_section( props, 'plan' )
-								}),
-								onChange: ( function( newValue ) { 
-									if( props.attributes.selectedCol !== i ){
-										fca_ept_select_column( props, i )
-										fca_ept_update_section( props, 'plan' )
-									} else {
-										var columnSettingsData = Array.from( columnSettings )
-										columnSettingsData[props.attributes.selectedCol].planText1 = newValue
-										props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
-									}
-								})
-							}),
-
-							el( wp.blockEditor.RichText, { 
-								style: { 
-									display: props.attributes.showPlanSubtext,
-									color: props.attributes.layoutFontColor,
-									fontSize: props.attributes.planSubtextFontSize
-								}, 
-								allowedFormats: fca_ept_allowed_formats,
-								className: 'fca-ept-plan-subtext', 
-								placeholder: 'To get started', 
-								type: "text", 
-								tagName: 'span',
-								value: columnSettings[i].planSubText, 
-								onClick: ( function() { 
-									fca_ept_update_section( props, 'planSubtext' )
-								}),
-								onChange: ( function( newValue ) { 
-									if( props.attributes.selectedCol !== i ){
-										fca_ept_select_column( props, i )
-										fca_ept_update_section( props, 'planSubtext' )
-									} else {
-										var columnSettingsData = Array.from( columnSettings )
-										columnSettingsData[props.attributes.selectedCol].planSubText = newValue
-										props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
-									}
-								})
-							})
-						),
-
-						el( 'div', { 
-							className: 'fca-ept-price-div'
+							className: 'fca-ept-price-container'
 							},
 
-							el( 'div', { 
-								className: 'fca-ept-price-container'
-								},
-
-								el( wp.blockEditor.RichText, { 
-									className: 'fca-ept-price',
-									style: { 
-										fontSize: props.attributes.priceFontSize,
-										color: props.attributes.layoutFontColor
-									}, 
-									allowedFormats: fca_ept_allowed_formats,
-									placeholder: '$29', 
-									type: "text", 
-									tagName: 'span',
-									value: columnSettings[i].priceText1, 
-									onClick: ( function( section ) { 
-										fca_ept_update_section( props, 'price' )
-									}),
-									onChange: ( function( newValue ) { 
-										if( props.attributes.selectedCol !== i ){
-											fca_ept_select_column( props, i )
-											fca_ept_update_section( props, 'price' )
-										} else {
-											var columnSettingsData = Array.from( columnSettings )
-											columnSettingsData[props.attributes.selectedCol].priceText1 = newValue
-											props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
-										}
-									})
-								}),
-
-								el( 'div', { 
-									style: { display: columnSettings.length > 1 ? 'block' : 'none' },
-									className: 'fca-ept-price-subtext'
-									},
-									el ( 'svg', {
-										className: 'fca-ept-price-svg',
-										style: { 
-											backgroundColor: props.attributes.buttonColor 
-										}
-									}),
-									el( wp.blockEditor.RichText, { 
-										style: { 
-											fontSize: props.attributes.pricePeriodFontSize,
-											color: props.attributes.layoutFontColor
-										},
-										allowedFormats: fca_ept_allowed_formats,
-										className: 'fca-ept-price-period', 
-										placeholder: 'per month', 
-										type: "text", 
-										tagName: 'span',
-										value: columnSettings[i].pricePeriod1,
-										onClick: ( function() { 
-											fca_ept_update_section( props, 'pricePeriod' )
-										}),
-										onChange: ( function( newValue ) { 
-											if( props.attributes.selectedCol !== i ){
-												fca_ept_select_column( props, i )
-												fca_ept_update_section( props, 'pricePeriod' )
-											} else {
-												var columnSettingsData = Array.from( columnSettings )
-												columnSettingsData[props.attributes.selectedCol].pricePeriod1 = newValue
-												props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
-											}
-										})
-									})
-								)
-							)
-						),
-
-						el( 'div', { 
-							className: 'fca-ept-features-div',
-							},
 							el( wp.blockEditor.RichText, { 
+								className: 'fca-ept-price',
 								style: { 
-									fontSize: props.attributes.featuresFontSize,
+									fontSize: props.attributes.priceFontSize,
 									color: props.attributes.layoutFontColor
 								}, 
 								allowedFormats: fca_ept_allowed_formats,
-								className: 'fca-ept-features', 
-								tagName: 'ul', 
-								multiline: 'li', 
-								placeholder: 'features offered', 
+								placeholder: '$29', 
+								
 								type: "text", 
-								value: columnSettings[i].featuresText, 
-								onClick: ( function() { 
-									fca_ept_update_section( props, 'features' )
+								tagName: 'span',
+								value: fca_ept_get_pricetext( props, i ),
+								onClick: function(){ 
+									fca_ept_update_ui_state( props, 'price' )
+								},
+								onChange: function( newValue ){ 
+									fca_ept_update_pricetext( props, newValue )
+								},
+							}),
+
+							el( 'div', { 
+								style: { display: props.attributes.showPriceSubtextToggle ? 'inline' : 'none' },
+								className: 'fca-ept-price-subtext'
+								},
+								el ( 'svg', {
+									className: 'fca-ept-price-svg',
+									style: { 
+										backgroundColor: props.attributes.buttonColor 
+									}
 								}),
-								onChange: ( function( newValue ) { 
-									if( props.attributes.selectedCol !== i ){
-										fca_ept_select_column( props, i )
-										fca_ept_update_section( props, 'features' )
-									} else {
-										var columnSettingsData = Array.from( columnSettings )
-										columnSettingsData[props.attributes.selectedCol].featuresText = newValue
-										props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } )
+								el( wp.blockEditor.RichText, { 
+									style: { 
+										fontSize: props.attributes.pricePeriodFontSize,
+										color: props.attributes.layoutFontColor
+									},
+									allowedFormats: fca_ept_allowed_formats,
+									className: 'fca-ept-price-period', 
+									placeholder: 'per month', 
+									type: "text", 
+									tagName: 'span',
+									value: props.attributes.togglePeriod ? columnSettings[i].pricePeriod2 : columnSettings[i].pricePeriod1,
+									onClick: function(){ 
+										fca_ept_update_ui_state( props, 'pricePeriod' )
+									},
+									onChange: function( newValue ){ 
+										fca_ept_update_priceperiod( props, newValue )
 									}
 								})
-							})
-						),
+							)
+						)
+					),
 
-						el( 'a', { 
+
+					el( 'div', { 
+						className: 'fca-ept-features-div'
+						},
+						el( wp.blockEditor.RichText, { 
+							style: { 
+								fontSize: props.attributes.featuresFontSize,
+								color: props.attributes.layoutFontColor
+							}, 
+							allowedFormats: fca_ept_allowed_formats,
+							className: 'fca-ept-features', 
+							tagName: 'ul', 
+							multiline: 'li', 
+							placeholder: 'features offered', 
+							type: "text",
+							value: columnSettings[i].featuresText, 
+							onClick: function(){ 
+								fca_ept_update_ui_state( props, 'features' )
+							},
+							onChange: function( newValue ){
+								fca_ept_update_featurestext( props, newValue )									
+							}
+						})
+					),
+
+					el( 'a', { 
 							style: {
-								display: props.attributes.showButtons,
+								display: props.attributes.showButtonsToggle ? 'block' : 'none',
 								fontSize: props.attributes.buttonFontSize,
 								color: props.attributes.buttonFontColor,
 								backgroundColor: props.attributes.buttonColor
 							}, 
 							className: 'fca-ept-button', 
-							onClick: ( function() { 
-								fca_ept_update_section( props, 'button' )
-							})
+							onClick: function(){
+								fca_ept_handle_cta_button_click( props )
+							},
 						},
-							el( wp.blockEditor.RichText, { 
-								allowedFormats: fca_ept_allowed_formats,
-								placeholder: 'Add to Cart', 
-								type: "text", 
-								tagName: 'span',
-								value: columnSettings[i].buttonText, 
-								onChange: ( function( newValue ) { 
-									if( props.attributes.selectedCol !== i ){
-										fca_ept_select_column( props, i )
-										fca_ept_update_section( props, 'button' )
-									} else {
-										var columnSettingsData = Array.from( columnSettings )
-										columnSettingsData[props.attributes.selectedCol].buttonText = newValue
-										props.setAttributes( { columnSettings: JSON.stringify( columnSettingsData ) } ) 
-									}
-								})
-							})
-						)
-					) // end column div
-				}) // end array
-			) // end table div
-		) // end main div
-	) // end fragment
+						columnSettings[i].buttonText
+					)
+				) // end column div
+			}) // end array
+		) // end table div
+	) // end main div
 }
 
-function fca_ept_layout2_additional_styles( props ){
-
-	var id = props.attributes.tableID
-
-	$( '#' + id ).remove()
-
-	$( 'body' ).append( 
-		"<style id='" + id + "'>" +
-			"#fca-ept-table-" + id + " div.fca-ept-toggle-period-container .fca-ept-slider { background-color: " + props.attributes.buttonColor + " }" +
-		"</style>" 
-	)
-
-}
