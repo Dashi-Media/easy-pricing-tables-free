@@ -1,6 +1,6 @@
 .ptp-pricing-table{ white-space: nowrap; width: 100%; text-align: center; }
 
-.ptp-col { padding-left: 0.4em; padding-right: 0.4em; display: inline-block; vertical-align: top; white-space: normal; }
+.ptp-col { padding-left: 0.4em; padding-right: 0.4em; display: inline-block; vertical-align: top; white-space: normal; float: left; }
 .ptp-one-col   { width: 50%; }
 .ptp-two-col   { width: 46.5%; }
 .ptp-three-col { width: 31%; }
