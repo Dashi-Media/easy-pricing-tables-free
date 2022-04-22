@@ -40,6 +40,9 @@ if( !defined( 'PTP_PLUGIN_PATH' ) ){
 	if( file_exists( PTP_PLUGIN_PATH . 'includes/settings.php' ) ) {
 		include ( PTP_PLUGIN_PATH . 'includes/settings.php' );
 	}
+	if( file_exists( PTP_PLUGIN_PATH . 'includes/notices/notices.php' ) ) {
+		include ( PTP_PLUGIN_PATH . 'includes/notices/notices.php' );
+	}
 	
 	if( file_exists( PTP_PLUGIN_PATH . 'assets/blocks/toggle/fca-ept-toggle.php' ) ) {
 		include ( PTP_PLUGIN_PATH . 'assets/blocks/toggle/fca-ept-toggle.php' );
