@@ -1,88 +1,28 @@
 <?php
 
-/**
- * Register "Pricing Table" post type
- * @return [type] [description]
- */
 
-
-function dh_ptp_register_pricing_table_post_type() {
-	
-	$labels = array(
-	    'name' => __('Pricing Tables', 'easy-pricing-tables'),
-	    'singular_name' => __('Pricing Table', 'easy-pricing-tables'),
-	    'add_new' => __('Add New', 'easy-pricing-tables'),
-	    'add_new_item' => __('Add New Pricing Table', 'easy-pricing-tables'),
-	    'edit_item' => __('Edit Pricing Table', 'easy-pricing-tables'),
-	    'new_item' => __('New Pricing Table', 'easy-pricing-tables'),
-	    'all_items' => __('Legacy Pricing Tables', 'easy-pricing-tables'),
-	    'view_item' => __('View Pricing Table', 'easy-pricing-tables'),
-	    'search_items' => __('Search Pricing Tables', 'easy-pricing-tables'),
-	    'not_found' =>  __('No Pricing Tables found', 'easy-pricing-tables'),
-	    'not_found_in_trash' => __('No Pricing Tables found in Trash', 'easy-pricing-tables'),
-	    'parent_item_colon' => '',
-	    'menu_name' => __('Pricing Tables', 'easy-pricing-tables')
-	);
-
-  	$args = array(
-	    'labels' => $labels,
-	    'public' => false,
-	    'exclude_from_search' => true,
-	    'publicly_queryable' => true,
-	    'show_ui' => true, 
-	    'show_in_menu' => true, 
-	    'query_var' => true,
-	    'rewrite' => array( 'slug' => 'pricing-table' ),
-	    'capability_type' => 'post',
-	    'has_archive' => false, 
-	    'hierarchical' => false,
-	    'menu_position' => 104,
-	    'menu_icon' => PTP_PLUGIN_PATH_FOR_SUBDIRS.'/assets/ept-icon-16x16.png',
-	    'supports' => array( 'title', 'revisions' )
-  	); 
-
-	register_post_type( 'easy-pricing-table', $args);
-
+//CUSTOM ROW ACTIONS FOR LEGACY POSTS
+function fca_ept_post_row_actions( $actions, $post ) {
+    
+    if ( $post->post_type == "easy-pricing-table" ) {
+		
+		$clone_query =  add_query_arg( array(
+			'fca_ept_clone_table' => $post->ID,
+			'ept_nonce' => wp_create_nonce( 'ept_clone' )
+		));
+		
+		return array(
+			'edit' => $actions['edit'],
+			'duplicate' => "<a href='" . esc_url( $clone_query ) . "'>Make a Copy</a>",
+			'trash' => $actions['trash'],
+			'view' => $actions['view']
+		);
+		
+	}
+	return $actions;
 }
-add_action( 'init', 'dh_ptp_register_pricing_table_post_type');
+add_filter( 'post_row_actions', 'fca_ept_post_row_actions', 10, 2 );
 
-
-/**
- * customize UI interaction messages
- * eg: Changes "Post published" to "Pricing Table published"
- * Code template from http://wp.smashingmagazine.com/2012/11/08/complete-guide-custom-post-types/
- * I removed the "view post" hyperlinks from notification messages since they are pointless
- * 
- * @param  [type] $messages [description]
- * @return [type]           [description]
- */
-
-function dh_ptp_updated_interaction_messages( $messages ) {
-	global $post, $post_ID;
-	$messages['easy-pricing-table'] = array(
-		0 => '', 
-		1 => sprintf( __('Pricing table saved. <a href="%s">View pricing table</a>.', 'easy-pricing-tables'), esc_url( get_permalink($post_ID) ) ),
-		2 => __('Custom field updated.', 'easy-pricing-tables'),
-		3 => __('Custom field deleted.', 'easy-pricing-tables'),
-		4 => __('Pricing table saved.', 'easy-pricing-tables'),
-		5 => isset($_GET['revision']) ? sprintf( __('Pricing table restored to revision from %s', 'easy-pricing-tables'), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-		6 => sprintf( __('Pricing table saved. <a href="%s">View pricing table</a>', 'easy-pricing-tables'), esc_url( get_permalink($post_ID) ) ),
-		7 => __('Pricing table saved.', 'easy-pricing-tables'),
-		//8 => sprintf( __('Pricing table submitted. <a target="_blank" href="%s">Preview pricing table</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
-		8 => __('Pricing table submitted.', 'easy-pricing-tables'),
-		9 => sprintf( __('Pricing table scheduled for: <strong>%1$s</strong>.', 'easy-pricing-tables'), date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ), esc_url( get_permalink($post_ID) ) ),
-		10 => __('Pricing table saved.', 'easy-pricing-tables'),
-	);
-	return $messages;
-}
-add_filter( 'post_updated_messages', 'dh_ptp_updated_interaction_messages' );
-
-/**
- * Customize pricing table overview tables ("Pricing Tables" -> "All Pricing Tables")
- * Add / modify columns at pricing table edit overview
- * @param  [type] $gallery_columns [description]
- * @return [type]                  [description]
- */
 function dh_ptp_add_new_pricing_table_columns($gallery_columns) {
     $new_columns['cb'] = '<input type="checkbox" />';
     $new_columns['title'] = _x('Pricing Table Name', 'column name', 'easy-pricing-tables');    
@@ -91,11 +31,10 @@ function dh_ptp_add_new_pricing_table_columns($gallery_columns) {
  
     return $new_columns;
 }
-// Add to admin_init function
-add_filter('manage_edit-easy-pricing-table_columns', 'dh_ptp_add_new_pricing_table_columns');
-function dh_ptp_manage_pricing_table_columns($column_name, $id) {
-    global $wpdb;
+add_filter( 'manage_edit-easy-pricing-table_columns', 'dh_ptp_add_new_pricing_table_columns' );
 
+function dh_ptp_manage_pricing_table_columns($column_name, $id) {
+	
     switch ($column_name) {
 	    case 'shortcode':
 	        echo '<input type="text" style="width: 300px;" readonly="readonly" onclick="this.select()" value="[easy-pricing-table id=&quot;'. $id . '&quot;]"/>';
@@ -104,17 +43,10 @@ function dh_ptp_manage_pricing_table_columns($column_name, $id) {
 	    default:
 	        break;
     } // end switch
-}   
-// Add to admin_init function
-add_action('manage_easy-pricing-table_posts_custom_column', 'dh_ptp_manage_pricing_table_columns', 10, 2);
+}  
+add_action( 'manage_easy-pricing-table_posts_custom_column', 'dh_ptp_manage_pricing_table_columns', 10, 2 );
 
-// check whether this is a brand new install or has existing legacy tables
-function dh_ptp_check_existing_install (){
-	global $wpdb;
-	$results = $wpdb->get_var( "SELECT COUNT(*) FROM $wpdb->posts WHERE post_type='easy-pricing-table'");
-	
-	return $results ? true : false;
-}
+
 
 /**
  * Preview functionality.
@@ -122,12 +54,11 @@ function dh_ptp_check_existing_install (){
  * @param  [type] $content [description]
  * @return [type]          [description]
  */
-function dh_ptp_live_preview($content)
-{
+function dh_ptp_live_preview($content){
     global $post;
-    if( 'easy-pricing-table' == get_post_type() && 
-    	is_user_logged_in() && 
-    	is_main_query() ) {
+    if ( is_user_logged_in() &&
+    	 'easy-pricing-table' == get_post_type() && 
+    	 is_main_query() )  {
 		return $content . do_shortcode("[easy-pricing-table id={$post->ID}]");
 	} else {
 		return $content;
@@ -157,9 +88,19 @@ function dh_ptp_404()
 }
 add_action( 'wp', 'dh_ptp_404');
 
+/**
+ * Remove the publish metabox for pricing tables
+ * @return [type] [description]
+ */
+function dh_ptp_remove_publish_metabox()
+{
+    remove_meta_box( 'submitdiv', 'easy-pricing-table', 'side' );
+}
+add_action( 'admin_menu', 'dh_ptp_remove_publish_metabox' );
+
 /* Redirect when Save & Preview button is clicked */
 add_filter('redirect_post_location', 'dh_ptp_save_preview_redirect');
-function dh_ptp_save_preview_redirect ($location)
+function dh_ptp_save_preview_redirect ( $location )
 {
     global $post;
  
@@ -179,47 +120,65 @@ function dh_ptp_save_preview_redirect ($location)
     return $location;
 }
 
-/**
- * Enqueue jquery-ui-accordion in wp-admin
- */
-add_action('admin_enqueue_scripts', 'dh_ptp_jquery_ui_accordion_enqueue',100 );
-function dh_ptp_jquery_ui_accordion_enqueue(){
-	$screen = get_current_screen();
-	if ( 'easy-pricing-table' != $screen->id ) {
-		return;
+/* Number of Columns */
+function dh_ptp_screen_layout_columns()
+{
+	global $current_screen;
+	$current_user =  wp_get_current_user();
+	
+	if ( $current_screen->post_type == 'easy-pricing-table' ) {
+		$user_id    = $current_user->ID;
+		$prev_value = NULL;
+		
+		// Full width
+		$screen_layout_option = get_user_meta($user_id, 'screen_layout_easy-pricing-table');
+		if ( ! $screen_layout_option ) {
+			update_user_meta($user_id, 'screen_layout_easy-pricing-table', 1, $prev_value);
+		}
 	}
-	wp_enqueue_script('jquery-ui-accordion');
-	wp_enqueue_style('dh-ptp-jquery-ui', plugins_url('assets/ui/ui-accordion.min.css', dirname(__FILE__)));
 }
+add_action( 'admin_head-post.php'    , 'dh_ptp_screen_layout_columns' );
+add_action( 'admin_head-post-new.php', 'dh_ptp_screen_layout_columns' );
 
-/**
- * Print accordion related JS in Pricing Tables create/edit pages
- */
-add_action('admin_print_footer_scripts', 'dh_ptp_print_jquery_ui_accordion_js' );
-function dh_ptp_print_jquery_ui_accordion_js() {
-	$screen = get_current_screen();
-	if ( 'easy-pricing-table' != $screen->id ) {
-		return;
+
+/* design 4 hack */
+function ptp_design4_color_columns() {
+	
+	$columns = (isset($_REQUEST['columns']) && preg_match("/^([0-9]+)+$/sim", $_REQUEST['columns']))?$_REQUEST['columns']:2;
+	$post_id = (isset($_REQUEST['post_id']) && preg_match("/^([0-9]+)+$/sim", $_REQUEST['post_id']))?$_REQUEST['post_id']:0;
+	
+	if($columns > 0 && $post_id != 0) {
+		$meta = get_post_meta($post_id, '1_dh_ptp_settings', TRUE); // HACK: 1_dh_ptp_settings
+		$column_names = isset($_REQUEST['column_names'])?explode("\t\n", $_REQUEST['column_names']):array();
+		for($i=0; $i<$columns; $i++) {
+			$color = (isset($meta['column']) && isset($meta['column'][$i]['plancolor']))?$meta['column'][$i]['plancolor']:'#6baba1';
+			$color = isset($meta['design4_color_column_'.($i+1)])?$meta['design4_color_column_'.($i+1)]:$color;
+			
+			?>
+				<tr class="design4-js-rows">
+                    <td class="settings-title">
+						<?php if (isset($column_names[$i]) && strlen($column_names[$i]) > 0) : ?>
+							<?php _e(sprintf('%s - Color', $column_names[$i]), 'easy-pricing-tables'); ?>
+						<?php else : ?>
+							<?php _e(sprintf('Column %d - Color', ($i+1)), 'easy-pricing-tables'); ?>
+						<?php endif; ?>
+					</td>
+                    <td>
+                        <input type="text" name="1_dh_ptp_settings[design4_color_column_<?php echo ($i+1); ?>]" class="design4-color" value="<?php echo $color; ?>" class="my-color-field form-control" data-default-color="#6baba1" />
+                    </td>
+                </tr>
+			<?php
+		}
 	}
-	?>
-	<script type="text/javascript">
-		//<![CDATA[
-			jQuery(document).ready(function(){
-				jQuery( ".dh_ptp_accordion" ).accordion({
-                                    icons: false,
-                                    heightStyle: 'content',
-									collapsible: true
-                                });
-			});
-		//]]>
-	</script>
-	<?php
+	
+	exit();
+
 }
+add_action( 'wp_ajax_ptp_design4_color_columns'       , 'ptp_design4_color_columns' );
+add_action( 'wp_ajax_nopriv_ptp_design4_color_columns', 'ptp_design4_color_columns' );
 
 /* Deal with parasite Post Type Switcher plugin */
-add_filter('pts_post_type_filter', 'ptp_dh_pts_disable');
-function ptp_dh_pts_disable( $args )
-{
+function ptp_dh_pts_disable( $args ) {
     $postType  = get_post_type();
     if( 'easy-pricing-table' === $postType){
         $args = array(
@@ -228,25 +187,5 @@ function ptp_dh_pts_disable( $args )
     }
     return $args;
 }
+add_filter( 'pts_post_type_filter', 'ptp_dh_pts_disable' );
 
-/**
- *  set screen layout to 2 colums
- */
-add_filter('screen_layout_columns', 'tt_ptp_set_custom_branding_screen_layout', 10, 2);
-function tt_ptp_set_custom_branding_screen_layout($columns, $screen) {
-	
-       if ($screen === 'easy-pricing-table'){
-		$columns[$screen] = 2;
-	}
-	return $columns;
-}
-
-add_filter( 'get_user_option_screen_layout_easy-pricing-table', 'tt_ptp_user_option_screen_layout_easy_pricing_table' );
-function tt_ptp_user_option_screen_layout_easy_pricing_table() {
-    
-    $screen = get_current_screen();
-	if ( 'easy-pricing-table' == $screen->id ) {
-		 return 2;
-	}
-   
-}
