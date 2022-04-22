@@ -18,7 +18,7 @@ function fca_ept_set_layout1_attributes( props ){
 	props.setAttributes( { accentColor: '#dd4632' } )
 		
 	// FONT SETTINGS
-	props.setAttributes( { fontFamily: 'Montserrat' } )
+	props.setAttributes( { fontFamily: fcaEptEditorData.edition === 'Free' ? 'sans-serif' : 'Montserrat' } )
 	props.setAttributes( { popularFontSize: '125%' } ) 
 	props.setAttributes( { planFontSize: '137.5%' } ) 
 	props.setAttributes( { priceFontSize: '175%' } ) 
@@ -35,7 +35,7 @@ function fca_ept_layout1_block_edit( props ){
 	fca_ept_layout1_additional_styles( props )
 	
 	return el( 'div', {
-		style: { fontFamily: props.attributes.fontFamily + ', sans serif' },
+		style: { fontFamily: props.attributes.fontFamily + ', sans-serif' },
 		id: 'fca-ept-table-' + props.attributes.tableID,
 		className: 'fca-ept-table-container'
 	},
@@ -73,12 +73,12 @@ function fca_ept_layout1_block_edit( props ){
 							placeholder: 'Most Popular', 
 							type: "text", 
 							tagName: 'span',
-							value: props.attributes.popularText, 
+							value: columnSettings[i].popularText, 
 							onClick: function(){ 
 								fca_ept_update_ui_state( props, 'popular' )
 							},
 							onChange: function( newValue ){ 
-								props.setAttributes( { popularText: newValue } )
+								fca_ept_update_populartext( props, newValue )
 							}
 						})
 					),

@@ -11,18 +11,21 @@ function fca_ept_render( $attributes ) {
 		$renderLayout = 'fca_ept_render_' . $selectedLayout;
 		
 		if ( function_exists( $renderLayout ) ) {
-			wp_enqueue_style( 'fca-ept-font-awesome' );
 			
-			$fontFamily = empty( $attributes['fontFamily'] ) ? false : trim( $attributes['fontFamily'] );
-			
-			if( $fontFamily && $fontFamily !== 'sans-serif' ) {
-				$font_url = add_query_arg( array(
-					"family" => $fontFamily,
-					"subset" => "latin" 
-				), 'https://fonts.googleapis.com/css' );
-			
-				wp_enqueue_style( 'fca-ept-google-font', $font_url );
-			
+			if( DH_PTP_LICENSE_PACKAGE !== 'Free' ) {
+				wp_enqueue_style( 'fca-ept-font-awesome' );
+				
+				$fontFamily = empty( $attributes['fontFamily'] ) ? false : trim( $attributes['fontFamily'] );
+				
+				if( $fontFamily && $fontFamily !== 'sans-serif' ) {
+					$font_url = add_query_arg( array(
+						"family" => $fontFamily,
+						"subset" => "latin" 
+					), 'https://fonts.googleapis.com/css' );
+				
+					wp_enqueue_style( 'fca-ept-google-font', $font_url );
+				
+				}
 			}
 			
 			return call_user_func( $renderLayout, $attributes );
@@ -50,6 +53,7 @@ function fca_ept_register_block() {
 	wp_register_style( 'fca-ept-layout2-style', PTP_PLUGIN_URL . '/assets/blocks/layout2/fca-ept-layout2.min.css', PTP_PLUGIN_VER );
 	
 	if ( DH_PTP_LICENSE_PACKAGE !== 'Free' ) {
+		
 		wp_register_script( 'fca_ept_layout3_script', PTP_PLUGIN_URL . '/assets/blocks/layout3/fca-ept-layout3.min.js', array( 'fca_ept_editor_script' ), PTP_PLUGIN_VER );
 		wp_register_style( 'fca-ept-layout3-style', PTP_PLUGIN_URL . '/assets/blocks/layout3/fca-ept-layout3.min.css', PTP_PLUGIN_VER );
 
@@ -156,6 +160,7 @@ function fca_ept_add_block_listener(){
 			wp_die( 'Authorization failed, please try logging in again' );
 		}
 	}
+
 }
 add_action( 'init', 'fca_ept_add_block_listener' );
 
@@ -357,5 +362,16 @@ function fca_ept_clone_table( $to_duplicate ) {
 
 }
 
+function fca_ept_block_admin_notice() {
+	$current_page = empty( $_GET['page'] ) ? '' : $_GET['page'];
+	$action = empty( $_GET['action'] ) ? false : $_GET['action'];
+	
+	if ( $current_page === 'ept3-list' && $action === 'trash'  ){
+		echo '<div id="fca-ept-setup-notice" class="notice notice-success is-dismissible">';
+			echo '<p>' . esc_attr__( "Pricing table deleted successfully.", 'easy-pricing-tables' ) . "</p>" ;
+		echo '</div>';
+	}
 
+}
+add_action( 'admin_notices', 'fca_ept_block_admin_notice' );
 

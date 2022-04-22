@@ -91,14 +91,14 @@ function dh_ptp_easy_pricing_table_dynamic_css( $id ) {
 function dh_ptp_generate_pricing_table($id, $hide = false){
     $meta = get_post_meta( $id, '1_dh_ptp_settings', true );
 
-    // Enqueue assets & IE Hacks
-    wp_enqueue_style('ept-font-awesome');
-    wp_enqueue_style('ept-foundation', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/foundation/foundation.min.css');
-	
-	wp_enqueue_script('ept-foundation', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/foundation/foundation.min.js', array( 'jquery' ));
-    wp_enqueue_script('ept-foundation-tooltip', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/foundation/foundation.tooltip.min.js', array( 'ept-foundation', 'jquery'));
-    wp_enqueue_script('ept-ui-tooltip', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-tooltip.min.js', array('ept-foundation-tooltip'));
-	
+    if( DH_PTP_LICENSE_PACKAGE !== 'Free' ) {
+		wp_enqueue_style('ept-font-awesome');
+		wp_enqueue_style('ept-foundation', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/foundation/foundation.min.css');
+		
+		wp_enqueue_script('ept-foundation', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/foundation/foundation.min.js', array( 'jquery' ));
+		wp_enqueue_script('ept-foundation-tooltip', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/foundation/foundation.tooltip.min.js', array( 'ept-foundation', 'jquery'));
+		wp_enqueue_script('ept-ui-tooltip', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/ui-tooltip.min.js', array('ept-foundation-tooltip'));
+	}
 	
 	//ADD A DUMMY STYLESHEET TO APPEND INLINE CSS LATER IF SET
 	wp_register_style( 'dh-ptp-custom-css', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/ptp-custom.min.css'  );	
@@ -350,4 +350,32 @@ function dh_ptp_get_price_formatted ( $planprice , $call_user_custom_func = '' )
         }
         
         return $price_formatted;
+}
+
+/* Replace shortcode text into font awesome icon */
+function dh_ptp_fa_icons($raw, $extra = false, $fa_icon_type = '')
+{
+    // Extra Icons for Comparison 1
+    if ($extra) {
+        if($fa_icon_type == 'no-circle') {
+            $raw = str_replace('[y]', '<i class="fa fa-check black"></i>', $raw);
+           $raw = str_replace('[n]', '<i class="fa fa-times black"></i>', $raw);
+        } else {
+           $raw = str_replace('[y]', '<i class="fa fa-chevron-circle-down green"></i>', $raw);
+           $raw = str_replace('[n]', '<i class="fa fa-times-circle red"></i>', $raw);   
+        }
+    }
+    
+	// Tooltip
+	if (preg_match('/\[tooltip( content=[\"|\']{1}(.*)?[\"|\']{1})?\](.*)?\[\/tooltip\]/sim', $raw)) {
+		$pattern = '/\[tooltip( content=[\"|\']{1}(.*)?[\"|\']{1})?\](.*)?\[\/tooltip\]/i';
+		$replacement = '<span data-tooltip class="has-tip" title="$2">$3</span>';
+		$raw = preg_replace($pattern, $replacement, $raw);
+	}
+	
+    $pattern = '/\[(.*?)\]/i';
+    $replacement = '<i class="fa fa-$1"></i>';
+    $text = preg_replace($pattern, $replacement, $raw);
+    
+    return $text;
 }

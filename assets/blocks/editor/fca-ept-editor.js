@@ -58,6 +58,13 @@ function fca_ept_main_edit( props ){
 
 function fca_ept_layout_picker_screen( props ) {
 	
+	var learnMoreButton = el( wp.components.Button, {
+		variant: 'primary',
+		onClick: function(){
+			window.open( 'https://fatcatapps.com/easypricingtables/', '_blank' )
+		}
+	},'Learn more' )
+		
 	return el( wp.element.Fragment, { },
 		el( wp.components.Modal, {
 			title: 'Choose a template',
@@ -87,7 +94,8 @@ function fca_ept_layout_picker_screen( props ) {
 						width: 600,
 						height: 401,
 						src: fcaEptEditorData.directory + '/assets/blocks/screenshots/layout1.png',
-					})
+					}),
+					learnMoreButton
 				),
 
 				el( 'div', {
@@ -102,14 +110,19 @@ function fca_ept_layout_picker_screen( props ) {
 						width: 600,
 						height: 410,
 						src: fcaEptEditorData.directory + '/assets/blocks/screenshots/layout2.png',
-					})
+					}),
+					learnMoreButton
 				),
 
 				el( 'div', {
-					className: 'layout',
+					className: fcaEptEditorData.edition === 'Free' ? 'layout pro-only' : 'layout',
 					onClick: function(){
-						fca_ept_maybe_set_defaults( props )						
-						fca_ept_set_layout3_attributes( props )
+						if ( fcaEptEditorData.edition === 'Free' ) {
+							window.open( 'https://fatcatapps.com/easypricingtables/', '_blank' )
+						} else {
+							fca_ept_maybe_set_defaults( props )						
+							fca_ept_set_layout3_attributes( props )
+						}
 					}
 				},					
 					el( 'img', {
@@ -117,28 +130,38 @@ function fca_ept_layout_picker_screen( props ) {
 						width: 600,
 						height: 357,
 						src: fcaEptEditorData.directory + '/assets/blocks/screenshots/layout3.png',
-					})
+					}),
+					learnMoreButton
 				),
 
 				el( 'div', {
-					className: 'layout',
+					className: fcaEptEditorData.edition === 'Free' ? 'layout pro-only' : 'layout',
 					onClick: function(){
-						fca_ept_maybe_set_defaults( props )
-						fca_ept_set_layout4_attributes( props )
+						if ( fcaEptEditorData.edition === 'Free' ) {
+							window.open( 'https://fatcatapps.com/easypricingtables/', '_blank' )
+						} else {
+							fca_ept_maybe_set_defaults( props )						
+							fca_ept_set_layout4_attributes( props )
+						}
 					}
 				},					
 					el( 'img', {
 						width: 600,
 						height: 257,
 						src: fcaEptEditorData.directory + '/assets/blocks/screenshots/layout4.png',
-					})
+					}),
+					learnMoreButton
 				),
 
 				el( 'div', {
-					className: 'layout',
+					className: fcaEptEditorData.edition === 'Free' ? 'layout pro-only' : 'layout',
 					onClick: function(){
-						fca_ept_maybe_set_defaults( props )
-						fca_ept_set_layout5_attributes( props )
+						if ( fcaEptEditorData.edition === 'Free' ) {
+							window.open( 'https://fatcatapps.com/easypricingtables/', '_blank' )
+						} else {
+							fca_ept_maybe_set_defaults( props )						
+							fca_ept_set_layout5_attributes( props )
+						}
 					}
 				},					
 					el( 'img', {
@@ -146,14 +169,19 @@ function fca_ept_layout_picker_screen( props ) {
 						width: 600,
 						height: 252,
 						src: fcaEptEditorData.directory + '/assets/blocks/screenshots/layout5.png',
-					})
+					}),
+					learnMoreButton
 				),
 
 				el( 'div', {
-					className: 'layout',
+					className: fcaEptEditorData.edition === 'Free' ? 'layout pro-only' : 'layout',
 					onClick: function(){
-						fca_ept_maybe_set_defaults( props )
-						fca_ept_set_layout6_attributes( props )
+						if ( fcaEptEditorData.edition === 'Free' ) {
+							window.open( 'https://fatcatapps.com/easypricingtables/', '_blank' )
+						} else {
+							fca_ept_maybe_set_defaults( props )						
+							fca_ept_set_layout6_attributes( props )
+						}
 					}
 				},					
 					el( 'img', {
@@ -161,13 +189,18 @@ function fca_ept_layout_picker_screen( props ) {
 						width: 600,
 						height: 311,
 						src: fcaEptEditorData.directory + '/assets/blocks/screenshots/layout6.png',
-					})
+					}),
+					learnMoreButton
 				),
 				el( 'div', {
-					className: 'layout',
+					className: fcaEptEditorData.edition === 'Free' ? 'layout pro-only' : 'layout',
 					onClick: function(){
-						fca_ept_maybe_set_defaults( props )
-						fca_ept_set_layout7_attributes( props )
+						if ( fcaEptEditorData.edition === 'Free' ) {
+							window.open( 'https://fatcatapps.com/easypricingtables/', '_blank' )
+						} else {
+							fca_ept_maybe_set_defaults( props )						
+							fca_ept_set_layout7_attributes( props )
+						}
 					}
 				},					
 					el( 'img', {
@@ -175,13 +208,18 @@ function fca_ept_layout_picker_screen( props ) {
 						width: 600,
 						height: 344,
 						src: fcaEptEditorData.directory + '/assets/blocks/screenshots/layout7.png',
-					})
+					}),
+					learnMoreButton
 				),
 				el( 'div', {
-					className: 'layout',
+					className: fcaEptEditorData.edition === 'Free' ? 'layout pro-only' : 'layout',
 					onClick: function(){
-						fca_ept_maybe_set_defaults( props )
-						fca_ept_set_layout8_attributes( props )
+						if ( fcaEptEditorData.edition === 'Free' ) {
+							window.open( 'https://fatcatapps.com/easypricingtables/', '_blank' )
+						} else {
+							fca_ept_maybe_set_defaults( props )						
+							fca_ept_set_layout8_attributes( props )
+						}
 					} 
 				},					
 					el( 'img', {
@@ -189,13 +227,18 @@ function fca_ept_layout_picker_screen( props ) {
 						width: 600,
 						height: 304,
 						src: fcaEptEditorData.directory + '/assets/blocks/screenshots/layout8.png',
-					})
+					}),
+					learnMoreButton
 				),
 				el( 'div', {
-					className: 'layout',
+					className: fcaEptEditorData.edition === 'Free' ? 'layout pro-only' : 'layout',
 					onClick: function(){
-						fca_ept_maybe_set_defaults( props )
-						fca_ept_set_layout9_attributes( props )
+						if ( fcaEptEditorData.edition === 'Free' ) {
+							window.open( 'https://fatcatapps.com/easypricingtables/', '_blank' )
+						} else {
+							fca_ept_maybe_set_defaults( props )						
+							fca_ept_set_layout9_attributes( props )
+						}
 					} 
 				},					
 					el( 'img', {
@@ -203,7 +246,8 @@ function fca_ept_layout_picker_screen( props ) {
 						width: 600,
 						height: 252,
 						src: fcaEptEditorData.directory + '/assets/blocks/screenshots/layout5.png',
-					})
+					}),
+					learnMoreButton
 				)
 				
 				)//END LAYOUT CONTAINER
@@ -222,7 +266,7 @@ function fca_ept_main_attributes() {
 		tableID: { type: 'string', default: '' },
 		columnSettings: { type: 'string', default: '' },
 		comparisonText: { type: 'string', default: '' },
-		popularText: { type: 'string', default: 'Most Popular' },
+		
 		selectedRange: { type: 'string', default: '' },
 		showLayoutPickerScreen: { type: 'boolean', default: true },
 		showIconDropdown: { type: 'boolean', default: false },
@@ -262,7 +306,7 @@ function fca_ept_main_attributes() {
 		accentColor: { type: 'string', default: '#6236ff' },
 		
 		// FONT SETTINGS
-		fontFamily: { type: 'string', default: 'Sans Serif' },
+		fontFamily: { type: 'string', default: 'sans-serif' },
 		popularFontSize: { type: 'string', default: '75%' }, 
 		planFontSize: { type: 'string', default: '300%' }, 
 		planSubtextFontSize: { type: 'string', default: '100%' }, 
@@ -279,6 +323,7 @@ function fca_ept_default_columnSettings() {
 	return [
 		{
 			columnPopular: false,
+			popularText: 'Most popular',
 			planText1: 'Starter',
 			planText2: 'Starter',
 			planSvg: '&#xf155;',
@@ -301,6 +346,7 @@ function fca_ept_default_columnSettings() {
 		},
 		{
 			columnPopular: true,
+			popularText: 'Most popular',
 			planText1: 'Pro',
 			planText2: 'Pro',
 			planSvg: '&#xf09d;',
@@ -323,6 +369,7 @@ function fca_ept_default_columnSettings() {
 		},
 		{
 			columnPopular: false,
+			popularText: 'Most popular',
 			planText1: 'Elite',
 			planText2: 'Elite',
 			planSvg: '&#xf219;',

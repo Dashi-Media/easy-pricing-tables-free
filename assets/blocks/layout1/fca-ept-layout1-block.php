@@ -30,7 +30,7 @@ function fca_ept_render_layout1( $attributes ){
 	$fontFamily = empty( $attributes['fontFamily'] ) ? 'sans-serif' : $attributes['fontFamily'];
 	
 	$align = empty( $attributes['align'] ) ? 'wide' : ( $attributes['align'] );
-	$popularText = empty( $attributes['popularText'] ) ? 'Most Popular' : ( $attributes['popularText'] );
+	$popularTextDefault = empty( $attributes['popularText'] ) ? 'Most Popular' : ( $attributes['popularText'] );
 	$showButtons = empty( $attributes['showButtonsToggle'] ) ? 'none' : 'block';
 	$urlTarget = empty( $attributes['urlTargetToggle'] ) ? '_self' : '_blank';
 
@@ -52,7 +52,7 @@ function fca_ept_render_layout1( $attributes ){
 			$columnPopular = empty( $column['columnPopular'] ) ? false : true;
 
 			$popularClass = $columnPopular ? 'fca-ept-most-popular' : '';
-
+			$popularText = empty( $column['popularText'] ) ? $popularTextDefault : $column['popularText'];
 			//Integrations
 			$planText1 = fca_ept_get_product_data( $column, 1, 'plan' );
 			$planText2 = fca_ept_get_product_data( $column, 2, 'plan' );

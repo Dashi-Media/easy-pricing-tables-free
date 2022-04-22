@@ -4,13 +4,11 @@
  Settings UI -- USED IN FREE EDITION SINCE THERE IS NO OTHER LICENSING PAGE
  ************************************* */
 function dh_ptp_settings_menu() {
-	
-	$position = empty( $submenu_list ) ? 3 : count( $submenu_list ) -1;
-	
+		
 	add_submenu_page( 'edit.php?post_type=easy-pricing-table', __('Settings', 'easy-pricing-tables'), __('Settings', 'easy-pricing-tables'), 'manage_options', 'easy-pricing-tables-settings', 'dh_ptp_settings' );
 	
 }
-add_action('admin_menu', 'dh_ptp_settings_menu');
+add_action( 'admin_menu', 'dh_ptp_settings_menu' );
 
 function dh_ptp_settings() {
 

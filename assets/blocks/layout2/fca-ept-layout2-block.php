@@ -31,7 +31,7 @@ function fca_ept_render_layout2( $attributes ){
 	
 	$paddingBottom = empty( $attributes['showButtons'] ) ? '30px' : ( $attributes['showButtons'] === 'block' ? '30px' : '0px' );
 	$align = empty( $attributes['align'] ) ? 'wide' : ( $attributes['align'] );
-	$popularText = empty( $attributes['popularText'] ) ? 'Most Popular' : ( $attributes['popularText'] );
+	$popularTextDefault = empty( $attributes['popularText'] ) ? 'Most Popular' : ( $attributes['popularText'] );
 	$showPlanSubtext = empty( $attributes['showPlanSubtextToggle'] ) ? 'none' : 'block';
 	$showPriceSubtext = empty( $attributes['showPriceSubtextToggle'] ) ? 'none' : 'inline';
 	
@@ -53,7 +53,7 @@ function fca_ept_render_layout2( $attributes ){
 			$columnPopular = empty( $column['columnPopular'] ) ? false : true;
 			$showPopular = $columnPopular ? 'block' : 'none';
 			$popularClass = $columnPopular ? 'fca-ept-most-popular' : '';
-
+			$popularText = empty( $column['popularText'] ) ? $popularTextDefault : $column['popularText'];
 			$columnPaddingTop = $columnPopular ? '30px' : '45px';
 			$marginTop = $columnPopular ? '-5px' : '10px';
 			$columnBorder = $columnPopular ? '2px solid ' . $accentColor : '0px solid';

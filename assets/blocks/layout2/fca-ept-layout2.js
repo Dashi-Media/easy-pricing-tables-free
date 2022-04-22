@@ -93,12 +93,12 @@ function fca_ept_layout2_block_edit( props ){
 							placeholder: 'Most Popular', 
 							type: "text", 
 							tagName: 'span',
-							value: props.attributes.popularText, 
+							value: columnSettings[i].popularText, 
 							onClick: function(){ 
 								fca_ept_update_ui_state( props, 'popular' )
 							},
 							onChange: function( newValue ){ 
-								props.setAttributes( { popularText: newValue } )
+								fca_ept_update_populartext( props, newValue )
 							}
 						})
 					),
