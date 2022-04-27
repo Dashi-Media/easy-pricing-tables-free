@@ -51,10 +51,6 @@ div.fca-ept-sidebar-items .block-editor-panel-color-gradient-settings__panel-tit
 	display: none;  
 }
 
-div.fca-ept-layout-selection {
-	background: white;
-}
-
 div.fca-ept-layout-selection .layout-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;

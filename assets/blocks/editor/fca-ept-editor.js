@@ -206,7 +206,7 @@ function fca_ept_layout_picker_screen( props ) {
 					el( 'img', {
 						
 						width: 600,
-						height: 344,
+						height: 350,
 						src: fcaEptEditorData.directory + '/assets/blocks/screenshots/layout7.png',
 					}),
 					learnMoreButton
@@ -227,25 +227,6 @@ function fca_ept_layout_picker_screen( props ) {
 						width: 600,
 						height: 304,
 						src: fcaEptEditorData.directory + '/assets/blocks/screenshots/layout8.png',
-					}),
-					learnMoreButton
-				),
-				el( 'div', {
-					className: fcaEptEditorData.edition === 'Free' ? 'layout pro-only' : 'layout',
-					onClick: function(){
-						if ( fcaEptEditorData.edition === 'Free' ) {
-							window.open( 'https://fatcatapps.com/easypricingtables/', '_blank' )
-						} else {
-							fca_ept_maybe_set_defaults( props )						
-							fca_ept_set_layout9_attributes( props )
-						}
-					} 
-				},					
-					el( 'img', {
-						
-						width: 600,
-						height: 252,
-						src: fcaEptEditorData.directory + '/assets/blocks/screenshots/layout5.png',
 					}),
 					learnMoreButton
 				)

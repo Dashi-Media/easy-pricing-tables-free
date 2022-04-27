@@ -1,6 +1,6 @@
 <?php
 /*
-	Plugin Name: Easy Pricing Tables Premium: Free
+	Plugin Name: Easy Pricing Tables: Free
 	Plugin URI: https://fatcatapps.com/easypricingtables
 	Description: Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 5 Minutes with Easy Pricing Tables for WordPress. No Coding Required.
 	Text Domain: easy-pricing-tables
@@ -77,6 +77,7 @@ if( !defined( 'PTP_PLUGIN_PATH' ) ){
 		include ( PTP_PLUGIN_PATH . 'includes/table-generation/table-generator.php');
 		include ( PTP_PLUGIN_PATH . 'includes/post-types.php' );
 		include ( PTP_PLUGIN_PATH . 'includes/shortcodes.php' );
+		include ( PTP_PLUGIN_PATH . 'assets/blocks/legacy/block.php' );
 		if( !class_exists( 'WPAlchemy_MetaBox' ) ){
 			include_once ( PTP_PLUGIN_PATH . 'includes/wpalchemy/MetaBox.php' );
 		}
@@ -174,24 +175,15 @@ if( !defined( 'PTP_PLUGIN_PATH' ) ){
 		// Remove Edit link
 		unset( $links['edit'] );
 
-		// Add Easy Pricing Tables links
-		$add_new_link = add_query_arg( array(
-			'fca_ept_new_block' => 1,
-			'ept_nonce' => wp_create_nonce( 'ept_new' ),
-		));
-		
-		$add_new_link = "<a href='$add_new_link'>" . esc_attr__( 'Add New', 'easy-pricing-tables' ) . '</a>'; 
 		$forum_link   = '<a href="http://wordpress.org/support/plugin/easy-pricing-tables">' . __('Support', 'easy-pricing-tables' ) . '</a>';
 		$support_link = '<a href="https://fatcatapps.com/support" target="_blank">' . esc_attr__( 'Support', 'easy-pricing-tables' ) . '</a>';
 		$premium_link = '<a href="https://fatcatapps.com/easypricingtables/?utm_campaign=Purchase%2BPremium%2Bin%2Bplugins.php&utm_source=Easy%2BPricing%2BTables%2BFree&utm_medium=plugin&utm_content=v1">' . __('Purchase Premium',  'easy-pricing-tables' ) . '</a>';
 
-		array_push( $links, $add_new_link );
-		
 		if ( DH_PTP_LICENSE_PACKAGE === 'Free') {
-			array_push($links, $forum_link);
-			array_push($links, $premium_link);
+			array_push( $links, $forum_link );
+			array_push( $links, $premium_link );
 			
-		} else {			
+		} else {
 			array_push( $links, $support_link );
 		}
 

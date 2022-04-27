@@ -37,14 +37,11 @@ function fca_ept_render_layout1( $attributes ){
 	ob_start(); 
 
 	?>
-
 	<div style="display: contents; font-family: <?php echo $fontFamily ?>" class='fca-ept-main' id='<?php echo 'fca-ept-table-' . $tableID ?>'>
 		<?php if( function_exists( 'fca_ept_render_toggle' ) ){ 
 			echo fca_ept_render_toggle( $attributes, $toggleColor );
-		}?>
-		
+		}?>		
 		<div class="wp-block-fatcatapps-easy-pricing-tables align<?php echo $align ?> fca-ept-layout1">
-
 		<?php
 
 		forEach ( $columnSettings as $column ){
@@ -70,62 +67,37 @@ function fca_ept_render_layout1( $attributes ){
 			$buttonBorderColorPop = empty( $attributes['buttonBorderColorPop'] ) ? '#c0392b' : $attributes['buttonBorderColorPop'];
 
 			?>
-
 			<div class="fca-ept-column <?php echo $popularClass ?>" style="background-color: <?php echo $layoutBGColor ?>">
-
-				<div style="font-size: <?php echo $popularFontSize ?>; color: <?php echo $buttonFontColor ?>; background-color: <?php echo $layoutBGTint4 ?>;" class="fca-ept-popular <?php echo $popularClass ?>"><?php echo $popularText ?></div>
-
+				<div style="font-size: <?php echo $popularFontSize ?>; color: <?php echo $buttonFontColor ?>; background-color: <?php echo $layoutBGTint4 ?>;" class="fca-ept-popular <?php echo $popularClass ?>"><?php echo $popularText ?>
+				</div>
 				<div class="fca-ept-plan-div" style="background-color: <?php echo $layoutBGTint3 ?>">
-
 					<div style="display: <?php echo $hasPlanImage1 ?>" class="fca-ept-plan-image"><img class="fca-ept-image1" src="<?php echo fca_ept_get_product_data( $column, 1, 'image' ) ?>"></div>
-
 					<div style="display: <?php echo $hasPlanImage2 ?>" class="fca-ept-plan-image"><img class="fca-ept-image2" src="<?php echo fca_ept_get_product_data( $column, 2, 'image' ) ?>"></div>
-
 					<span style="font-size: <?php echo $planFontSize ?>; color: <?php echo $layoutFontColor ?>; background-color: <?php echo $layoutBGTint3 ?>" class="fca-ept-plan" data-plan1="<?php echo esc_attr( $planText1 ) ?>" data-plan2="<?php echo esc_attr( $planText2 ) ?>"><?php echo $planText1 ?></span>
-
 				</div>
-
 				<div style="background-color: <?php echo $layoutBGTint2 ?>;" class="fca-ept-price-div">
-
 					<span style="font-size: <?php echo $priceFontSize ?>; color: <?php echo $layoutFontColor ?>;" class="fca-ept-price" data-price1="<?php echo esc_attr( $priceText1 ) ?>" data-price2="<?php echo esc_attr( $priceText2 ) ?>"><?php echo $priceText1 ?></span>
-
 				</div>
-
 				<div style="font-size: <?php echo $featuresFontSize ?>; color: <?php echo $layoutFontColor ?>; background-color: <?php echo $layoutBGColor ?>" class="fca-ept-features-div">
-
-					<ul class="fca-ept-features"><?php echo $featuresText ?></ul>
-						
+					<ul class="fca-ept-features"><?php echo $featuresText ?></ul>						
 				</div>
-
 				<div style="display: <?php echo $showButtons ?>; background-color: <?php echo $layoutBGTint2 ?>;" class="fca-ept-button-div">
-
 					<a style="font-size: <?php echo $buttonFontSize ?>; color: <?php echo $buttonFontColor ?>;" href="<?php echo $buttonURL1 ?>" class="fca-ept-button" data-url1="<?php echo $buttonURL1 ?>" data-url2="<?php echo $buttonURL2 ?>" target="<?php echo $urlTarget ?>" rel="noopener noreferrer"><?php echo $buttonText ?></a>
-
 				</div>
-
 			</div>
-
-		<?php
-		
-		}
-
-		?>
-
+		<?php }	?>
 		</div>
-
-		<style>
-			#fca-ept-table-<?php echo $tableID ?> div.fca-ept-layout1 div.fca-ept-column a.fca-ept-button { background-color: <?php echo $buttonColor ?>; border-bottom: 4px solid <?php echo $buttonBorderColor ?>}
-			#fca-ept-table-<?php echo $tableID ?> div.fca-ept-layout1 div.fca-ept-column a.fca-ept-button:hover { background-color: <?php echo $buttonBorderColor ?>; }
-			#fca-ept-table-<?php echo $tableID ?> div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular a.fca-ept-button { background-color: <?php echo $accentColor ?>; border-bottom: 4px solid <?php echo $buttonBorderColorPop ?>}
-			#fca-ept-table-<?php echo $tableID ?> div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular a.fca-ept-button:hover { background-color: <?php echo $buttonBorderColorPop ?>; }
-		</style>
-
 	</div>
-
+	<style>
+		#fca-ept-table-<?php echo $tableID ?> div.fca-ept-layout1 div.fca-ept-column a.fca-ept-button { background-color: <?php echo $buttonColor ?>; border-bottom: 4px solid <?php echo $buttonBorderColor ?>}
+		#fca-ept-table-<?php echo $tableID ?> div.fca-ept-layout1 div.fca-ept-column a.fca-ept-button:hover { background-color: <?php echo $buttonBorderColor ?>; }
+		#fca-ept-table-<?php echo $tableID ?> div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular a.fca-ept-button { background-color: <?php echo $accentColor ?>; border-bottom: 4px solid <?php echo $buttonBorderColorPop ?>}
+		#fca-ept-table-<?php echo $tableID ?> div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular a.fca-ept-button:hover { background-color: <?php echo $buttonBorderColorPop ?>; }
+	</style>
+	<?php echo fca_ept_match_heights_js( $attributes ); ?>	
 	<?php
 
 	return ob_get_clean();
 
 }
-
 ?>

@@ -72,9 +72,6 @@ function fca_ept_register_block() {
 		wp_register_script( 'fca_ept_layout8_script', PTP_PLUGIN_URL . '/assets/blocks/layout8/fca-ept-layout8.min.js', array( 'fca_ept_editor_script' ), PTP_PLUGIN_VER );
 		wp_register_style( 'fca-ept-layout8-style', PTP_PLUGIN_URL . '/assets/blocks/layout8/fca-ept-layout8.min.css', PTP_PLUGIN_VER );
 		
-		wp_register_script( 'fca_ept_layout9_script', PTP_PLUGIN_URL . '/assets/blocks/layout9/fca-ept-layout9.min.js', array( 'fca_ept_editor_script' ), PTP_PLUGIN_VER );
-		wp_register_style( 'fca-ept-layout9-style', PTP_PLUGIN_URL . '/assets/blocks/layout9/fca-ept-layout9.min.css', PTP_PLUGIN_VER );
-
 		// FONTS
 		$fonts = array(
 			"Roboto:400",
@@ -150,6 +147,33 @@ function fca_ept_add_block_listener(){
 		exit;
 	}
 	
+	if ( isSet( $_GET['fca_ept_new_page'] ) ){
+		$nonce = empty( $_GET['ept_nonce'] ) ? '' : sanitize_text_field( $_GET['ept_nonce'] );
+		
+		if( wp_verify_nonce( $nonce, 'ept_new' ) == false ){
+			wp_die( 'Authorization failed, please try logging in again' );
+		}
+		$args = array(
+			'post_type'      => 'page',
+			'meta_key' 		 => '1_dh_ptp_settings',
+			'posts_per_page' => '-1'
+		);
+
+		$count = count( get_posts ( $args ) ) + 1;
+		
+		$args = array(
+			'post_title'     => 'Pricing',
+			'post_type'      => 'page',
+			'post_author'    => get_current_user_id(),
+			'post_status'    => 'publish',
+			'post_content'   => '<!-- wp:fatcatapps\/easy-pricing-tables \/-->',
+		);
+
+		$post_ID = wp_insert_post( $args );
+		wp_redirect( admin_url( "post.php?post=" . $post_ID . "&action=edit&block-editor=1" ) );
+		exit;
+	}
+	
 	//USED FOR LEGACY TABLE CLONING
 	if ( isSet( $_GET['fca_ept_clone_table'] ) ){
 		$postID = empty( $_GET['fca_ept_clone_table'] ) ? '' : intval( $_GET['fca_ept_clone_table'] );
@@ -181,14 +205,12 @@ function fca_ept_block_enqueue() {
 		wp_enqueue_style( 'fca-ept-layout6-style' );
 		wp_enqueue_style( 'fca-ept-layout7-style' );
 		wp_enqueue_style( 'fca-ept-layout8-style' );
-		wp_enqueue_style( 'fca-ept-layout9-style' );
 		wp_enqueue_script( 'fca_ept_layout3_script' );
 		wp_enqueue_script( 'fca_ept_layout4_script' );
 		wp_enqueue_script( 'fca_ept_layout5_script' );
 		wp_enqueue_script( 'fca_ept_layout6_script' );
 		wp_enqueue_script( 'fca_ept_layout7_script' );
 		wp_enqueue_script( 'fca_ept_layout8_script' );
-		wp_enqueue_script( 'fca_ept_layout9_script' );
 	}
 	
 	// enqueue layout scripts for editor
@@ -226,18 +248,18 @@ add_action( 'enqueue_block_editor_assets', 'fca_ept_block_enqueue' );
 // ADD OUR MENU, MAYBE REMOVE LEGACY WP ADMIN MENU ITEMS
 function fca_ept_admin_menu() {
 
-	add_submenu_page( 'edit.php?post_type=easy-pricing-table', __('Easy Pricing Tables', 'easy-pricing-tables'), __('All Pricing Tables', 'easy-pricing-tables'), 'manage_options', 'ept3-list', 'fca_ept_render_post_list', 0 );
-	
+	add_submenu_page( 'edit.php?post_type=easy-pricing-table', __('Easy Pricing Tables', 'easy-pricing-tables'), __('Easy Pricing Tables', 'easy-pricing-tables'), 'manage_options', 'ept3-list', 'fca_ept_render_post_list', 0 );
 	// hide legacy tables submenu if this is a fresh install OR if it's disabled through settings menu
 	$show_legacy_tables = get_option( 'dh_ptp_show_legacy_tables' );
 	
+	global $submenu;
 	if( !$show_legacy_tables ){
 
-		global $submenu;
 		unset($submenu['edit.php?post_type=easy-pricing-table'][1]);
-		unset($submenu['edit.php?post_type=easy-pricing-table'][2]);
 
 	} 
+	//REMOVE ADD NEW - USE THE LEGACY OR NEW POST LIST PAGE TO ADD NEW
+	unset($submenu['edit.php?post_type=easy-pricing-table'][2]);
 
 }
 add_action( 'admin_menu', 'fca_ept_admin_menu' );
@@ -250,20 +272,70 @@ function fca_ept_render_post_list(){
 	}
 	
 	include ( PTP_PLUGIN_PATH . 'includes/post-list-table.php' );
-	$add_new_link = add_query_arg( array(
-		'fca_ept_new_block' => true,
+	wp_enqueue_style( 'fca_ept_post_list_css', PTP_PLUGIN_URL . '/assets/blocks/post-list.min.css' );
+	wp_enqueue_script( 'fca_ept_post_list_js', PTP_PLUGIN_URL . '/assets/blocks/post-list.min.js', false, PTP_PLUGIN_VER, true );
+	
+	$new_block_link = add_query_arg( array(
+		'fca_ept_new_block' => 1,
+		'ept_nonce' => wp_create_nonce( 'ept_new' ),
+	));
+	
+	$new_page_link = add_query_arg( array(
+		'fca_ept_new_page' => 1,
 		'ept_nonce' => wp_create_nonce( 'ept_new' ),
 	));
 	
 	?>
-	<div class="wrap"><h2>Pricing Tables <a href="<?php echo $add_new_link ?>" class="page-title-action">Add New</a></h2>
-	<form method="post">
-		<?php
-		$listTable = new EPT3_List_Table();
-		$listTable->prepare_items();
-		$listTable->display();
-		?>
-	</form></div>
+	<div class="fca-ept-modal">
+		<div class="fca-ept-modal-inner">
+			<a href="#" id="fca-ept-modal-close">Close</a>
+			<h2><?php esc_html_e( 'Choose an Option', 'easy-pricing-tables' ) ?></h2>
+			<div class="fca-ept-modal-list">
+				<a href="<?php echo $new_block_link ?>" class="fca-ept-modal-list-group" >
+					<span class="dashicons dashicons-shortcode"></span>
+					<h3><?php esc_html_e( 'New Shortcode', 'easy-pricing-tables' ) ?></h3>
+					<p><?php esc_html_e( 'Create shortcode for use with page editors like Divi or WP Bakery.', 'easy-pricing-tables' ) ?></p>
+					<h4><?php esc_html_e( 'Recommended for Divi/WP Bankery/Visual Composer', 'easy-pricing-tables' ) ?></h4>
+				</a>
+				<a href="<?php echo $new_page_link ?>" class="fca-ept-modal-list-group" >
+					<span class="dashicons dashicons-welcome-add-page"></span>
+					<h3><?php esc_html_e( 'New Page with Pricing Table', 'easy-pricing-tables' ) ?></h3>
+					<p><?php esc_html_e( 'Create a new blank page containing a pricing table block.', 'easy-pricing-tables' ) ?></p>
+					<h4><?php esc_html_e( 'Recommended for Gutenberg', 'easy-pricing-tables' ) ?></h4>
+				</a>
+				<div class="fca-ept-modal-list-group" >
+					<span class="dashicons dashicons-admin-post"></span>
+					<h3><?php esc_html_e( 'Add Table to a Post', 'easy-pricing-tables' ) ?></h3>
+					<p><?php esc_html_e( 'Add a pricing table to a post with an "Easy Pricing Table" block, or using a shortcode.', 'easy-pricing-tables' ) ?>
+					<a href="https://fatcatapps.com/knowledge-base/how-to-add-a-table-to-a-post-shortcode-reusable-block-block/" target="_blank"><?php esc_html_e( 'Click here to learn more.', 'easy-pricing-tables' ) ?></a></p>
+					<p><a href="<?php echo admin_url('edit.php') ?>" ><?php esc_html_e( 'View Posts', 'easy-pricing-tables' ) ?></a><br>
+					<a href="<?php echo admin_url('edit.php?post_type=page') ?>" ><?php esc_html_e( 'View Pages', 'easy-pricing-tables' ) ?></a>
+					</p>
+					
+				</div>
+				
+			</div>
+		</div>
+	</div>
+<form method="post">
+	<div class="wrap">
+		<h2>Easy Pricing Tables <a href="#" id="fca-ept-add-new-button" class="page-title-action">Add New</a></h2>
+		
+		<?php if ( DH_PTP_LICENSE_PACKAGE !== 'Free' ) { ?>
+			<p><?php esc_html_e( 'Problems, Suggestions?', 'easy-pricing-tables' ) ?> 
+			<a href="https://wordpress.org/support/plugin/easy-pricing-tables" target="_blank"><?php esc_html_e( 'Visit the support forum', 'easy-pricing-tables' ) ?></a> | 
+			<a href="http://wordpress.org/plugins/easy-pricing-tables/faq/" target="_blank"><?php esc_html_e( 'Visit FAQ', 'easy-pricing-tables' ) ?></a> | 
+			<a href="https://youtu.be/iU3mC8vXKt8" target="_blank"><?php esc_html_e( 'Watch Demo', 'easy-pricing-tables' ) ?></a> |
+			<a href="http://fatcatapps.com/easypricingtables/?utm_campaign=ept-ui-sidebar&utm_source=free-plugin&utm_medium=link&utm_content=v3" target="_blank"><?php esc_html_e( 'Get Easy Pricing Tables Premium', 'easy-pricing-tables' ) ?></a>
+			</p>
+		<?php } ?>
+			<?php
+			$listTable = new EPT3_List_Table();
+			$listTable->prepare_items();
+			$listTable->display();
+			?>
+	</div>
+</form>
 <?php	
 }
 
@@ -375,3 +447,37 @@ function fca_ept_block_admin_notice() {
 }
 add_action( 'admin_notices', 'fca_ept_block_admin_notice' );
 
+function fca_ept_match_heights_js( $attributes ) {
+	$matchHeights = empty( $attributes['matchHeightsToggle'] ) ? false : true;
+	$table_id = empty( $attributes['tableID'] ) ? false : $attributes['tableID'];
+	
+	if ( $matchHeights && $table_id ) {
+		
+		$thisTableID = "#fca-ept-table-$table_id";
+				
+		return "<script id='ept-$thisTableID-matchheight'>
+			var thisTableID = '$thisTableID';
+			var imageDivs = document.querySelectorAll( thisTableID + ' .fca-ept-plan-image img' )			
+			for( var i = 0; i < imageDivs.length; i++ ) {							
+				imageDivs[i].addEventListener('load', function(){
+					var imageDivs = document.querySelectorAll( thisTableID + ' .fca-ept-plan-image img' )
+					var shortestImageHeight = 2147483647
+					for( var i = 0; i < imageDivs.length; i++ ) {							
+						imageDivs[i].style.maxHeight = 'none'
+						if ( imageDivs[i].offsetHeight > 0 && imageDivs[i].offsetHeight < shortestImageHeight ) {
+							shortestImageHeight = imageDivs[i].offsetHeight
+						}
+					}
+					//SET IMAGE DIV CSS
+					for( var i = 0; i < imageDivs.length; i++ ) {				
+						imageDivs[i].style.maxHeight = shortestImageHeight + 'px'
+					}
+					
+				});
+			}
+			
+			</script>";
+	}
+	
+	return;
+}

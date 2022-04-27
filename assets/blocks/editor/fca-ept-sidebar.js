@@ -1,6 +1,13 @@
 function fca_ept_sidebar_settings( props ){
 	var wp = window.wp
 	var el = wp.element.createElement
+	var checkIcon = el( 'span', { className: 'dashicons dashicons-yes' } )
+	var learnMoreButton = el( wp.components.Button, {
+		variant: 'primary',
+		onClick: function(){
+			window.open( 'https://fatcatapps.com/easypricingtables/', '_blank' )
+		}
+	},'Upgrade Now' )	
 	
 	return el( wp.blockEditor.InspectorControls, { key: 'ept-inspector-controls' },
 			el( 'div', { className: 'fca-ept-sidebar-items' },
@@ -18,7 +25,26 @@ function fca_ept_sidebar_settings( props ){
 				},
 					'Change template'
 				)
-			)
+			),
+			
+			fcaEptEditorData.edition === 'Free' ? el( wp.components.PanelBody, { 
+					className: 'fca-ept-get-premium',
+					title: '',
+					initialOpen: true 
+				},
+					el( 'h2', {
+						className: 'get-premium-features'
+					}, "Upgrade to Premium and Build Better Pricing Tables. You'll Get:" ),
+					el( 'p', {}, checkIcon, 'Six Gorgeous Designs' ),
+					el( 'p', {}, checkIcon, 'Fully Customizable (Colors, Fonts, etc.)' ),
+					el( 'p', {}, checkIcon, '700+ Icons to Add to Your Tables' ),
+					el( 'p', {}, checkIcon, 'Priority Email Support' ),
+					el( 'p', {}, checkIcon, 'Tooltips' ),
+					el( 'p', {}, checkIcon, 'Font Picker with 12+ fonts' ),
+					el( 'p', {}, checkIcon, 'Pricing Toggles - switch between currencies or monthly/yearly pricing' ),
+					learnMoreButton
+				
+			) : null
 		)
 	)
 }

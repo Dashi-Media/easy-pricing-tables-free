@@ -74,64 +74,39 @@ function fca_ept_render_layout2( $attributes ){
 			$buttonText = $column['buttonText'] ? $column['buttonText'] : '';
 
 			?> 
-			<div style="background-color:<?php echo $layoutBGColor ?>; padding-top:<?php echo $columnPaddingTop ?>; padding-bottom:<?php echo $paddingBottom ?>; margin-top:<?php echo $marginTop?>; border:<?php echo $columnBorder ?>" class="fca-ept-column <?php echo $popularClass ?>">
-				
+			<div style="background-color:<?php echo $layoutBGColor ?>; padding-top:<?php echo $columnPaddingTop ?>; padding-bottom:<?php echo $paddingBottom ?>; margin-top:<?php echo $marginTop?>; border:<?php echo $columnBorder ?>" class="fca-ept-column <?php echo $popularClass ?>">				
 				<div class="fca-ept-plan-div">
 					<div style="display: <?php echo $hasPlanImage1 ?>" class="fca-ept-plan-image"><img class="fca-ept-image1" src="<?php echo fca_ept_get_product_data( $column, 1, 'image' ) ?>"></div>
 					<div style="display: <?php echo $hasPlanImage2 ?>" class="fca-ept-plan-image"><img class="fca-ept-image2" src="<?php echo fca_ept_get_product_data( $column, 2, 'image' ) ?>"></div>
-					<div style="display: <?php echo $showPopular ?>; border-color:<?php echo $accentColor ?>" class="fca-ept-popular-div">
-					
-						<span style="font-size:<?php echo $popularFontSize ?>; background-color:<?php echo $accentColor ?>; color:<?php echo $buttonFontColor ?>" class="fca-ept-popular-text"><?php echo $popularText ?></span>
-					
+					<div style="display: <?php echo $showPopular ?>; border-color:<?php echo $accentColor ?>" class="fca-ept-popular-div">					
+						<span style="font-size:<?php echo $popularFontSize ?>; background-color:<?php echo $accentColor ?>; color:<?php echo $buttonFontColor ?>" class="fca-ept-popular-text"><?php echo $popularText ?></span>					
 					</div>
-					<span style="font-size:<?php echo $planFontSize ?>; color:<?php echo $layoutFontColor1 ?>" class="fca-ept-plan" data-plan1="<?php echo esc_attr( $planText1 ) ?>" data-plan2="<?php echo esc_attr( $planText2 ) ?>"><?php echo $planText1 ?></span>
-			
+					<span style="font-size:<?php echo $planFontSize ?>; color:<?php echo $layoutFontColor1 ?>" class="fca-ept-plan" data-plan1="<?php echo esc_attr( $planText1 ) ?>" data-plan2="<?php echo esc_attr( $planText2 ) ?>"><?php echo $planText1 ?></span>			
 					<span style="display: <?php echo $showPlanSubtext ?>; font-size:<?php echo $planSubtextFontSize ?>; color:<?php echo $layoutFontColor ?>;" class="fca-ept-plan-subtext"><?php echo $planSubText ?></span>
-			
-				</div>
-			
-				<div class="fca-ept-price-div">
-			
-					<div class="fca-ept-price-container">
-			
-						<span style="font-size: <?php echo $priceFontSize ?>; color:<?php echo $layoutFontColor ?>" class="fca-ept-price" data-price1="<?php echo esc_attr( $priceText1 ) ?>" data-price2="<?php echo esc_attr( $priceText2 ) ?>"><?php echo $priceText1 ?></span>
-			
-						<div style="display: <?php echo $showPriceSubtext ?>" class="fca-ept-price-subtext">
-			
-							<svg class="fca-ept-price-svg" style="background-color:<?php echo $buttonColor ?>"></svg>
-			
-							<span style="font-size:<?php echo $pricePeriodFontSize ?>; color:<?php echo $layoutFontColor ?>" class="fca-ept-price-period" data-period1="<?php echo esc_attr( $pricePeriod1 ) ?>" data-period2="<?php echo esc_attr( $pricePeriod2 ) ?>"><?php echo $pricePeriod1 ?></span>
-			
-						</div>
-			
-					</div>
-			
-				</div>
-			
-				<div class="fca-ept-features-div">
-			
-					<ul style="font-size:<?php echo $featuresFontSize ?>; color:<?php echo $layoutFontColor ?>" class="fca-ept-features">
-			
-						<?php echo $featuresText ?>
-			
-					</ul>
-			
-				</div>
-			
-				<a style="display:<?php echo $showButtons ?>; font-size:<?php echo $buttonFontSize ?>; color:<?php echo $buttonFontColor ?>; background-color:<?php echo $buttonColor ?>" href="<?php echo $buttonURL1 ?>" class="fca-ept-button" data-url1="<?php echo $buttonURL1 ?>" data-url2="<?php echo $buttonURL2 ?>" target="<?php echo $urlTarget ?>" rel="noopener noreferrer"><span class="fca-ept-button-text"><?php echo $buttonText ?> </span></a>
-			
-			</div>
-		
+				</div>			
+				<div class="fca-ept-price-div">			
+					<div class="fca-ept-price-container">			
+						<span style="font-size: <?php echo $priceFontSize ?>; color:<?php echo $layoutFontColor ?>" class="fca-ept-price" data-price1="<?php echo esc_attr( $priceText1 ) ?>" data-price2="<?php echo esc_attr( $priceText2 ) ?>"><?php echo $priceText1 ?></span>			
+						<div style="display: <?php echo $showPriceSubtext ?>" class="fca-ept-price-subtext">			
+							<svg class="fca-ept-price-svg" style="background-color:<?php echo $buttonColor ?>"></svg>			
+							<span style="font-size:<?php echo $pricePeriodFontSize ?>; color:<?php echo $layoutFontColor ?>" class="fca-ept-price-period" data-period1="<?php echo esc_attr( $pricePeriod1 ) ?>" data-period2="<?php echo esc_attr( $pricePeriod2 ) ?>"><?php echo $pricePeriod1 ?></span>			
+						</div>			
+					</div>			
+				</div>			
+				<div class="fca-ept-features-div">			
+					<ul style="font-size:<?php echo $featuresFontSize ?>; color:<?php echo $layoutFontColor ?>" class="fca-ept-features">			
+						<?php echo $featuresText ?>			
+					</ul>			
+				</div>			
+				<a style="display:<?php echo $showButtons ?>; font-size:<?php echo $buttonFontSize ?>; color:<?php echo $buttonFontColor ?>; background-color:<?php echo $buttonColor ?>" href="<?php echo $buttonURL1 ?>" class="fca-ept-button" data-url1="<?php echo $buttonURL1 ?>" data-url2="<?php echo $buttonURL2 ?>" target="<?php echo $urlTarget ?>" rel="noopener noreferrer"><span class="fca-ept-button-text"><?php echo $buttonText ?> </span></a>			
+			</div>		
 		<?php } ?>
 		</div>
+		<?php echo fca_ept_match_heights_js( $attributes ); ?>	
 	</div>
-
 	<?php
-
-	$result = ob_get_clean();
-
-	return $result;
-
+	
+	return ob_get_clean();
+	
 }
-
 ?>
