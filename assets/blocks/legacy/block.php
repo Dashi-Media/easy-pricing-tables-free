@@ -5,31 +5,27 @@ GUTENBERG BLOCK INTEGRATION
 
 function dh_ptp_gutenblock_register() {
 	
-	$block_path = DH_PTP_LICENSE_PACKAGE === 'Personal' ? '/assets/blocks/legacy/block.js' : '/assets/blocks/legacy/block-premium.js';
-	
-	wp_register_script(
-		'dh_ptp_gutenblock_script',
-		PTP_PLUGIN_PATH_FOR_SUBDIRS . $block_path,
-		array( 'wp-blocks', 'wp-element', 'wp-editor' )
-	);
+	$block_file = in_array( DH_PTP_LICENSE_PACKAGE, array( 'Free', 'Personal' ) ) ? 'block.js' : 'block-premium.js';
+		
+	wp_register_script( 'dh_ptp_gutenblock_script', PTP_PLUGIN_URL . "/assets/blocks/legacy/$block_file", array( 'wp-blocks', 'wp-element', 'wp-editor' ), PTP_PLUGIN_VER );
 	
 	wp_register_style( 'dh-ptp-block-css', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/blocks/legacy/block.css' );
 	wp_register_style( 'dh-ptp-design1', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/design1/pricingtable.min.css' );
-	wp_register_style( 'ept-font-awesome', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/font-awesome/css/font-awesome.min.css' );
-	wp_register_style( 'ept-foundation', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/foundation/foundation.min.css' );
-	wp_register_style( 'fancy-flat-table-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/fancy-flat/pricingtable.min.css' );
-	wp_register_style( 'stylish-flat-table-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/stylish-flat/css/pricingtable.min.css' );
-	wp_register_style( 'design4-table-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/design4/css/pricingtable.min.css' );
-	wp_register_style( 'design5-table-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/design5/pricingtable.min.css' );
-	wp_register_style( 'design6-table-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/design6/pricingtable.min.css' );
-	wp_register_style( 'design7-table-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/design7/pricingtable.min.css' );
-	wp_register_style( 'comparison1-table-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/comparison1/css/comparison1-common.min.css' );
-	wp_register_style( 'comparison2-table-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/comparison2/css/comparison2-common.min.css' );      
-	wp_register_style( 'comparison3-table-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/comparison3/css/comparison3-common.min.css' );
-
+	if( DH_PTP_LICENSE_PACKAGE !== 'Free' ) {
+		wp_register_style( 'ept-font-awesome', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/font-awesome/css/font-awesome.min.css' );
+		wp_register_style( 'ept-foundation', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/ui/foundation/foundation.min.css' );
+		wp_register_style( 'fancy-flat-table-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/fancy-flat/pricingtable.min.css' );
+		wp_register_style( 'stylish-flat-table-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/stylish-flat/css/pricingtable.min.css' );
+		wp_register_style( 'design4-table-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/design4/css/pricingtable.min.css' );
+		wp_register_style( 'design5-table-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/design5/pricingtable.min.css' );
+		wp_register_style( 'design6-table-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/design6/pricingtable.min.css' );
+		wp_register_style( 'design7-table-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/design7/pricingtable.min.css' );
+		wp_register_style( 'comparison1-table-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/comparison1/css/comparison1-common.min.css' );
+		wp_register_style( 'comparison2-table-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/comparison2/css/comparison2-common.min.css' );      
+		wp_register_style( 'comparison3-table-style', PTP_PLUGIN_PATH_FOR_SUBDIRS . '/assets/pricing-tables/comparison3/css/comparison3-common.min.css' );
+	}
+	
 	if ( function_exists( 'register_block_type' ) ) {
-
-
 		register_block_type( 'easy-pricing-tables/gutenblock',
 			array(
 				'editor_script' => 'dh_ptp_gutenblock_script',
@@ -130,20 +126,23 @@ function dh_ptp_gutenblock_enqueue() {
 		
 	}
 
-	wp_enqueue_style( array( 
-		'dh-ptp-design1',
-		'ept-font-awesome',
-		'ept-foundation',
-		'fancy-flat-table-style',
-		'stylish-flat-table-style',
-		'design4-table-style',
-		'design5-table-style',
-		'design6-table-style',
-		'design7-table-style',
-		'comparison1-table-style',
-		'comparison2-table-style',
-		'comparison3-table-style'
-	) );
+	
+	wp_enqueue_style( 'dh-ptp-design1' );
+	if( DH_PTP_LICENSE_PACKAGE !== 'Free' ) {
+		wp_enqueue_style( array(
+			'ept-font-awesome',
+			'ept-foundation',
+			'fancy-flat-table-style',
+			'stylish-flat-table-style',
+			'design4-table-style',
+			'design5-table-style',
+			'design6-table-style',
+			'design7-table-style',
+			'comparison1-table-style',
+			'comparison2-table-style',
+			'comparison3-table-style'
+		) );		
+	}	
 	
 	wp_enqueue_style( 'dh-ptp-block-css' );
 	wp_localize_script( 'dh_ptp_gutenblock_script', 'dh_ptp_gutenblock_script_data', array( 'tables' => $table_list, 'editurl' => admin_url( 'post.php' ), 'newurl' => admin_url( 'post-new.php' )  ) );

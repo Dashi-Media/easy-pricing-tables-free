@@ -74,8 +74,7 @@ add_action ( 'fca_ept_schedule_review_notice', 'fca_ept_enable_review_notice' );
 function fca_ept_admin_deactivation_survey( $hook ) {
 	if ( $hook === 'plugins.php' ) {
 		
-		ob_start(); ?>
-		
+		ob_start(); ?>		
 			<div id="fca-deactivate" style="position: fixed; left: 232px; top: 191px; border: 1px solid #979797; background-color: white; z-index: 9999; padding: 12px; max-width: 669px;">
 				<h3 style="font-size: 14px; border-bottom: 1px solid #979797; padding-bottom: 8px; margin-top: 0;"><?php _e( 'Sorry to see you go', 'easy-pricing-tables' ) ?></h3>
 				<p><?php _e( 'Hi, this is David, the creator of Easy Pricing Tables. Thanks so much for giving my plugin a try. I’m sorry that you didn’t love it.', 'easy-pricing-tables' ) ?>
@@ -90,10 +89,8 @@ function fca_ept_admin_deactivation_survey( $hook ) {
 				<div style='float: right;' id='fca-deactivate-nav'>
 					<button style='margin-right: 5px;' type='button' class='button button-secondary' id='fca-ept-deactivate-skip'><?php _e( 'Skip', 'easy-pricing-tables' ) ?></button>
 					<button type='button' class='button button-primary' id='fca-ept-deactivate-send'><?php _e( 'Send Feedback', 'easy-pricing-tables' ) ?></button>
-				</div>
-			
-			</div>
-		
+				</div>			
+			</div>		
 		<?php
 			
 		$html = ob_get_clean();
@@ -104,7 +101,7 @@ function fca_ept_admin_deactivation_survey( $hook ) {
 			'ajaxurl' => admin_url( 'admin-ajax.php' ),
 		);
 		
-		wp_enqueue_script( 'fca_ept_deactivation_js', PTP_PLUGIN_URL . '/includes/notices/deactivation.min.js', false, PTP_PLUGIN_VER, true );
+		wp_enqueue_script( 'fca_ept_deactivation_js', PTP_PLUGIN_URL . '/includes/notices/deactivation.js', false, PTP_PLUGIN_VER, true );
 		wp_localize_script( 'fca_ept_deactivation_js', "fca_ptp", $data );
 	}
 	
@@ -117,11 +114,11 @@ function fca_ptp_uninstall_ajax() {
 	
 	$msg = sanitize_text_field( $_REQUEST['msg'] );
 	$nonce = sanitize_text_field( $_REQUEST['nonce'] );
-	$nonceVerified = wp_verify_nonce( $nonce, 'fca_ptp_uninstall_nonce') == 1;
+	$nonceVerified = wp_verify_nonce( $nonce, 'fca_ept_uninstall_nonce');
 
 	if ( $nonceVerified && !empty( $msg ) ) {
 		
-		$url =  "https://api.fatcatapps.com/api/feedback.php";
+		$url =  "http://api.fatcatapps.com/api/feedback.php";
 				
 		$body = array(
 			'product' => 'pricingtables',

@@ -50,7 +50,7 @@
 				),
 
 				createElement( wp.serverSideRender, {
-					key: 'ptp-ssr'
+					key: 'ptp-ssr',
 					block: 'easy-pricing-tables/gutenblock',
 					attributes:  props.attributes,
 				})
