@@ -189,3 +189,27 @@ function ptp_dh_pts_disable( $args ) {
 }
 add_filter( 'pts_post_type_filter', 'ptp_dh_pts_disable' );
 
+
+/**
+ *  set screen layout to 2 colums
+ */
+if ( DH_PTP_LICENSE_PACKAGE === 'Free') {
+	function tt_ptp_set_custom_branding_screen_layout($columns, $screen) {
+		
+		   if ($screen === 'easy-pricing-table'){
+			$columns[$screen] = 2;
+		}
+		return $columns;
+	}
+	add_filter('screen_layout_columns', 'tt_ptp_set_custom_branding_screen_layout', 10, 2);
+
+	function tt_ptp_user_option_screen_layout_easy_pricing_table() {
+		
+		$screen = get_current_screen();
+		if ( 'easy-pricing-table' == $screen->id ) {
+			 return 2;
+		}
+	   
+	}
+	add_filter( 'get_user_option_screen_layout_easy-pricing-table', 'tt_ptp_user_option_screen_layout_easy_pricing_table' );
+}

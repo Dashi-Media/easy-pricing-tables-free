@@ -43,11 +43,15 @@ div.fca-ept-layout1 div.fca-ept-plan-div{
 	font-family: inherit;
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
-	word-break: break-word;
 	text-align: center; 
 	padding: 15px 20px; 
 	font-weight: bold; 
 	font-size: 1em; 
+}
+div.fca-ept-layout1 span,
+div.fca-ept-layout1 li,
+div.fca-ept-layout1 .fca-ept-button { 
+	word-break: break-all;
 }
 
 div.fca-ept-layout1 div.fca-ept-plan-div div.fca-ept-plan-image img {
@@ -173,7 +177,7 @@ div.fca-ept-layout1 div.fca-ept-column.fca-ept-most-popular.fca-ept-selected-col
 	transform:translateX( calc( -50% + 7px ) );
 }
 
-.fca-ept-tooltip:active:before {
+.fca-ept-tooltip:hover:before {
 	visibility: visible;
 	z-index: 2;
 }

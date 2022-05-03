@@ -29,7 +29,7 @@
 	grid-template-columns: 1fr 1fr 1fr;
 }
 
-.fca-ept-modal-list a {
+.fca-ept-modal-list > a {
 	text-decoration: none;
 	color: #1D2327;
 }

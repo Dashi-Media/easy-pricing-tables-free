@@ -91,10 +91,8 @@ div.fca-ept-woo-products li{
 	color: #000;
 }
 
-.fca-ept-icon-toolbar {
-	border: 0;
-	position: absolute;
-	z-index: 1000;
+.fca-ept-fa-icons-modal {
+	min-width: 530px;
 }
 
 .fca-ept-fa-icons.components-combobox-control li {

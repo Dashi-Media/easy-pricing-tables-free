@@ -134,8 +134,16 @@ Our full privacy policy is available here: [https://fatcatapps.com/legal/privacy
 == Changelog ==
 
 = Easy Pricing Tables 3.2.0 =
-* 
-
+* Added Image support
+* Added "Add Row" and ability to add rows & columns before or after existing table
+* Added Copy Table action for EPT3 tables
+* UI Updates
+* Improved performance (editor & sitewide enqueues)
+* Changed button editing behavior to a modal (to edit URL and button text)
+* Fix jQuery conflict with toggles Divi theme (probably others)
+* Removed/refactor some legacy code causing conflicts
+* Removed Column Height toggle (added match image heights)
+* Removed Copy HTML feature
 
 = Easy Pricing Tables 3.1.6 =
 * Fixed a bug on the settings page that caused an error for some users

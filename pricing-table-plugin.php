@@ -174,11 +174,14 @@ if( !defined( 'PTP_PLUGIN_PATH' ) ){
 	function dh_ptp_plugin_settings_link( $links ){
 		// Remove Edit link
 		unset( $links['edit'] );
-
+		
+		$add_new_link = '<a href=' . admin_url( 'admin.php?page=ept3-list&add_new=1' ) . '>' . __('Add New', 'easy-pricing-tables') . '</a>'; 
 		$forum_link   = '<a href="http://wordpress.org/support/plugin/easy-pricing-tables">' . __('Support', 'easy-pricing-tables' ) . '</a>';
 		$support_link = '<a href="https://fatcatapps.com/support" target="_blank">' . esc_attr__( 'Support', 'easy-pricing-tables' ) . '</a>';
 		$premium_link = '<a href="https://fatcatapps.com/easypricingtables/?utm_campaign=Purchase%2BPremium%2Bin%2Bplugins.php&utm_source=Easy%2BPricing%2BTables%2BFree&utm_medium=plugin&utm_content=v1">' . __('Purchase Premium',  'easy-pricing-tables' ) . '</a>';
-
+		
+		array_unshift( $links, $add_new_link );
+		
 		if ( DH_PTP_LICENSE_PACKAGE === 'Free') {
 			array_push( $links, $forum_link );
 			array_push( $links, $premium_link );
@@ -189,5 +192,7 @@ if( !defined( 'PTP_PLUGIN_PATH' ) ){
 
 		return $links; 
 	}
+	$plugin = plugin_basename(__FILE__); 
+	add_filter("plugin_action_links_$plugin", 'dh_ptp_plugin_settings_link' );
 	
 }

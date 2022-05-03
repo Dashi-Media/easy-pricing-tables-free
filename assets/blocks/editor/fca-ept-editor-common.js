@@ -288,7 +288,6 @@ function fca_ept_update_ui_state( props, newSection ) {
 	}
 	props.setAttributes( { selectedSection: newSection } )
 	//RESET OUR CURSOR SELECTION DEPENDENT CONTEXTS
-	props.setAttributes( { showIconDropdown: false } )
 	props.setAttributes( { selectedRange: selectedRange } )
 		
 	if ( fca_ept_is_tooltip_selected( selectedRange ) ) {			
@@ -400,7 +399,7 @@ function fca_ept_reusable_block_init() {
 							actions: [
 								{
 									onClick: ( function(){ window.open( 'https://fatcatapps.com/knowledge-base/how-to-create-your-first-pricing-table/', '_blank' ) } ),
-									label: 'Need help publishing your new block?',
+									label: 'Need help publishing your new table?',
 								},
 							],
 						}

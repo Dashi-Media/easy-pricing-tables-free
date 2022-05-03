@@ -266,7 +266,8 @@ add_action( 'admin_menu', 'fca_ept_admin_menu' );
 
 
 function fca_ept_render_post_list(){
-
+	
+	$add_new = !empty( $_GET['add_new'] );
 	if ( ! class_exists( 'WP_List_Table' ) ) {
 		require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
 	}
@@ -285,8 +286,9 @@ function fca_ept_render_post_list(){
 		'ept_nonce' => wp_create_nonce( 'ept_new' ),
 	));
 	
+	$modal_style = $add_new ? 'style="display:block;"' : ''
 	?>
-	<div class="fca-ept-modal">
+	<div class="fca-ept-modal" <?php echo $modal_style ?> >
 		<div class="fca-ept-modal-inner">
 			<a href="#" id="fca-ept-modal-close">Close</a>
 			<h2><?php esc_html_e( 'Choose an Option', 'easy-pricing-tables' ) ?></h2>
@@ -295,7 +297,7 @@ function fca_ept_render_post_list(){
 					<span class="dashicons dashicons-shortcode"></span>
 					<h3><?php esc_html_e( 'New Shortcode', 'easy-pricing-tables' ) ?></h3>
 					<p><?php esc_html_e( 'Create shortcode for use with page editors like Divi or WP Bakery.', 'easy-pricing-tables' ) ?></p>
-					<h4><?php esc_html_e( 'Recommended for Divi/WP Bankery/Visual Composer', 'easy-pricing-tables' ) ?></h4>
+					<h4><?php esc_html_e( 'Recommended for Divi/WP Bakery/Visual Composer', 'easy-pricing-tables' ) ?></h4>
 				</a>
 				<a href="<?php echo $new_page_link ?>" class="fca-ept-modal-list-group" >
 					<span class="dashicons dashicons-welcome-add-page"></span>
@@ -321,12 +323,18 @@ function fca_ept_render_post_list(){
 	<div class="wrap">
 		<h2>Easy Pricing Tables <a href="#" id="fca-ept-add-new-button" class="page-title-action">Add New</a></h2>
 		
-		<?php if ( DH_PTP_LICENSE_PACKAGE !== 'Free' ) { ?>
+		<?php if ( DH_PTP_LICENSE_PACKAGE === 'Free' ) { ?>
 			<p><?php esc_html_e( 'Problems, Suggestions?', 'easy-pricing-tables' ) ?> 
 			<a href="https://wordpress.org/support/plugin/easy-pricing-tables" target="_blank"><?php esc_html_e( 'Visit the support forum', 'easy-pricing-tables' ) ?></a> | 
-			<a href="http://wordpress.org/plugins/easy-pricing-tables/faq/" target="_blank"><?php esc_html_e( 'Visit FAQ', 'easy-pricing-tables' ) ?></a> | 
+			<a href="https://fatcatapps.com/article-categories/easy-pricing-tables/" target="_blank"><?php esc_html_e( 'Knowledge Base', 'easy-pricing-tables' ) ?></a> | 
 			<a href="https://youtu.be/iU3mC8vXKt8" target="_blank"><?php esc_html_e( 'Watch Demo', 'easy-pricing-tables' ) ?></a> |
 			<a href="http://fatcatapps.com/easypricingtables/?utm_campaign=ept-ui-sidebar&utm_source=free-plugin&utm_medium=link&utm_content=v3" target="_blank"><?php esc_html_e( 'Get Easy Pricing Tables Premium', 'easy-pricing-tables' ) ?></a>
+			</p>
+		<?php } else { ?>
+			<p><?php esc_html_e( 'Problems, Suggestions?', 'easy-pricing-tables' ) ?> 
+			<a href="https://fatcatapps.com/support/" target="_blank"><?php esc_html_e( 'Get support', 'easy-pricing-tables' ) ?></a> | 
+			<a href="https://fatcatapps.com/article-categories/easy-pricing-tables/" target="_blank"><?php esc_html_e( 'Knowledge Base', 'easy-pricing-tables' ) ?></a> | 
+			<a href="https://youtu.be/iU3mC8vXKt8" target="_blank"><?php esc_html_e( 'Watch Demo', 'easy-pricing-tables' ) ?></a>
 			</p>
 		<?php } ?>
 			<?php
@@ -455,7 +463,7 @@ function fca_ept_match_heights_js( $attributes ) {
 		
 		$thisTableID = "#fca-ept-table-$table_id";
 				
-		return "<script id='ept-$thisTableID-matchheight'>
+		return "<script id='ept-$table_id-matchheight'>
 			var thisTableID = '$thisTableID';
 			var imageDivs = document.querySelectorAll( thisTableID + ' .fca-ept-plan-image img' )			
 			for( var i = 0; i < imageDivs.length; i++ ) {							

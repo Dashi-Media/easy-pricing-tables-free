@@ -147,7 +147,7 @@ function fca_ept_toolbar_controls( props ){
 				onClick: function(){
 					//RN NOTE FORCE OPEN...
 					window.setTimeout( function(){
-						var inputToFocus = document.querySelectorAll('.fca-ept-icon-toolbar label')
+						var inputToFocus = document.querySelectorAll('.fca-ept-fa-icons label')
 						if( inputToFocus.length ){ 
 							inputToFocus[0].click()					
 						}							
@@ -372,9 +372,16 @@ function fca_ept_icon_dropdown( props ){
 	var isSelected = props.isSelected
 	var showIconDropdown = props.attributes.showIconDropdown
 	// icons
-	return ( isSelected && showIconDropdown ) ? el( wp.components.ToolbarGroup, {			
-			className: "fca-ept-icon-toolbar",
-		},	
+	
+	return ( isSelected && showIconDropdown ) ? el( wp.components.Modal, { 
+			isDismissible: false,
+			shouldCloseOnClickOutside: true,
+			title: "Add icon",
+			className: 'fca-ept-fa-icons-modal',
+			onRequestClose: function(){	
+				props.setAttributes({ showIconDropdown: false })
+			}
+		},
 		el( wp.components.ComboboxControl, {
 			
 			hideLabelFromVision: true,
