@@ -16,9 +16,19 @@ Create a Beautiful, Responsive and Highly Converting Pricing Table in Less Than 
 == Changelog ==
 
 # Version 3.2.0 #
+* Added 2 new table designs
+* Added Image support
+* Added "Add Row" and ability to add rows & columns before or after existing table
+* Added Copy Table action for EPT3 tables
+* UI Updates
+* Improved performance (editor & sitewide enqueues)
+* Changed button editing behavior to a modal (to edit URL and button text)
+* Rewrite toolbar, WooCommerce and icon insert behavior
+* Fix some Google fonts not working
 * Fix jQuery conflict with toggles Divi theme (probably others)
-* Rewrite toolbar and icon insert behavior
-* Add image support
+* Removed/refactor some legacy code causing conflicts
+* Removed Column Height toggle (added match image heights)
+* Removed Copy HTML feature
 
 # Version 3.1.5 #
 * Added filter to include more allowed tags in EPT Legacy frontend
