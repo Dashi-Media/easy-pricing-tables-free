@@ -33,7 +33,7 @@ function fca_ept_render_layout2( $attributes ){
 	$align = empty( $attributes['align'] ) ? 'wide' : ( $attributes['align'] );
 	$popularTextDefault = empty( $attributes['popularText'] ) ? 'Most Popular' : ( $attributes['popularText'] );
 	$showPlanSubtext = empty( $attributes['showPlanSubtextToggle'] ) ? 'none' : 'block';
-	$showPriceSubtext = empty( $attributes['showPriceSubtextToggle'] ) ? 'none' : 'inline';
+	$showPriceSubtext = empty( $attributes['showPriceSubtextToggle'] ) ? 'none' : 'block';
 	
 	$showButtons = empty( $attributes['showButtonsToggle'] ) ? 'none' : 'block';
 	$urlTarget = empty( $attributes['urlTargetToggle'] ) ? '_self' : '_blank';
@@ -54,10 +54,7 @@ function fca_ept_render_layout2( $attributes ){
 			$showPopular = $columnPopular ? 'block' : 'none';
 			$popularClass = $columnPopular ? 'fca-ept-most-popular' : '';
 			$popularText = empty( $column['popularText'] ) ? $popularTextDefault : $column['popularText'];
-			$columnPaddingTop = $columnPopular ? '30px' : '45px';
-			$marginTop = $columnPopular ? '-5px' : '10px';
-			$columnBorder = $columnPopular ? '2px solid ' . $accentColor : '0px solid';
-
+			
 			$planText1 = fca_ept_get_product_data( $column, 1, 'plan' );
 			$planText2 = fca_ept_get_product_data( $column, 2, 'plan' );
 			$hasPlanImage1 = fca_ept_get_product_data( $column, 1, 'image' ) ? 'block' : 'none';
@@ -74,7 +71,7 @@ function fca_ept_render_layout2( $attributes ){
 			$buttonText = $column['buttonText'] ? $column['buttonText'] : '';
 
 			?> 
-			<div style="background-color:<?php echo $layoutBGColor ?>; padding-top:<?php echo $columnPaddingTop ?>; padding-bottom:<?php echo $paddingBottom ?>; margin-top:<?php echo $marginTop?>; border:<?php echo $columnBorder ?>" class="fca-ept-column <?php echo $popularClass ?>">				
+			<div style="background-color:<?php echo $layoutBGColor ?>;" class="fca-ept-column <?php echo $popularClass ?>">				
 				<div class="fca-ept-plan-div">
 					<div style="display: <?php echo $hasPlanImage1 ?>" class="fca-ept-plan-image"><img class="fca-ept-image1" src="<?php echo fca_ept_get_product_data( $column, 1, 'image' ) ?>"></div>
 					<div style="display: <?php echo $hasPlanImage2 ?>" class="fca-ept-plan-image"><img class="fca-ept-image2" src="<?php echo fca_ept_get_product_data( $column, 2, 'image' ) ?>"></div>
@@ -104,6 +101,9 @@ function fca_ept_render_layout2( $attributes ){
 		</div>
 		<?php echo fca_ept_match_heights_js( $attributes ); ?>	
 	</div>
+	<style>
+		#fca-ept-table-<?php echo $tableID ?> div.fca-ept-layout2 div.fca-ept-column.fca-ept-most-popular { border: 2px solid <?php echo $accentColor ?> }
+	</style>
 	<?php
 	
 	return ob_get_clean();

@@ -15,13 +15,13 @@ function fca_ept_set_layout2_attributes( props ){
 
 	// FONT SETTINGS 
 	props.setAttributes( { fontFamily: 'sans-serif' } )
-	props.setAttributes( { popularFontSize: '75%' } ) 
-	props.setAttributes( { planFontSize: '300%' } ) 
-	props.setAttributes( { planSubtextFontSize: '100%' } ) 
-	props.setAttributes( { priceFontSize: '400%' } ) 
-	props.setAttributes( { pricePeriodFontSize: '100%' }) 
-	props.setAttributes( { featuresFontSize: '125%' } ) 
-	props.setAttributes( { buttonFontSize: '150%' } ) 
+	props.setAttributes( { popularFontSize: '70%' } ) 
+	props.setAttributes( { planFontSize: '225%' } ) 
+	props.setAttributes( { planSubtextFontSize: '90%' } ) 
+	props.setAttributes( { priceFontSize: '300%' } ) 
+	props.setAttributes( { pricePeriodFontSize: '90%' }) 
+	props.setAttributes( { featuresFontSize: '90%' } ) 
+	props.setAttributes( { buttonFontSize: '100%' } ) 
 	props.setAttributes( { toggleFontSize: '112.5%' } ) 
 
 
@@ -50,9 +50,7 @@ function fca_ept_layout2_block_edit( props ){
 					key: i,
 					style: { 
 						backgroundColor: props.attributes.layoutBGColor,
-						paddingTop: columnSettings[i].columnPopular ? '30px' : '45px',
-						paddingBottom: props.attributes.showButtonsToggle ? '30px' : '0px',
-						marginTop: columnSettings[i].columnPopular ? '0px' : '10px',
+						
 						border: columnSettings[i].columnPopular ? '2px solid ' + props.attributes.accentColor : '0px solid'
 					},
 						className: fca_ept_column_class_name( props, i ),
@@ -177,7 +175,7 @@ function fca_ept_layout2_block_edit( props ){
 							}),
 
 							el( 'div', { 
-								style: { display: props.attributes.showPriceSubtextToggle ? 'inline' : 'none' },
+								style: { display: props.attributes.showPriceSubtextToggle ? 'block' : 'none' },
 								className: 'fca-ept-price-subtext'
 								},
 								el ( 'svg', {

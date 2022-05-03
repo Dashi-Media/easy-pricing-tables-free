@@ -11,8 +11,7 @@ div.fca-ept-layout2 {
 	display: flex;
 	font-family: inherit;
 	padding-top: 5px;
-	padding-right: 20px;
-	line-height: 1.5;
+	line-height: 1.33;
 }
 
 div.fca-ept-layout2 div.fca-ept-column {
@@ -23,12 +22,16 @@ div.fca-ept-layout2 div.fca-ept-column {
 	flex-shrink: 1;
 	flex-basis: 0%;
 	position: relative;
-	overflow-wrap: break-word;
-	padding-left: 40px;
-	padding-right: 40px;
+	
 	margin: 10px 8px 0 8px;
 	display: grid;
 	grid-template-rows: auto auto auto 1fr auto;
+	padding: 42px 30px 30px 30px;
+	
+}
+
+div.fca-ept-layout2 div.fca-ept-column.fca-ept-most-popular {
+	padding-top: 18px;	
 }
 
 /* POPULAR */
@@ -36,7 +39,6 @@ div.fca-ept-layout2 div.fca-ept-popular-div{
 	font-family: inherit;
 	display: none;
     text-align: left;
-    margin: 0 0 -6px 0;
 }
 
 div.fca-ept-layout2 .fca-ept-popular-svg{
@@ -54,10 +56,6 @@ div.fca-ept-layout2 .fca-ept-popular-text{
 div.fca-ept-layout2 div.fca-ept-plan-div{
 	font-family: inherit;
 	text-align: start;
-}
-
-div.fca-ept-layout2 div.fca-ept-plan-div span:not(.fca-ept-popular-text ){
-	display: inline;
 }
 
 div.fca-ept-layout2 div.fca-ept-plan-image img, div.fca-ept-layout2 div.fca-ept-plan-div .fca-ept-plan img {
@@ -82,41 +80,37 @@ div.fca-ept-layout2 div.fca-ept-plan-image img.fca-ept-image2{
 
 div.fca-ept-layout2 div.fca-ept-plan-image {
 	justify-items: center;
-}
-
+} 
+ 
 div.fca-ept-layout2 .fca-ept-plan{
-	word-break: break-word;
-	display: inline;
-	vertical-align: top;
-	font-weight: 600;
-	line-height: 1.5;
+	font-weight: bold;
 }
 
-div.fca-ept-layout2 .fca-ept-plan-subtext{
+div.fca-ept-layout2 .fca-ept-plan-subtext {
 	display: block;
-	margin-top: -13px;
-	width: fit-content;
+	margin-top: -6px;
 }
+
+div.fca-ept-layout2 span,
+div.fca-ept-layout2 li,
+div.fca-ept-layout2 .fca-ept-button { 
+	word-break: break-all;
+}
+
 
 /* PRICE */
 
 div.fca-ept-layout2 .fca-ept-price-container{
 	font-family: inherit;
 	padding: 0;
-	margin-top: 20px;
-}
-
-div.fca-ept-layout2 .fca-ept-price{
-	display: inline-block;
-	font-weight: bolder;
-	line-height: 1;
-	margin: 0 10px 0 0;
+	margin-top: 10px;
 }
 
 /* PRICE SUBTEXT CONTAINER */
 div.fca-ept-layout2 .fca-ept-price-subtext{
-	display: block;
 	line-height: 1;
+	margin-top: -6px;
+	display: block;
 }
 
 div.fca-ept-layout2 .fca-ept-price-svg{
@@ -124,12 +118,7 @@ div.fca-ept-layout2 .fca-ept-price-svg{
 }
 
 div.fca-ept-layout2 div.fca-ept-price-div .fca-ept-price-period{
-	text-transform: unset;
-	font-weight: 500;
-	line-height: 1;
-	margin-top: 10px;
-	display: block;
-	width: fit-content;
+	
 }
 
 div.fca-ept-layout2 div.fca-ept-price-div .fca-ept-price-billing{
@@ -141,7 +130,7 @@ div.fca-ept-layout2 div.fca-ept-features-div ul{
 	font-family: inherit;
 	letter-spacing: inherit;
 	text-align: start;
-	margin: 35px 0;
+	margin: 26px 0;
 	padding-left: 0;
 	font-weight: 500;
 }
@@ -149,8 +138,8 @@ div.fca-ept-layout2 div.fca-ept-features-div ul{
 div.fca-ept-layout2 div.fca-ept-features-div .fca-ept-features li{
 	font-family: inherit;
 	list-style-type: none;
-	line-height: 2.7;
-	margin: 0;
+	margin: 0 0 10px 0;
+	line-height: 1.4;
 }
 
 /* Fix for Gutenberg bug where removing an entire line adds a span to the element */
@@ -172,11 +161,9 @@ div.fca-ept-layout2 div.fca-ept-features-div .fca-ept-features li img {
 div.fca-ept-layout2 a.fca-ept-button{
 	font-family: inherit;
 	padding: 10px;
-	width:100%;
 	border-radius: 8px;
 	white-space: normal;
 	text-align: center;
-	font-weight: 500;
 	align-self: self-end;
 	text-decoration: none !important;
 	-webkit-appearance: unset;
